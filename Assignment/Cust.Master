@@ -1,0 +1,242 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Cust.Master.cs" Inherits="Assignment.Cust" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="Cust.css" rel="stylesheet">
+
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="??">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="Customer" runat="server">
+
+        <!--Promoter-->
+        <div class="outer-header">
+            <div class="header-container">
+                <div id="header-msg">
+                    <div class="slides">
+                        <i style="margin-top: 3px;" class="fa fa-bullhorn"></i>&nbsp;&nbsp;
+                        <div>Message A</div>
+                    </div>
+                    <div class="slides">
+                        <i style="margin-top: 3px;" class="fa fa-bullhorn"></i>&nbsp;&nbsp;
+                        <div>Message B</div>
+                    </div>
+                    <div class="slides">
+                        <i style="margin-top: 3px;" class="fa fa-bullhorn"></i>&nbsp;&nbsp;
+                        <div>Message C</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Header-->
+        <div class="header" style="width: 100%; display: flex; flex-flow: nowrap; justify-content: space-between; background-color: #3a3a3b;">
+
+
+            <div style="margin-left: 20px;" class="business-icon">
+                <div style="color: white; height: inherit; text-align: center; font-weight: bold; font-size: 20px;">
+                    Business Icon
+                </div>
+            </div>
+
+
+
+
+            <div style="display: flex; flex-flow: row nowrap;">
+
+                <div class="action-group" style="display: flex; flex-flow: row nowrap;">
+
+                    <div class="cart-container action">
+                        <asp:LinkButton ID="btnCart" runat="server" CssClass="btn header-font" Style="font-size: 17px;">
+                                Cart
+                        </asp:LinkButton>
+                    </div>
+
+                    <div class="profile-container action">
+                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn header-font" Style="width: 130px; font-size: 17px;">
+                                User Profile
+                        </asp:LinkButton>
+                    </div>
+
+                    <div class="login action" style="margin-right: 40px;">
+                        <asp:LinkButton ID="btnLgn" runat="server" CssClass="topBtns btn dropdown-toggle header-font" data-bs-toggle="dropdown" aria-expanded="false" Style="font-size: 17px;">
+                        Login
+                        </asp:LinkButton>
+                        <ul class="dropdown-menu">
+                            <li id="identityUser">
+                                <asp:HyperLink runat="server" ID="hrefCustomer" NavigateUrl="~/Login/CustomerLogin.aspx" Text="Customer" CssClass="dropdown-item LoginHover"></asp:HyperLink>
+                            </li>
+                            <li id="identityStaff">
+                                <asp:HyperLink runat="server" ID="hrefStaff" NavigateUrl="~/Login/StaffLogin.aspx" Text="Staff" CssClass="dropdown-item LoginHover"></asp:HyperLink>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+                <div class="container-fluid col-5" style="margin-right: 20px;">
+                    <div class="d-flex input-group" role="search">
+                        <asp:TextBox Style="color: black;" TextMode="Search" ID="txtSearch" runat="server" class="form-control border border-1 search-bar" placeholder="Product Name" />
+
+                        <asp:LinkButton ID="btnSch" ValidationGroup="btn" runat="server" CssClass="btn-light btn btn-search">
+                            <i style="font-size: 18px; display: flex; justify-content: center; align-items: center; margin-top: 4.5px;" class="fa fa-search"></i>
+                        </asp:LinkButton>
+                    </div>
+
+                    <asp:RequiredFieldValidator Style="font-size: 13px; margin-left: 3px;" Display="Dynamic" ID="searchtext" runat="server" ControlToValidate="txtSearch" ErrorMessage="Please do not leave empty!" ForeColor="Red" ValidationGroup="btn" />
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <!--Navigation Bar-->
+        <asp:Repeater runat="server" ID="menu" DataSourceID="SiteMapDataSource1">
+            <HeaderTemplate>
+                <div class="dropdowns">
+                    <div class="nav">
+            </HeaderTemplate>
+            <ItemTemplate>
+                <li>
+                    <div class="drop">
+                        <asp:HyperLink Style="margin-right: 7px; font-size: 14px;" ID="HyperLink1" CssClass="btn bt dropdown-toggle dropbtn MainHyperLinkHover" data-bs-toggle="dropdown" aria-expanded="false" runat="server" NavigateUrl='<%# Eval("url") %>'><%# Eval("title") %></asp:HyperLink>
+
+                        <asp:Repeater ID="Repeater1" runat="server" DataSource='<%# ((SiteMapNode)Container.DataItem).ChildNodes %>'>
+
+                            <HeaderTemplate>
+
+                                <ul class="dropdown-menu">
+                            </HeaderTemplate>
+
+                            <ItemTemplate>
+                                <li>
+                                    <asp:HyperLink Style="font-size: 14px;" ID="HyperLink2" CssClass="dropdown-item HyperLinkHover" runat="server" NavigateUrl='<%# Eval("url") %>'><%# Eval("title") %></asp:HyperLink>
+                                </li>
+                            </ItemTemplate>
+
+                            <FooterTemplate>
+                                </ul>
+                     </div>
+                            </FooterTemplate>
+
+                        </asp:Repeater>
+                </li>
+            </ItemTemplate>
+            <FooterTemplate></div></div></FooterTemplate>
+        </asp:Repeater>
+
+        <asp:SiteMapDataSource ShowStartingNode="False" ID="SiteMapDataSource1" runat="server" />
+
+
+
+        <!--Main Contents-->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <!--End of Main Contents-->
+
+
+
+
+        <!--Footer-->
+        <footer>
+            <div class="subscribe" style="display: flex; justify-content: center; align-content: center;">
+                <asp:TextBox placeholder="example@gmail.com" TextMode="Email" CssClass="col-3" Style="border-radius: 5px;" ID="txtSubscribe" runat="server">
+                </asp:TextBox>
+                <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="btn btn-primary" />
+            </div>
+            <div class="footer-container container-fluid">
+                <div class="top">
+                    <div class="business-name" style="font-size: 1.7rem">
+                        Business Name
+                    </div>
+                    <div class="social-media" style="font-size: 23px;">
+                        <a class="space" href="https://www.facebook.com/"><i class="ic fa-brands fa-facebook"></i></a>
+                        <a class="space" href="https://twitter.com/"><i class="ic fa-brands fa-x-twitter"></i></a>
+                        <a class="space" href="https://www.instagram.com/"><i class="ic fa-brands fa-instagram"></i></a>
+                        <a class="space" href="https://jp.linkedin.com/"><i class="ic fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div style="width: 30%">
+                        <div style="color: white" class="title">
+                            MAP
+                        </div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.5366112914785!2d101.72591861422123!3d3.2155626536388193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3843bfb6a031%3A0x2dc5e067aae3ab84!2sTunku%20Abdul%20Rahman%20University%20of%20Management%20and%20Technology%20(TAR%20UMT)!5e0!3m2!1sen!2smy!4v1678112699587!5m2!1sen!2smy"
+                            width="350" height="200" style="border: 0; display: flex; justify-content: center;" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+
+                    <div class="category" style="color: white; width: 25%">
+                        <div class="title">
+                            MAIN CATEGORIES
+                        </div>
+                        <div style="margin-top: 15px; display: flex; flex-flow: column nowrap;" class="items">
+                            <a href="?" class="space">Category 1</a>
+                            <a href="?" class="space">Category 2</a>
+                            <a href="?" class="space">Category 3</a>
+                            <a href="?" class="space">Category 4</a>
+                            <a href="?" class="space">Category 5</a>
+                        </div>
+                    </div>
+
+                    <div class="social-name" style="color: white; width: 25%">
+                        <div class="title">
+                            SOCIAL MEDIAS
+                        </div>
+                        <div style="margin-top: 15px; display: flex; flex-flow: column nowrap;" class="items">
+                            <a href="https://www.facebook.com/">Facebook</a>
+                            <a href="https://twitter.com/">X</a>
+                            <a href="https://www.instagram.com/">Instagram</a>
+                            <a href="https://jp.linkedin.com/">Linkedin</a>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="bottom" style="text-align: center; color: white;">
+                    © 2022 - 2023 Business Name (Copyright Reserved)
+                </div>
+            </div>
+        </footer>
+
+
+
+        <!--JavaScripts-->
+        <script type="text/javascript" src='<%= ResolveUrl("~/Customer/Home.js") %>'></script>
+        <script type="text/javascript">
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+        </script>
+        <script src="https://kit.fontawesome.com/06c32b9e65.js" crossorigin="anonymous"></script>
+    </form>
+
+</body>
+</html>

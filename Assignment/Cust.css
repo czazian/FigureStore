@@ -1,0 +1,175 @@
+﻿/*Main*/
+html,
+body {
+    min-height: 100vh;
+    max-width: 100%;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #ffece3;
+}
+::-webkit-scrollbar-thumb {
+    background: #fc7c7c;
+}
+    ::-webkit-scrollbar-thumb:hover {
+        background: #fc5f5f;
+    }
+
+/*Header*/
+.header-container {
+    background-color: white;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-msg > * {
+    text-align: center;
+    font-weight: 500;
+    font-size: 13px;
+    color: black;
+}
+
+.slides {
+    display: none;
+}
+
+.header { 
+    padding : 10px;
+    display: flex; 
+    flex-flow: row nowrap;
+}
+
+.form-control:focus {
+    border-color: rgba(100,100,100,1) !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.business-icon {
+    flex: 0 1 150px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action{
+    margin-right: 50px;
+}
+
+.header-font {
+    color: white;
+}
+
+    .header-font:hover, .header-font:active, .header-font:focus {
+        color: antiquewhite;
+    }
+
+.login:hover .dropdown-menu {
+    display: block;
+}
+
+a.LoginHover:hover {
+    color: white;
+    background-color: #3a3a3b;
+}
+
+.dropdowns {
+    background-color: #515557;
+    padding: 8px;
+}
+
+.nav {
+    margin-left: 17px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.drop:hover .dropdown-menu {
+    display: block;
+}
+
+.dropbtn {
+    border: 0 !important;
+    box-shadow: none;
+}
+
+a.HyperLinkHover:hover {
+    color: white;
+    background-color: #515557;
+    font-size: 14px;
+}
+
+.MainHyperLinkHover {
+    color: white;
+}
+
+a.MainHyperLinkHover:hover, a.MainHyperLinkHover:focus, a.MainHyperLinkHover:active{
+    background-color: white;
+    color: black;
+}
+
+a.HyperLinkHover:hover + a.MainHyperLinkHover {
+    background-color: white;
+    color: black;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #3a3a3b;
+    display:flex;
+    flex-flow: column nowrap;
+}
+
+.subscribe { 
+    margin-top: 35px;
+}
+
+.footer-container {
+    height: contain;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.top{
+    display:flex;
+    flex-flow: row wrap; 
+    justify-content:space-between;
+    color: white;
+    margin: 0 25px 0 25px;
+}
+
+.ic {
+    margin-right : 10px;
+}
+
+.middle { 
+    padding: 10px; 
+    margin: 10px 25px 0 40px;
+    display:flex;
+    flex-flow: row nowrap;
+    flex : 0 1 500px;
+    justify-content: space-around
+}
+
+.title { 
+    font-weight: bold; 
+}
+
+.items > a {
+    text-decoration:none;
+}
+
+.space {
+    margin-top: 5px; 
+}
