@@ -1,7 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeBehind="CustomerLogin.aspx.cs" Inherits="Assignment.Login.CustomerLogin" %>
 
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" href="CustomerLogin.css " />
+</asp:Content>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <!-- Login Form -->
     <div class="container">
@@ -82,4 +85,8 @@
         </div>
     </div>
 
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="JS" runat="server">
+    <script src="CustomerLogin.js" type="text/javascript"></script>
 </asp:Content>

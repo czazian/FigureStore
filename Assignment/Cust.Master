@@ -52,55 +52,68 @@
         </div>
 
         <!--Header-->
-        <div class="header" style="width: 100%; display: flex; flex-flow: nowrap; justify-content: space-between; background-color: #3a3a3b;">
+        <div class="header">
 
 
             <div style="margin-left: 20px;" class="business-icon">
                 <div style="color: white; height: inherit; text-align: center; font-weight: bold; font-size: 20px;">
-                    Business Icon
+                    <a href='<%= ResolveUrl("~/Customer/Home.aspx") %>'>Business Icon</a>
                 </div>
             </div>
 
 
 
 
-            <div style="display: flex; flex-flow: row nowrap;">
+            <div class="right-header">
 
                 <div class="action-group" style="display: flex; flex-flow: row nowrap;">
 
                     <div class="cart-container action">
-                        <asp:LinkButton ID="btnCart" runat="server" CssClass="btn header-font" Style="font-size: 17px;">
+                        <div>
+                            <asp:LinkButton ID="btnCart" runat="server" CssClass="btn header-font" Style="width: 120px; font-size: 17px;">
+                                <i style="color: white; font-size: 18px" class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;
                                 Cart
-                        </asp:LinkButton>
+                                <div style="position:relative; margin-top:-5px; border-radius: 100px; background-color: darkred; padding: 5px; float: right; height: 16px; width: 16px;">
+                                    <asp:Label Style="position: absolute;
+    top: 0; left: 4.5px; color: white; height: 16px; font-size: 12px;" ID="cartcount" runat="server" Text="2"/>
+                                </div>
+                            </asp:LinkButton>
+                        </div>
                     </div>
 
                     <div class="profile-container action">
-                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn header-font" Style="width: 130px; font-size: 17px;">
+                        <div>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn header-font" Style="width: 150px; font-size: 17px;">
+                                <i style="color:white; font-size:18px" class="fa-solid fa-user"></i>&nbsp;&nbsp;
                                 User Profile
-                        </asp:LinkButton>
+                            </asp:LinkButton>
+                        </div>
                     </div>
 
-                    <div class="login action" style="margin-right: 40px;">
-                        <asp:LinkButton ID="btnLgn" runat="server" CssClass="topBtns btn dropdown-toggle header-font" data-bs-toggle="dropdown" aria-expanded="false" Style="font-size: 17px;">
+                    <div class="login action" style="margin-right: 20px;">
+                        <div>
+                            <asp:LinkButton ID="btnLgn" runat="server" CssClass="topBtns btn dropdown-toggle header-font" data-bs-toggle="dropdown" aria-expanded="false" Style="font-size: 17px;">
+                                <i style="color:white; font-size:18px" class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;
                         Login
-                        </asp:LinkButton>
-                        <ul class="dropdown-menu">
-                            <li id="identityUser">
-                                <asp:HyperLink runat="server" ID="hrefCustomer" NavigateUrl="~/Login/CustomerLogin.aspx" Text="Customer" CssClass="dropdown-item LoginHover"></asp:HyperLink>
-                            </li>
-                            <li id="identityStaff">
-                                <asp:HyperLink runat="server" ID="hrefStaff" NavigateUrl="~/Login/StaffLogin.aspx" Text="Staff" CssClass="dropdown-item LoginHover"></asp:HyperLink>
-                            </li>
-                        </ul>
+                            </asp:LinkButton>
+                            <ul class="dropdown-menu">
+                                <li id="identityUser">
+                                    <asp:HyperLink runat="server" ID="hrefCustomer" NavigateUrl="~/Login/CustomerLogin.aspx" Text="Customer" CssClass="dropdown-item LoginHover"></asp:HyperLink>
+                                </li>
+                                <li id="identityStaff">
+                                    <asp:HyperLink runat="server" ID="hrefStaff" NavigateUrl="~/Login/StaffLogin.aspx" Text="Staff" CssClass="dropdown-item LoginHover"></asp:HyperLink>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
 
 
 
-                <div class="container-fluid col-5" style="margin-right: 20px;">
-                    <div class="d-flex input-group" role="search">
-                        <asp:TextBox Style="color: black;" TextMode="Search" ID="txtSearch" runat="server" class="form-control border border-1 search-bar" placeholder="Product Name" />
+                <div class="search-ctn container-fluid" style="margin-right: 60px;">
+                    <div class="search-ctn d-flex input-group" role="search">
+                        <asp:TextBox Style="margin-left: 10px; color: black;" TextMode="Search" ID="txtSearch" runat="server" class="form-control border border-1 search-bar" placeholder="Product Name" />
 
                         <asp:LinkButton ID="btnSch" ValidationGroup="btn" runat="server" CssClass="btn-light btn btn-search">
                             <i style="font-size: 18px; display: flex; justify-content: center; align-items: center; margin-top: 4.5px;" class="fa fa-search"></i>
@@ -166,7 +179,7 @@
 
         <!--Footer-->
         <footer>
-            <div class="subscribe" style="display: flex; justify-content: center; align-content: center;">
+            <div id="subscribe" class="subscribe">
                 <asp:TextBox placeholder="example@gmail.com" TextMode="Email" CssClass="col-3" Style="border-radius: 5px;" ID="txtSubscribe" runat="server">
                 </asp:TextBox>
                 <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="btn btn-primary" />
@@ -190,7 +203,7 @@
                         </div>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.5366112914785!2d101.72591861422123!3d3.2155626536388193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3843bfb6a031%3A0x2dc5e067aae3ab84!2sTunku%20Abdul%20Rahman%20University%20of%20Management%20and%20Technology%20(TAR%20UMT)!5e0!3m2!1sen!2smy!4v1678112699587!5m2!1sen!2smy"
-                            width="350" height="200" style="border: 0; display: flex; justify-content: center;" loading="lazy"
+                            width="350" height="180" style="border: 0; display: flex; justify-content: center;" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
@@ -236,6 +249,9 @@
             const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         </script>
         <script src="https://kit.fontawesome.com/06c32b9e65.js" crossorigin="anonymous"></script>
+
+        <!--Script from Content Page-->
+        <asp:ContentPlaceHolder ID="JS" runat="server"></asp:ContentPlaceHolder>
     </form>
 
 </body>

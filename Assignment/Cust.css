@@ -42,10 +42,13 @@ body {
     display: none;
 }
 
-.header { 
-    padding : 10px;
-    display: flex; 
+.header {
+    padding: 10px;
+    display: flex;
     flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #3a3a3b;
 }
 
 .form-control:focus {
@@ -64,7 +67,9 @@ body {
 }
 
 .action{
-    margin-right: 50px;
+    margin-right: 40px;
+    display:flex;
+    flex-flow:row nowrap;
 }
 
 .header-font {
@@ -172,4 +177,40 @@ footer {
 
 .space {
     margin-top: 5px; 
+}
+
+.subscribe {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.right-header {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/*Mobile and Tablet*/
+@media (max-width: 869px) {
+    .search-ctn{
+        width: 100%;
+        order: 3;
+    }
+
+    .header, .right-header {
+        flex-flow: column nowrap;
+    }
+
+    .action-group{
+        justify-content:center;
+        margin-bottom: 8px;
+    }
+
+    .action {
+        margin-right: 0px;
+    }
+
+    .top, .middle, .subscribe, hr {
+        display: none;
+    }
 }

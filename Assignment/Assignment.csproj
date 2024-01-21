@@ -72,7 +72,11 @@
     <Content Include="Customer\Home.js" />
     <Content Include="Login\CustomerLogin.aspx" />
     <Content Include="Cust.css" />
+    <Content Include="Login\CustomerLogin.css" />
+    <Content Include="Login\CustomerLogin.js" />
     <Content Include="Login\StaffLogin.aspx" />
+    <Content Include="Login\StaffLogin.css" />
+    <Content Include="Login\StaffLogin.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
