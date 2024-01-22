@@ -69,7 +69,20 @@
   <ItemGroup>
     <Content Include="Customer\Cart.aspx" />
     <Content Include="Customer\Home.aspx" />
+    <Content Include="Customer\Home.css" />
     <Content Include="Customer\Home.js" />
+    <Content Include="FigureCategories\Doll.aspx" />
+    <Content Include="FigureCategories\Good.aspx" />
+    <Content Include="FigureCategories\Gundam.aspx" />
+    <Content Include="FigureCategories\Nendoroid.aspx" />
+    <Content Include="FigureCategories\ScaleFigure.aspx" />
+    <Content Include="Image\banner1.jpg" />
+    <Content Include="Image\banner2.jpg" />
+    <Content Include="Image\banner3.jpg" />
+    <Content Include="Image\banner4.jpg" />
+    <Content Include="Image\banner5.jpg" />
+    <Content Include="Image\Logo.png" />
+    <Content Include="Image\sbackground.mp4" />
     <Content Include="Login\CustomerLogin.aspx" />
     <Content Include="Cust.css" />
     <Content Include="Login\CustomerLogin.css" />
@@ -100,6 +113,41 @@
     </Compile>
     <Compile Include="Customer\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FigureCategories\Doll.aspx.cs">
+      <DependentUpon>Doll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FigureCategories\Doll.aspx.designer.cs">
+      <DependentUpon>Doll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FigureCategories\Good.aspx.cs">
+      <DependentUpon>Good.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FigureCategories\Good.aspx.designer.cs">
+      <DependentUpon>Good.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FigureCategories\Gundam.aspx.cs">
+      <DependentUpon>Gundam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FigureCategories\Gundam.aspx.designer.cs">
+      <DependentUpon>Gundam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FigureCategories\Nendoroid.aspx.cs">
+      <DependentUpon>Nendoroid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FigureCategories\Nendoroid.aspx.designer.cs">
+      <DependentUpon>Nendoroid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FigureCategories\ScaleFigure.aspx.cs">
+      <DependentUpon>ScaleFigure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FigureCategories\ScaleFigure.aspx.designer.cs">
+      <DependentUpon>ScaleFigure.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\CustomerLogin.aspx.cs">
       <DependentUpon>CustomerLogin.aspx</DependentUpon>

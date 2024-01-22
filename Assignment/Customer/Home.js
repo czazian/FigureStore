@@ -30,8 +30,8 @@ function slide(number) {
 }
 
 //Check the lenght of book name and author name, if > 17, take only 20 chars + ...
-//For book title
-$(".s1").each(function () {
+//For Product Name
+$(".sentence").each(function () {
     var string = $(this).text();
     var limit = 17;
     var length = string.length;
@@ -41,14 +41,5 @@ $(".s1").each(function () {
     }
 });
 
-//For author name
-$(".s2").each(function () {
-    var string = $(this).text();
-    var limit = 17;
-    var length = string.length;
-    if (length > limit) {
-        var result = string.substr(0, limit);
-        $(this).text(result + "...");
-    }
-});
+
 

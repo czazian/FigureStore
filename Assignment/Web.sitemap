@@ -1,25 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
 	<siteMapNode>
-		<siteMapNode title="Category 1" description="">
-			<siteMapNode url="~/BookCategories/newarrivals.aspx#list-item-1" title="Sub1"  description="" />
-			<siteMapNode url="~/BookCategories/newarrivals.aspx#list-item-2" title="Sub2"  description="" />
+		<siteMapNode title="SCALE FIGURES" description="">
+			<siteMapNode url="~/FigureCategories/ScaleFigure.aspx#list-item-1" title="All Product"  description="" />
+			<siteMapNode url="~/FigureCategories/ScaleFigure.aspx#list-item-2" title="Pre-Order"  description="" />
+			<siteMapNode url="~/FigureCategories/ScaleFigure.aspx#list-item-3" title="Available Now"  description="" />
 		</siteMapNode>
-		<siteMapNode title="Category 2" description="">
-			<siteMapNode url="~/BookCategories/fiction.aspx#list-item-1" title="Sub1"  description="" />
-			<siteMapNode url="~/BookCategories/fiction.aspx#list-item-2" title="Sub2"  description="" />
+		<siteMapNode title="NENDOROIDS" description="">
+			<siteMapNode url="~/FigureCategories/Nendoroid.aspx#list-item-1" title="All Product"  description="" />
+			<siteMapNode url="~/FigureCategories/Nendoroid.aspx#list-item-2" title="Pre-Order"  description="" />
+			<siteMapNode url="~/FigureCategories/Nendoroid.aspx#list-item-3" title="Available Now"  description="" />
 		</siteMapNode>
-		<siteMapNode title="Category 3" description="">
-			<siteMapNode url="~/BookCategories/nonfiction.aspx#list-item-1" title="Sub1" description="" />
-			<siteMapNode url="~/BookCategories/nonfiction.aspx#list-item-2" title="Sub2"  description="" />
+		<siteMapNode title="GUNDAM" description="">
+			<siteMapNode url="~/FigureCategories/Gundam.aspx#list-item-1" title="All Product"  description="" />
+			<siteMapNode url="~/FigureCategories/Gundam.aspx#list-item-2" title="Pre-Order"  description="" />
+			<siteMapNode url="~/FigureCategories/Gundam.aspx#list-item-3" title="Available Now"  description="" />
 		</siteMapNode>
-		<siteMapNode title="Category 4" description="">
-			<siteMapNode url="~/BookCategories/children.aspx#list-item-1" title="Sub1"  description="" />
-			<siteMapNode url="~/BookCategories/children.aspx#list-item-2" title="Sub2"  description="" />
+		<siteMapNode title="DOLLS" description="">
+			<siteMapNode url="~/FigureCategories/Doll.aspx#list-item-1" title="All Product"  description="" />
+			<siteMapNode url="~/FigureCategories/Doll.aspx#list-item-2" title="Pre-Order"  description="" />
+			<siteMapNode url="~/FigureCategories/Doll.aspx#list-item-3" title="Available Now"  description="" />
 		</siteMapNode>
-		<siteMapNode title="Category 5" description="">
-			<siteMapNode url="~/BookCategories/mangalightnovel.aspx#list-item-1" title="Sub1"  description="" />
-			<siteMapNode url="~/BookCategories/mangalightnovel.aspx#list-item-2" title="Sub2"  description="" />
+		<siteMapNode title="GOODS" description="">
+			<siteMapNode url="~/FigureCategories/Good.aspx#list-item-1" title="All Product"  description="" />
+			<siteMapNode url="~/FigureCategories/Good.aspx#list-item-2" title="Pre-Order"  description="" />
+			<siteMapNode url="~/FigureCategories/Good.aspx#list-item-3" title="Available Now"  description="" />
 		</siteMapNode>
 	</siteMapNode>
 </siteMap>

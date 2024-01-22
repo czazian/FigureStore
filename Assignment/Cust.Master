@@ -22,7 +22,7 @@
     <link href="Cust.css" rel="stylesheet">
 
     <title></title>
-    <link rel="icon" type="image/x-icon" href="??">
+    <link rel="icon" type="image/x-icon" href="~/Image/Element/window.png">
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -54,14 +54,26 @@
         <!--Header-->
         <div class="header">
 
+            <div class="binder">
+                <div style="margin-left: 20px;" class="business-icon">
+                    <div style="color: white; height: inherit; text-align: center; font-weight: bold; font-size: 20px;">
+                        <asp:ImageButton Width="120" Height="35" PostBackUrl="~/Customer/Home.aspx" ImageUrl="~/Image/Element/Logo.png" runat="server"/>
+                    </div>
+                </div>
 
-            <div style="margin-left: 20px;" class="business-icon">
-                <div style="color: white; height: inherit; text-align: center; font-weight: bold; font-size: 20px;">
-                    <a href='<%= ResolveUrl("~/Customer/Home.aspx") %>'>Business Icon</a>
+
+                <div class="search-ctn col-7 container-fluid" style="margin-top: 3px;">
+                    <div class="search-ctn d-flex input-group" role="search">
+                        <asp:TextBox Style="color: black;" TextMode="Search" ID="txtSearch" runat="server" class="form-control border border-1 search-bar" placeholder="Product Name" />
+
+                        <asp:LinkButton ID="btnSch" ValidationGroup="btn" runat="server" CssClass="btn-light btn btn-search">
+                            <i style="font-size: 18px; display: flex; justify-content: center; align-items: center; margin-top: 4.5px;" class="fa fa-search"></i>
+                        </asp:LinkButton>
+                    </div>
+
+                    <asp:RequiredFieldValidator Style="font-size: 13px; margin-left: 3px;" Display="Dynamic" ID="searchtext" runat="server" ControlToValidate="txtSearch" ErrorMessage="Please do not leave empty!" ForeColor="Red" ValidationGroup="btn" />
                 </div>
             </div>
-
-
 
 
             <div class="right-header">
@@ -73,9 +85,9 @@
                             <asp:LinkButton ID="btnCart" runat="server" CssClass="btn header-font" Style="width: 120px; font-size: 17px;">
                                 <i style="color: white; font-size: 18px" class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;
                                 Cart
-                                <div style="position:relative; margin-top:-5px; border-radius: 100px; background-color: darkred; padding: 5px; float: right; height: 16px; width: 16px;">
-                                    <asp:Label Style="position: absolute;
-    top: 0; left: 4.5px; color: white; height: 16px; font-size: 12px;" ID="cartcount" runat="server" Text="2"/>
+                                <div style="position: relative; margin-top: -5px; border-radius: 100px; background-color:#ff2b2b ; padding: 5px; float: right; height: 16px; width: 16px;">
+                                    <asp:Label Style="position: absolute; top: 0; left: 4.5px; color: white; height: 16px; font-size: 12px;"
+                                        ID="cartcount" runat="server" Text="2" />
                                 </div>
                             </asp:LinkButton>
                         </div>
@@ -106,21 +118,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-
-
-
-
-                <div class="search-ctn container-fluid" style="margin-right: 60px;">
-                    <div class="search-ctn d-flex input-group" role="search">
-                        <asp:TextBox Style="margin-left: 10px; color: black;" TextMode="Search" ID="txtSearch" runat="server" class="form-control border border-1 search-bar" placeholder="Product Name" />
-
-                        <asp:LinkButton ID="btnSch" ValidationGroup="btn" runat="server" CssClass="btn-light btn btn-search">
-                            <i style="font-size: 18px; display: flex; justify-content: center; align-items: center; margin-top: 4.5px;" class="fa fa-search"></i>
-                        </asp:LinkButton>
-                    </div>
-
-                    <asp:RequiredFieldValidator Style="font-size: 13px; margin-left: 3px;" Display="Dynamic" ID="searchtext" runat="server" ControlToValidate="txtSearch" ErrorMessage="Please do not leave empty!" ForeColor="Red" ValidationGroup="btn" />
                 </div>
 
 
@@ -187,7 +184,7 @@
             <div class="footer-container container-fluid">
                 <div class="top">
                     <div class="business-name" style="font-size: 1.7rem">
-                        Business Name
+                        Apex Online Shop
                     </div>
                     <div class="social-media" style="font-size: 23px;">
                         <a class="space" href="https://www.facebook.com/"><i class="ic fa-brands fa-facebook"></i></a>
@@ -197,7 +194,7 @@
                     </div>
                 </div>
                 <div class="middle">
-                    <div style="width: 30%">
+                    <div class="map" style="width: 30%">
                         <div style="color: white" class="title">
                             MAP
                         </div>
@@ -213,11 +210,11 @@
                             MAIN CATEGORIES
                         </div>
                         <div style="margin-top: 15px; display: flex; flex-flow: column nowrap;" class="items">
-                            <a href="?" class="space">Category 1</a>
-                            <a href="?" class="space">Category 2</a>
-                            <a href="?" class="space">Category 3</a>
-                            <a href="?" class="space">Category 4</a>
-                            <a href="?" class="space">Category 5</a>
+                            <a href='<%= ResolveUrl("~/FigureCategories/ScaleFigure.aspx") %>' class="space">Scale Figures</a>
+                            <a href='<%= ResolveUrl("~/FigureCategories/Nendoroid.aspx") %>' class="space">Nendoroids</a>
+                            <a href='<%= ResolveUrl("~/FigureCategories/Gundam.aspx") %>' class="space">Gundam</a>
+                            <a href='<%= ResolveUrl("~/FigureCategories/Doll.aspx") %>' class="space">Dolls</a>
+                            <a href='<%= ResolveUrl("~/FigureCategories/Good.aspx") %>' class="space">Goods</a>
                         </div>
                     </div>
 
@@ -235,7 +232,7 @@
                 </div>
                 <hr />
                 <div class="bottom" style="text-align: center; color: white;">
-                    © 2022 - 2023 Business Name (Copyright All Right Reserved)
+                    © 2023 - 2024 Apex Online Shop (Copyright All Right Reserved)
                 </div>
             </div>
         </footer>

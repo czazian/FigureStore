@@ -17,11 +17,11 @@
                     
                     <div>
                         <div class="input-field">
-                            <input type="text" name="email" placeholder="Enter your e-mail" required>
+                            <input type="text" name="email" placeholder="Enter your e-mail">
                             <i class="uil uil-envelope icon"></i>
                         </div>
                         <div class="input-field">
-                            <input type="password" name="password" placeholder="Enter your password" required>
+                            <input type="password" name="password" placeholder="Enter your password">
                             <i class="uil uil-lock icon"></i>
                             <i class="uil uil-eye-slash showHidePw"></i>
                         </div>

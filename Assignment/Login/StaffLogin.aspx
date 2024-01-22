@@ -17,11 +17,11 @@
 
                     <div>
                         <div class="input-field">
-                            <input type="text" name="id" placeholder="Enter Staff ID" required>
+                            <input type="text" name="id" placeholder="Enter Staff ID">
                             <i class="uil uil-user"></i>
                         </div>
                         <div class="input-field">
-                            <input type="password" name="password" class="password" placeholder="Enter your password" required>
+                            <input type="password" name="password" class="password" placeholder="Enter your password">
                             <i class="uil uil-lock icon"></i>
                             <i class="uil uil-eye-slash showHidePw"></i>
                         </div>

@@ -48,7 +48,7 @@ body {
     flex-flow: row nowrap;
     width: 100%;
     justify-content: space-between;
-    background-color: #3a3a3b;
+    background-color: #212121;
 }
 
 .form-control:focus {
@@ -86,11 +86,11 @@ body {
 
 a.LoginHover:hover {
     color: white;
-    background-color: #3a3a3b;
+    background-color: #212121;
 }
 
 .dropdowns {
-    background-color: #515557;
+    background-color: #e8e3e3;
     padding: 8px;
 }
 
@@ -110,13 +110,13 @@ a.LoginHover:hover {
 }
 
 a.HyperLinkHover:hover {
-    color: white;
-    background-color: #515557;
+    color: #212121;
+    background-color: #e8e3e3;
     font-size: 14px;
 }
 
 .MainHyperLinkHover {
-    color: white;
+    color: #212121;
 }
 
 a.MainHyperLinkHover:hover, a.MainHyperLinkHover:focus, a.MainHyperLinkHover:active{
@@ -131,8 +131,8 @@ a.HyperLinkHover:hover + a.MainHyperLinkHover {
 
 footer {
     margin-top: auto;
-    background-color: #3a3a3b;
-    display:flex;
+    background-color: #212121;
+    display: flex;
     flex-flow: column nowrap;
 }
 
@@ -190,11 +190,22 @@ footer {
     flex-flow: row nowrap;
 }
 
+.binder {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    margin-left: -10px;
+}
+
+.search-ctn {
+    justify-content: center;
+}
+
 /*Mobile and Tablet*/
 @media (max-width: 869px) {
     .search-ctn{
         width: 100%;
-        order: 3;
+        order: -1;
     }
 
     .header, .right-header {
@@ -210,7 +221,7 @@ footer {
         margin-right: 0px;
     }
 
-    .top, .middle, .subscribe, hr {
+    .top, .middle, .subscribe, hr, .map {
         display: none;
     }
 }
