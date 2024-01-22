@@ -14,7 +14,7 @@
 
                     <span class="login-title">Customer Login Page
                     </span>
-
+                    
                     <div>
                         <div class="input-field">
                             <input type="text" name="email" placeholder="Enter your e-mail" required>
