@@ -1,0 +1,146 @@
+﻿
+.noSpinners::-webkit-inner-spin-button,
+.noSpinners::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.product-container {
+    width: 100%;
+    height: contain;
+    justify-content: center;
+    display: flex;
+    margin: 20px 0px 20px 0px;
+    gap: 15px;
+}
+
+.product-header {
+    border-bottom: 1px solid lightgrey;
+    padding: 15px;
+}
+
+.left-box {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 800px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    height: fit-content;
+}
+
+.right-box {
+    border: 1px solid grey;
+    border-radius: 15px;
+    width: 350px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 10px;
+    height: fit-content;
+    padding-bottom: 10px;
+}
+
+.quantity-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.price {
+    font-weight: bold;
+    background-color: #212121;
+    border-radius: 15px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 15px 10px 15px 10px;
+}
+
+.top-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.main-img {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.select-img {
+    width: 15%;
+    border-left: 1px solid lightgrey;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.middle {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sideimg {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+.title {
+    width: 150px;
+    color: #ff7e29;
+}
+
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 96%;
+    background-color: lightgrey;
+    height: 2px;
+    color: lightgrey;
+}
+
+
+/*Suggestion*/
+.product-suggestion {
+    height: fit-content;
+    width: 230px;
+    padding: 10px 20px 10px 20px;
+}
+
+.sname, .sprice {
+    text-align: center;
+    font-weight: bold;
+    color: #ff7e29;
+}
+
+.sprice {
+    margin-top: 5px;
+}
+
+.deconone {
+    text-decoration: none !important;
+}
+
+
+.simg {
+    transition: 0.35s ease-in-out;
+}
+
+    .simg:hover {
+        transform: scale(1.07);
+    }

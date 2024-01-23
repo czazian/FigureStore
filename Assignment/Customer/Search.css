@@ -1,51 +1,12 @@
-﻿.midPanel{
-    display:flex;
-    flex-flow: row nowrap;
-    justify-content:center;
-    gap : 18px;
-}
+﻿/*Contents*/
 
-.slide {
-    width: 580px;
-    height: 327.5px;
-    top: 12px;
-}
 
-.iSlide {
-    border-radius: 10px;
-}
-
-.toper {
-    width: 240px;
-    height: 327.5px;
-    display: inline-block;
-    margin-top: 12px;
-    border-radius: 10px;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: black;
-    padding: 5px; 
-    border-radius : 5px;
-}
-
-.carousel-control-prev, .carousel-control-next {
-    width: 28px;
-}
-
-/*Contents*/
-.content-container {
+.contents {
+    width: 95%;
     display: flex;
-    align-items: center;
-    flex-flow:column nowrap;
-    margin-top: 30px;
-    margin-bottom : 30px; 
-}
-
-.contents { 
-    width: 85%;
-    display:flex;
     flex-flow: column nowrap;
+    justify-content: center;
+    align-items:center;
 }
 
 .content-header {
@@ -55,25 +16,23 @@
     text-shadow: 1px 1px lightgrey;
 }
 
-
-.card-wrap {
+.item-container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    gap: 10px;
     width: 100%;
-    gap: 20px;
-    flex: 0 0 400px;
 }
 
 .itemslide {
     width: 100%;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
 .imgFigure {
-    width:100%;
-    padding : 15px; 
-    transition : 0.35s ease-in-out;
+    width: 100%;
+    padding: 15px;
+    transition: 0.35s ease-in-out;
 }
 
     .imgFigure:hover {
@@ -118,5 +77,5 @@
 
 .item-name {
     font-weight: bold;
-    font-size : 18px;
+    font-size: 18px;
 }

@@ -76,7 +76,7 @@
 
                         <!--Each Display Maximum is 5 Items!!!-->
                         <!--Display1-->
-                        <div class="carousel-item active">
+                        <div class="carousel-item active center">
                             <div class="card-wrap">
 
                                 <!--An Item-->
@@ -97,7 +97,7 @@
                                             </asp:LinkButton>
                                         </div>
                                         <div class="item-view">
-                                            <asp:LinkButton runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/IndividualFigure.aspx" runat="server">
                                                 <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
                                             </asp:LinkButton>
                                         </div>
@@ -123,7 +123,7 @@
                                             </asp:LinkButton>
                                         </div>
                                         <div class="item-view">
-                                            <asp:LinkButton runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/IndividualFigure.aspx" runat="server">
                                                 <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
                                             </asp:LinkButton>
                                         </div>
@@ -149,7 +149,7 @@
                                             </asp:LinkButton>
                                         </div>
                                         <div class="item-view">
-                                            <asp:LinkButton runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/IndividualFigure.aspx" runat="server">
                                                 <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
                                             </asp:LinkButton>
                                         </div>
@@ -175,7 +175,7 @@
                                             </asp:LinkButton>
                                         </div>
                                         <div class="item-view">
-                                            <asp:LinkButton runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/IndividualFigure.aspx" runat="server">
                                                 <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
                                             </asp:LinkButton>
                                         </div>
@@ -201,7 +201,7 @@
                                             </asp:LinkButton>
                                         </div>
                                         <div class="item-view">
-                                            <asp:LinkButton runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/IndividualFigure.aspx" runat="server">
                                                 <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
                                             </asp:LinkButton>
                                         </div>
@@ -234,7 +234,7 @@
                                             </asp:LinkButton>
                                         </div>
                                         <div class="item-view">
-                                            <asp:LinkButton runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/IndividualFigure.aspx" runat="server">
                 <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
                                             </asp:LinkButton>
                                         </div>
@@ -260,7 +260,7 @@
                                             </asp:LinkButton>
                                         </div>
                                         <div class="item-view">
-                                            <asp:LinkButton runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/IndividualFigure.aspx" runat="server">
                 <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
                                             </asp:LinkButton>
                                         </div>
@@ -286,7 +286,7 @@
                                             </asp:LinkButton>
                                         </div>
                                         <div class="item-view">
-                                            <asp:LinkButton runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/IndividualFigure.aspx" runat="server">
                 <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
                                             </asp:LinkButton>
                                         </div>

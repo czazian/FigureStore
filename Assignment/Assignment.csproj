@@ -71,6 +71,10 @@
     <Content Include="Customer\Home.aspx" />
     <Content Include="Customer\Home.css" />
     <Content Include="Customer\Home.js" />
+    <Content Include="Customer\IndividualFigure.aspx" />
+    <Content Include="Customer\InidividualFigure.css" />
+    <Content Include="Customer\Search.aspx" />
+    <Content Include="Customer\Search.css" />
     <Content Include="FigureCategories\Doll.aspx" />
     <Content Include="FigureCategories\Good.aspx" />
     <Content Include="FigureCategories\Gundam.aspx" />
@@ -113,6 +117,20 @@
     </Compile>
     <Compile Include="Customer\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\IndividualFigure.aspx.cs">
+      <DependentUpon>IndividualFigure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\IndividualFigure.aspx.designer.cs">
+      <DependentUpon>IndividualFigure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
     <Compile Include="FigureCategories\Doll.aspx.cs">
       <DependentUpon>Doll.aspx</DependentUpon>

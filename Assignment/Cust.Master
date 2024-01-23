@@ -66,7 +66,7 @@
                     <div class="search-ctn d-flex input-group" role="search">
                         <asp:TextBox Style="color: black;" TextMode="Search" ID="txtSearch" runat="server" class="form-control border border-1 search-bar" placeholder="Product Name" />
 
-                        <asp:LinkButton ID="btnSch" ValidationGroup="btn" runat="server" CssClass="btn-light btn btn-search">
+                        <asp:LinkButton PostBackUrl="~/Customer/Search.aspx" ID="btnSch" ValidationGroup="btn" runat="server" CssClass="btn-light btn btn-search">
                             <i style="font-size: 18px; display: flex; justify-content: center; align-items: center; margin-top: 4.5px;" class="fa fa-search"></i>
                         </asp:LinkButton>
                     </div>
@@ -183,10 +183,10 @@
             </div>
             <div class="footer-container container-fluid">
                 <div class="top">
-                    <div class="business-name" style="font-size: 1.7rem">
+                    <div class="business-name" style="font-size: 1.7rem; margin-bottom: 10px;">
                         Apex Online Shop
                     </div>
-                    <div class="social-media" style="font-size: 23px;">
+                    <div class="social-media" style="font-size: 23px; color:white">
                         <a class="space" href="https://www.facebook.com/"><i class="ic fa-brands fa-facebook"></i></a>
                         <a class="space" href="https://twitter.com/"><i class="ic fa-brands fa-x-twitter"></i></a>
                         <a class="space" href="https://www.instagram.com/"><i class="ic fa-brands fa-instagram"></i></a>
@@ -195,7 +195,7 @@
                 </div>
                 <div class="middle">
                     <div class="map" style="width: 30%">
-                        <div style="color: white" class="title">
+                        <div style="color: #ff7e29;" class="title">
                             MAP
                         </div>
                         <iframe
@@ -206,7 +206,7 @@
                     </div>
 
                     <div class="category" style="color: white; width: 25%">
-                        <div class="title">
+                        <div class="title-p" style="color: #ff7e29;">
                             MAIN CATEGORIES
                         </div>
                         <div style="margin-top: 15px; display: flex; flex-flow: column nowrap;" class="items">
@@ -219,7 +219,7 @@
                     </div>
 
                     <div class="social-name" style="color: white; width: 25%">
-                        <div class="title">
+                        <div class="title-p" style="color: #ff7e29;">
                             SOCIAL MEDIAS
                         </div>
                         <div style="margin-top: 15px; display: flex; flex-flow: column nowrap;" class="items">

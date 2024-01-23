@@ -44,28 +44,28 @@
 
                     <div>
                         <div class="input-field">
-                            <input type="text" name="name" placeholder="Enter your name" required>
+                            <input type="text" name="name" placeholder="Enter your name">
                             <i class="uil uil-user"></i>
                         </div>
                         <div class="input-field">
-                            <input type="text" name="phone" placeholder="Enter your phone number" required>
+                            <input type="text" name="phone" placeholder="Enter your phone number">
                             <i class="uil uil-phone"></i>
                         </div>
                         <div class="input-field">
-                            <input type="text" name="email" placeholder="Enter your email" required>
+                            <input type="text" name="email" placeholder="Enter your email">
                             <i class="uil uil-envelope icon"></i>
                         </div>
                         <div class="input-field">
-                            <input type="text" name="address" placeholder="Enter your address" required>
+                            <input type="text" name="address" placeholder="Enter your address">
                             <i class="uil uil-map"></i>
                         </div>
                         <div class="input-field">
-                            <input type="password" name="pass1" class="password" placeholder="Create a password" required>
+                            <input type="password" name="pass1" class="password" placeholder="Create a password">
                             <i class="uil uil-lock icon"></i>
                             <i class="uil uil-eye-slash showHidePw"></i>
                         </div>
                         <div class="input-field">
-                            <input type="password" name="pass2" class="password" placeholder="Confirm a password" required>
+                            <input type="password" name="pass2" class="password" placeholder="Confirm a password">
                             <i class="uil uil-lock icon"></i>
                             <i class="uil uil-eye-slash showHidePw"></i>
                         </div>
