@@ -120,3 +120,12 @@
     font-weight: bold;
     font-size : 18px;
 }
+
+
+/*Click this back to top*/
+.toTop {
+    position :fixed;
+    bottom: 15px;
+    right: 15px;
+    display:none;
+}

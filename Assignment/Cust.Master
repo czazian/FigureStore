@@ -129,7 +129,7 @@
         <!--Navigation Bar-->
         <asp:Repeater runat="server" ID="menu" DataSourceID="SiteMapDataSource1">
             <HeaderTemplate>
-                <div class="dropdowns">
+                <div class="dropdowns" id="dropdown">
                     <div class="nav">
             </HeaderTemplate>
             <ItemTemplate>

@@ -144,3 +144,11 @@ hr {
     .simg:hover {
         transform: scale(1.07);
     }
+
+/*Click this back to top*/
+.toTop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: none;
+}

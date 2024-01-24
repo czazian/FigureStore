@@ -71,7 +71,7 @@
                 <div class="content-header">
                     SCALE FIGURES
                 </div>
-                <div id="carouselControl1"  class="carousel itemslide" data-bs-ride="carousel">
+                <div id="carouselControl1" class="carousel itemslide" data-bs-ride="carousel">
                     <div class="carousel-inner">
 
                         <!--Each Display Maximum is 5 Items!!!-->
@@ -318,7 +318,7 @@
                 <div class="content-header">
                     NENDOROIDS
                 </div>
-                <div id="carouselControl2" class="carousel itemslide"  data-bs-ride="carousel">
+                <div id="carouselControl2" class="carousel itemslide" data-bs-ride="carousel">
                     <div class="carousel-inner">
 
                         <!--Each Display Maximum is 5 Items!!!-->
@@ -782,4 +782,29 @@
 
         </div>
     </div>
+
+
+    <!--Click this button back to top of the page-->
+    <div class="toTop" id="toTop">
+        <asp:LinkButton OnClientClick="toTop() ;return false;" ID="top" runat="server">
+            <i style="border-radius: 50px; background-color:#ff7e29; padding: 10px 12.5px 10px 12.5px; color:white; font-size: 20px;" class="fa-solid fa-arrow-up"></i>
+        </asp:LinkButton>
+    </div>
+    
+    <script>
+        window.addEventListener("scroll", function () {
+            let box = document.getElementById("toTop");
+            var elementTarget = document.getElementById("dropdown");
+            if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        });
+
+        function toTop() {
+            document.documentElement.scrollTop = 0; 
+        }
+    </script>
+
 </asp:Content>
