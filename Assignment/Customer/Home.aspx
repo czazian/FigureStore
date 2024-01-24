@@ -88,7 +88,7 @@
                                         <asp:Label ID="Label15" CssClass="sentence" runat="server" Text="TENITOL Jess"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label16" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label16" runat="server" Text="RM 233.40"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -108,13 +108,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image9" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image9" ImageUrl="~/Image/Product/f3.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label17" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label17" CssClass="sentence" runat="server" Text="Usada Pekora"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label18" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label18" runat="server" Text="RM 1414.90"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -134,13 +134,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image10" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image10" ImageUrl="~/Image/Product/f4.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label19" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label19" CssClass="sentence" runat="server" Text="Chen Hai"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label20" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label20" runat="server" Text="RM 707.50"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -160,13 +160,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image11" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image11" ImageUrl="~/Image/Product/f5.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label21" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label21" CssClass="sentence" runat="server" Text="Marcille Donato: Adding Color to the Dungeon"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label22" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label22" runat="server" Text="RM 926.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -186,13 +186,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image12" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image12" ImageUrl="~/Image/Product/f6.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label23" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label23" CssClass="sentence" runat="server" Text="Mikasa Ackerman: DX Ver."></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label24" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label24" runat="server" Text="RM 804.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -219,13 +219,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image13" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image13" ImageUrl="~/Image/Product/f7.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label25" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label25" CssClass="sentence" runat="server" Text="Kurige-chan"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label26" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label26" runat="server" Text="RM 636.70"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -245,13 +245,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image14" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image14" ImageUrl="~/Image/Product/f8.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label27" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label27" CssClass="sentence" runat="server" Text="POP UP PARADE Eren Yeager: Attack Titan Ver."></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label28" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label28" runat="server" Text="RM 154.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -271,13 +271,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image15" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image15" ImageUrl="~/Image/Product/f9.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label29" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label29" CssClass="sentence" runat="server" Text="Racing Miku 2021: Private Ver."></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label30" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label30" runat="server" Text="RM 959.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -335,7 +335,7 @@
                                         <asp:Label ID="Label31" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label32" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label32" runat="server" Text="RM 209.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -355,13 +355,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image17" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image17" ImageUrl="~/Image/Product/f10.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label33" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label33" CssClass="sentence" runat="server" Text="Nendoroid Chisato Nishikigi: Cafe LycoReco Uniform Ver."></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label34" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label34" runat="server" Text="RM 200.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -381,13 +381,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image18" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image18" ImageUrl="~/Image/Product/f11.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label35" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label35" CssClass="sentence" runat="server" Text="Nendoroid Takina Inoue: Cafe LycoReco Uniform Ver."></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label36" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label36" runat="server" Text="RM 200.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -407,13 +407,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image19" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image19" ImageUrl="~/Image/Product/f12.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label37" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label37" CssClass="sentence" runat="server" Text="Nendoroid Fern"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label38" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label38" runat="server" Text="RM 189.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -433,13 +433,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image20" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image20" ImageUrl="~/Image/Product/f13.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label39" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label39" CssClass="sentence" runat="server" Text="Nendoroid Shiroko Sunaookami"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label40" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label40" runat="server" Text="RM 254.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -466,13 +466,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image21" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image21" ImageUrl="~/Image/Product/f14.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label41" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label41" CssClass="sentence" runat="server" Text="Nendoroid Shigure Ui"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label42" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label42" runat="server" Text="RM 241.10"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -492,13 +492,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image22" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image22" ImageUrl="~/Image/Product/f15.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label43" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label43" CssClass="sentence" runat="server" Text="Nendoroid Minato Aqua"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label44" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label44" runat="server" Text="RM 196.20"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -518,13 +518,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image23" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image23" ImageUrl="~/Image/Product/f16.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label45" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label45" CssClass="sentence" runat="server" Text="Nendoroid Cheshire"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label46" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label46" runat="server" Text="RM 257.30"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -563,7 +563,7 @@
             <!--Category 3-->
             <div class="contents">
                 <div class="content-header">
-                    GOODS
+                    DOLLS
                 </div>
                 <div id="carouselControl3" class="carousel itemslide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -576,13 +576,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="imgFigure" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="imgFigure" ImageUrl="~/Image/Product/f17.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="lblName" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="lblName" CssClass="sentence" runat="server" Text="Shangri-La Frontier Plushie Emul"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="lblPrice" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="lblPrice" runat="server" Text="RM 106.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -602,13 +602,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image1" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image1" ImageUrl="~/Image/Product/f18.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label1" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label1" CssClass="sentence" runat="server" Text="Shangri-La Frontier Plushie Sunraku"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label2" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label2" runat="server" Text="RM 106.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -628,13 +628,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image2" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image2" ImageUrl="~/Image/Product/f19.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label3" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label3" CssClass="sentence" runat="server" Text="Love Live! Nijigasaki High School Idol Club Plushie Ayumu Uehara"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label4" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label4" runat="server" Text="RM 141.50"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -654,13 +654,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image3" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image3" ImageUrl="~/Image/Product/f20.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label5" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label5" CssClass="sentence" runat="server" Text="Attack on Titan Cart Titan Plushie"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label6" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label6" runat="server" Text="RM 530.60"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -680,13 +680,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image4" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image4" ImageUrl="~/Image/Product/f21.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label7" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label7" CssClass="sentence" runat="server" Text="Atelier Ryza: Ever Darkness & the Secret Hideout The Animation Plushie Reisalin Stout"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label8" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label8" runat="server" Text="RM 141.50"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -713,13 +713,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image5" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image5" ImageUrl="~/Image/Product/f22.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label9" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label9" CssClass="sentence" runat="server" Text="Frieren: Beyond Journey's End Plushie Frieren"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label10" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label10" runat="server" Text="RM 141.50"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -739,39 +739,13 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image6" ImageUrl="~/Image/Product/f1.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image6" ImageUrl="~/Image/Product/f23.jpg" />
                                     </div>
                                     <div class="item-name">
-                                        <asp:Label ID="Label11" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
+                                        <asp:Label ID="Label11" CssClass="sentence" runat="server" Text="Sword Art Online the Movie -Progressive- Scherzo of Deep Night Plushie Asuna"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label12" runat="server" Text="RM 100.00"></asp:Label>
-                                    </div>
-                                    <div class="item-details">
-                                        <div class="item-buy">
-                                            <asp:LinkButton runat="server">
-                <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
-                                            </asp:LinkButton>
-                                        </div>
-                                        <div class="item-view">
-                                            <asp:LinkButton runat="server">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
-                                            </asp:LinkButton>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End of An Item-->
-
-                                <!--An Item-->
-                                <div class="item">
-                                    <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image7" ImageUrl="~/Image/Product/f1.jpg" />
-                                    </div>
-                                    <div class="item-name">
-                                        <asp:Label ID="Label13" CssClass="sentence" runat="server" Text="Nendoroid Frieren"></asp:Label>
-                                    </div>
-                                    <div class="item-price">
-                                        <asp:Label ID="Label14" runat="server" Text="RM 100.00"></asp:Label>
+                                        <asp:Label ID="Label12" runat="server" Text="RM 160.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
