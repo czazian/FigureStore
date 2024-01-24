@@ -78,7 +78,7 @@
                         <td style="width: contain;">
                             <div>
                                 <div>
-                                    <div style="display: flex; flex-flow: row nowrap; justify-content: center;">
+                                    <div style="display: flex; flex-flow: row nowrap; justify-content: left;">
                                         <!--Deduct 1-->
                                         <span class="input-group-btn">
                                             <asp:LinkButton ValidationGroup="grp" OnClientClick="return false" runat="server" ID="btnMinus" CssClass="quantity-left-minus btn btn-number" Style="background-color: #ff7e29; color: white;" data-type="minus" data-field="">
