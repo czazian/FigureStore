@@ -108,7 +108,7 @@
             <!--Add to card button-->
             <div class="row details-row addtocart" style="width: 100%;">
                 <div style="display: flex; justify-content: center;">
-                    <asp:Button runat="server" ID="btnCart" CssClass="btn" Style="background-color: #ff7e29; width: 83%; margin-top: 5px; color: white; font-weight: bold;" Text="Add to cart" />
+                    <asp:Button PostBackUrl="~/Customer/Cart.aspx" runat="server" ID="btnCart" CssClass="btn" Style="background-color: #ff7e29; width: 83%; margin-top: 5px; color: white; font-weight: bold;" Text="Add to cart" />
                 </div>
             </div>
 

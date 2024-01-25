@@ -104,16 +104,6 @@ td {
     color: #ff7e29;
 }
 
-hr {
-    border: 0;
-    clear: both;
-    display: block;
-    width: 96%;
-    background-color: lightgrey;
-    height: 2px;
-    color: lightgrey;
-}
-
 
 /*Suggestion*/
 .product-suggestion {

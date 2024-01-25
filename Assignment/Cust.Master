@@ -32,7 +32,7 @@
     <form id="Customer" runat="server">
 
         <!--Promoter-->
-        <div class="outer-header">
+        <div class="outer-header" id="outer-header">
             <div class="header-container">
                 <div id="header-msg">
                     <div class="slides">
@@ -52,7 +52,7 @@
         </div>
 
         <!--Header-->
-        <div class="header">
+        <div class="header" id="header">
 
             <div class="binder">
                 <div style="margin-left: 20px;" class="business-icon">
@@ -82,7 +82,7 @@
 
                     <div class="cart-container action">
                         <div>
-                            <asp:LinkButton ID="btnCart" runat="server" CssClass="btn header-font" Style="width: 120px; font-size: 17px;">
+                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx" ID="btnCart" runat="server" CssClass="btn header-font" Style="width: 120px; font-size: 17px;">
                                 <i style="color: white; font-size: 18px" class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;
                                 Cart
                                 <div style="position: relative; margin-top: -5px; border-radius: 100px; background-color:#ff2b2b ; padding: 5px; float: right; height: 16px; width: 16px;">

@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Customer\Cart.aspx" />
+    <Content Include="Customer\Cart.css" />
     <Content Include="Customer\Home.aspx" />
     <Content Include="Customer\Home.css" />
     <Content Include="Customer\Home.js" />
