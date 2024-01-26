@@ -95,11 +95,11 @@
                         <asp:TextBox runat="server" ID="TextBox1" class="form-control" placeholder="House no. or Unit no." />
                         <label for="txtHouse">House no. / Unit no.</label>
                     </div>
-                    <div class="form-floating city">
-                        <asp:TextBox runat="server" ID="txtCity" class="form-control" placeholder="City" />
-                        <label for="txtCity">City</label>
-                    </div>
                     <div class="state">
+                        <div class="form-floating city">
+                            <asp:TextBox runat="server" ID="txtCity" class="form-control" placeholder="City" />
+                            <label for="txtCity">City</label>
+                        </div>
                         <div class="form-floating statename">
                             <asp:DropDownList runat="server" CssClass="form-control" ID="ddlState">
                                 <asp:ListItem Selected="True" runat="server" Text="Please select your state" />
@@ -123,17 +123,17 @@
                             <asp:TextBox runat="server" ID="txtPostCode" class="form-control" placeholder="Postcode" />
                             <label for="txtPostCode">Postcode</label>
                         </div>
-                        <div class="form-floating phone">
-                            <asp:TextBox TextMode="Phone" runat="server" ID="txtPhone" class="form-control" placeholder="Phone" />
-                            <label for="txtPhone">Phone</label>
-                        </div>
                     </div>
-                    <div class="checkout">
-                        <asp:Button Style="background-color: #212121; color: white; padding: 5px; border-radius: 5px;" runat="server" ID="btnBack" Text="Back to Cart" PostBackUrl="~/Customer/Cart.aspx" />
-                        <asp:LinkButton Style="background-color: #ff7e29; color: white; padding: 8.5px; text-decoration: none; border-radius: 5px;" runat="server" ID="lkbCheckout">
+                    <div class="form-floating phone">
+                        <asp:TextBox TextMode="Phone" runat="server" ID="txtPhone" class="form-control" placeholder="Phone" />
+                        <label for="txtPhone">Phone</label>
+                    </div>
+                </div>
+                <div class="checkout">
+                    <asp:Button Style="background-color: #212121; color: white; padding: 5px; border-radius: 5px;" runat="server" ID="btnBack" Text="Back to Cart" PostBackUrl="~/Customer/Cart.aspx" />
+                    <asp:LinkButton Style="background-color: #ff7e29; color: white; padding: 8.5px; text-decoration: none; border-radius: 5px;" runat="server" ID="lkbCheckout">
                         <i class="fa-solid fa-cart-shopping"></i>&nbsp;Checkout
-                        </asp:LinkButton>
-                    </div>
+                    </asp:LinkButton>
                 </div>
             </div>
         </div>
@@ -236,7 +236,13 @@
                 document.getElementById('<%= master.ClientID %>').classList.remove("selected");
 
                 //Behavior
-                document.getElementById("payment-container").style.display = "none";
+                let box = document.getElementById("payment-container");
+                box.classList.remove("payment-container-show")
+
+                //Remove data if choose back cod
+                document.getElementById('<%= txtExpiryDate.ClientID %>').value = "";
+                document.getElementById('<%= txtCardNo.ClientID %>').value = "";
+                document.getElementById('<%= txtCVV.ClientID %>').value = "";
             }
 
             function visa() {
@@ -246,7 +252,8 @@
                 document.getElementById('<%= master.ClientID %>').classList.remove("selected");
 
                 //Behavior
-                document.getElementById("payment-container").style.display = "block";
+                let box = document.getElementById("payment-container");
+                box.classList.add("payment-container-show");
             }
 
             function master() {
@@ -256,7 +263,8 @@
                 document.getElementById('<%= visa.ClientID %>').classList.remove("selected");
 
                 //Behavior
-                document.getElementById("payment-container").style.display = "block";
+                let box = document.getElementById("payment-container");
+                box.classList.add("payment-container-show");
             }
         </script>
 
