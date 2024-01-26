@@ -147,7 +147,7 @@
             <!--Checkout Button-->
             <div class="row details-row" style="width: 100%;">
                 <div style="display: flex; justify-content: center">
-                    <asp:LinkButton runat="server" ID="btnCheckoutt" CssClass="btn-checkout" Style="background-color: #ff7e29; color: white; font-weight: bold; text-decoration: none; text-align: center;">
+                    <asp:LinkButton PostBackUrl="~/Customer/Checkout.aspx" runat="server" ID="btnCheckoutt" CssClass="btn-checkout" Style="background-color: #ff7e29; color: white; font-weight: bold; text-decoration: none; text-align: center;">
                         <i class="fa-solid fa-cart-shopping"></i>&nbsp;Checkout
                     </asp:LinkButton>
                 </div>
