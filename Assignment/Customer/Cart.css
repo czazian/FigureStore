@@ -18,12 +18,8 @@
     display: flex;
     margin: 20px 0px 20px 0px;
     gap: 15px;
-
-
-    position:relative;
-    justify-content:space-between;
-
-    
+    position: relative;
+    justify-content: space-between;
 }
 
 .left-box {
@@ -33,7 +29,6 @@
     border: 1px solid grey;
     border-radius: 15px;
     height: fit-content;
-
     margin-left: 50px;
 }
 
@@ -47,12 +42,19 @@
     gap: 10px;
     height: fit-content;
     padding: 10px;
-    background-color:white;
+    background-color: white;
 
-    position: fixed;
+
     left: 86.5%;
     transform: translateX(-50%);
+    position:absolute;
 }
+
+#right-box.fixed {
+    position: fixed;
+    top: 0;
+}
+
 
 .top-container {
     display: flex;
@@ -64,7 +66,7 @@
     flex-flow: row nowrap;
     margin: 0px;
     padding: 0px;
-    width:100%;
+    width: 100%;
 }
 
 .title {
@@ -76,7 +78,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
-    border-radius: 15px; 
+    border-radius: 15px;
     border: none;
     font-size: 1.35rem;
 }
@@ -109,7 +111,7 @@
 .info-notice {
     border-top: 1px solid lightgrey;
     margin-top: 10px;
-    padding-top: 10px; 
+    padding-top: 10px;
 }
 
 /*Cart Contents*/
@@ -120,7 +122,7 @@
     padding: 15px;
 }
 
-th{ 
+th {
     padding-bottom: 18px;
 }
 
@@ -128,9 +130,9 @@ tr {
     border-bottom: 1px solid lightgrey;
 }
 
-tr:last-child {
-    border-bottom: 0;
-}
+    tr:last-child {
+        border-bottom: 0;
+    }
 
 .start {
     display: flex;
@@ -141,9 +143,9 @@ tr:last-child {
     width: 20%;
 }
 
-.start2 { 
-    width:35%;
-    margin-left:20px;
+.start2 {
+    width: 35%;
+    margin-left: 20px;
     padding: 25px;
 }
 
@@ -154,52 +156,50 @@ tr:last-child {
 }
 
 .mid {
-    width:20%;
-    text-align:center;
+    width: 20%;
+    text-align: center;
 }
 
 .end, .total-price {
     width: 12.5%;
     text-align: center;
     color: #ff7e29;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .removebtn {
     color: #ff7e29;
     border: none;
-    background-color:transparent;
+    background-color: transparent;
     padding: 0px;
-    margin-top: 3px; 
+    margin-top: 3px;
     text-decoration: underline;
 }
 
 
 
 @media (max-width: 1300px) {
-    .product-container{
+    .product-container {
         flex-flow: column nowrap;
         align-items: center;
-        margin-top:20px;
+        margin-top: 20px;
     }
 
-    .left-box{
-        width:96%;
-        margin:0;
+    .left-box {
+        width: 96%;
+        margin: 0;
     }
 
     .right-box {
         position: static;
         width: 96%;
         margin: 20px 0px 20px 0px;
-
-
         left: 0%;
         transform: translateX(0%);
     }
 
     .info {
-        justify-content:right;
+        justify-content: right;
         margin-right: 30px;
     }
 }

@@ -37,15 +37,15 @@
                 <div id="header-msg">
                     <div class="slides">
                         <i style="margin-top: 3px;" class="fa fa-bullhorn"></i>&nbsp;&nbsp;
-                        <div>Message A</div>
+                        <div>Discover the latest trends! Explore our pre-order figures with just a click!</div>
                     </div>
                     <div class="slides">
                         <i style="margin-top: 3px;" class="fa fa-bullhorn"></i>&nbsp;&nbsp;
-                        <div>Message B</div>
+                        <div>Get ready to shop without boundaries! Enjoy free shipping on all orders with minimum purchase!</div>
                     </div>
                     <div class="slides">
                         <i style="margin-top: 3px;" class="fa fa-bullhorn"></i>&nbsp;&nbsp;
-                        <div>Message C</div>
+                        <div>Shop with confidence at Apex Online Shop — our prices already include a low 6% tax, so there are no surprises at checkout!</div>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@
 
 
         <!--Footer-->
-        <footer>
+        <footer id="footer">
             <div id="subscribe" class="subscribe">
                 <asp:TextBox placeholder="example@gmail.com" TextMode="Email" CssClass="col-3" Style="border-radius: 5px;" ID="txtSubscribe" runat="server">
                 </asp:TextBox>

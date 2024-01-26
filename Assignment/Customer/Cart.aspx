@@ -8,7 +8,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="product-container">
-        <div class="left-box">
+        <div class="left-box" id="left">
             <div class="top-container">
                 <div class="header-title">
                     <asp:Label Style="font-weight: bold; font-size: 25px; color: #ff7e29; margin-right: 10px;" ID="pname" runat="server" Text="My Cart" />
@@ -170,17 +170,27 @@
 
 
     <script>
-        window.addEventListener("scroll", function () {
-            let box = document.getElementById("right-box");
-            var elementTarget = document.getElementById("outer-header");
-            if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-                box.style.top = "0px";
-            }
+        $(function () {
+            var top = $('#right-box').offset().top - parseFloat($('#right-box').css('marginTop').replace(/auto/, 0));
+            var footTop = $('#footer').offset().top - parseFloat($('#footer').css('marginTop').replace(/auto/, 0));
 
-            var elementTarget2 = document.getElementById("dropdown");
-            if (window.scrollY < (elementTarget2.offsetTop + elementTarget2.offsetHeight)) {
-                box.style.top = "161px";
-            }
+            var maxY = footTop - $('#right-box').outerHeight();
+
+            $(window).scroll(function (evt) {
+                var y = $(this).scrollTop();
+                if (y > top) {
+                    if (y < maxY) {
+                        $('#right-box').addClass('fixed').removeAttr('style');
+                    } else {
+                        $('#right-box').removeClass('fixed').css({
+                            position: 'absolute',
+                            top: (maxY - top) + 'px'
+                        });
+                    }
+                } else {
+                    $('#right-box').removeClass('fixed');
+                }
+            });
         });
     </script>
 
