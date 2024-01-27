@@ -255,7 +255,7 @@
                 </div>
                 <div class="btn-container">
                     <div class="view-order">
-                        <asp:Button CssClass="btn border btn-view" runat="server" Text="VIEW ORDER" />
+                        <asp:Button PostBackUrl="~/Customer/OrderTrack.aspx" CssClass="btn border btn-view" runat="server" Text="VIEW ORDER" />
                     </div>
                     <div class="continue">
                         <asp:Button PostBackUrl="~/Customer/Home.aspx" CssClass="btn continue-btn" runat="server" Text="CONTINUE SHOPPING" />

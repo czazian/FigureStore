@@ -11,19 +11,19 @@
                 MY ACTION
             </div>
             <div class="inner-side">
-                <asp:LinkButton CssClass="lb" runat="server" ID="goProfile">
+                <asp:LinkButton PostBackUrl="~/Customer/UserProfile.aspx" CssClass="lb" runat="server" ID="goProfile">
                     <i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;MY PROFILE
                 </asp:LinkButton>
 
-                <asp:LinkButton CssClass="lb" runat="server" ID="goEdit">
+                <asp:LinkButton PostBackUrl="~/Customer/EditProfile.aspx" CssClass="lb" runat="server" ID="goEdit">
                     <i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;EDIT PROFILE
                 </asp:LinkButton>
 
-                <asp:LinkButton CssClass="lb" runat="server" ID="goOrder">
+                <asp:LinkButton PostBackUrl="~/Customer/OrderTrack.aspx" CssClass="lb" runat="server" ID="goOrder">
                     <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;MY ORDER
                 </asp:LinkButton>
 
-                <asp:LinkButton CssClass="lb" runat="server" ID="goLogout">
+                <asp:LinkButton PostBackUrl="~/Customer/Home.aspx" CssClass="lb" runat="server" ID="goLogout">
                     <i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;LOGOUT
                 </asp:LinkButton>
             </div>
@@ -58,7 +58,7 @@
 
                     </table>
                     <div class="edit-btn">
-                        <asp:Button CssClass="border btn btn-edit" runat="server" Text="Edit Profile" />
+                        <asp:Button PostBackUrl="~/Customer/EditProfile.aspx" CssClass="border btn btn-edit" runat="server" Text="Edit Profile" />
                     </div>
                 </fieldset>
             </div>

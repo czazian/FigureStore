@@ -71,12 +71,16 @@
     <Content Include="Customer\Cart.css" />
     <Content Include="Customer\Checkout.aspx" />
     <Content Include="Customer\Checkout.css" />
+    <Content Include="Customer\EditProfile.aspx" />
+    <Content Include="Customer\EditProfile.css" />
     <Content Include="Customer\Home.aspx" />
     <Content Include="Customer\Home.css" />
     <Content Include="Customer\Home.js" />
     <Content Include="Customer\IndividualFigure.aspx" />
     <Content Include="Customer\InidividualFigure.css" />
     <Content Include="Customer\OrderConfirmation.aspx" />
+    <Content Include="Customer\OrderTrack.aspx" />
+    <Content Include="Customer\OrderTrack.css" />
     <Content Include="Customer\Search.aspx" />
     <Content Include="Customer\Search.css" />
     <Content Include="Customer\UserProfile.aspx" />
@@ -124,6 +128,13 @@
     <Compile Include="Customer\Checkout.aspx.designer.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -144,6 +155,13 @@
     </Compile>
     <Compile Include="Customer\OrderConfirmation.aspx.designer.cs">
       <DependentUpon>OrderConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OrderTrack.aspx.cs">
+      <DependentUpon>OrderTrack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\OrderTrack.aspx.designer.cs">
+      <DependentUpon>OrderTrack.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>

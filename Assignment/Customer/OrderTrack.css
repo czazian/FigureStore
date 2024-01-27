@@ -1,0 +1,55 @@
+﻿.track {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 80vh;
+    width: 100%;
+}
+
+    .profile:nth-child(2) {
+        justify-content: center;
+    }
+
+.sidebar {
+    width: 200px;
+    background-color: #333131;
+    color: white;
+}
+
+.tt {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 10px;
+}
+
+.inner-side {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 70vh;
+}
+
+.lb {
+    text-decoration: none;
+    padding: 20px 20px 20px 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+    .lb:hover {
+        background-color: #1c1c1c;
+    }
+
+    .lb:nth-child(1) {
+        margin-top: -5px;
+    }
+
+    .lb:nth-child(1), .lb:nth-child(2), .lb:nth-child(3) {
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .lb:last-child {
+        border-top: 1px solid lightgrey;
+        margin-top: auto;
+    }
