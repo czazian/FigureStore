@@ -4,9 +4,8 @@
 .contents {
     width: 95%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    align-items:center;
 }
 
 .content-header {
@@ -14,13 +13,6 @@
     font-size: 28px;
     margin: 15px 0px 3px 0px;
     text-shadow: 1px 1px lightgrey;
-}
-
-.item-container {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
-    width: 100%;
 }
 
 .itemslide {
@@ -39,15 +31,23 @@
         transform: scale(1.07);
     }
 
+.item-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    flex: 1 1 0;
+    width: 100%;
+}
+
 .item {
-    width: 350px;
+    width: 240px;
     height: 400px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     border: 1px solid grey;
     border-radius: 10px;
-    flex: 0 0 243px;
+    /* flex: 0 0 243px;*/
 }
 
 .item-details {

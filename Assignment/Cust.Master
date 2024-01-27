@@ -95,7 +95,7 @@
 
                     <div class="profile-container action">
                         <div>
-                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn header-font" Style="width: 150px; font-size: 17px;">
+                            <asp:LinkButton PostBackUrl="~/Customer/UserProfile.aspx" ID="LinkButton1" runat="server" CssClass="btn header-font" Style="width: 150px; font-size: 17px;">
                                 <i style="color:white; font-size:18px" class="fa-solid fa-user"></i>&nbsp;&nbsp;
                                 User Profile
                             </asp:LinkButton>

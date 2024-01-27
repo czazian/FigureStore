@@ -131,7 +131,7 @@
                 </div>
                 <div class="checkout">
                     <asp:Button Style="background-color: #212121; color: white; padding: 5px; border-radius: 5px;" runat="server" ID="btnBack" Text="Back to Cart" PostBackUrl="~/Customer/Cart.aspx" />
-                    <asp:LinkButton Style="background-color: #ff7e29; color: white; padding: 8.5px; text-decoration: none; border-radius: 5px;" runat="server" ID="lkbCheckout">
+                    <asp:LinkButton PostBackUrl="~/Customer/OrderConfirmation.aspx" Style="background-color: #ff7e29; color: white; padding: 8.5px; text-decoration: none; border-radius: 5px;" runat="server" ID="lkbCheckout">
                         <i class="fa-solid fa-cart-shopping"></i>&nbsp;Checkout
                     </asp:LinkButton>
                 </div>

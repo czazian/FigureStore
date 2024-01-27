@@ -95,9 +95,12 @@ table {
     width: 100%;
 }
 
-td {
+td, tr {
     padding: 10px;
+    vertical-align:top;
 }
+
+
 
 .title {
     width: 150px;
