@@ -12,8 +12,8 @@
 
 
     <div class="slider" style="position: relative;">
-        <div style="overflow: hidden; height: 350px; width: contain; position: absolute;">
-            <video autoplay loop muted class="slider-background">
+        <div style="overflow: hidden; height: 350px; width: 100%; position: absolute;">
+            <video autoplay loop muted class="slider-background" style="width:auto; min-width: 100%;">
                 <source src='<%= ResolveUrl("~/Image/Element/sbackground.mp4") %>' type="video/mp4" />
             </video>
         </div>
