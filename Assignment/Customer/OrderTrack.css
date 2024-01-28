@@ -42,7 +42,11 @@
     }
 
     .lb:nth-child(1) {
-        margin-top: -5px;
+        margin-top: -10px;
+    }
+
+    .lb:nth-child(3) {
+        background-color: #1c1c1c;
     }
 
     .lb:nth-child(1), .lb:nth-child(2), .lb:nth-child(3) {

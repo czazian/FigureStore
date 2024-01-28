@@ -33,7 +33,8 @@
         <div class="main">
             <div class="left">
                 <div class="profileimg">
-                    <asp:Image Style="width: 100%; border-radius: 10px;" runat="server" ID="profileimg" ImageUrl="~/Image/Profile/user.jpg" />
+                    <asp:Image Style="width: 250px; height: 250px; border-radius: 100px;"
+                        runat="server" ID="profileimg" ImageUrl="~/Image/Profile/user.jpg" />
                 </div>
                 <div class="profilename">
                     @<asp:Label runat="server" ID="username" Text="Lala Yang" />
@@ -44,16 +45,25 @@
                     <legend>User Profile</legend>
                     <table class="profile-info">
                         <tr>
-                            <th>Email Address <div style="height:inherit;text-align:right;">:</div></th>
-                            <td><asp:Label runat="server" ID="email" Text="lalayang@gmail.com"/></td>
+                            <th>Email Address
+                                <div style="height: inherit; text-align: right;">:</div>
+                            </th>
+                            <td>
+                                <asp:Label runat="server" ID="email" Text="lalayang@gmail.com" /></td>
                         </tr>
                         <tr>
-                            <th>Phone No. <div style="height:inherit;text-align:right;">:</div></th>
-                            <td><asp:Label runat="server" ID="phone" Text="012-34567890"/></td>
+                            <th>Phone No.
+                                <div style="height: inherit; text-align: right;">:</div>
+                            </th>
+                            <td>
+                                <asp:Label runat="server" ID="phone" Text="012-34567890" /></td>
                         </tr>
                         <tr>
-                            <th>Home Address <div style="height:inherit;text-align:right;">:</div></th>
-                            <td><asp:Label runat="server" ID="address" Text="TARUMT, Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur, Federal Territory of Kuala Lumpur."/></td>
+                            <th>Home Address
+                                <div style="height: inherit; text-align: right;">:</div>
+                            </th>
+                            <td>
+                                <asp:Label runat="server" ID="address" Text="TARUMT, Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur, Federal Territory of Kuala Lumpur." /></td>
                         </tr>
 
                     </table>

@@ -42,7 +42,8 @@
     }
 
     .lb:nth-child(1) {
-        margin-top: -5px;
+        margin-top: -10px;
+        background-color: #1c1c1c;
     }
 
     .lb:nth-child(1), .lb:nth-child(2), .lb:nth-child(3) {
@@ -110,8 +111,9 @@
 .profileimg {
     width: 250px;
     height: 250px;
-    border-radius: 10px;
+    border-radius: 150px;
     border: 2px solid grey;
+    overflow:hidden;
 }
 
 .profilename {

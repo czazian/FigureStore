@@ -57,7 +57,7 @@
             <div class="binder">
                 <div style="margin-left: 20px;" class="business-icon">
                     <div style="color: white; height: inherit; text-align: center; font-weight: bold; font-size: 20px;">
-                        <asp:ImageButton Width="120" Height="35" PostBackUrl="~/Customer/Home.aspx" ImageUrl="~/Image/Element/Logo.png" runat="server"/>
+                        <asp:ImageButton Width="120" Height="35" PostBackUrl="~/Customer/Home.aspx" ImageUrl="~/Image/Element/Logo.png" runat="server" />
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@
                     <div class="search-ctn d-flex input-group" role="search">
                         <asp:TextBox Style="color: black;" TextMode="Search" ID="txtSearch" runat="server" class="form-control border border-1 search-bar" placeholder="Product Name" />
 
-                        <asp:LinkButton PostBackUrl="~/Customer/Search.aspx" ID="btnSch" ValidationGroup="btn" runat="server" CssClass="btn-light btn btn-search">
+                        <asp:LinkButton PostBackUrl="~/Customer/Search.aspx" ID="btnSch" ValidationGroup="btn" runat="server" Style="width:fit-content;" CssClass="btn-light btn btn-search">
                             <i style="font-size: 18px; display: flex; justify-content: center; align-items: center; margin-top: 4.5px;" class="fa fa-search"></i>
                         </asp:LinkButton>
                     </div>
@@ -85,7 +85,7 @@
                             <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx" ID="btnCart" runat="server" CssClass="btn header-font" Style="width: 120px; font-size: 17px;">
                                 <i style="color: white; font-size: 18px" class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;
                                 Cart
-                                <div style="position: relative; margin-top: -5px; border-radius: 100px; background-color:#ff2b2b ; padding: 5px; float: right; height: 16px; width: 16px;">
+                                <div style="position: relative; margin-top: -5px; border-radius: 100px; background-color: #ff2b2b; padding: 5px; float: right; height: 16px; width: 16px;">
                                     <asp:Label Style="position: absolute; top: 0; left: 4.5px; color: white; height: 16px; font-size: 12px;"
                                         ID="cartcount" runat="server" Text="2" />
                                 </div>
@@ -95,33 +95,36 @@
 
                     <div class="profile-container action">
                         <div>
-                            <asp:LinkButton PostBackUrl="~/Customer/UserProfile.aspx" ID="LinkButton1" runat="server" CssClass="btn header-font" Style="width: 150px; font-size: 17px;">
-                                <i style="color:white; font-size:18px" class="fa-solid fa-user"></i>&nbsp;&nbsp;
+                            <asp:LinkButton PostBackUrl="~/Customer/UserProfile.aspx" ID="LinkButton1" runat="server" CssClass="btn header-font" Style="width: 170px; font-size: 17px; display: flex;">
+                                <div style="margin-top:-3px;border-radius: 150px; width: 30px; height: 30px; overflow: hidden;">
+                                    <asp:Image ImageUrl="~/Image/Profile/user.jpg" Style="background-color: white; border-radius: 100px; width: 30px; height: 30px; margin-right:-5px;" runat="server" ID="topImage" />
+                                </div>
+                        &nbsp;&nbsp;
                                 User Profile
                             </asp:LinkButton>
-                        </div>
-                    </div>
-
-                    <div class="login action" style="margin-right: 20px;">
-                        <div>
-                            <asp:LinkButton ID="btnLgn" runat="server" CssClass="topBtns btn dropdown-toggle header-font" data-bs-toggle="dropdown" aria-expanded="false" Style="font-size: 17px;">
-                                <i style="color:white; font-size:18px" class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;
-                        Login
-                            </asp:LinkButton>
-                            <ul class="dropdown-menu">
-                                <li id="identityUser">
-                                    <asp:HyperLink runat="server" ID="hrefCustomer" NavigateUrl="~/Login/CustomerLogin.aspx" Text="Customer" CssClass="dropdown-item LoginHover"></asp:HyperLink>
-                                </li>
-                                <li id="identityStaff">
-                                    <asp:HyperLink runat="server" ID="hrefStaff" NavigateUrl="~/Login/StaffLogin.aspx" Text="Staff" CssClass="dropdown-item LoginHover"></asp:HyperLink>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
 
-
+                <div class="login action" style="margin-right: 20px;">
+                    <div>
+                        <asp:LinkButton ID="btnLgn" runat="server" CssClass="topBtns btn dropdown-toggle header-font" data-bs-toggle="dropdown" aria-expanded="false" Style="font-size: 17px;">
+                                <i style="color:white; font-size:18px" class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;
+                        Login
+                        </asp:LinkButton>
+                        <ul class="dropdown-menu">
+                            <li id="identityUser">
+                                <asp:HyperLink runat="server" ID="hrefCustomer" NavigateUrl="~/Login/CustomerLogin.aspx" Text="Customer" CssClass="dropdown-item LoginHover"></asp:HyperLink>
+                            </li>
+                            <li id="identityStaff">
+                                <asp:HyperLink runat="server" ID="hrefStaff" NavigateUrl="~/Login/StaffLogin.aspx" Text="Staff" CssClass="dropdown-item LoginHover"></asp:HyperLink>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+
+        </div>
         </div>
 
 
@@ -186,7 +189,7 @@
                     <div class="business-name" style="font-size: 1.7rem; margin-bottom: 10px;">
                         Apex Online Shop
                     </div>
-                    <div class="social-media" style="font-size: 23px; color:white">
+                    <div class="social-media" style="font-size: 23px; color: white">
                         <a class="space" href="https://www.facebook.com/"><i class="ic fa-brands fa-facebook"></i></a>
                         <a class="space" href="https://twitter.com/"><i class="ic fa-brands fa-x-twitter"></i></a>
                         <a class="space" href="https://www.instagram.com/"><i class="ic fa-brands fa-instagram"></i></a>

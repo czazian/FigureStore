@@ -3,11 +3,12 @@
     flex-flow: row nowrap;
     height: 80vh;
     width: 100%;
+    background-color: #d4d6da;
 }
 
-    .profile:nth-child(2) {
-        justify-content: center;
-    }
+.profile:nth-child(2) {
+    justify-content: center;
+}
 
 .sidebar {
     width: 200px;
@@ -42,7 +43,11 @@
     }
 
     .lb:nth-child(1) {
-        margin-top: -5px;
+        margin-top: -10px;
+    }
+
+    .lb:nth-child(2) {
+        background-color: #1c1c1c;
     }
 
     .lb:nth-child(1), .lb:nth-child(2), .lb:nth-child(3) {
@@ -53,3 +58,115 @@
         border-top: 1px solid lightgrey;
         margin-top: auto;
     }
+
+
+/*Content*/
+.box {
+    border-radius: 10px;
+    padding: 20px;
+    width: 650px;
+    height: 600px;
+    margin: auto;
+    background-color: white;
+}
+
+.maintitle {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ff7e29;
+}
+
+.subtitle, .suggestion-img {
+    color: grey;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.profile-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ff7e29;
+}
+
+.image-container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap:20px;
+}
+
+.changeimg {
+    width:100%;
+}
+
+.btn-grouping {
+     display:flex;
+     flex-flow: column nowrap;
+     height:inherit;
+     justify-content:center;
+     gap:5px;
+}
+
+.img {
+    width: 120px;
+    height: 120px;
+    overflow:hidden;
+}
+
+.b1, .b2, .btn-edit{ 
+    text-decoration:none;
+    font-size:12px;
+    font-weight:bold;
+    width: 130px;
+}
+
+.b1 {
+    color: white;
+    background-color: #ff7e29;
+    padding: 10px 15px 10px 15px;
+    border: none;
+}
+
+.b2 {
+    padding: 10px 15px 10px 15px;
+}
+
+.suggestion-img {
+     margin-top: 10px;
+}
+
+.edit-input {
+    margin-top: 18px;
+}
+
+.edit-items {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 7px;
+}
+
+.form-control:focus {
+    border-width: 2.5px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.045);
+    border-color: #ff7e29 !important; 
+}
+
+.btn-edit {
+    padding: 10px 20px 10px 20px;
+    background-color: #ff7e29;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px ;
+}
+
+.btn-edit:hover {
+    color: white;
+    background-color: #f56a0f;
+}
+
+.edit-btn {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: right;
+    margin-top: auto;
+}
