@@ -47,7 +47,7 @@
                 <div class="image-container">
                     <div class="img">
                         <asp:Image Style="border-radius: 100px; width: 100%; width: 120px; height: 120px;"
-                            runat="server" ID="profileimg" ImageUrl="~/Image/Profile/user.jpg" />
+                            runat="server" ID="profileimg" ImageUrl="~/Image/Profile/user.png" />
                     </div>
                     <div class="btn-grouping">
                         <div class="img-change-btn">

@@ -34,7 +34,7 @@
             <div class="left">
                 <div class="profileimg">
                     <asp:Image Style="width: 250px; height: 250px; border-radius: 100px;"
-                        runat="server" ID="profileimg" ImageUrl="~/Image/Profile/user.jpg" />
+                        runat="server" ID="profileimg" ImageUrl="~/Image/Profile/user.png" />
                 </div>
                 <div class="profilename">
                     @<asp:Label runat="server" ID="username" Text="Lala Yang" />
