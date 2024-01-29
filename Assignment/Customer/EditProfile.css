@@ -1,7 +1,7 @@
 ﻿.edit {
     display: flex;
     flex-flow: row nowrap;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     background-color: #d4d6da;
 }
