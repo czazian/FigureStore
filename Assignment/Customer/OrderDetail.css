@@ -1,0 +1,177 @@
+﻿.detail {
+    display: flex;
+    flex-flow: row nowrap;
+    min-height: 80vh;
+    width: 100%;
+    background-color: #d4d6da;
+}
+
+.profile:nth-child(2) {
+    justify-content: center;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333131;
+    color: white;
+}
+
+.tt {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 10px;
+}
+
+.inner-side {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.lb {
+    text-decoration: none;
+    padding: 20px 20px 20px 20px;
+    font-size: 16px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+}
+
+    .lb:hover {
+        background-color: #1c1c1c;
+    }
+
+    .lb:nth-child(1) {
+        margin-top: -10px;
+    }
+
+    .lb:nth-child(3) {
+        background-color: #1c1c1c;
+    }
+
+
+/*Content*/
+.main-content {
+    border-radius: 5px;
+    width: 85%;
+    height: 100%;
+    margin: 20px auto 20px auto;
+    background-color: white;
+    padding: 50px;
+}
+
+.lbn {
+    text-decoration: none;
+    color: grey;
+    padding: 25px;
+}
+
+.order-title {
+    padding: 25px;
+}
+
+.top-title {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.current-status {
+    font-weight: bold;
+    color: white;
+    background-color: #ff7e29;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    width: fit-content;
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
+
+.date-title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.date {
+    padding: 10px 10px 10px 0px;
+}
+
+.estimate {
+    padding: 10px;
+}
+
+/*Progress Bar*/
+.status-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#bar-progress {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+    #bar-progress .step {
+        display: inline-block;
+    }
+
+        #bar-progress .step .check-container {
+            display: inline-block;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+        }
+
+        #bar-progress .step.step-active .check-container {
+            background-color: #ff7e29;
+        }
+
+        #bar-progress .step .check-container .check {
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 1em;
+            display: block;
+            text-align: center;
+        }
+
+.check {
+    margin-top: 15px;
+}
+
+#bar-progress .step.step-active .check-container .check {
+    color: white;
+}
+
+#bar-progress .step h5 {
+    display: inline;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+
+#bar-progress .seperator {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, .2);
+    margin: 25px 25px 25px 25px;
+}
+
+.done-date { 
+    width:100%;
+    margin:8px;
+    text-align:center;
+}

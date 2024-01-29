@@ -1,13 +1,14 @@
 ﻿.track {
     display: flex;
     flex-flow: row nowrap;
-    height: 80vh;
+    min-height: 80vh;
     width: 100%;
+    background-color: #d4d6da;
 }
 
-    .profile:nth-child(2) {
-        justify-content: center;
-    }
+.profile:nth-child(2) {
+    justify-content: center;
+}
 
 .sidebar {
     width: 200px;
@@ -27,7 +28,6 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    height: 70vh;
 }
 
 .lb {
@@ -35,6 +35,7 @@
     padding: 20px 20px 20px 20px;
     font-size: 16px;
     width: 100%;
+    border-bottom: 1px solid lightgrey;
 }
 
     .lb:hover {
@@ -49,11 +50,164 @@
         background-color: #1c1c1c;
     }
 
-    .lb:nth-child(1), .lb:nth-child(2), .lb:nth-child(3) {
-        border-bottom: 1px solid lightgrey;
+
+/*Content*/
+.main-content {
+    border-radius: 5px;
+    width: 85%;
+    height: 100%;
+    margin: 20px auto 20px auto;
+    background-color: white;
+}
+
+.topSelection {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.selection {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 15px 0px 15px 0px;
+    margin: 0;
+}
+
+.select {
+    border-bottom: 3px solid #ff7e29;
+}
+
+.lbl {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    color: #ff7e29;
+}
+
+.sButton {
+    width: 100%;
+    border-radius: 0px;
+    border: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+    .sButton:hover, .sButton:active, .sButton:active:hover {
+        color: #ff7e29;
     }
 
-    .lb:last-child {
-        border-top: 1px solid lightgrey;
-        margin-top: auto;
+.order-container {
+    color: black;
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap:20px;
+    margin-top:10px; 
+}
+
+.anOrder {
+    border: 2px solid grey;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.top-item {
+    background-color: #ff7e29;
+    color: white;
+    padding: 10px 35px 10px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+}
+
+.middle1 {
+    display: flex;
+    flex-flow: row nowrap;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 20px 10px 20px;
+}
+
+.img {
+    padding: 8px;
+    border: 1px solid grey;
+}
+
+.product {
+    padding: 20px;
+    display:flex;
+    flex-flow: column nowrap;
+    height: inherit;
+    width: 100%;
+    font-size: 18px;
+}
+
+.name {
+    color: #ff7e29;
+    font-weight:bold;
+}
+
+.subtotal { 
+    width:150px;
+    display:flex;
+    height:inherit;
+    align-items:center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff7e29;
+}
+
+.middle2 {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px 20px 7px 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+}
+
+.noOfItems{ 
+    margin-left:6px;
+    height:inherit;
+    align-items:center;
+    display:flex;
+}
+
+.viewOrder {
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    font-size: 16px;
+    background-color: #ff7e29;
+    color:white;
+    font-size: 14px; 
+}
+
+    .viewOrder:hover {
+        color: white;
+        background-color: #f56a0f;
     }
+
+.bottom {
+    color:grey;
+    padding:10px;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    width:100%;
+}
+
+.estimate { 
+    height: inherit;
+    display:flex;
+    align-items:center;
+    margin-left:5px;
+}

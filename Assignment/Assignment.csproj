@@ -79,6 +79,8 @@
     <Content Include="Customer\IndividualFigure.aspx" />
     <Content Include="Customer\InidividualFigure.css" />
     <Content Include="Customer\OrderConfirmation.aspx" />
+    <Content Include="Customer\OrderDetail.aspx" />
+    <Content Include="Customer\OrderDetail.css" />
     <Content Include="Customer\OrderTrack.aspx" />
     <Content Include="Customer\OrderTrack.css" />
     <Content Include="Customer\Search.aspx" />
@@ -155,6 +157,13 @@
     </Compile>
     <Compile Include="Customer\OrderConfirmation.aspx.designer.cs">
       <DependentUpon>OrderConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OrderDetail.aspx.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\OrderDetail.aspx.designer.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\OrderTrack.aspx.cs">
       <DependentUpon>OrderTrack.aspx</DependentUpon>
