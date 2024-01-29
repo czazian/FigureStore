@@ -197,6 +197,9 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="JS" runat="server">
+    <!--May need to change.
+        When the user click on a button, the system should trigger the click button whether is "Order Received", "Shipping", "All Order" or something else. Apply the "select" class according to the value. 
+        -->
     <script type="text/javascript">
         function allOrder() {
             document.getElementById("all").classList.add("select");

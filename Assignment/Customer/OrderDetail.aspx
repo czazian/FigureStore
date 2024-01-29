@@ -102,7 +102,158 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="item-ordered">
+                        <div class="item-ordered-title">
+                            Item Ordered
+                        </div>
+                        <div class="items-cont">
+                            <!--An Item-->
+                            <div class="products">
+                                <div class="left">
+                                    <div class="img">
+                                        <asp:Image Style="width: 100%;" runat="server" ID="pImage" ImageUrl="~/Image/Product/f1.jpg" />
+                                    </div>
+                                    <div class="text">
+                                        <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
+                                            <asp:Label ID="Label4" runat="server" Text="Nendoroids Frieren" />
+                                        </div>
+                                        <div class="qty">
+                                            <span>Quantity :&nbsp;</span><asp:Label ID="qty" runat="server" Text="2" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <asp:Label runat="server" ID="itemtotal" Text="RM 200.00" />
+                                </div>
+                            </div>
+                            <!--End of An Item-->
+
+                            <!--An Item-->
+                            <div class="products">
+                                <div class="left">
+                                    <div class="img">
+                                        <asp:Image Style="width: 100%;" runat="server" ID="Image2" ImageUrl="~/Image/Product/f1.jpg" />
+                                    </div>
+                                    <div class="text">
+                                        <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
+                                            <asp:Label ID="Label8" runat="server" Text="Nendoroids Frieren" />
+                                        </div>
+                                        <div class="qty">
+                                            <span>Quantity :&nbsp;</span><asp:Label ID="Label9" runat="server" Text="2" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <asp:Label runat="server" ID="Label10" Text="RM 200.00" />
+                                </div>
+                            </div>
+                            <!--End of An Item-->
+
+                            <!--An Item-->
+                            <div class="products">
+                                <div class="left">
+                                    <div class="img">
+                                        <asp:Image Style="width: 100%;" runat="server" ID="Image1" ImageUrl="~/Image/Product/f1.jpg" />
+                                    </div>
+                                    <div class="text">
+                                        <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
+                                            <asp:Label ID="Label5" runat="server" Text="Nendoroids Frieren" />
+                                        </div>
+                                        <div class="qty">
+                                            <span>Quantity :&nbsp;</span><asp:Label ID="Label6" runat="server" Text="2" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <asp:Label runat="server" ID="Label7" Text="RM 200.00" />
+                                </div>
+                            </div>
+                            <!--End of An Item-->
+
+                            <!--Bottom Information-->
+                            <div class="bottom-info">
+                                <div class="b1">
+                                    <div class="t" style="color: #ff7e29">Information</div>
+                                    <table class="info-container">
+                                        <tr>
+                                            <th>Name</th>
+                                            <td> :</td>
+                                            <td>
+                                                <asp:Label runat="server" ID="name" Text="Lala Yang" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phone No.</th>
+                                            <td> :</td>
+                                            <td>
+                                                <asp:Label runat="server" ID="Label11" Text="012-34567890" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Home Address
+                                            </th>
+                                            <td> :</td>
+                                            <td>
+                                                <asp:Label runat="server" ID="homeaddress" Text="TARUMT, Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur, Federal Territory of Kuala Lumpur." />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Payment Method
+                                            </th>
+                                            <td> :</td>
+                                            <td>
+                                                <asp:Label runat="server" ID="paymentmethod" Text="Cash On Delivery" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="b2">
+                                    <div class="t"  style="color: #ff7e29">Order Summary</div>
+                                    <table class="order-summary">
+                                        <tr>
+                                            <th>Subtotal
+                                            </th>
+                                            <td> :</td>
+                                            <td class="tRight">
+                                                <asp:Label runat="server" ID="lblSubtotal" Text="RM 600.00" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Discount
+                                            </th>
+                                            <td> :</td>
+                                            <td class="tRight">
+                                                <asp:Label runat="server" ID="lblDiscount" Text="RM 60.00" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Delivery
+                                            </th>
+                                            <td> :</td>
+                                            <td class="tRight">
+                                                <asp:Label runat="server" ID="lblDelivery" Text="RM 25.00" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th style="padding-bottom: 20px;">Tax
+                                            </th>
+                                            <td style="padding-bottom: 20px;"> :</td>
+                                            <td class="tRight" style="padding-bottom: 20px;">
+                                                <asp:Label runat="server" ID="lblTax" Text="RM 36.00" />
+                                            </td>
+                                        </tr>
+                                        <tr class="last-column">
+                                            <th style="padding-top: 20px;">Total
+                                            </th>
+                                            <td style="font-weight:100; padding-top: 20px;"> :</td>
+                                            <td style="padding-top: 20px;" class="tRight">
+                                                <asp:Label runat="server" ID="lblTotal" Text="RM 601.00" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -114,5 +265,5 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="JS" runat="server">
     <script> 
 
-    </script>
+</script>
 </asp:Content>

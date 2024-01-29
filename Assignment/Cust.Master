@@ -97,7 +97,7 @@
                         <div>
                             <asp:LinkButton PostBackUrl="~/Customer/UserProfile.aspx" ID="LinkButton1" runat="server" CssClass="btn header-font" Style="width: 170px; font-size: 17px; display: flex;">
                                 <div style="margin-top:-3px;border-radius: 150px; width: 30px; height: 30px; overflow: hidden;">
-                                    <asp:Image ImageUrl="~/Image/Profile/user.png" Style="background-color: white; border-radius: 100px; width: 30px; height: 30px; margin-right:-5px;" runat="server" ID="topImage" />
+                                    <asp:Image ImageUrl="~/Image/Profile/user.jpg" Style="background-color: white; border-radius: 100px; width: 30px; height: 30px; margin-right:-5px;" runat="server" ID="topImage" />
                                 </div>
                         &nbsp;&nbsp;
                                 User Profile

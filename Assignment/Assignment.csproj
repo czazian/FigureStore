@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Testing2.mdf" />
+    <Content Include="App_Data\Testing2_log.ldf">
+      <DependentUpon>Testing2.mdf</DependentUpon>
+    </Content>
     <Content Include="Customer\Cart.aspx" />
     <Content Include="Customer\Cart.css" />
     <Content Include="Customer\Checkout.aspx" />

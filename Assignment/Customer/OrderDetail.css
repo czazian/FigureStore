@@ -55,7 +55,7 @@
 .main-content {
     border-radius: 5px;
     width: 85%;
-    height: 100%;
+    height: fit-content;
     margin: 20px auto 20px auto;
     background-color: white;
     padding: 50px;
@@ -170,8 +170,137 @@
     margin: 25px 25px 25px 25px;
 }
 
-.done-date { 
+.done-date {
+    width: 100%;
+    margin: 8px;
+    text-align: center;
+}
+
+
+
+.item-ordered {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 45px;
+    gap: 10px;
+}
+
+.item-ordered-title { 
+    font-size: 22px;
+    font-weight:bold;
+    color: #ff7e29;
+}
+
+.items-cont {
+    border-radius: 10px;
+    background-color: #fafcfc;
+    padding: 10px;
+    height: fit-content;
+}
+
+.img {
+    width: 100px;
+}
+
+.products {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.products {
+    border-bottom: 1px solid grey; 
+    padding: 10px; 
+}
+
+.left {
+    display: flex;
+    flex-flow: row nowrap;
+    width:90%;
+}
+
+.text {
+    padding: 15px;
     width:100%;
-    margin:8px;
-    text-align:center;
+}
+
+.right {
+    width: 10%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    color: #ff7e29;
+    font-weight:bold;
+    font-size: 17px;
+}
+
+.bottom-info {
+    display:flex;
+    flex-flow: row nowrap;
+}
+
+.b1, .b2 { 
+    width:50%;
+    padding: 50px 50px 20px 50px;
+}
+
+.t {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+td, tr, th { 
+    padding: 10px;
+    vertical-align:top;
+    color:grey;
+}
+
+.info-container {
+    margin: 0px 10px 0px 10px;
+    width: 100%;
+    font-size: 17px;
+}
+
+.order-summary {
+    margin: 0px 0px 0px 10px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.last-column > th, .last-column > td {
+    font-size: 24px;
+    font-weight:bold;
+}
+
+.last-column {
+    border-top: 1px grey dashed;
+}
+
+.tRight{ 
+    text-align:right;
+}
+
+@media (max-width: 869px) {
+    .bottom-info{ 
+        flex-flow: column nowrap;
+    }
+
+    .info-container {
+        width: 100%;
+    }
+
+    .order-summary {
+        width:100%;
+    }
+
+    .b1, .b2 {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .item-ordered {
+        padding: 0;
+    }
+
 }
