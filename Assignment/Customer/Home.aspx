@@ -13,7 +13,7 @@
 
     <div class="slider" style="position: relative;">
         <div style="overflow: hidden; height: 350px; width: 100%; position: absolute;">
-            <video autoplay loop muted class="slider-background" style="width:auto; min-width: 100%;">
+            <video autoplay loop muted class="slider-background" style="width: auto; min-width: 100%;">
                 <source src='<%= ResolveUrl("~/Image/Element/sbackground.mp4") %>' type="video/mp4" />
             </video>
         </div>
@@ -297,7 +297,7 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image7" ImageUrl="~/Image/Product/sf9.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image7" ImageUrl="~/Image/Product/f41.jpg" />
                                     </div>
                                     <div class="item-name">
                                         <asp:Label ID="Label47" CssClass="sentence" runat="server" Text="Goblin Slayer"></asp:Label>
@@ -323,7 +323,7 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image24" ImageUrl="~/Image/Product/sf10.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image24" ImageUrl="~/Image/Product/f42.jpg" />
                                     </div>
                                     <div class="item-name">
                                         <asp:Label ID="Label13" CssClass="sentence" runat="server" Text="Izuku Midoriya: Deku Ver"></asp:Label>
@@ -593,36 +593,36 @@
                                 </div>
                                 <!--End of An Item-->
 
-                                                <!--An Item-->
-                <div class="item">
-                    <div class="item-image">
-                        <asp:Image runat="server" CssClass="imgFigure" ID="Image25" ImageUrl="~/Image/Product/n9.jpg" />
-                    </div>
-                    <div class="item-name">
-                        <asp:Label ID="Label49" CssClass="sentence" runat="server" Text="Nendoroid Saitama"></asp:Label>
-                    </div>
-                    <div class="item-price">
-                        <asp:Label ID="Label50" runat="server" Text="RM 135.00"></asp:Label>
-                    </div>
-                    <div class="item-details">
-                        <div class="item-buy">
-                            <asp:LinkButton runat="server">
+                                <!--An Item-->
+                                <div class="item">
+                                    <div class="item-image">
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image25" ImageUrl="~/Image/Product/f39.jpg" />
+                                    </div>
+                                    <div class="item-name">
+                                        <asp:Label ID="Label49" CssClass="sentence" runat="server" Text="Nendoroid Saitama"></asp:Label>
+                                    </div>
+                                    <div class="item-price">
+                                        <asp:Label ID="Label50" runat="server" Text="RM 135.00"></asp:Label>
+                                    </div>
+                                    <div class="item-details">
+                                        <div class="item-buy">
+                                            <asp:LinkButton runat="server">
 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
-                            </asp:LinkButton>
-                        </div>
-                        <div class="item-view">
-                            <asp:LinkButton runat="server">
+                                            </asp:LinkButton>
+                                        </div>
+                                        <div class="item-view">
+                                            <asp:LinkButton runat="server">
 <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
-                            </asp:LinkButton>
-                        </div>
-                    </div>
-                </div>
-                <!--End of An Item-->
+                                            </asp:LinkButton>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End of An Item-->
 
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image26" ImageUrl="~/Image/Product/n10.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image26" ImageUrl="~/Image/Product/f40.jpg" />
                                     </div>
                                     <div class="item-name">
                                         <asp:Label ID="Label51" CssClass="sentence" runat="server" Text="Nendoroid of Bond"></asp:Label>
@@ -869,7 +869,7 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image27" ImageUrl="~/Image/Product/g8.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image27" ImageUrl="~/Image/Product/f36.jpg" />
                                     </div>
                                     <div class="item-name">
                                         <asp:Label ID="Label53" CssClass="sentence" runat="server" Text="Cyberpunk: Edgerunners Plushie Rebecca"></asp:Label>
@@ -895,7 +895,7 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image28" ImageUrl="~/Image/Product/g9.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image28" ImageUrl="~/Image/Product/f37.jpg" />
                                     </div>
                                     <div class="item-name">
                                         <asp:Label ID="Label55" CssClass="sentence" runat="server" Text="BLUELOCK Plushie Isagi Yoichi"></asp:Label>
@@ -921,7 +921,7 @@
                                 <!--An Item-->
                                 <div class="item">
                                     <div class="item-image">
-                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image29" ImageUrl="~/Image/Product/g10.jpg" />
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image29" ImageUrl="~/Image/Product/f38.jpg" />
                                     </div>
                                     <div class="item-name">
                                         <asp:Label ID="Label57" CssClass="sentence" runat="server" Text="Hatsune Miku NT Big Plushie"></asp:Label>
@@ -972,7 +972,7 @@
             <i style="border-radius: 50px; background-color:#ff7e29; padding: 10px 12.5px 10px 12.5px; color:white; font-size: 20px;" class="fa-solid fa-arrow-up"></i>
         </asp:LinkButton>
     </div>
-    
+
     <script>
         window.addEventListener("scroll", function () {
             let box = document.getElementById("toTop");
@@ -985,7 +985,7 @@
         });
 
         function toTop() {
-            document.documentElement.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
         }
     </script>
 
