@@ -9,8 +9,6 @@
 <%--Content here--%>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--Banners-->
-
-
     <div class="slider" style="position: relative;">
         <div style="overflow: hidden; height: 350px; width: 100%; position: absolute;">
             <video autoplay loop muted class="slider-background" style="width: auto; min-width: 100%;">

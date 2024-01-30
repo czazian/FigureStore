@@ -1,0 +1,157 @@
+﻿
+.header-cont {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: contain;
+    background-color: black;
+}
+
+    .header-cont img {
+        display: block;
+        min-width: 100%;
+        height: 200px;
+    }
+
+.header-tt {
+    color: white;
+    /*font-size:3.6vw;*/
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 7.8rem;
+    transform: translateY(-50%);
+    text-shadow: 2px 2px black;
+}
+
+
+.content {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.right {
+    padding: 20px;
+    background-color: #e3e5e8;
+    width: 100%;
+}
+
+.left {
+    background-color: #e3e5e8;
+    width: contain;
+}
+
+.openCloseBtn {
+    color: white;
+    background-color: #ff7e29;
+    border: none;
+    font-size: 20px;
+    padding: 10px 18px 10px 18px ;
+    display:none;
+}
+
+.offcanvas-title {
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.offcanvas {
+    position: relative;
+    background-color: #ff7e29;
+    max-width: 350px;
+}
+
+.button {
+    color: white;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+.title-selector {
+    color: white;
+    font-size: 23px;
+    font-weight:bold;
+}
+
+.selection {
+    color: white;
+    font-size: 18px;
+}
+
+td {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+    td input {
+        margin-top: 6.5px;
+    }
+
+input[type='checkbox'] {
+    accent-color: black;
+}
+
+input[type='radio'] {
+    accent-color: black;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+}
+
+.pricerange-cont {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: white;
+}
+
+.btn-apply {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: right;
+    padding: 5px 0px 5px 0px;
+    font-weight: bold;
+}
+
+.applybtn {
+    width: 100%;
+    background-color: black !important;
+    color: white;
+    font-weight: bold;
+}
+
+    .applybtn:hover, .applybtn:active:hover {
+        background-color: #393b3a !important;
+        color: white;
+    }
+
+/*Mobile and Tablet*/
+@media (max-width: 869px) {
+    .header-tt {
+        color: white;
+        /*font-size: 35px;*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 400px) {
+    .header-tt {
+        color: white;
+        /*font-size: 20px;*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

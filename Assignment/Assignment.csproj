@@ -91,6 +91,7 @@
     <Content Include="Customer\Search.css" />
     <Content Include="Customer\UserProfile.aspx" />
     <Content Include="Customer\UserProfile.css" />
+    <Content Include="FigureCategories\Category.css" />
     <Content Include="FigureCategories\Doll.aspx" />
     <Content Include="FigureCategories\Good.aspx" />
     <Content Include="FigureCategories\Gundam.aspx" />
