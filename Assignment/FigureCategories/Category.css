@@ -104,6 +104,7 @@ input[type='radio'] {
     display: flex;
     flex-flow: column nowrap;
     gap: 30px;
+    margin-bottom: 40px;
 }
 
 .pricerange-cont {
