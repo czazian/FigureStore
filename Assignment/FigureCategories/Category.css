@@ -58,6 +58,7 @@
     background-color: #ededed;
     max-width: 350px;
     min-height: 100%;
+    z-index:1;
 }
 
 .button {
@@ -226,6 +227,10 @@ input[type='radio'] {
 .item-name {
     font-weight: bold;
     font-size: 18px;
+}
+
+.list-item { 
+    text-align:center;
 }
 
 /*Mobile and Tablet*/

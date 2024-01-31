@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeBehind="IndividualFigure.aspx.cs" Inherits="Assignment.Customer.IndividualFigure" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeBehind="IndividualFigure.aspx.cs" Inherits="Assignment.Customer.IndividualFigure" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="InidividualFigure.css" />
@@ -19,14 +19,14 @@
                 </div>
                 <div class="middle">
                     <div class="main-img">
-                        <asp:Image runat="server" ID="mainimg" ImageUrl="~/Image/Product/f1.jpg" />
+                        <asp:Image runat="server" ID="mainimg" Style="width: 90%; padding: 20px;" />
                     </div>
                     <div class="select-img">
                         <div class="img1" id="img1" style="border: 3px solid #ff7e29">
-                            <asp:ImageButton OnClientClick="changeImg1(); return false;" CssClass="sideimg" runat="server" ID="Image1" ImageUrl="~/Image/Product/f1.jpg" />
+                            <asp:ImageButton OnClientClick="changeImg1(); return false;" CssClass="sideimg" runat="server" ID="Image1" />
                         </div>
                         <div class="img2" id="img2">
-                            <asp:ImageButton OnClientClick="changeImg2(); return false;" CssClass="sideimg" runat="server" ID="Image2" ImageUrl="~/Image/Product/f1-2.jpg" />
+                            <asp:ImageButton OnClientClick="changeImg2(); return false;" CssClass="sideimg" runat="server" ID="Image2" />
                         </div>
                     </div>
                 </div>
@@ -127,37 +127,29 @@
             <hr style="margin-top: 0px; margin-bottom: 10px;" />
 
 
-            <div style="text-align: left; font-weight: bold; font-size: 18px; align-self: flex-start; margin-left: 15px;">
+            <div style="text-align: left; font-weight: bold; font-size: 18px; align-self: flex-start; margin-left: 15px; margin-bottom: 10px;">
                 Product Suggestions
             </div>
             <div class="product-suggestion">
-                <!--Product Suggestion 1-->
-                <asp:LinkButton Font-Underline="false" runat="server" class="suggestion1">
-                    <div class="simg">
-                        <asp:ImageButton Style="width: 100%;" runat="server" ID="simg1" ImageUrl="~/Image/Product/f2.jpg" />
-                    </div>
-                    <div class="sname">
-                        <asp:Label CssClass="deconone" runat="server" ID="sname1" Text="TENITOL Jess" />
-                    </div>
-                    <div class="sprice">
-                        <asp:Label CssClass="deconone" runat="server" ID="sprice1" Text="RM 100.00" />
-                    </div>
-                </asp:LinkButton>
-
+                <!--Product Suggestion-->
+                <asp:Repeater runat="server" ID="SuggestionRpt">
+                    <ItemTemplate>
+                        <div class="suggestion1">
+                            <div class="simg">
+                                <asp:Image Style="width: 100%; margin-bottom: 10px;" runat="server" ID="sImg" ImageUrl='<%# Eval("FigureImage1") %>' />
+                            </div>
+                            <div class="sname">
+                                <asp:Label CssClass="deconone" runat="server" ID="sName" Text='<%# Eval("FigureName") %>' />
+                            </div>
+                            <div class="sprice">
+                                <asp:Label CssClass="deconone" runat="server" ID="sPrice" Text='<%# Convert.ToDecimal(Eval("FigurePrice")).ToString("C2") %>' />
+                            </div>
+                            <asp:Button ID="view" OnCommand="view_Command" CommandArgument='<%# Eval("FigureID") %>' Font-Underline="false" Style="background-color:#ff7e29; width:100%; font-weight:bold;color:white; margin-top:5px;" runat="server" CssClass="btn border" Text="View"/>
+                            <hr />
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
                 <hr />
-
-                <!--Product Suggestion 2-->
-                <asp:LinkButton Font-Underline="false" Style="padding-top: 10px" runat="server" class="suggestion2">
-                    <div class="simg">
-                        <asp:ImageButton Style="width: 100%;" runat="server" ID="ImageButton1" ImageUrl="~/Image/Product/f2.jpg" />
-                    </div>
-                    <div class="sname">
-                        <asp:Label CssClass="deconone" runat="server" ID="Label1" Text="TENITOL Jess" />
-                    </div>
-                    <div class="sprice">
-                        <asp:Label CssClass="deconone" runat="server" ID="Label2" Text="RM 100.00" />
-                    </div>
-                </asp:LinkButton>
             </div>
 
 
@@ -192,7 +184,9 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="JS" runat="server">
+
     <script type="text/javascript">
+
         function changeImg1() {
             //Get Imaghe Path to change
             var path = document.getElementById('<%= Image1.ClientID %>').src;

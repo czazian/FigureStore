@@ -201,6 +201,16 @@ footer {
     justify-content: center;
 }
 
+.result{
+    background-color:white;
+    width:inherit;
+    position:absolute;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+
+
 /*Mobile and Tablet*/
 @media (max-width: 869px) {
     .search-ctn{

@@ -63,12 +63,35 @@
 
 
                 <div class="search-ctn col-7 container-fluid" style="margin-top: 3px;">
-                    <div class="search-ctn d-flex input-group" role="search">
-                        <asp:TextBox Style="color: black;" TextMode="Search" ID="txtSearch" runat="server" class="form-control border border-1 search-bar" placeholder="Product Name" />
+                    <div class="search-ctn input-group" style="display: flex; flex-flow: row nowrap; min-width: 100%;" role="search">
+                        <div class="s-box col-11">
+                            <asp:TextBox OnKeyUp="checkPostback(this)" AutoPostBack="true" OnTextChanged="txtSearch_TextChanged" autocomplete="off" Style="color: black; position: relative;" TextMode="Search" ID="txtSearch" runat="server" class="form-control border border-1 search-bar" placeholder="Product Name" />
+                            <div class="result">
+                                <asp:Repeater Visible="false" runat="server" ID="resultRepeater">
 
-                        <asp:LinkButton PostBackUrl="~/Customer/Search.aspx" ID="btnSch" ValidationGroup="btn" runat="server" Style="width: fit-content;" CssClass="btn-light btn btn-search">
-                            <i style="font-size: 18px; display: flex; justify-content: center; align-items: center; margin-top: 4.5px;" class="fa fa-search"></i>
-                        </asp:LinkButton>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="toDestination" CommandArgument='<%# Eval("FigureID") %>' OnCommand="toDestination_Command" runat="server" Style="margin: 5px 0px 5px 0px;display: flex; flex-flow: row nowrap; text-decoration: none;">
+                                            <div style="width: 40%; padding: 10px; display: flex; justify-content: center;">
+                                                <asp:Image Style="width: 100px;" runat="server" ImageUrl='<%# Eval("FigureImage1") %>' />
+                                            </div>
+                                            <div style="width: 60%; padding: 10px;">
+                                                <div class="dt" style="display: flex; flex-flow: column nowrap; height: 100%; justify-content: center;">
+                                                    <asp:Label Style="color: #ff7e29; font-weight: bold;" runat="server" ID="lblName" Text='<%# Eval("FigureName") %>' />
+                                                    <asp:Label Style="color: #ff7e29; color: #ff7e29;" runat="server" ID="lblSeries" Text='<%# Eval("FigureSeries") %>' />
+                                                    <asp:Label runat="server" ID="lblPrice" Text='<%# Convert.ToDecimal(Eval("FigurePrice").ToString()) %>' />
+                                                </div>
+                                            </div>
+                                        </asp:LinkButton>
+                                    </ItemTemplate>
+
+                                </asp:Repeater>
+                            </div>
+                        </div>
+                        <div>
+                            <asp:LinkButton PostBackUrl="~/Customer/Search.aspx" ID="btnSch" ValidationGroup="btn" runat="server" Style="width: fit-content;" CssClass="btn-light btn btn-search">
+                            <i style="font-size: 18px; display: flex; justify-content: center; align-items: center; margin-top: 4.5px; height: 18px;" class="fa fa-search"></i>
+                            </asp:LinkButton>
+                        </div>
                     </div>
 
                     <asp:RequiredFieldValidator Style="font-size: 13px; margin-left: 3px;" Display="Dynamic" ID="searchtext" runat="server" ControlToValidate="txtSearch" ErrorMessage="Please do not leave empty!" ForeColor="Red" ValidationGroup="btn" />
@@ -242,10 +265,18 @@
 
 
         <!--JavaScripts-->
+
         <script type="text/javascript" src='<%= ResolveUrl("~/Customer/Home.js") %>'></script>
         <script type="text/javascript">
             const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
             const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+            function checkPostback(ctrl) {
+                var MIN_TEXTLENGTH = 6;
+                if (ctrl != null && ctrl.value && ctrl.value.length >= MIN_TEXTLENGTH) {
+                    __doPostBack(ctrl.id, '');
+                }
+            }
         </script>
         <script src="https://kit.fontawesome.com/06c32b9e65.js" crossorigin="anonymous"></script>
 
