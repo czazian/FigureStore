@@ -55,5 +55,11 @@ namespace Assignment
             string url = "~/Customer/IndividualFigure.aspx?id=" + e.CommandArgument.ToString();
             Response.Redirect(url);
         }
+
+        protected void btnSch_Click(object sender, EventArgs e)
+        {
+            string name = txtSearch.Text;
+            Response.Redirect("~/Customer/Search.aspx?name=" + name);
+        }
     }
 }

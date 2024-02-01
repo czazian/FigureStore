@@ -32,6 +32,7 @@
     width: 100%;
     padding: 15px;
     transition: 0.35s ease-in-out;
+    max-height: 320px;
 }
 
     .imgFigure:hover {
@@ -57,11 +58,20 @@
     /* flex: 0 0 243px;*/
 }
 
+.detail-cont { 
+    display:flex;
+    flex-flow : column nowrap;
+    justify-content:end;
+    text-align:center;
+    margin-top: auto;
+    margin-bottom:13px;
+}
+
 .item-details {
     display: flex;
     flex-flow: row nowrap;
     gap: 10px;
-    align-items: end;
+    justify-content:center;
 }
 
 .item-view, .item-buy {

@@ -146,3 +146,47 @@ td, tr {
     right: 15px;
     display: none;
 }
+
+/*Mobile and Tablet*/
+@media (max-width: 869px) {
+    .product-container { 
+        flex-flow:column nowrap;
+    }
+
+    .left-box { 
+        width:100%;
+        margin:5px;
+    }
+
+    .middle{
+        flex-flow: column nowrap;
+    }
+    .select-img {
+        flex-flow: row nowrap;
+        width: 40%;
+    }
+    .main-img{ 
+        width:100%;
+    }
+
+    .right-box {
+        width: 100%;
+        margin: 5px;
+        flex-flow: column nowrap;
+        padding-bottom: 10px;
+        gap: 20px;
+    }
+
+    .product-suggestion { 
+        margin-bottom: 20px;
+        flex-flow: row nowrap;
+        justify-content:center;
+        width:100%;
+    }
+
+    .suggestion1 {
+        margin-bottom: 20px;
+        width:40%;
+    }
+
+}

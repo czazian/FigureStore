@@ -73,7 +73,7 @@
             <div class="quantity-container">
                 <table>
                     <tr>
-                        <td class="q-title" style="font-weight: bold; text-align: right;">Quantity
+                        <td class="q-title" style="margin-top:5px; font-weight: bold; text-align: right;">Quantity
                         </td>
                         <td style="width: contain;">
                             <div>

@@ -88,7 +88,8 @@
                             </div>
                         </div>
                         <div>
-                            <asp:LinkButton PostBackUrl="~/Customer/Search.aspx" ID="btnSch" ValidationGroup="btn" runat="server" Style="width: fit-content;" CssClass="btn-light btn btn-search">
+                            <asp:LinkButton OnClick="btnSch_Click"
+                                ID="btnSch" ValidationGroup="btn" runat="server" Style="width: fit-content;" CssClass="btn-light btn btn-search">
                             <i style="font-size: 18px; display: flex; justify-content: center; align-items: center; margin-top: 4.5px; height: 18px;" class="fa fa-search"></i>
                             </asp:LinkButton>
                         </div>
@@ -271,12 +272,12 @@
             const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
             const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
-            function checkPostback(ctrl) {
-                var MIN_TEXTLENGTH = 6;
-                if (ctrl != null && ctrl.value && ctrl.value.length >= MIN_TEXTLENGTH) {
-                    __doPostBack(ctrl.id, '');
-                }
-            }
+            //function checkPostback(ctrl) {
+            //    var MIN_TEXTLENGTH = 10;
+            //    if (ctrl != null && ctrl.value && ctrl.value.length >= MIN_TEXTLENGTH) {
+            //        __doPostBack(ctrl.id, '');
+            //    }
+            //}
         </script>
         <script src="https://kit.fontawesome.com/06c32b9e65.js" crossorigin="anonymous"></script>
 

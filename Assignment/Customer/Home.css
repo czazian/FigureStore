@@ -71,9 +71,10 @@
 }
 
 .imgFigure {
-    width:100%;
-    padding : 15px; 
-    transition : 0.35s ease-in-out;
+    width: 100%;
+    padding: 15px;
+    transition: 0.35s ease-in-out;
+    max-height: 290px;
 }
 
     .imgFigure:hover {
