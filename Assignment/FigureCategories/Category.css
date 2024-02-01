@@ -11,7 +11,7 @@
         display: block;
         min-width: 100%;
         height: 200px;
-        filter: blur(3px) brightness(65%);
+        filter:  brightness(60%);
     }
 
 .header-tt {

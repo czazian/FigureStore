@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="box">
         <div class="header-cont">
-            <asp:Image runat="server" ImageUrl="~/Image/Element/categoryBannerTest.png" />
+            <asp:Image runat="server" ImageUrl="~/Image/Element/longbanner3.jpg" />
             <div class="header-tt">
                 GUNDAMS
             </div>

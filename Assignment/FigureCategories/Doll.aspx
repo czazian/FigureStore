@@ -7,9 +7,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="box">
         <div class="header-cont">
-            <asp:Image runat="server" ImageUrl="~/Image/Element/longbanner3.jpg" />
+            <asp:Image runat="server" ImageUrl="~/Image/Element/longbanner4.jpg" />
             <div class="header-tt">
-                DOOLS
+                DOLLS
             </div>
         </div>
 
