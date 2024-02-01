@@ -50,7 +50,7 @@
                                 Status
                             </div>
                             <div class="form-check" id="collpaseStatus">
-                                <asp:RadioButtonList CssClass="selection" runat="server" ID="CheckBoxList1">
+                                <asp:RadioButtonList AutoPostBack="true" OnSelectedIndexChanged="RadioButtonList_SelectedIndexChanged" CssClass="selection" runat="server" ID="RadioButtonList">
                                     <asp:ListItem Value="All Product">All Product</asp:ListItem>
                                     <asp:ListItem Value="Pre-Order">Pre-Order</asp:ListItem>
                                     <asp:ListItem Value="Available">Available</asp:ListItem>
@@ -62,13 +62,9 @@
                                 Manufacturer
                             </div>
                             <div class="form-check" id="collapseManu">
-                                <asp:CheckBoxList CssClass="selection" runat="server" ID="cbxManufacturer">
-                                    <asp:ListItem Value="Good Smile Company">Good Smile Company</asp:ListItem>
-                                    <asp:ListItem Value="Solarain">Solarain</asp:ListItem>
-                                    <asp:ListItem Value="PROOF">PROOF</asp:ListItem>
-                                    <asp:ListItem Value="Max Factory">Max Factory</asp:ListItem>
-                                    <asp:ListItem Value="METAL ROBOT SPIRITS">METAL ROBOT SPIRITS</asp:ListItem>
+                                <asp:CheckBoxList CssClass="selection" OnSelectedIndexChanged="cbxManufacturer_SelectedIndexChanged" runat="server" ID="cbxManufacturer">
                                 </asp:CheckBoxList>
+                                <asp:Label runat="server" ID="onlyOneM" Visible="false"></asp:Label>
                             </div>
                         </div>
                         <div class="series-selector" style="border-top: 1px solid lightgrey; padding-top: 15px;">
@@ -76,13 +72,9 @@
                                 Series
                             </div>
                             <div class="form-check" id="collapseSeries">
-                                <asp:CheckBoxList CssClass="selection" runat="server" ID="cbxSeries">
-                                    <asp:ListItem Value="Frieren: Beyond Journey's End">Frieren: Beyond Journey's End</asp:ListItem>
-                                    <asp:ListItem Value="Butareba: The Story of a Man Turned into a Pig">Butareba: The Story of a Man Turned into a Pig</asp:ListItem>
-                                    <asp:ListItem Value="Azur Lane">Azur Lane</asp:ListItem>
-                                    <asp:ListItem Value="Mobile Suit Gundam: Iron-Blooded Orphans">Mobile Suit Gundam: Iron-Blooded Orphans</asp:ListItem>
-                                    <asp:ListItem Value="Pop Team Epic Season 2">Pop Team Epic Season 2</asp:ListItem>
+                                <asp:CheckBoxList CssClass="selection" OnSelectedIndexChanged="cbxSeries_SelectedIndexChanged" runat="server" ID="cbxSeries">
                                 </asp:CheckBoxList>
+                                <asp:Label runat="server" ID="onlyOneS" Visible="false"></asp:Label>
                             </div>
 
                         </div>
@@ -94,7 +86,7 @@
                 <div class="items-cont">
                     <div class="sort">
                         <div class="noOfResult">
-                            <asp:Label runat="server" ID="resultno" Text="12 Results" />
+                            <asp:Label runat="server" ID="resultno" />
                         </div>
                         <div class="sort-cont">
                             <div class="sort-title">
@@ -111,131 +103,39 @@
                         </div>
                     </div>
                     <div class="item-container">
-                        <!--An Item-->
-                        <div class="item">
-                            <div class="item-image">
-                                <asp:Image runat="server" CssClass="imgFigure" ID="Image8" ImageUrl="~/Image/Product/f2.jpg" />
-                            </div>
-                            <div class="item-name">
-                                <asp:Label ID="Label15" CssClass="sentence" runat="server" Text="TENITOL Jess"></asp:Label>
-                            </div>
-                            <div class="item-price">
-                                <asp:Label ID="Label16" runat="server" Text="RM 100.00"></asp:Label>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-buy">
-                                    <asp:LinkButton runat="server">
-        <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
-                                    </asp:LinkButton>
+
+                        <asp:Repeater runat="server" ID="gundamRepater">
+                            <ItemTemplate>
+                                <!--An Item-->
+                                <div class="item">
+                                    <div class="item-image">
+                                        <asp:Image runat="server" CssClass="imgFigure" ID="Image8" ImageUrl='<%# Eval("FigureImage1") %>' />
+                                    </div>
+                                    <div class="detail-cont">
+                                        <div class="item-name">
+                                            <asp:Label ID="lblName" CssClass="sentence" runat="server" Text='<%# Eval("FigureName") %>'></asp:Label>
+                                        </div>
+                                        <div class="item-price">
+                                            <asp:Label ID="lblPrice" runat="server" Text='<%# Convert.ToDecimal(Eval("FigurePrice")).ToString("C2") %>'></asp:Label>
+                                        </div>
+                                        <div class="item-details">
+                                            <div class="item-buy">
+                                                <asp:LinkButton runat="server">
+  <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
+                                                </asp:LinkButton>
+                                            </div>
+                                            <div class="item-view">
+                                                <asp:LinkButton runat="server" ID="destination" CommandArgument='<%# Eval("FigureID") %>' OnCommand="destination_Command">
+  <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
+                                                </asp:LinkButton>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="item-view">
-                                    <asp:LinkButton runat="server">
-        <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
-                                    </asp:LinkButton>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End of An Item-->
-                        <!--An Item-->
-                        <div class="item">
-                            <div class="item-image">
-                                <asp:Image runat="server" CssClass="imgFigure" ID="Image1" ImageUrl="~/Image/Product/f2.jpg" />
-                            </div>
-                            <div class="item-name">
-                                <asp:Label ID="Label1" CssClass="sentence" runat="server" Text="TENITOL Jess"></asp:Label>
-                            </div>
-                            <div class="item-price">
-                                <asp:Label ID="Label2" runat="server" Text="RM 100.00"></asp:Label>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-buy">
-                                    <asp:LinkButton runat="server">
-        <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
-                                    </asp:LinkButton>
-                                </div>
-                                <div class="item-view">
-                                    <asp:LinkButton runat="server">
-        <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
-                                    </asp:LinkButton>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End of An Item-->
-                        <!--An Item-->
-                        <div class="item">
-                            <div class="item-image">
-                                <asp:Image runat="server" CssClass="imgFigure" ID="Image2" ImageUrl="~/Image/Product/f2.jpg" />
-                            </div>
-                            <div class="item-name">
-                                <asp:Label ID="Label3" CssClass="sentence" runat="server" Text="TENITOL Jess"></asp:Label>
-                            </div>
-                            <div class="item-price">
-                                <asp:Label ID="Label4" runat="server" Text="RM 100.00"></asp:Label>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-buy">
-                                    <asp:LinkButton runat="server">
-        <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
-                                    </asp:LinkButton>
-                                </div>
-                                <div class="item-view">
-                                    <asp:LinkButton runat="server">
-        <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
-                                    </asp:LinkButton>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End of An Item-->
-                        <!--An Item-->
-                        <div class="item">
-                            <div class="item-image">
-                                <asp:Image runat="server" CssClass="imgFigure" ID="Image3" ImageUrl="~/Image/Product/f2.jpg" />
-                            </div>
-                            <div class="item-name">
-                                <asp:Label ID="Label5" CssClass="sentence" runat="server" Text="TENITOL Jess"></asp:Label>
-                            </div>
-                            <div class="item-price">
-                                <asp:Label ID="Label6" runat="server" Text="RM 100.00"></asp:Label>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-buy">
-                                    <asp:LinkButton runat="server">
-        <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
-                                    </asp:LinkButton>
-                                </div>
-                                <div class="item-view">
-                                    <asp:LinkButton runat="server">
-        <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
-                                    </asp:LinkButton>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End of An Item-->
-                        <!--An Item-->
-                        <div class="item">
-                            <div class="item-image">
-                                <asp:Image runat="server" CssClass="imgFigure" ID="Image4" ImageUrl="~/Image/Product/f2.jpg" />
-                            </div>
-                            <div class="item-name">
-                                <asp:Label ID="Label7" CssClass="sentence" runat="server" Text="TENITOL Jess"></asp:Label>
-                            </div>
-                            <div class="item-price">
-                                <asp:Label ID="Label8" runat="server" Text="RM 100.00"></asp:Label>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-buy">
-                                    <asp:LinkButton runat="server">
-        <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
-                                    </asp:LinkButton>
-                                </div>
-                                <div class="item-view">
-                                    <asp:LinkButton runat="server">
-        <i class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;View
-                                    </asp:LinkButton>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End of An Item-->
+                                <!--End of An Item-->
+                            </ItemTemplate>
+                        </asp:Repeater>
+
                     </div>
                 </div>
             </div>

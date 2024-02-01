@@ -44,6 +44,7 @@ namespace Assignment.Customer
                         prelease.Text = figure["FigureReleaseDate"].ToString();
                         pmanufacturer.Text = figure["FigureManufacturer"].ToString();
                         punit.Text = figure["FigureUnit"].ToString();
+                        pStatus.Text = figure["FigureStatus"].ToString();
                         pspecification.Text = figure["FigureSpecification"].ToString();
                         txtPrice.Text = Convert.ToDecimal(figure["FigurePrice"]).ToString("C2");
                     }

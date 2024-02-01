@@ -176,6 +176,7 @@ input[type='radio'] {
     width: 100%;
     justify-content: center;
     margin-top: 25px; 
+    text-align:center;
 }
 
 .item {
@@ -193,17 +194,28 @@ input[type='radio'] {
     width: 100%;
     padding: 15px;
     transition: 0.35s ease-in-out;
+    max-height: 320px;
 }
 
     .imgFigure:hover {
         transform: scale(1.07);
     }
 
+.detail-cont {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: end;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 13px;
+}
+
 .item-details {
     display: flex;
     flex-flow: row nowrap;
     gap: 10px;
     align-items: end;
+    justify-content: center;
 }
 
 .item-view, .item-buy {

@@ -54,6 +54,13 @@
                             <asp:Label runat="server" ID="punit" Text="50" />
                         </td>
                     </tr>
+                    <tr class="status">
+                        <td class="title">Status :
+                        </td>
+                        <td class="p-status">
+                            <asp:Label runat="server" ID="pStatus" />
+                        </td>
+                    </tr>
                     <tr class="specification">
                         <td class="title">Specification :
                         </td>
@@ -73,7 +80,7 @@
             <div class="quantity-container">
                 <table>
                     <tr>
-                        <td class="q-title" style="margin-top:5px; font-weight: bold; text-align: right;">Quantity
+                        <td class="q-title" style="margin-top: 5px; font-weight: bold; text-align: right;">Quantity
                         </td>
                         <td style="width: contain;">
                             <div>
@@ -144,7 +151,7 @@
                             <div class="sprice">
                                 <asp:Label CssClass="deconone" runat="server" ID="sPrice" Text='<%# Convert.ToDecimal(Eval("FigurePrice")).ToString("C2") %>' />
                             </div>
-                            <asp:Button ID="view" OnCommand="view_Command" CommandArgument='<%# Eval("FigureID") %>' Font-Underline="false" Style="background-color:#ff7e29; width:100%; font-weight:bold;color:white; margin-top:5px;" runat="server" CssClass="btn border" Text="View"/>
+                            <asp:Button ID="view" OnCommand="view_Command" CommandArgument='<%# Eval("FigureID") %>' Font-Underline="false" Style="background-color: #ff7e29; width: 100%; font-weight: bold; color: white; margin-top: 5px;" runat="server" CssClass="btn border" Text="View" />
                             <hr />
                         </div>
                     </ItemTemplate>

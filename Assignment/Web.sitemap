@@ -2,29 +2,29 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
 	<siteMapNode>
 		<siteMapNode title="SCALE FIGURES" description="">
-			<siteMapNode url="~/FigureCategories/ScaleFigure.aspx#list-item-1" title="All Product"  description="" />
-			<siteMapNode url="~/FigureCategories/ScaleFigure.aspx#list-item-2" title="Pre-Order"  description="" />
-			<siteMapNode url="~/FigureCategories/ScaleFigure.aspx#list-item-3" title="Available Now"  description="" />
+			<siteMapNode url="~/FigureCategories/ScaleFigure.aspx?status=all" title="All Product"  description="" />
+			<siteMapNode url="~/FigureCategories/ScaleFigure.aspx?status=pre" title="Pre-Order"  description="" />
+			<siteMapNode url="~/FigureCategories/ScaleFigure.aspx?status=available" title="Available Now"  description="" />
 		</siteMapNode>
 		<siteMapNode title="NENDOROIDS" description="">
-			<siteMapNode url="~/FigureCategories/Nendoroid.aspx#list-item-1" title="All Product"  description="" />
-			<siteMapNode url="~/FigureCategories/Nendoroid.aspx#list-item-2" title="Pre-Order"  description="" />
-			<siteMapNode url="~/FigureCategories/Nendoroid.aspx#list-item-3" title="Available Now"  description="" />
+			<siteMapNode url="~/FigureCategories/Nendoroid.aspx?status=all" title="All Product"  description="" />
+			<siteMapNode url="~/FigureCategories/Nendoroid.aspx?status=pre" title="Pre-Order"  description="" />
+			<siteMapNode url="~/FigureCategories/Nendoroid.aspx?status=available" title="Available Now"  description="" />
 		</siteMapNode>
 		<siteMapNode title="GUNDAM" description="">
-			<siteMapNode url="~/FigureCategories/Gundam.aspx#list-item-1" title="All Product"  description="" />
-			<siteMapNode url="~/FigureCategories/Gundam.aspx#list-item-2" title="Pre-Order"  description="" />
-			<siteMapNode url="~/FigureCategories/Gundam.aspx#list-item-3" title="Available Now"  description="" />
+			<siteMapNode url="~/FigureCategories/Gundam.aspx?status=all" title="All Product"  description="" />
+			<siteMapNode url="~/FigureCategories/Gundam.aspx?status=pre" title="Pre-Order"  description="" />
+			<siteMapNode url="~/FigureCategories/Gundam.aspx?status=available" title="Available Now"  description="" />
 		</siteMapNode>
 		<siteMapNode title="DOLLS" description="">
-			<siteMapNode url="~/FigureCategories/Doll.aspx#list-item-1" title="All Product"  description="" />
-			<siteMapNode url="~/FigureCategories/Doll.aspx#list-item-2" title="Pre-Order"  description="" />
-			<siteMapNode url="~/FigureCategories/Doll.aspx#list-item-3" title="Available Now"  description="" />
+			<siteMapNode url="~/FigureCategories/Doll.aspx?status=all" title="All Product"  description="" />
+			<siteMapNode url="~/FigureCategories/Doll.aspx?status=pre" title="Pre-Order"  description="" />
+			<siteMapNode url="~/FigureCategories/Doll.aspx?status=available" title="Available Now"  description="" />
 		</siteMapNode>
 		<siteMapNode title="GOODS" description="">
-			<siteMapNode url="~/FigureCategories/Good.aspx#list-item-1" title="All Product"  description="" />
-			<siteMapNode url="~/FigureCategories/Good.aspx#list-item-2" title="Pre-Order"  description="" />
-			<siteMapNode url="~/FigureCategories/Good.aspx#list-item-3" title="Available Now"  description="" />
+			<siteMapNode url="~/FigureCategories/Good.aspx?status=all" title="All Product"  description="" />
+			<siteMapNode url="~/FigureCategories/Good.aspx?status=pre" title="Pre-Order"  description="" />
+			<siteMapNode url="~/FigureCategories/Good.aspx?status=available" title="Available Now"  description="" />
 		</siteMapNode>
 	</siteMapNode>
 </siteMap>
