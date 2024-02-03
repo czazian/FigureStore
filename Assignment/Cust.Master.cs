@@ -7,14 +7,67 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//Mail
+using System.Net.Mail;
+using System.Net.Http;
+
 namespace Assignment
 {
     public partial class Cust : System.Web.UI.MasterPage
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+
+        protected void btnSubscribe_Click(object sender, EventArgs e)
+        {
+            string recipient = txtSubscribe.Text;
+            sendEmail(recipient);
+        }
+
+        private void sendEmail(string recipient) { 
+            //Mail Object
+            MailMessage mailMessage = new MailMessage();
+            string fromMail = "apexonlineshop.noreply@gmail.com";
+            string fromPassword = "mlgrtqinkgbiutmn";
+            string path = Server.MapPath("~/Image/Element/promo.jpg");
+
+            //Sender and Recipient
+            mailMessage.From = new MailAddress(fromMail); //The sender
+            mailMessage.To.Add(recipient); //The recipient
+            mailMessage.Subject = "Promotion Notifications Activated"; //Email Subject
+            mailMessage.Attachments.Add(new Attachment(path));
+            //Mail Message
+            mailMessage.Body = "You chose to receive our promotion information, Thank you! We will keep sending our latest promotion information to you.";
+            mailMessage.IsBodyHtml = true;
+
+            SmtpClient client = new SmtpClient("smtp.gmail.com");
+            client.Port = 587;
+            client.Timeout = 20000;
+            client.Credentials = new System.Net.NetworkCredential(fromMail,fromPassword);
+            client.EnableSsl = true;
+            client.Send(mailMessage);
+
+            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "call()", true);
+
+            //Store email to database
+            string date = DateTime.Now.ToString("MM/dd/yyyy");
+
+            SqlConnection conn;
+            string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
+            conn = new SqlConnection(str);
+
+            conn.Open();
+            string query = "INSERT INTO Promotion (PromotionRecipientEmail, PromotionActivatedDate) VALUES (@email,@date)";
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@email", recipient);
+            command.Parameters.AddWithValue("@date", date);
+
+            command.ExecuteNonQuery();
+        }
+
 
         protected void txtSearch_TextChanged(object sender, EventArgs e)
         {

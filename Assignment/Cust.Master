@@ -70,7 +70,7 @@
                                 <asp:Repeater Visible="false" runat="server" ID="resultRepeater">
 
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="toDestination" CommandArgument='<%# Eval("FigureID") %>' OnCommand="toDestination_Command" runat="server" Style="margin: 5px 0px 5px 0px;display: flex; flex-flow: row nowrap; text-decoration: none;">
+                                        <asp:LinkButton ID="toDestination" CommandArgument='<%# Eval("FigureID") %>' OnCommand="toDestination_Command" runat="server" Style="margin: 5px 0px 5px 0px; display: flex; flex-flow: row nowrap; text-decoration: none;">
                                             <div style="width: 40%; padding: 10px; display: flex; justify-content: center;">
                                                 <asp:Image Style="width: 100px;" runat="server" ImageUrl='<%# Eval("FigureImage1") %>' />
                                             </div>
@@ -205,7 +205,7 @@
             <div id="subscribe" class="subscribe">
                 <asp:TextBox placeholder=" example@gmail.com" TextMode="Email" CssClass="col-3" Style="border-radius: 5px; border-bottom-right-radius: 0; border-top-right-radius: 0; border: none;" ID="txtSubscribe" runat="server">
                 </asp:TextBox>
-                <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="btn" Style="background-color: #ff7e29; color: white; border-bottom-left-radius: 0; border-top-left-radius: 0;" />
+                <asp:Button ID="btnSubscribe" OnClick="btnSubscribe_Click" runat="server" Text="Subscribe" CssClass="btn" Style="background-color: #ff7e29; color: white; border-bottom-left-radius: 0; border-top-left-radius: 0;" />
             </div>
             <div class="footer-container container-fluid">
                 <div class="top">
@@ -272,12 +272,9 @@
             const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
             const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
-            //function checkPostback(ctrl) {
-            //    var MIN_TEXTLENGTH = 10;
-            //    if (ctrl != null && ctrl.value && ctrl.value.length >= MIN_TEXTLENGTH) {
-            //        __doPostBack(ctrl.id, '');
-            //    }
-            //}
+            function call() {
+                alert("Congrats! You have successfully activated our promotion notification!");
+            }
         </script>
         <script src="https://kit.fontawesome.com/06c32b9e65.js" crossorigin="anonymous"></script>
 
