@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Web;
@@ -45,11 +46,20 @@ namespace Assignment.Customer
                         pmanufacturer.Text = figure["FigureManufacturer"].ToString();
                         punit.Text = figure["FigureUnit"].ToString();
                         pStatus.Text = figure["FigureStatus"].ToString();
+                        lblTopStatus.Text = figure["FigureStatus"].ToString();
                         pspecification.Text = figure["FigureSpecification"].ToString();
                         txtPrice.Text = Convert.ToDecimal(figure["FigurePrice"]).ToString("C2");
                     }
                 }
                 conn.Close();
+            }
+
+            if(lblTopStatus.Text == "Pre-Order")
+            {
+                lblTopStatus.BackColor = Color.DarkOrange;
+            } else if (lblTopStatus.Text == "Available")
+            {
+                lblTopStatus.BackColor = Color.LimeGreen;
             }
 
             //Suggestion

@@ -99,7 +99,7 @@
                             </div>
                             <div class="sort-list">
                                 <asp:DropDownList AutoPostBack="true" OnSelectedIndexChanged="ddlSort_SelectedIndexChanged" CssClass="list-item" runat="server" ID="ddlSort">
-                                    <asp:ListItem Selected="True">Sort Selection</asp:ListItem>
+                                    <asp:ListItem Selected="True">Default</asp:ListItem>
                                     <asp:ListItem Value="1">Lowest Price</asp:ListItem>
                                     <asp:ListItem Value="2">Highest Price</asp:ListItem>
                                     <asp:ListItem Value="3">a-Z</asp:ListItem>

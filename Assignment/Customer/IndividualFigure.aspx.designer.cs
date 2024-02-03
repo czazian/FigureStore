@@ -33,6 +33,15 @@ namespace Assignment.Customer
         protected global::System.Web.UI.WebControls.Label lblSeries;
 
         /// <summary>
+        /// lblTopStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTopStatus;
+
+        /// <summary>
         /// mainimg control.
         /// </summary>
         /// <remarks>

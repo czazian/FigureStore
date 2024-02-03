@@ -18,7 +18,9 @@
 
 .product-header {
     border-bottom: 1px solid lightgrey;
-    padding: 15px;
+    padding: 13px 20px 13px 20px ;
+    display:flex;
+    flex-flow: row nowrap;
 }
 
 .left-box {
@@ -145,6 +147,31 @@ td, tr {
     bottom: 15px;
     right: 15px;
     display: none;
+}
+
+.left-info {
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content:center;
+    padding: 0px 15px 0px 0px;
+}
+
+.status-icon {
+    display:flex;
+    flex-flow: row nowrap;
+    height: inherit;
+    align-items: center;
+    margin:5px;
+    margin-left:auto;
+    color:white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.topStatus {
+    background-color: grey;
+    border-radius: 6px;
+    padding: 6px 18px 6px 18px;
 }
 
 /*Mobile and Tablet*/

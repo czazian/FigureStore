@@ -9,12 +9,17 @@
         <div class="left-box">
             <div class="top-container">
                 <div class="product-header">
-                    <div class="header-title">
-                        <asp:Label Style="font-weight: bold; font-size: 18px; color: #ff7e29" ID="pname" runat="server" Text="Nendoroid Frieren" />
+                    <div class="left-info">
+                        <div class="header-title">
+                            <asp:Label Style="font-weight: bold; font-size: 18px; color: #ff7e29" ID="pname" runat="server" Text="Nendoroid Frieren" />
+                        </div>
+                        <div class="series">
+                            <span style="color: #ff7e29;">Series : </span>
+                            <asp:Label ID="lblSeries" runat="server" Text="Frieren: Beyond Journey's End" />
+                        </div>
                     </div>
-                    <div class="series">
-                        <span style="color: #ff7e29;">Series : </span>
-                        <asp:Label ID="lblSeries" runat="server" Text="Frieren: Beyond Journey's End" />
+                    <div class="status-icon" id="status">
+                        <asp:Label runat="server" ID="lblTopStatus" CssClass="topStatus" Text="test"/>
                     </div>
                 </div>
                 <div class="middle">
@@ -180,6 +185,11 @@
             } else {
                 box.style.display = "none";
             }
+
+           <%-- var topStatus = document.getElementById('<%= lblTopStatus.ClientID %>').innerHTML;
+            if (topStatus === "Pre-Order") {
+                this.document.getElementById('status').style.Back
+            }--%>
         });
 
         function toTop() {
