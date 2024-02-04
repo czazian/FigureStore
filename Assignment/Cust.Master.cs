@@ -18,7 +18,7 @@ namespace Assignment
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //To be done
         }
 
         protected void btnSubscribe_Click(object sender, EventArgs e)
@@ -38,9 +38,9 @@ namespace Assignment
             mailMessage.From = new MailAddress(fromMail); //The sender
             mailMessage.To.Add(recipient); //The recipient
             mailMessage.Subject = "Promotion Notifications Activated"; //Email Subject
-            mailMessage.Attachments.Add(new Attachment(path));
             //Mail Message
             mailMessage.Body = "You chose to receive our promotion information, Thank you! We will keep sending our latest promotion information to you.";
+            mailMessage.Attachments.Add(new Attachment(path));
             mailMessage.IsBodyHtml = true;
 
             SmtpClient client = new SmtpClient("smtp.gmail.com");

@@ -23,7 +23,7 @@
                         <div class="input-field">
                             <input type="password" name="password" class="password" placeholder="Enter your password">
                             <i class="uil uil-lock icon"></i>
-                            <i class="uil uil-eye-slash showHidePw"></i>
+                            <i class="fa-solid fa-eye-slash showHidePw"></i>
                         </div>
                         <div class="input-field button">
                             <input type="submit" value="Login">

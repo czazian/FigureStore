@@ -1,13 +1,11 @@
 ﻿
 .form-container {
     position: relative;
-    /* max-width: 500px; */
     width: 100%;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    /* margin: 0 20px; */
     margin: 30px 0px 30px 0px;
 }
 
@@ -49,20 +47,9 @@
 
     .form-container .form .login-title {
         position: relative;
-        font-size: 27px;
+        font-size: 30px;
         font-weight: 600;
     }
-
-.form .login-title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background-color: #fa4d4d;
-    border-radius: 25px;
-}
 
 .form .input-field {
     position: relative;
@@ -71,11 +58,13 @@
     margin-top: 20px;
 }
 
+
+
+
 .input-field input {
-    position: absolute;
     height: 100%;
     width: 100%;
-    padding: 0 35px;
+    padding: 0 50px;
     border: none;
     outline: none;
     font-size: 16px;
@@ -87,6 +76,17 @@
     .input-field input:is(:focus, :valid) {
         border-bottom-color: #fa4d4d;
     }
+
+
+    .validator { 
+        text-align:right;
+        width: 100%;
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content:right;
+    }
+
+
 
 .input-field i {
     position: absolute;
@@ -100,6 +100,7 @@
 .input-field input:is(:focus, :valid) ~ i {
     color: #fa4d4d;
 }
+
 
 .input-field i.icon {
     left: 0;
@@ -123,6 +124,7 @@
     align-items: center;
 }
 
+
 .checkbox-content input {
     margin-right: 10px;
     accent-color: #fa4d4d;
@@ -135,7 +137,6 @@
 
 .form a.text {
     color: #fa4d4d;
-    text-decoration: none;
 }
 
 .form a:hover {
@@ -162,7 +163,31 @@
     background-color: #fc7c7c;
 }
 
-.form .login-signup {
-    margin-top: 30px;
-    text-align: center;
+.modal-body {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    justify-content:center;
+}
+
+.emailRecover, .verification {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 5px;
+}
+
+tr, table { 
+    width: 100%;
+    margin: 0px 10px 0px 10px; 
+}
+
+
+
+.tt { 
+    width: 35%;
+}
+
+.ti { 
+    width: 65%;
 }

@@ -176,6 +176,7 @@
     <Content Include="Image\banner5.jpg" />
     <Content Include="Image\Logo.png" />
     <Content Include="Image\sbackground.mp4" />
+    <Content Include="Login\ChangePassword.aspx" />
     <Content Include="Login\CustomerLogin.aspx" />
     <Content Include="Cust.css" />
     <Content Include="Login\CustomerLogin.css" />
@@ -297,6 +298,13 @@
     </Compile>
     <Compile Include="FigureCategories\ScaleFigure.aspx.designer.cs">
       <DependentUpon>ScaleFigure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\CustomerLogin.aspx.cs">
       <DependentUpon>CustomerLogin.aspx</DependentUpon>

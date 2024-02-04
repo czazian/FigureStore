@@ -33,11 +33,11 @@
         <div class="main">
             <div class="left">
                 <div class="profileimg">
-                    <asp:Image Style="width: 250px; height: 250px; border-radius: 100px;"
-                        runat="server" ID="profileimg" ImageUrl="~/Image/Profile/user.jpg" />
+                    <asp:Image Style="width: 250px; height: 250px; border-radius: 100px; z-index:3;"
+                        runat="server" ID="profileimg" />
                 </div>
                 <div class="profilename">
-                    @<asp:Label runat="server" ID="username" Text="Lala Yang" />
+                    @<asp:Label runat="server" ID="username" />
                 </div>
             </div>
             <div class="right">
@@ -49,21 +49,21 @@
                                 <div style="height: inherit; text-align: right;">:</div>
                             </th>
                             <td>
-                                <asp:Label runat="server" ID="email" Text="lalayang@gmail.com" /></td>
+                                <asp:Label runat="server" ID="email" /></td>
                         </tr>
                         <tr>
                             <th>Phone No.
                                 <div style="height: inherit; text-align: right;">:</div>
                             </th>
                             <td>
-                                <asp:Label runat="server" ID="phone" Text="012-34567890" /></td>
+                                <asp:Label runat="server" ID="phone" /></td>
                         </tr>
                         <tr>
                             <th>Home Address
                                 <div style="height: inherit; text-align: right;">:</div>
                             </th>
                             <td>
-                                <asp:Label runat="server" ID="address" Text="TARUMT, Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur, Federal Territory of Kuala Lumpur." /></td>
+                                <asp:Label runat="server" ID="address" /></td>
                         </tr>
 
                     </table>
