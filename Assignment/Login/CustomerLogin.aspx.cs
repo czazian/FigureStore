@@ -146,7 +146,7 @@ namespace Assignment.Login
             }
         }
 
-        private string getID ()
+        private string getID()
         {
             //Getting user id with email 
             SqlConnection conn;
@@ -167,7 +167,6 @@ namespace Assignment.Login
 
         protected void btnSendEmail_Click(object sender, EventArgs e)
         {
-
             //Operation
             if (txtRecoverEmail.Text == "")
             {
@@ -176,14 +175,17 @@ namespace Assignment.Login
             }
             else if (txtRecoverEmail.Text != "")
             {
+                //Avoid user click again while email is sending
+                btnSendEmail.Enabled = false;
+                //Correct operation
                 message1.ForeColor = Color.ForestGreen;
                 string recipient = txtRecoverEmail.Text;
                 string code = sendEmail(recipient, getID());
                 Session["code"] = code.ToString();
 
-            } else
+            } else if (getID() == "")
             {
-                message1.Text = "Please do not leave email empty / Email entered does not exist.";
+                message1.Text = "Email entered does not exist.";
                 message1.ForeColor = Color.Red;
             }
         }
@@ -191,8 +193,6 @@ namespace Assignment.Login
         private string sendEmail(string recipient, string id)
         {
 
-            //Avoid user click again while email is sending
-            btnSendEmail.Enabled = false;
 
             //Generate 6 digits random numbers 
             Random generator = new Random();
