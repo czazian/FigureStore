@@ -162,6 +162,8 @@ namespace Assignment.Login
             string id = cmd.ExecuteScalar().ToString();
             System.Diagnostics.Debug.WriteLine("ID = " + id);
 
+            conn.Close();
+
             return id;
         }
 
@@ -170,7 +172,7 @@ namespace Assignment.Login
             //Operation
             if (txtRecoverEmail.Text == "")
             {
-                message1.Text = "Please do not leave email empty / Email entered does not exist.";
+                message1.Text = "Please do not leave email empty and enter your email with correct format.";
                 message1.ForeColor = Color.Red;
             }
             else if (txtRecoverEmail.Text != "")
@@ -180,17 +182,13 @@ namespace Assignment.Login
                 //Correct operation
                 message1.ForeColor = Color.ForestGreen;
                 string recipient = txtRecoverEmail.Text;
-                string code = sendEmail(recipient, getID());
+                string code = sendEmail(recipient);
                 Session["code"] = code.ToString();
 
-            } else if (getID() == "")
-            {
-                message1.Text = "Email entered does not exist.";
-                message1.ForeColor = Color.Red;
             }
         }
 
-        private string sendEmail(string recipient, string id)
+        private string sendEmail(string recipient)
         {
 
 
