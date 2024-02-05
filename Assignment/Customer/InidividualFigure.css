@@ -18,7 +18,7 @@
 
 .product-header {
     border-bottom: 1px solid lightgrey;
-    padding: 13px 20px 13px 20px ;
+    padding: 13px 20px 13px 20px;
     display:flex;
     flex-flow: row nowrap;
 }
@@ -154,6 +154,7 @@ td, tr {
     flex-flow: column nowrap;
     justify-content:center;
     padding: 0px 15px 0px 0px;
+    width:80%;
 }
 
 .status-icon {
@@ -166,6 +167,8 @@ td, tr {
     color:white;
     font-weight: bold;
     font-size: 13px;
+    width: 20%;
+    justify-content:right;
 }
 
 .topStatus {

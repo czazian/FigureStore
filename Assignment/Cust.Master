@@ -67,6 +67,11 @@
                         <div class="s-box col-11">
                             <asp:TextBox OnKeyUp="checkPostback(this)" AutoPostBack="true" OnTextChanged="txtSearch_TextChanged" autocomplete="off" Style="color: black; position: relative;" TextMode="Search" ID="txtSearch" runat="server" class="form-control border border-1 search-bar" placeholder="Product Name" />
                             <div class="result">
+                                <asp:Panel runat="server" Visible="false" ID="panelResult" class="more-result" Style="display: flex; justify-content: right; background-color: #ff7e29;">
+                                    <asp:LinkButton ID="moreitem" Style="text-decoration: none; font-weight: bold; padding: 5px 0px 5px 0px; border: none; margin-right: 10px; background-color: transparent; color: white;" runat="server" OnClientClick="return showMore();">
+                                        Show&nbsp;<asp:Label runat="server" ID="resultTopNumber" />&nbsp;More Results&nbsp;&nbsp;<i class="fa-solid fa-circle-right"></i>
+                                    </asp:LinkButton>
+                                </asp:Panel>
                                 <asp:Repeater Visible="false" runat="server" ID="resultRepeater">
 
                                     <ItemTemplate>
@@ -78,7 +83,7 @@
                                                 <div class="dt" style="display: flex; flex-flow: column nowrap; height: 100%; justify-content: center;">
                                                     <asp:Label Style="color: #ff7e29; font-weight: bold;" runat="server" ID="lblName" Text='<%# Eval("FigureName") %>' />
                                                     <asp:Label Style="color: #ff7e29; color: #ff7e29;" runat="server" ID="lblSeries" Text='<%# Eval("FigureSeries") %>' />
-                                                    <asp:Label runat="server" ID="lblPrice" Text='<%# Convert.ToDecimal(Eval("FigurePrice").ToString()) %>' />
+                                                    <asp:Label runat="server" ID="lblPrice" Text='<%# Convert.ToDecimal(Eval("FigurePrice")).ToString("C2") %>' />
                                                 </div>
                                             </div>
                                         </asp:LinkButton>
@@ -116,11 +121,11 @@
                             </asp:LinkButton>
                         </div>
                     </div>
-                    <div class="profile-container action">
+                    <div class="profile-container action" id="profile" style="display: none;">
                         <div>
                             <asp:LinkButton PostBackUrl="~/Customer/UserProfile.aspx" ID="LinkButton1" runat="server" CssClass="btn header-font" Style="width: 170px; font-size: 17px; display: flex;">
                                 <div style="margin-top: -3px; border-radius: 150px; width: 30px; height: 30px; overflow: hidden;">
-                                    <asp:Image ImageUrl="~/Image/Profile/default.jpg" Style="background-color: white; border-radius: 100px; width: 30px; height: 30px; margin-right: -5px;" runat="server" ID="topImage" />
+                                    <asp:Image Style="background-color: white; border-radius: 100px; width: 30px; height: 30px; margin-right: -5px;" runat="server" ID="topImage" />
                                 </div>
                                 &nbsp;&nbsp;
                                 User Profile
@@ -135,10 +140,10 @@
                         Login
                             </asp:LinkButton>
                             <ul class="dropdown-menu">
-                                <li id="identityUser">
+                                <li id="userlogin">
                                     <asp:HyperLink runat="server" ID="hrefCustomer" NavigateUrl="~/Login/CustomerLogin.aspx" Text="Customer" CssClass="dropdown-item LoginHover"></asp:HyperLink>
                                 </li>
-                                <li id="identityStaff">
+                                <li id="stafflogin">
                                     <asp:HyperLink runat="server" ID="hrefStaff" NavigateUrl="~/Login/StaffLogin.aspx" Text="Staff" CssClass="dropdown-item LoginHover"></asp:HyperLink>
                                 </li>
                             </ul>
@@ -275,8 +280,43 @@
             function call() {
                 alert("Congrats! You have successfully activated our promotion notification!");
             }
+
+            function showMore() {
+                document.getElementById('<%= btnSch.ClientID %>').click();
+                return false;
+            }
+
+            function checkPostback(value) {
+                var timer;
+
+                clearTimeout(timer);
+
+                timer = setTimeout(function () {
+
+                    var textBoxValue = document.getElementById('<%= txtSearch.ClientID %>').value;
+                    __doPostBack('<%= txtSearch.ClientID %>', textBoxValue);
+
+                }, 1500);
+
+            }
+
         </script>
         <script src="https://kit.fontawesome.com/06c32b9e65.js" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var CustomerID = <%= Session["CustomerID"] %>;
+
+                if (CustomerID == 0 || CustomerID == null || CustomerID == "") {
+                    document.getElementById('userlogin').style.display = "flex";
+                    document.getElementById('profile').style.display = "none";
+                } else {
+                    document.getElementById('userlogin').style.display = "none";
+                    document.getElementById('profile').style.display = "flex";
+                }
+            });
+        </script>
+
 
         <!--Script from Content Page-->
         <asp:ContentPlaceHolder ID="JS" runat="server"></asp:ContentPlaceHolder>

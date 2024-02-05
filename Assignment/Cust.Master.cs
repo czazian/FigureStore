@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Net.Mail;
 using System.Net.Http;
 using System.Threading;
+using MailChimp.Net.Models;
 
 namespace Assignment
 {
@@ -19,7 +20,20 @@ namespace Assignment
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //To be done
+            if (Session["CustomerID"] != null)
+            {
+                SqlConnection conn;
+                string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
+                conn = new SqlConnection(str);
+
+                conn.Open();
+                string query = "SELECT Image FROM Customer WHERE CustomerID = @id";
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.AddWithValue("@id", Session["CustomerID"].ToString());
+                string img = command.ExecuteScalar().ToString();
+
+                topImage.ImageUrl = img;
+            }
         }
 
         protected void btnSubscribe_Click(object sender, EventArgs e)
@@ -77,9 +91,11 @@ namespace Assignment
 
         protected void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            txtSearch.Focus();
             string currentInput = txtSearch.Text;
             if (currentInput != "")
             {
+                //Random 3 items 
                 resultRepeater.Visible = true;
                 SqlConnection conn;
                 string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
@@ -103,10 +119,31 @@ namespace Assignment
                     resultRepeater.Visible = false;
                     resultRepeater.DataSource = "";
                 }
+                //Top header
+                SqlConnection conn2;
+                string str2 = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
+                conn2 = new SqlConnection(str2);
+
+                conn2.Open();
+
+                string retrieve2 = "SELECT COUNT(*) FROM FIGURE WHERE UPPER(FigureName) LIKE UPPER('%' + @name + '%')";
+                SqlCommand cmd2 = new SqlCommand(retrieve2, conn2);
+                cmd2.Parameters.AddWithValue("@name", currentInput);
+                int n = Convert.ToInt32(cmd2.ExecuteScalar());
+
+                if(n > 0)
+                {
+                    panelResult.Visible = true;
+                    resultTopNumber.Text = n.ToString();
+                } else
+                {
+                    panelResult.Visible = false;
+                }
 
             }
             else
             {
+                panelResult.Visible = false;
                 resultRepeater.Visible = false;
                 resultRepeater.DataSource = "";
             }

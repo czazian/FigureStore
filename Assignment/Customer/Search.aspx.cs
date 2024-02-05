@@ -14,7 +14,7 @@ namespace Assignment.Customer
         protected void Page_Load(object sender, EventArgs e)
         {
             string name = Request.QueryString["name"];
-            if(name != "")
+            if (name != "")
             {
                 SqlConnection conn;
                 string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
@@ -28,15 +28,16 @@ namespace Assignment.Customer
 
                 SqlDataReader figure = cmd.ExecuteReader();
 
-                if(figure.HasRows)
+                if (figure.HasRows)
                 {
-                    while(figure.Read()) {
-                        figuresRepeater.DataSource = figure;
-                        figuresRepeater.DataBind();
-                    }
+
+                    figuresRepeater.DataSource = figure;
+                    figuresRepeater.DataBind();
+
                     searchCount.Text = figuresRepeater.Controls.Count.ToString();
                     div.Visible = false;
-                } else
+                }
+                else
                 {
                     searchCount.Text = "0";
                     div.Visible = true;

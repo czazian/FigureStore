@@ -46,5 +46,11 @@ namespace Assignment.Customer
             }
 
         }
+
+        protected void goLogout_Click(object sender, EventArgs e)
+        {
+            Session.Remove("CustomerID");
+            Response.Redirect("~/Customer/Home.aspx");
+        }
     }
 }

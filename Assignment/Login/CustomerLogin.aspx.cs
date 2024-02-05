@@ -270,7 +270,7 @@ namespace Assignment.Login
             }
             else //mean error
             {
-                loginerr.Text = "Email or Password wrong, please try again.";
+                loginerr.Text = "*Email or Password wrong, please try again.";
             }
         }
 
@@ -309,7 +309,7 @@ namespace Assignment.Login
             else
             {
                 message2.ForeColor = Color.Red;
-                message2.Text = "*Incorrect validation code, please enter again.";
+                message2.Text = "Incorrect verification code, please enter again.";
             }
         }
 

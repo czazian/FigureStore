@@ -51,6 +51,15 @@ namespace Assignment.Customer
         protected global::System.Web.UI.WebControls.LinkButton goLogout;
 
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+
+        /// <summary>
         /// profileimg control.
         /// </summary>
         /// <remarks>
@@ -69,13 +78,22 @@ namespace Assignment.Customer
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
 
         /// <summary>
-        /// hideButton control.
+        /// hideBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button hideButton;
+        protected global::System.Web.UI.WebControls.LinkButton hideBtn;
+
+        /// <summary>
+        /// Delete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Delete;
 
         /// <summary>
         /// txtUsername control.
@@ -87,6 +105,15 @@ namespace Assignment.Customer
         protected global::System.Web.UI.WebControls.TextBox txtUsername;
 
         /// <summary>
+        /// modified1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label modified1;
+
+        /// <summary>
         /// txtPhoneno control.
         /// </summary>
         /// <remarks>
@@ -96,6 +123,15 @@ namespace Assignment.Customer
         protected global::System.Web.UI.WebControls.TextBox txtPhoneno;
 
         /// <summary>
+        /// modified2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label modified2;
+
+        /// <summary>
         /// txtHomeAddress control.
         /// </summary>
         /// <remarks>
@@ -103,5 +139,23 @@ namespace Assignment.Customer
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtHomeAddress;
+
+        /// <summary>
+        /// modified3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label modified3;
+
+        /// <summary>
+        /// edit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button edit;
     }
 }
