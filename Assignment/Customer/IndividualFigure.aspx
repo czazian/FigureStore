@@ -132,7 +132,7 @@
                 </div>
                 <div style="color: red;">
                     Please ensure that your quantity selected is not exceed
-                    <asp:Label Style="font-weight: bold" Text="50" ID="maxQty" runat="server" />, which is the maximum available unit for this product. 
+                    <asp:Label Style="font-weight: bold" ID="maxQty" runat="server" />, which is the maximum available unit for this product. 
                 </div>
             </div>
 

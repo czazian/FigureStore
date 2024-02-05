@@ -11,12 +11,15 @@ body {
 ::-webkit-scrollbar {
     width: 12px;
 }
+
 ::-webkit-scrollbar-track {
     background: #ffece3;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #212121;
 }
+
     ::-webkit-scrollbar-thumb:hover {
         background: #fc5f5f;
     }
@@ -66,10 +69,10 @@ body {
     justify-content: center;
 }
 
-.action{
+.action {
     margin-right: 40px;
-    display:flex;
-    flex-flow:row nowrap;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 .header-font {
@@ -119,7 +122,7 @@ a.HyperLinkHover:hover {
     color: #212121;
 }
 
-a.MainHyperLinkHover:hover, a.MainHyperLinkHover:focus, a.MainHyperLinkHover:active{
+a.MainHyperLinkHover:hover, a.MainHyperLinkHover:focus, a.MainHyperLinkHover:active {
     background-color: white;
     color: black;
 }
@@ -136,7 +139,7 @@ footer {
     flex-flow: column nowrap;
 }
 
-.subscribe { 
+.subscribe {
     margin-top: 35px;
 }
 
@@ -146,37 +149,37 @@ footer {
     margin-top: 5px;
 }
 
-.top{
-    display:flex;
-    flex-flow: row wrap; 
-    justify-content:space-between;
+.top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     color: white;
     margin: 0 25px 0 25px;
 }
 
 .ic {
-    margin-right : 10px;
+    margin-right: 10px;
 }
 
-.middle { 
-    padding: 10px; 
+.middle {
+    padding: 10px;
     margin: 10px 25px 0 40px;
-    display:flex;
+    display: flex;
     flex-flow: row nowrap;
-    flex : 0 1 500px;
+    flex: 0 1 500px;
     justify-content: space-around
 }
 
-.title { 
-    font-weight: bold; 
+.title {
+    font-weight: bold;
 }
 
 .items > a {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .space {
-    margin-top: 5px; 
+    margin-top: 5px;
 }
 
 .subscribe {
@@ -201,19 +204,25 @@ footer {
     justify-content: center;
 }
 
-.result{
-    background-color:white;
-    width:inherit;
-    position:absolute;
+.result {
+    background-color: white;
+    width: inherit;
+    position: absolute;
     z-index: 10;
     border-radius: 5px;
 }
 
+.linkBtn {
+    border-bottom: 1px solid lightgrey;
+}
 
+    .linkBtn:last-child {
+        border-bottom: none;
+    }
 
 /*Mobile and Tablet*/
 @media (max-width: 869px) {
-    .search-ctn{
+    .search-ctn {
         width: 100%;
         order: -1;
     }
@@ -222,8 +231,8 @@ footer {
         flex-flow: column nowrap;
     }
 
-    .action-group{
-        justify-content:center;
+    .action-group {
+        justify-content: center;
         margin-bottom: 8px;
     }
 

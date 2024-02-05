@@ -49,6 +49,7 @@ namespace Assignment.Customer
                         lblTopStatus.Text = figure["FigureStatus"].ToString();
                         pspecification.Text = figure["FigureSpecification"].ToString();
                         txtPrice.Text = Convert.ToDecimal(figure["FigurePrice"]).ToString("C2");
+                        maxQty.Text = figure["FigureUnit"].ToString();
                     }
                 }
                 conn.Close();

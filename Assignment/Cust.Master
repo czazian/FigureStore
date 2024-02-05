@@ -75,7 +75,7 @@
                                 <asp:Repeater Visible="false" runat="server" ID="resultRepeater">
 
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="toDestination" CommandArgument='<%# Eval("FigureID") %>' OnCommand="toDestination_Command" runat="server" Style="margin: 5px 0px 5px 0px; display: flex; flex-flow: row nowrap; text-decoration: none;">
+                                        <asp:LinkButton CssClass="linkBtn" ID="toDestination" CommandArgument='<%# Eval("FigureID") %>' OnCommand="toDestination_Command" runat="server" Style="margin: 5px 0px 5px 0px; display: flex; flex-flow: row nowrap; text-decoration: none;">
                                             <div style="width: 40%; padding: 10px; display: flex; justify-content: center;">
                                                 <asp:Image Style="width: 100px;" runat="server" ImageUrl='<%# Eval("FigureImage1") %>' />
                                             </div>
@@ -87,6 +87,7 @@
                                                 </div>
                                             </div>
                                         </asp:LinkButton>
+                                     
                                     </ItemTemplate>
 
                                 </asp:Repeater>
