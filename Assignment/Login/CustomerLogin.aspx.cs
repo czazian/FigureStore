@@ -10,6 +10,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -146,7 +147,7 @@ namespace Assignment.Login
             }
         }
 
-        private string getID()
+        private int getCount()
         {
             //Getting user id with email 
             SqlConnection conn;
@@ -155,16 +156,15 @@ namespace Assignment.Login
 
             conn.Open();
 
-            string query = "SELECT CustomerID FROM Customer WHERE Email = @email";
+            string query = "SELECT COUNT(*) FROM Customer WHERE Email = @email";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@email", txtRecoverEmail.Text);
 
-            string id = cmd.ExecuteScalar().ToString();
-            System.Diagnostics.Debug.WriteLine("ID = " + id);
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
 
             conn.Close();
 
-            return id;
+            return count;
         }
 
         protected void btnSendEmail_Click(object sender, EventArgs e)
@@ -175,10 +175,17 @@ namespace Assignment.Login
                 message1.Text = "Please do not leave email empty and enter your email with correct format.";
                 message1.ForeColor = Color.Red;
             }
+            else if (getCount() == 0)
+            {
+                message1.Text = "Email does not exist, please try another one.";
+                message1.ForeColor = Color.Red;
+            }
             else if (txtRecoverEmail.Text != "")
             {
                 //Avoid user click again while email is sending
                 btnSendEmail.Enabled = false;
+                recBtn.Enabled = true;
+                resendbtn.Enabled = true;
                 //Correct operation
                 message1.ForeColor = Color.ForestGreen;
                 string recipient = txtRecoverEmail.Text;
@@ -190,8 +197,6 @@ namespace Assignment.Login
 
         private string sendEmail(string recipient)
         {
-
-
             //Generate 6 digits random numbers 
             Random generator = new Random();
             string code = generator.Next(0, 1000000).ToString("D6");
@@ -215,10 +220,14 @@ namespace Assignment.Login
             client.Timeout = 20000;
             client.Credentials = new System.Net.NetworkCredential(fromMail, fromPassword);
             client.EnableSsl = true;
-            client.Send(mailMessage);
+
+            //Send the email asynchronously - means send in background 
+            ThreadPool.QueueUserWorkItem(delegate
+            {
+                client.Send(mailMessage);
+            });
 
             message1.Text = "Verification code has been sent to your mainbox.";
-            recBtn.Enabled = true;
 
             return code;
         }
@@ -270,13 +279,13 @@ namespace Assignment.Login
         {
             string codeToCompare = "";
             string enteredCode = verificationCode.Text;
-            if(Session["code"].ToString() != "")
+            if (Session["code"].ToString() != "")
             {
                 codeToCompare = Session["code"].ToString();
                 recBtn.Enabled = true;
             }
 
-            if(enteredCode == codeToCompare.ToString())
+            if (enteredCode == codeToCompare.ToString())
             {
                 //Obtain user id 
                 SqlConnection conn;
@@ -296,11 +305,24 @@ namespace Assignment.Login
                     Response.Redirect("~/Login/ChangePassword.aspx?id=" + id);
                 }
 
-            } else
+            }
+            else
             {
                 message2.ForeColor = Color.Red;
                 message2.Text = "*Incorrect validation code, please enter again.";
             }
+        }
+
+        protected void resendbtn_Click(object sender, EventArgs e)
+        {
+            txtRecoverEmail.Text = "";
+            verificationCode.Text = "";
+            message1.Text = "";
+            message2.Text = "";
+            resendbtn.Enabled = false;
+            btnSendEmail.Enabled = true;
+            recBtn.Enabled = false;
+            txtRecoverEmail.Focus();
         }
     }
 }

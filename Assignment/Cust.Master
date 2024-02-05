@@ -57,7 +57,7 @@
             <div class="binder">
                 <div style="margin-left: 20px;" class="business-icon">
                     <div style="color: white; height: inherit; text-align: center; font-weight: bold; font-size: 20px;">
-                        <asp:ImageButton Width="120" Height="35" PostBackUrl="~/Customer/Home.aspx" ImageUrl="~/Image/Element/Logo.png" runat="server" />
+                        <asp:ImageButton CausesValidation="false" Width="120" Height="35" PostBackUrl="~/Customer/Home.aspx" ImageUrl="~/Image/Element/Logo.png" runat="server" />
                     </div>
                 </div>
 
@@ -205,7 +205,7 @@
             <div id="subscribe" class="subscribe">
                 <asp:TextBox placeholder=" example@gmail.com" TextMode="Email" CssClass="col-3" Style="border-radius: 5px; border-bottom-right-radius: 0; border-top-right-radius: 0; border: none;" ID="txtSubscribe" runat="server">
                 </asp:TextBox>
-                <asp:Button ID="btnSubscribe" OnClick="btnSubscribe_Click" runat="server" Text="Subscribe" CssClass="btn" Style="background-color: #ff7e29; color: white; border-bottom-left-radius: 0; border-top-left-radius: 0;" />
+                <asp:Button CausesValidation="false" ID="btnSubscribe" OnClick="btnSubscribe_Click" runat="server" Text="Subscribe" CssClass="btn" Style="background-color: #ff7e29; color: white; border-bottom-left-radius: 0; border-top-left-radius: 0;" />
             </div>
             <div class="footer-container container-fluid">
                 <div class="top">

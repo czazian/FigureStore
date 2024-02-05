@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 //Mail
 using System.Net.Mail;
 using System.Net.Http;
+using System.Threading;
 
 namespace Assignment
 {
@@ -27,7 +28,8 @@ namespace Assignment
             sendEmail(recipient);
         }
 
-        private void sendEmail(string recipient) { 
+        private void sendEmail(string recipient)
+        {
             //Mail Object
             MailMessage mailMessage = new MailMessage();
             string fromMail = "apexonlineshop.noreply@gmail.com";
@@ -46,11 +48,15 @@ namespace Assignment
             SmtpClient client = new SmtpClient("smtp.gmail.com");
             client.Port = 587;
             client.Timeout = 20000;
-            client.Credentials = new System.Net.NetworkCredential(fromMail,fromPassword);
+            client.Credentials = new System.Net.NetworkCredential(fromMail, fromPassword);
             client.EnableSsl = true;
-            client.Send(mailMessage);
 
             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "call()", true);
+
+            ThreadPool.QueueUserWorkItem(delegate
+            {
+                client.Send(mailMessage);
+            });
 
             //Store email to database
             string date = DateTime.Now.ToString("MM/dd/yyyy");
@@ -72,7 +78,8 @@ namespace Assignment
         protected void txtSearch_TextChanged(object sender, EventArgs e)
         {
             string currentInput = txtSearch.Text;
-            if (currentInput != "") {
+            if (currentInput != "")
+            {
                 resultRepeater.Visible = true;
                 SqlConnection conn;
                 string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
@@ -85,18 +92,20 @@ namespace Assignment
                 cmd.Parameters.AddWithValue("@name", currentInput);
 
                 SqlDataReader figure = cmd.ExecuteReader();
-                
-                if(figure.HasRows)
+
+                if (figure.HasRows)
                 {
                     resultRepeater.DataSource = figure;
                     resultRepeater.DataBind();
-                } else
+                }
+                else
                 {
                     resultRepeater.Visible = false;
                     resultRepeater.DataSource = "";
                 }
 
-            } else
+            }
+            else
             {
                 resultRepeater.Visible = false;
                 resultRepeater.DataSource = "";

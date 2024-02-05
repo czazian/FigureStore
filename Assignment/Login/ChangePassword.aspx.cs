@@ -30,9 +30,9 @@ namespace Assignment.Login
         {
             string password1 = pass1.Text;
             string password2 = pass2.Text;
-            //string customerID = Request.QueryString["id"].ToString();
+            string customerID = Request.QueryString["id"].ToString();
 
-            string customerID = "7"; //For Testing Purpose
+            //string customerID = "7"; //For Testing Purpose
 
             //Store into DB
             if (password1 == password2 && password1 != "" && password2 != "" && Page.IsValid)
@@ -53,10 +53,13 @@ namespace Assignment.Login
 
                 int n = cmd.ExecuteNonQuery();
 
+
                 if (n >= 1) //Mean succeed
                 {
-                    ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "succeed()", true);
-                    Response.Redirect("~/Login/CustomerLogin.aspx");
+                    ScriptManager.RegisterStartupScript(this, this.GetType(),
+"alert",
+"alert('New Pasword has been updated!');window.location ='CustomerLogin.aspx';",
+true);
                 }
                 else
                 {
