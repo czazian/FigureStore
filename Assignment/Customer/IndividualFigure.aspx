@@ -156,7 +156,7 @@
                             <div class="sprice">
                                 <asp:Label CssClass="deconone" runat="server" ID="sPrice" Text='<%# Convert.ToDecimal(Eval("FigurePrice")).ToString("C2") %>' />
                             </div>
-                            <asp:Button ID="view" OnCommand="view_Command" CommandArgument='<%# Eval("FigureID") %>' Font-Underline="false" Style="background-color: #ff7e29; width: 100%; font-weight: bold; color: white; margin-top: 5px;" runat="server" CssClass="btn border" Text="View" />
+                            <asp:Button ID="view" OnCommand="view_Command" CommandArgument='<%# Eval("FigureID") %>' Font-Underline="false" Style="background-color: #ff7e29; width: 100%; font-weight: bold; color: white; margin-top: 5px;" runat="server" CssClass="btn border viewbtn" Text="View" />
                             <hr />
                         </div>
                     </ItemTemplate>
@@ -185,11 +185,6 @@
             } else {
                 box.style.display = "none";
             }
-
-           <%-- var topStatus = document.getElementById('<%= lblTopStatus.ClientID %>').innerHTML;
-            if (topStatus === "Pre-Order") {
-                this.document.getElementById('status').style.Back
-            }--%>
         });
 
         function toTop() {

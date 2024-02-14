@@ -13,6 +13,7 @@ namespace Assignment.Customer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "run();", true);
 
             //Obtain login session
             string customerID = Session["CustomerID"].ToString();

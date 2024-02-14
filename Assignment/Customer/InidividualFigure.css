@@ -19,7 +19,7 @@
 .product-header {
     border-bottom: 1px solid lightgrey;
     padding: 13px 20px 13px 20px;
-    display:flex;
+    display: flex;
     flex-flow: row nowrap;
 }
 
@@ -99,7 +99,7 @@ table {
 
 td, tr {
     padding: 10px;
-    vertical-align:top;
+    vertical-align: top;
 }
 
 
@@ -115,7 +115,7 @@ td, tr {
     height: fit-content;
     width: 230px;
     padding: 10px 20px 0px 20px;
-    margin-bottom: -15px; 
+    margin-bottom: -15px;
 }
 
 .sname, .sprice {
@@ -150,25 +150,25 @@ td, tr {
 }
 
 .left-info {
-    display:flex;
+    display: flex;
     flex-flow: column nowrap;
-    justify-content:center;
+    justify-content: center;
     padding: 0px 15px 0px 0px;
-    width:80%;
+    width: 80%;
 }
 
 .status-icon {
-    display:flex;
+    display: flex;
     flex-flow: row nowrap;
     height: inherit;
     align-items: center;
-    margin:5px;
-    margin-left:auto;
-    color:white;
+    margin: 5px;
+    margin-left: auto;
+    color: white;
     font-weight: bold;
     font-size: 13px;
     width: 20%;
-    justify-content:right;
+    justify-content: right;
 }
 
 .topStatus {
@@ -179,24 +179,26 @@ td, tr {
 
 /*Mobile and Tablet*/
 @media (max-width: 869px) {
-    .product-container { 
-        flex-flow:column nowrap;
-    }
-
-    .left-box { 
-        width:100%;
-        margin:5px;
-    }
-
-    .middle{
+    .product-container {
         flex-flow: column nowrap;
     }
+
+    .left-box {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .middle {
+        flex-flow: column nowrap;
+    }
+
     .select-img {
         flex-flow: row nowrap;
         width: 40%;
     }
-    .main-img{ 
-        width:100%;
+
+    .main-img {
+        width: 100%;
     }
 
     .right-box {
@@ -207,16 +209,19 @@ td, tr {
         gap: 20px;
     }
 
-    .product-suggestion { 
+    .product-suggestion {
+        display: flex;
         margin-bottom: 20px;
-        flex-flow: row nowrap;
-        justify-content:center;
-        width:100%;
+        flex-flow: column nowrap;
+        justify-content: center !important;
+        width: 100%;
+        gap: 20px;
+        align-items:center;
+
     }
 
     .suggestion1 {
         margin-bottom: 20px;
-        width:40%;
+        width: 40%;
     }
-
 }

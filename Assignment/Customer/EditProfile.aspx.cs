@@ -16,6 +16,8 @@ namespace Assignment.Customer
     {
         protected void Page_Init(object sender, EventArgs e)
         {
+            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "run();", true);
+
             string customerID = Session["CustomerID"].ToString();
 
             SqlConnection conn;

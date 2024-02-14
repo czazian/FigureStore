@@ -244,11 +244,15 @@ td {
     }
 
     .left-box {
-        order: 2;
         width: 100%;
     }
 
     .right-box {
         width: 100%;
+        min-height: fit-content !important;
+    }
+
+    .logo {
+        display:none;
     }
 }

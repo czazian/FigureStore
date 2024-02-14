@@ -6,25 +6,30 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="detail">
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <div class="tt">
-                MY ACTION
+                <div id="ttt" class="ttt">
+                    <span class="sel">MY ACTION</span>
+                </div>
+
+                <i style="font-size: 20px;" class="btn-show fa-solid fa-angles-left"></i>
+
             </div>
             <div class="inner-side">
                 <asp:LinkButton CausesValidation="false" PostBackUrl="~/Customer/UserProfile.aspx" CssClass="lb" runat="server" ID="goProfile">
-               <i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;MY PROFILE
+           <i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;<span class="sel">MY PROFILE</span>
                 </asp:LinkButton>
 
                 <asp:LinkButton CausesValidation="false" PostBackUrl="~/Customer/EditProfile.aspx" CssClass="lb" runat="server" ID="goEdit">
-               <i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;EDIT PROFILE
+           <i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;<span class="sel">EDIT PROFILE</span>
                 </asp:LinkButton>
 
-                <asp:LinkButton CausesValidation="false" PostBackUrl="~/Customer/OrderTrack.aspx" CssClass="lb" runat="server" ID="goOrder">
-               <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;MY ORDER
+                <asp:LinkButton Style="color: #ff7e29" CausesValidation="false" PostBackUrl="~/Customer/OrderTrack.aspx" CssClass="lb" runat="server" ID="goOrder">
+           <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;<span class="sel">MY ORDER</span>
                 </asp:LinkButton>
 
                 <asp:LinkButton CausesValidation="false" OnClick="goLogout_Click" CssClass="lb" runat="server" ID="goLogout">
-                  <i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;LOGOUT
+           <i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;<span class="sel">LOGOUT</span>
                 </asp:LinkButton>
             </div>
         </div>
@@ -177,14 +182,14 @@
                                     <table class="info-container">
                                         <tr>
                                             <th>Name</th>
-                                            <td> :</td>
+                                            <td>:</td>
                                             <td>
                                                 <asp:Label runat="server" ID="name" Text="Lala Yang" />
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Phone No.</th>
-                                            <td> :</td>
+                                            <td>:</td>
                                             <td>
                                                 <asp:Label runat="server" ID="Label11" Text="012-34567890" />
                                             </td>
@@ -192,7 +197,7 @@
                                         <tr>
                                             <th>Home Address
                                             </th>
-                                            <td> :</td>
+                                            <td>:</td>
                                             <td>
                                                 <asp:Label runat="server" ID="homeaddress" Text="TARUMT, Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur, Federal Territory of Kuala Lumpur." />
                                             </td>
@@ -200,7 +205,7 @@
                                         <tr>
                                             <th>Payment Method
                                             </th>
-                                            <td> :</td>
+                                            <td>:</td>
                                             <td>
                                                 <asp:Label runat="server" ID="paymentmethod" Text="Cash On Delivery" />
                                             </td>
@@ -208,12 +213,12 @@
                                     </table>
                                 </div>
                                 <div class="b2">
-                                    <div class="t"  style="color: #ff7e29">Order Summary</div>
+                                    <div class="t" style="color: #ff7e29">Order Summary</div>
                                     <table class="order-summary">
                                         <tr>
                                             <th>Subtotal
                                             </th>
-                                            <td> :</td>
+                                            <td>:</td>
                                             <td class="tRight">
                                                 <asp:Label runat="server" ID="lblSubtotal" Text="RM 600.00" />
                                             </td>
@@ -221,7 +226,7 @@
                                         <tr>
                                             <th>Discount
                                             </th>
-                                            <td> :</td>
+                                            <td>:</td>
                                             <td class="tRight">
                                                 <asp:Label runat="server" ID="lblDiscount" Text="RM 60.00" />
                                             </td>
@@ -229,7 +234,7 @@
                                         <tr>
                                             <th>Delivery
                                             </th>
-                                            <td> :</td>
+                                            <td>:</td>
                                             <td class="tRight">
                                                 <asp:Label runat="server" ID="lblDelivery" Text="RM 25.00" />
                                             </td>
@@ -237,7 +242,7 @@
                                         <tr>
                                             <th style="padding-bottom: 20px;">Tax
                                             </th>
-                                            <td style="padding-bottom: 20px;"> :</td>
+                                            <td style="padding-bottom: 20px;">:</td>
                                             <td class="tRight" style="padding-bottom: 20px;">
                                                 <asp:Label runat="server" ID="lblTax" Text="RM 36.00" />
                                             </td>
@@ -245,7 +250,7 @@
                                         <tr class="last-column">
                                             <th style="padding-top: 20px;">Total
                                             </th>
-                                            <td style="font-weight:100; padding-top: 20px;"> :</td>
+                                            <td style="font-weight: 100; padding-top: 20px;">:</td>
                                             <td style="padding-top: 20px;" class="tRight">
                                                 <asp:Label runat="server" ID="lblTotal" Text="RM 601.00" />
                                             </td>
@@ -263,7 +268,76 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="JS" runat="server">
-    <script> 
+    <script type="text/javascript">
+        let show = document.querySelector(".btn-show");
+        let title = document.querySelectorAll(".sel");
+        let sidebar = document.getElementById("sidebar");
+        let ttt = document.getElementById("ttt");
+        var option = sessionStorage.getItem("option");
 
-</script>
+        show.addEventListener("click", () => {
+            if (option === "show" || option === null) {
+                sessionStorage.setItem("option", "hide");
+                location.reload();
+            } else if (option === "hide") {
+                sessionStorage.setItem("option", "show");
+                location.reload();
+            }
+        })
+
+    </script>
+    <script>
+        function run() {
+
+            if (option === "hide") {
+
+                //operation
+                show.classList.replace("fa-angles-left", "fa-angles-right");
+                sidebar.style.width = "auto";
+                ttt.style.display = "none";
+
+                title.forEach(tt => {
+                    tt.classList.add("hideTitle");
+                })
+
+                $('#<%= goProfile.ClientID %>').hover(function () {
+                    $(this).tooltip({ placement: "right", title: "MY PROFILE" });
+                });
+                $('#<%= goEdit.ClientID %>').hover(function () {
+                    $(this).tooltip({ placement: "right", title: "EDIT PROFILE" });
+                });
+                $('#<%= goOrder.ClientID %>').hover(function () {
+                    $(this).tooltip({ placement: "right", title: "MY ORDER" });
+                });
+                $('#<%= goLogout.ClientID %>').hover(function () {
+                    $(this).tooltip({ placement: "right", title: "LOGOUT" });
+                });
+            } else if (option === "show") {
+
+                //operation
+                show.classList.replace("fa-angles-right", "fa-angles-left");
+                sidebar.style.width = "200px";
+                ttt.style.display = "block";
+
+                title.forEach(tt => {
+                    tt.classList.remove("hideTitle");
+                })
+
+                $('#<%= goProfile.ClientID %>').hover(function () {
+                    $(this).tooltip("dispose");
+                });
+                $('#<%= goEdit.ClientID %>').hover(function () {
+                    $(this).tooltip("dispose");
+                });
+                $('#<%= goOrder.ClientID %>').hover(function () {
+                    $(this).tooltip("dispose");
+                });
+                $('#<%= goLogout.ClientID %>').hover(function () {
+                    $(this).tooltip("dispose");
+                });
+            }
+
+        }
+    </script>
+
 </asp:Content>

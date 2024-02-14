@@ -305,6 +305,7 @@
         <script src="https://kit.fontawesome.com/06c32b9e65.js" crossorigin="anonymous"></script>
 
         <script type="text/javascript">
+
             $(document).ready(function () {
                 var CustomerID = <%= Session["CustomerID"] %>;
 

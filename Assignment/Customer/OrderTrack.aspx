@@ -6,25 +6,30 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="track">
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <div class="tt">
-                MY ACTION
+                <div id="ttt" class="ttt">
+                    <span class="sel">MY ACTION</span>
+                </div>
+
+                <i style="font-size: 20px;" class="btn-show fa-solid fa-angles-left"></i>
+
             </div>
             <div class="inner-side">
                 <asp:LinkButton CausesValidation="false" PostBackUrl="~/Customer/UserProfile.aspx" CssClass="lb" runat="server" ID="goProfile">
-                  <i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;MY PROFILE
+                  <i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;<span class="sel">MY PROFILE</span>
                 </asp:LinkButton>
 
                 <asp:LinkButton CausesValidation="false" PostBackUrl="~/Customer/EditProfile.aspx" CssClass="lb" runat="server" ID="goEdit">
-                  <i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;EDIT PROFILE
+                  <i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;<span class="sel">EDIT PROFILE</span>
                 </asp:LinkButton>
 
-                <asp:LinkButton CausesValidation="false" PostBackUrl="~/Customer/OrderTrack.aspx" CssClass="lb" runat="server" ID="goOrder">
-                  <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;MY ORDER
+                <asp:LinkButton Style="color: #ff7e29" CausesValidation="false" PostBackUrl="~/Customer/OrderTrack.aspx" CssClass="lb" runat="server" ID="goOrder">
+                  <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;<span class="sel">MY ORDER</span>
                 </asp:LinkButton>
 
                 <asp:LinkButton CausesValidation="false" OnClick="goLogout_Click" CssClass="lb" runat="server" ID="goLogout">
-                  <i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;LOGOUT
+                  <i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;<span class="sel">LOGOUT</span>
                 </asp:LinkButton>
             </div>
         </div>
@@ -197,10 +202,83 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="JS" runat="server">
-    <!--May need to change.
-        When the user click on a button, the system should trigger the click button whether is "Order Received", "Shipping", "All Order" or something else. Apply the "select" class according to the value. 
-        -->
     <script type="text/javascript">
+        let show = document.querySelector(".btn-show");
+        let title = document.querySelectorAll(".sel");
+        let sidebar = document.getElementById("sidebar");
+        let ttt = document.getElementById("ttt");
+        var option = sessionStorage.getItem("option");
+
+        show.addEventListener("click", () => {
+            if (option === "show" || option === null) {
+                sessionStorage.setItem("option", "hide");
+                location.reload();
+            } else if (option === "hide") {
+                sessionStorage.setItem("option", "show");
+                location.reload();
+            }
+        })
+
+    </script>
+    <script>
+        function run() {
+
+            if (option === "hide") {
+
+                //operation
+                show.classList.replace("fa-angles-left", "fa-angles-right");
+                sidebar.style.width = "auto";
+                ttt.style.display = "none";
+
+                title.forEach(tt => {
+                    tt.classList.add("hideTitle");
+                })
+
+                $('#<%= goProfile.ClientID %>').hover(function () {
+                    $(this).tooltip({ placement: "right", title: "MY PROFILE" });
+                });
+                $('#<%= goEdit.ClientID %>').hover(function () {
+                    $(this).tooltip({ placement: "right", title: "EDIT PROFILE" });
+                });
+                $('#<%= goOrder.ClientID %>').hover(function () {
+                    $(this).tooltip({ placement: "right", title: "MY ORDER" });
+                });
+                $('#<%= goLogout.ClientID %>').hover(function () {
+                    $(this).tooltip({ placement: "right", title: "LOGOUT" });
+                });
+            } else if (option === "show") {
+
+                //operation
+                show.classList.replace("fa-angles-right", "fa-angles-left");
+                sidebar.style.width = "200px";
+                ttt.style.display = "block";
+
+                title.forEach(tt => {
+                    tt.classList.remove("hideTitle");
+                })
+
+                $('#<%= goProfile.ClientID %>').hover(function () {
+                    $(this).tooltip("dispose");
+                });
+                $('#<%= goEdit.ClientID %>').hover(function () {
+                    $(this).tooltip("dispose");
+                });
+                $('#<%= goOrder.ClientID %>').hover(function () {
+                    $(this).tooltip("dispose");
+                });
+                $('#<%= goLogout.ClientID %>').hover(function () {
+                    $(this).tooltip("dispose");
+                });
+            }
+
+        }
+    </script>
+
+
+
+    <script>
+    //May need to change. When the user click on a button, the system should trigger the click button whether is "Order Received", "Shipping", "All Order" or something else. Apply the "select" class according to the value. 
+
         function allOrder() {
             document.getElementById("all").classList.add("select");
             document.getElementById("received").classList.remove("select");

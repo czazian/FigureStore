@@ -11,7 +11,7 @@ namespace Assignment.Customer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "run();", true);
         }
 
         protected void goLogout_Click(object sender, EventArgs e)
