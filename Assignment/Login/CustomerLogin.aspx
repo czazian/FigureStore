@@ -203,6 +203,20 @@
         function error() {
             alert("Something wrong with your input!");
         }
+
+        $('#<%= email.ClientID %>').keypress(function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+            }
+        });
+
+        $('#<%= password.ClientID %>').keypress(function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+            }
+        });
+
+
     </script>
     <script src="CustomerLogin.js" type="text/javascript"></script>
 </asp:Content>

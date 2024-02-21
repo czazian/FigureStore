@@ -38,4 +38,7 @@
 
 <asp:Content ContentPlaceHolderID="JS" runat="server">
     <script src="StaffLogin.js" type="text/javascript"></script>
+    <script>
+
+    </script>
 </asp:Content>
