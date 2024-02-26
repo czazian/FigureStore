@@ -1,0 +1,252 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="Assignment.Staff" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Style/reset.css" rel="stylesheet" />
+    <link href="~/Style/style.css" rel="stylesheet" />
+
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Apex Online Shop Management</title>
+    <link rel="icon" type="image/x-icon" href="~/Image/Element/window.png">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        div#myDropdown a:hover {
+            background-color: #ff7e29;
+            color: white;
+        }
+
+        .dropbtn {
+            color: white;
+            cursor: pointer;
+            padding: 3px;
+        }
+
+            .dropbtn:hover, .dropbtn:focus {
+                background-color: lightgrey;
+                border-radius: 5px;
+            }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 66px;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .logoName1 {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .logoName2 {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .sidebar {
+            position: fixed;
+            height: 100%;
+            width: 240px;
+            background: #ff7e29;
+            transition: all 0.5s ease;
+        }
+
+            .sidebar .nav-links li a.active {
+                background: #ffa061;
+            }
+
+            .sidebar .nav-links li a:hover {
+                background: #ffa061;
+            }
+
+        .home-section {
+            position: relative;
+            background: #ebeae8;
+            min-height: 100vh;
+            width: calc(100% - 240px);
+            left: 240px;
+            transition: all 0.5s ease;
+        }
+
+        .sidebar.active ~ .home-section {
+            width: calc(100% - 60px);
+            left: 60px;
+        }
+
+        .home-section nav {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: calc(100% - 240px);
+            left: 240px;
+            z-index: 100;
+            padding: 0 20px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+        }
+    </style>
+
+</head>
+<body>
+    <%--sidebar--%>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-user'"></i>
+            <span class="logoName1"><b><span class="logoName2">Apex Online Shop</span></b> Management</span>
+        </div>
+        <ul class="nav-links">
+            <li id="dashbLi" runat="server">
+                <asp:HyperLink runat="server" ID="dashboardLink" NavigateUrl="~/Staff/Dashboard.aspx">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </asp:HyperLink>
+            </li>
+            <li id="prodLi" runat="server">
+                <asp:HyperLink runat="server" ID="productLink" NavigateUrl="~/Staff/Product.aspx">
+                    <i class='bx bx-box'></i>
+                    <span class="links_name">Product</span>
+                </asp:HyperLink>
+            </li>
+            <li id="orderLi" runat="server">
+                <asp:HyperLink runat="server" ID="orderLink" NavigateUrl="~/Staff/Order.aspx">
+                    <i class='bx bx-list-ul'></i>
+                    <span class="links_name">Order List</span>
+                </asp:HyperLink>
+            </li>
+            <li id="reportLi" runat="server">
+                <asp:HyperLink runat="server" ID="reportLink" NavigateUrl="~/Staff/Report.aspx">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="links_name">Sales Report</span>
+                </asp:HyperLink>
+            </li>
+            <li id="memberLi" runat="server">
+                <asp:HyperLink runat="server" ID="memberLink" NavigateUrl="~/Staff/Member.aspx">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Member</span>
+                </asp:HyperLink>
+            </li>
+            <li id="staffLi" runat="server">
+                <asp:HyperLink runat="server" ID="staffLink" NavigateUrl="~/Staff/Staff.aspx">
+                    <i class='bx bxs-user-account'></i>
+                    <span class="links_name">Staff</span>
+                </asp:HyperLink>
+            </li>
+            <li id="roleLi" runat="server">
+                <asp:HyperLink runat="server" ID="roleLink" NavigateUrl="~/Staff/Role.aspx">
+                    <i class='bx bxs-user-badge'></i>
+                    <span class="links_name">Role</span>
+                </asp:HyperLink>
+            </li>
+
+            <li class="log_out">
+                <asp:HyperLink runat="server" ID="logoutLink" NavigateUrl="~/Customer/Home.aspx" OnClick="Logout_Click">
+                    <i class='bx bx-log-out'></i>
+                    <span class="links_name">Log out</span>
+                </asp:HyperLink>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <%--header--%>
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard"></span>
+            </div>
+            <div class="profile-details" style="background-color: #ff7e29; color: #FFFFFF; display: flex; justify-content: space-between;">
+                <div>
+                    <i class='bx bxs-user-circle bx-align-right' style="color: #FFFFFF; padding-left: 10px;"></i>
+                    <asp:Label runat="server" ID="adminNameLabel"></asp:Label>
+                </div>
+                <div onclick="myFunction()" class="dropbtn">
+                    <i class='bx bx-chevron-down' style="color: #FFFFFF;"></i>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                    <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Staff/profile.aspx">
+                    Profile
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Customer/Home.aspx" OnClick="Logout_Click">
+                    Logout
+                    </asp:HyperLink>
+                </div>
+            </div>
+        </nav>
+
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </section>
+</body>
+
+    <script>
+        /* When the user clicks on the button, 
+         toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        //dropping list
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+        //left navigation
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function () {
+            sidebar.classList.toggle("active");
+            if (sidebar.classList.contains("active")) {
+                sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else
+                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+
+    </script>
+</html>
+
+
+
+

@@ -184,6 +184,10 @@
     <Content Include="Login\StaffLogin.aspx" />
     <Content Include="Login\StaffLogin.css" />
     <Content Include="Login\StaffLogin.js" />
+    <Content Include="Staff\Dashboard.aspx" />
+    <Content Include="Staff\StaffPage.css" />
+    <Content Include="Style\reset.css" />
+    <Content Include="Style\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -321,18 +325,25 @@
       <DependentUpon>StaffLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Staff.Master.cs">
-      <DependentUpon>Staff.Master</DependentUpon>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Staff.Master.designer.cs">
-      <DependentUpon>Staff.Master</DependentUpon>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cust.Master" />
     <None Include="packages.config" />
-    <Content Include="Staff.Master" />
+    <Content Include="Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -344,7 +355,6 @@
   <ItemGroup>
     <Folder Include="Image\Customer\" />
     <Folder Include="Image\Products\" />
-    <Folder Include="Staff\Dashboard\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
