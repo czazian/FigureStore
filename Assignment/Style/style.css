@@ -322,7 +322,7 @@ nav .profile-details i {
 }
 
     /* left box */
-    .home-content .sales-boxes .recent-sales {
+    .home-content .sales-boxes .info3 {
         width: 97%;
         background: #fff;
         padding: 20px 30px;
@@ -331,6 +331,28 @@ nav .profile-details i {
         border-radius: 12px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
+
+
+    .home-content .sales-boxes .info1 {
+        width: 65%; /* Adjusted width for the first div */
+        background: #fff;
+        padding: 20px 30px;
+        margin: 0 20px;
+        margin-bottom: 10px;
+        border-radius: 12px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .home-content .sales-boxes .info2 {
+        width: 35%; /* Adjusted width for the first div */
+        background: #fff;
+        padding: 20px 30px;
+        margin: 0 20px;
+        margin-bottom: 10px;
+        border-radius: 12px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
 
     .home-content .sales-boxes .sales-details {
         display: flex;

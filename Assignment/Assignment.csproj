@@ -185,6 +185,8 @@
     <Content Include="Login\StaffLogin.css" />
     <Content Include="Login\StaffLogin.js" />
     <Content Include="Staff\Dashboard.aspx" />
+    <Content Include="Staff\DashboardChartA.js" />
+    <Content Include="Staff\DashboardChartB.js" />
     <Content Include="Staff\StaffPage.css" />
     <Content Include="Style\reset.css" />
     <Content Include="Style\style.css" />
