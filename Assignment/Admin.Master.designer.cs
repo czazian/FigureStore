@@ -11,7 +11,7 @@ namespace Assignment
 {
 
 
-    public partial class Staff
+    public partial class Admin
     {
 
         /// <summary>
