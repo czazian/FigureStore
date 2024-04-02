@@ -13,32 +13,32 @@ namespace Assignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
-            {
-                Label adminNameLabel = FindControl("adminNameLabel") as Label;
+            //if(!IsPostBack)
+            //{
+            //    Label adminNameLabel = FindControl("adminNameLabel") as Label;
 
-                if (adminNameLabel != null && Session["StaffID"] != null)
-                {
-                    string staffID = Session["StaffID"].ToString();
-                    // Assuming you have a method to retrieve StaffName based on StaffID
-                    string staffName = GetStaffNameByStaffID(staffID);
+            //    if (adminNameLabel != null && Session["StaffID"] != null)
+            //    {
+            //        string staffID = Session["StaffID"].ToString();
+            //        // Assuming you have a method to retrieve StaffName based on StaffID
+            //        string staffName = GetStaffNameByStaffID(staffID);
 
 
-                    if (!string.IsNullOrEmpty(staffName))
-                    {
-                        adminNameLabel.Text = staffName;
-                    }
-                    else
-                    {
-                        // StaffName is not found
-                        Response.Redirect("/Staff/staffLogin.aspx");
-                    }
-                }
-                else
-                {
-                    Response.Redirect("/Staff/staffLogin.aspx");
-                }
-            }
+            //        if (!string.IsNullOrEmpty(staffName))
+            //        {
+            //            adminNameLabel.Text = staffName;
+            //        }
+            //        else
+            //        {
+            //            // StaffName is not found
+            //            Response.Redirect("/Staff/staffLogin.aspx");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Response.Redirect("/Staff/staffLogin.aspx");
+            //    }
+            //}
         }
 
         private string GetStaffNameByStaffID(string staffID)

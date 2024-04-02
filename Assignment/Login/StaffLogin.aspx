@@ -17,16 +17,18 @@
 
                     <div>
                         <div class="input-field">
-                            <input type="text" name="id" placeholder="Enter Staff ID">
+                            <asp:TextBox ID="txtStaffusername"  name="id" runat="server" placeholder="Enter Staff ID"></asp:TextBox>
+                            <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
                             <i class="uil uil-user"></i>
                         </div>
                         <div class="input-field">
-                            <input type="password" name="password" class="password" placeholder="Enter your password">
+                            <asp:TextBox ID="txtPassword" TextMode="Password" name="password" runat="server" CssClass="password"  placeholder="Enter your password"></asp:TextBox>
+                            <asp:Label ID="lblError0" runat="server" ForeColor="Red"></asp:Label>
                             <i class="uil uil-lock icon"></i>
                             <i class="fa-solid fa-eye-slash showHidePw"></i>
                         </div>
                         <div class="input-field button">
-                            <input type="submit" value="Login">
+                            <asp:Button ID="btnSubmit" OnClientClick="return true;" runat="server" Text="Login" />
                         </div>
                     </div>
                 </div>

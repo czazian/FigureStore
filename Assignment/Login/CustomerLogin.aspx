@@ -113,7 +113,7 @@
 
                                                 <div class="modal-footer">
                                                     <asp:Button Enabled="false" runat="server" CausesValidation="false" Text="Resend" CssClass="btn btn-secondary" OnClick="resendbtn_Click" ID="resendbtn"/>
-                                                    <asp:Button ID="recBtn" Enabled="false" OnClientClick="return ture;" runat="server" CausesValidation="false" OnClick="Unnamed_Click" Style="background-color: #ff7e29; height: inherit; color: white;" CssClass="btn" Text="Recover" />
+                                                    <asp:Button ID="recBtn" Enabled="false" OnClientClick="return true;" runat="server" CausesValidation="false" OnClick="Unnamed_Click" Style="background-color: #ff7e29; height: inherit; color: white;" CssClass="btn" Text="Recover" />
                                                 </div>
 
                                             </ContentTemplate>
