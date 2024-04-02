@@ -1,117 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GitHub\\WebApplicationDevelopment\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\github\\webapplicationdevelopment\\assignment\\login\\stafflogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\login\\stafflogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\github\\webapplicationdevelopment\\assignment\\login\\stafflogin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\login\\stafflogin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\github\\webapplicationdevelopment\\assignment\\login\\customerlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\login\\customerlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\github\\webapplicationdevelopment\\assignment\\login\\customerlogin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\login\\customerlogin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\github\\webapplicationdevelopment\\assignment\\login\\customerlogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\login\\customerlogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 5,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomerLogin.aspx.cs",
-              "DocumentMoniker": "C:\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.aspx.cs",
-              "RelativeDocumentMoniker": "Assignment\\Login\\CustomerLogin.aspx.cs",
-              "ToolTip": "C:\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.aspx.cs",
-              "RelativeToolTip": "Assignment\\Login\\CustomerLogin.aspx.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAiwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T16:04:31.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StaffLogin.js",
-              "DocumentMoniker": "C:\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\StaffLogin.js",
-              "RelativeDocumentMoniker": "Assignment\\Login\\StaffLogin.js",
-              "ToolTip": "C:\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\StaffLogin.js",
-              "RelativeToolTip": "Assignment\\Login\\StaffLogin.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-02-21T15:56:05.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StaffLogin.aspx",
-              "DocumentMoniker": "C:\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\StaffLogin.aspx",
-              "RelativeDocumentMoniker": "Assignment\\Login\\StaffLogin.aspx",
-              "ToolTip": "C:\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\StaffLogin.aspx",
-              "RelativeToolTip": "Assignment\\Login\\StaffLogin.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-02-21T15:56:05.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomerLogin.js",
-              "DocumentMoniker": "C:\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.js",
-              "RelativeDocumentMoniker": "Assignment\\Login\\CustomerLogin.js",
-              "ToolTip": "C:\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.js",
-              "RelativeToolTip": "Assignment\\Login\\CustomerLogin.js",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-02-21T15:56:04.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerLogin.aspx",
-              "DocumentMoniker": "C:\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.aspx",
-              "RelativeDocumentMoniker": "Assignment\\Login\\CustomerLogin.aspx",
-              "ToolTip": "C:\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.aspx",
-              "RelativeToolTip": "Assignment\\Login\\CustomerLogin.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-02-21T15:56:03.074Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
