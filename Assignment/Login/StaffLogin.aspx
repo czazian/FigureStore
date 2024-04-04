@@ -2,6 +2,41 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="StaffLogin.css" />
+    <style>
+    .form-container {
+    width: 430px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    margin: 3% 34% 3% 34%;
+}
+
+        .form-container .cus-forms {
+            display: flex;
+            align-items: center;
+            height: 400px;
+            width: 200%;
+            transition: height 0.2s ease;
+        }
+
+    .form .button input {
+        border: none;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border-radius: 6px;
+        background-color: #ff7e29;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .input-field input:is(:focus, :valid) {
+        border-bottom-color: #ff7e29;
+    }
+
+    .button input:hover {
+        background-color: #fa9552;
+    }
+</style>
 </asp:Content>
 
 
@@ -17,12 +52,12 @@
 
                     <div>
                         <div class="input-field">
-                            <asp:TextBox ID="txtStaffusername"  name="id" runat="server" placeholder="Enter Staff ID"></asp:TextBox>
+                            <asp:TextBox ID="txtStaffusername" name="id" runat="server" placeholder="Enter Staff ID"></asp:TextBox>
                             <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
                             <i class="uil uil-user"></i>
                         </div>
                         <div class="input-field">
-                            <asp:TextBox ID="txtPassword" TextMode="Password" name="password" runat="server" CssClass="password"  placeholder="Enter your password"></asp:TextBox>
+                            <asp:TextBox ID="txtPassword" TextMode="Password" name="password" runat="server" CssClass="password" placeholder="Enter your password"></asp:TextBox>
                             <asp:Label ID="lblError0" runat="server" ForeColor="Red"></asp:Label>
                             <i class="uil uil-lock icon"></i>
                             <i class="fa-solid fa-eye-slash showHidePw"></i>

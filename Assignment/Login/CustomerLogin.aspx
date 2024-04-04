@@ -2,6 +2,41 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="CustomerLogin.css" />
+    <style>
+        .form-container {
+            width: 430px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+            margin: 3% 34% 3% 34%;
+        }
+
+            .form-container .cus-forms {
+                display: flex;
+                align-items: center;
+                height: 400px;
+                width: 200%;
+                transition: height 0.2s ease;
+            }
+
+        .form .button input {
+            border: none;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            background-color: #ff7e29;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .input-field input:is(:focus, :valid) {
+            border-bottom-color: #ff7e29;
+        }
+
+        .button input:hover {
+            background-color: #fa9552;
+        }
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -16,7 +51,7 @@
                     </span>
 
 
-                    <div>
+                    <div style="padding-top:20px;">
                         <div class="input-field">
                             <asp:TextBox CausesValidation="false" runat="server" ID="email" placeholder="Enter your e-mail" />
                             <i class="uil uil-envelope icon"></i>
@@ -39,14 +74,14 @@
 
                     <div style="display: flex; flex-flow: row nowrap; gap: 10px; width: 100%; justify-content: center; margin-top: 20px">
                         <div class="login-signup">
-                            <span class="text">Don't have an account? 
-                              <a href="#" class="text signup-link" style="color: #fa4d4d; border: none; background-color: transparent; text-decoration: underline;">Register Now</a>
+                            <span class="text">Don't have an account?
+                              <a href="#" class="text signup-link" style="color: #ff7e29; border: none; background-color: transparent; text-decoration: underline;">Register Now</a>
                             </span>
                         </div>
-                        &nbsp;|&nbsp;
+                        <br />
                         <div class="forget-password">
                             <span class="text">Forgot your password? 
-                              <asp:Button Style="margin-left: -5px; text-align: center; color: #fa4d4d; border: none; background-color: transparent; text-decoration: underline;" OnClientClick="return false;" runat="server" CausesValidation="false" data-bs-toggle="modal" data-bs-target="#staticBackdrop" Text="Recover Now" />
+                              <asp:Button Style="margin-left: -5px; text-align: center; color: #ff7e29; border: none; background-color: transparent; text-decoration: underline;" OnClientClick="return false;" runat="server" CausesValidation="false" data-bs-toggle="modal" data-bs-target="#staticBackdrop" Text="Recover Now" />
                             </span>
 
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
