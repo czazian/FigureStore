@@ -15,13 +15,40 @@ namespace Assignment.FigureCategories
     {
 
         /// <summary>
-        /// CheckBoxList1 control.
+        /// minPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList CheckBoxList1;
+        protected global::System.Web.UI.WebControls.TextBox minPrice;
+
+        /// <summary>
+        /// maxPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox maxPrice;
+
+        /// <summary>
+        /// errorPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorPrice;
+
+        /// <summary>
+        /// RadioButtonList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList;
 
         /// <summary>
         /// cbxManufacturer control.
@@ -33,6 +60,15 @@ namespace Assignment.FigureCategories
         protected global::System.Web.UI.WebControls.CheckBoxList cbxManufacturer;
 
         /// <summary>
+        /// onlyOneM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label onlyOneM;
+
+        /// <summary>
         /// cbxSeries control.
         /// </summary>
         /// <remarks>
@@ -40,6 +76,24 @@ namespace Assignment.FigureCategories
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList cbxSeries;
+
+        /// <summary>
+        /// onlyOneS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label onlyOneS;
+
+        /// <summary>
+        /// clearAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button clearAll;
 
         /// <summary>
         /// resultno control.

@@ -31,26 +31,29 @@
                             <div class="pricerange-cont">
                                 <div class="col">
                                     <div class="input-group">
-                                        <asp:TextBox runat="server" CssClass="border form-control" placeholder="Minimum Price" />
+                                        <asp:TextBox ID="minPrice" runat="server" CssClass="border form-control" placeholder="Minimum Price" />
                                     </div>
                                 </div>
                                 &nbsp-&nbsp
                                 <div class="col">
                                     <div class="input-group">
-                                        <asp:TextBox runat="server" CssClass="border form-control" placeholder="Maximum Price" />
+                                        <asp:TextBox ID="maxPrice" runat="server" CssClass="border form-control" placeholder="Maximum Price" />
                                     </div>
                                 </div>
                             </div>
                             <div class="btn-apply">
-                                <asp:Button runat="server" CssClass="btn border applybtn" Text="APPLY" />
+                                <asp:Button OnClick="Apply_Click" runat="server" CssClass="btn border applybtn" Text="APPLY" />
+                            </div>
+                            <div class="err-price">
+                                <asp:Label runat="server" ID="errorPrice" Visible="false" Style="color: red;" Text="Please enter a valid minimum price or maximum price." />
                             </div>
                         </div>
                         <div class="status-selector" style="border-top: 1px solid lightgrey; padding-top: 15px; border-bottom: 1px solid lightgrey; padding-bottom: 15px;">
                             <div class="title-selector">
-                                Status
+                                By Status
                             </div>
                             <div class="form-check" id="collpaseStatus">
-                                <asp:RadioButtonList CssClass="selection" runat="server" ID="CheckBoxList1">
+                                <asp:RadioButtonList AutoPostBack="true" OnSelectedIndexChanged="RadioButtonList_SelectedIndexChanged" CssClass="selection" runat="server" ID="RadioButtonList">
                                     <asp:ListItem Value="All Product">All Product</asp:ListItem>
                                     <asp:ListItem Value="Pre-Order">Pre-Order</asp:ListItem>
                                     <asp:ListItem Value="Available">Available</asp:ListItem>
@@ -59,32 +62,26 @@
                         </div>
                         <div class="manufacturer-selector" style="border-top: 1px solid lightgrey; padding-top: 15px; border-bottom: 1px solid lightgrey; padding-bottom: 15px;">
                             <div class="title-selector">
-                                Manufacturer
+                                By Manufacturer
                             </div>
                             <div class="form-check" id="collapseManu">
-                                <asp:CheckBoxList CssClass="selection" runat="server" ID="cbxManufacturer">
-                                    <asp:ListItem Value="Good Smile Company">Good Smile Company</asp:ListItem>
-                                    <asp:ListItem Value="Solarain">Solarain</asp:ListItem>
-                                    <asp:ListItem Value="PROOF">PROOF</asp:ListItem>
-                                    <asp:ListItem Value="Max Factory">Max Factory</asp:ListItem>
-                                    <asp:ListItem Value="METAL ROBOT SPIRITS">METAL ROBOT SPIRITS</asp:ListItem>
+                                <asp:CheckBoxList AutoPostBack="true" CssClass="selection" OnSelectedIndexChanged="cbxManufacturer_SelectedIndexChanged" runat="server" ID="cbxManufacturer">
                                 </asp:CheckBoxList>
+                                <asp:Label runat="server" ID="onlyOneM" Visible="false"></asp:Label>
                             </div>
                         </div>
-                        <div class="series-selector" style="border-top: 1px solid lightgrey; padding-top: 15px;">
+                        <div class="series-selector" style="border-top: 1px solid lightgrey; padding-top: 15px; border-bottom: 1px solid lightgrey; padding-bottom: 15px;">
                             <div class="title-selector">
-                                Series
+                                By Series
                             </div>
                             <div class="form-check" id="collapseSeries">
-                                <asp:CheckBoxList CssClass="selection" runat="server" ID="cbxSeries">
-                                    <asp:ListItem Value="Frieren: Beyond Journey's End">Frieren: Beyond Journey's End</asp:ListItem>
-                                    <asp:ListItem Value="Butareba: The Story of a Man Turned into a Pig">Butareba: The Story of a Man Turned into a Pig</asp:ListItem>
-                                    <asp:ListItem Value="Azur Lane">Azur Lane</asp:ListItem>
-                                    <asp:ListItem Value="Mobile Suit Gundam: Iron-Blooded Orphans">Mobile Suit Gundam: Iron-Blooded Orphans</asp:ListItem>
-                                    <asp:ListItem Value="Pop Team Epic Season 2">Pop Team Epic Season 2</asp:ListItem>
+                                <asp:CheckBoxList AutoPostBack="true" CssClass="selection" OnSelectedIndexChanged="cbxSeries_SelectedIndexChanged" runat="server" ID="cbxSeries">
                                 </asp:CheckBoxList>
+                                <asp:Label runat="server" ID="onlyOneS" Visible="false"></asp:Label>
                             </div>
-
+                        </div>
+                        <div class="clear-all" style="border-top: 1px solid lightgrey; padding-top: 15px;">
+                            <asp:Button CssClass="btn clearall-btn" runat="server" ID="clearAll" Text="Clear All" OnClick="clearAll_Click" />
                         </div>
                     </div>
                 </div>
@@ -94,14 +91,15 @@
                 <div class="items-cont">
                     <div class="sort">
                         <div class="noOfResult">
-                            <asp:Label runat="server" ID="resultno" Text="12 Results" />
+                            <asp:Label runat="server" ID="resultno" />
                         </div>
                         <div class="sort-cont">
                             <div class="sort-title">
                                 Sort By
                             </div>
                             <div class="sort-list">
-                                <asp:DropDownList CssClass="list-item" runat="server" ID="ddlSort">
+                                <asp:DropDownList AutoPostBack="true" OnSelectedIndexChanged="ddlSort_SelectedIndexChanged" CssClass="list-item" runat="server" ID="ddlSort">
+                                    <asp:ListItem Selected="True">Default</asp:ListItem>
                                     <asp:ListItem Value="1">Lowest Price</asp:ListItem>
                                     <asp:ListItem Value="2">Highest Price</asp:ListItem>
                                     <asp:ListItem Value="3">a-Z</asp:ListItem>
