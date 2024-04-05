@@ -3,6 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="CustomerLogin.css" />
     <style>
+        body {
+            background-color: #e8e8e8;
+        }
+
         .form-container {
             width: 430px;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);

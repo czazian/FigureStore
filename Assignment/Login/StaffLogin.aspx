@@ -3,40 +3,44 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="StaffLogin.css" />
     <style>
-    .form-container {
-    width: 430px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
-    margin: 3% 34% 3% 34%;
-}
-
-        .form-container .cus-forms {
-            display: flex;
-            align-items: center;
-            height: 400px;
-            width: 200%;
-            transition: height 0.2s ease;
+        body {
+            background-color: #e8e8e8;
         }
 
-    .form .button input {
-        border: none;
-        color: #fff;
-        font-size: 17px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        border-radius: 6px;
-        background-color: #ff7e29;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
+        .form-container {
+            width: 430px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+            margin: 3% 34% 3% 34%;
+        }
 
-    .input-field input:is(:focus, :valid) {
-        border-bottom-color: #ff7e29;
-    }
+            .form-container .cus-forms {
+                display: flex;
+                align-items: center;
+                height: 400px;
+                width: 200%;
+                transition: height 0.2s ease;
+            }
 
-    .button input:hover {
-        background-color: #fa9552;
-    }
-</style>
+        .form .button input {
+            border: none;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            background-color: #ff7e29;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .input-field input:is(:focus, :valid) {
+            border-bottom-color: #ff7e29;
+        }
+
+        .button input:hover {
+            background-color: #fa9552;
+        }
+    </style>
 </asp:Content>
 
 
