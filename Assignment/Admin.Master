@@ -22,7 +22,7 @@
     </asp:ContentPlaceHolder>
 
     <style>
-        div#myDropdown a:hover {
+        .div#myDropdown a:hover {
             background-color: #ff7e29;
             color: white;
         }
@@ -83,16 +83,16 @@
             position: fixed;
             height: 100%;
             width: 240px;
-            background: #ff7e29;
+            background: #212121;
             transition: all 0.5s ease;
         }
 
             .sidebar .nav-links li a.active {
-                background: #ffa061;
+                background: #595959;
             }
 
             .sidebar .nav-links li a:hover {
-                background: #ffa061;
+                background: #595959;
             }
 
         .home-section {
@@ -131,56 +131,56 @@
     <%--sidebar--%>
     <div class="sidebar">
         <div class="logo-details">
-            <i class='bx bx-user'"></i>
-            <span class="logoName1"><b><span class="logoName2">Apex Online Shop</span></b> Management</span>
+            <i class="bx bx-user" style="color:#fc893d;"></i>
+            <span class="logoName1"><b><span class="logoName2" style="color:#fc893d;">Apex Online Shop</span></b> Management</span>
         </div>
         <ul class="nav-links">
             <li id="dashbLi" runat="server">
                 <asp:HyperLink runat="server" ID="dashboardLink" NavigateUrl="~/Staff/Dashboard.aspx">
-                    <i class='bx bx-grid-alt'></i>
+                    <i class='bx bx-grid-alt' style="color:#fc893d;"></i>
                     <span class="links_name">Dashboard</span>
                 </asp:HyperLink>
             </li>
             <li id="prodLi" runat="server">
                 <asp:HyperLink runat="server" ID="productLink" NavigateUrl="~/Staff/Product.aspx">
-                    <i class='bx bx-box'></i>
+                    <i class='bx bx-box' style="color:#fc893d;"></i>
                     <span class="links_name">Product</span>
                 </asp:HyperLink>
             </li>
             <li id="orderLi" runat="server">
                 <asp:HyperLink runat="server" ID="orderLink" NavigateUrl="~/Staff/Order.aspx">
-                    <i class='bx bx-list-ul'></i>
+                    <i class='bx bx-list-ul' style="color:#fc893d;"></i>
                     <span class="links_name">Order List</span>
                 </asp:HyperLink>
             </li>
             <li id="reportLi" runat="server">
                 <asp:HyperLink runat="server" ID="reportLink" NavigateUrl="~/Staff/Report.aspx">
-                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <i class='bx bx-pie-chart-alt-2' style="color:#fc893d;"></i>
                     <span class="links_name">Sales Report</span>
                 </asp:HyperLink>
             </li>
             <li id="memberLi" runat="server">
                 <asp:HyperLink runat="server" ID="memberLink" NavigateUrl="~/Staff/Member.aspx">
-                    <i class='bx bx-user'></i>
+                    <i class='bx bx-user' style="color:#fc893d;"></i>
                     <span class="links_name">Member</span>
                 </asp:HyperLink>
             </li>
             <li id="staffLi" runat="server">
                 <asp:HyperLink runat="server" ID="staffLink" NavigateUrl="~/Staff/Staff.aspx">
-                    <i class='bx bxs-user-account'></i>
+                    <i class='bx bxs-user-account' style="color:#fc893d;"></i>
                     <span class="links_name">Staff</span>
                 </asp:HyperLink>
             </li>
             <li id="roleLi" runat="server">
                 <asp:HyperLink runat="server" ID="roleLink" NavigateUrl="~/Staff/Role.aspx">
-                    <i class='bx bxs-user-badge'></i>
+                    <i class='bx bxs-user-badge' style="color:#fc893d;"></i>
                     <span class="links_name">Role</span>
                 </asp:HyperLink>
             </li>
 
             <li class="log_out">
                 <asp:HyperLink runat="server" ID="logoutLink" NavigateUrl="~/Customer/Home.aspx" OnClick="Logout_Click">
-                    <i class='bx bx-log-out'></i>
+                    <i class='bx bx-log-out' style="color:#fc893d;"></i>
                     <span class="links_name">Log out</span>
                 </asp:HyperLink>
             </li>
@@ -194,7 +194,7 @@
                 <i class='bx bx-menu sidebarBtn'></i>
                 <span class="dashboard"></span>
             </div>
-            <div class="profile-details" style="background-color: #ff7e29; color: #FFFFFF; display: flex; justify-content: space-between;">
+            <div class="profile-details" style="background-color: #212121; color: #FFFFFF; display: flex; justify-content: space-between;">
                 <div>
                     <i class='bx bxs-user-circle bx-align-right' style="color: #FFFFFF; padding-left: 10px;"></i>
                     <asp:Label runat="server" ID="adminNameLabel"></asp:Label>
