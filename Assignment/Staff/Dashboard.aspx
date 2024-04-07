@@ -9,10 +9,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="home-content">
 
-    <div class="overview-boxes">
-        <div class="box">
-            <div class="right-side">
-                <div class="box-topic">Total Order</div>
+        <div class="sales-boxes" style="padding-bottom:10px;">
+            <div class="info3 box">
+                <div class="title">Welcome to Staff Portal</div>
+            </div>
+        </div>
+
+        <div class="overview-boxes">
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Total Order</div>
                 <div class="number">
                     <asp:Label ID="lblTotalOrder" runat="server">0</asp:Label>
                 </div>

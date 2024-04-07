@@ -67,7 +67,7 @@
                             <i class="fa-solid fa-eye-slash showHidePw"></i>
                         </div>
                         <div class="input-field button">
-                            <asp:Button ID="btnSubmit" runat="server" Text="Login" />
+                            <asp:Button ID="btnSubmit" runat="server" Text="Login"/>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,4 @@
 
 <asp:Content ContentPlaceHolderID="JS" runat="server">
     <script src="StaffLogin.js" type="text/javascript"></script>
-    <script>
-
-    </script>
 </asp:Content>

@@ -22,11 +22,10 @@
     </asp:ContentPlaceHolder>
 
     <style>
-        .div#myDropdown a:hover {
-            background-color: #ff7e29;
+        div#myDropdown a:hover {
+            background-color: #212121;
             color: white;
         }
-
         .dropbtn {
             color: white;
             cursor: pointer;
@@ -196,14 +195,14 @@
             </div>
             <div class="profile-details" style="background-color: #212121; color: #FFFFFF; display: flex; justify-content: space-between;">
                 <div>
-                    <i class='bx bxs-user-circle bx-align-right' style="color: #FFFFFF; padding-left: 10px;"></i>
-                    <asp:Label runat="server" ID="adminNameLabel"></asp:Label>
+                    <i class='bx bxs-user-circle bx-align-right' style="color: #FFFFFF; padding-left: 15px; padding-right:12px;"></i>
+                    <asp:Label runat="server" ID="adminNameLabel" style="margin: 0 auto; font-size:18px;"></asp:Label>
                 </div>
                 <div onclick="myFunction()" class="dropbtn">
                     <i class='bx bx-chevron-down' style="color: #FFFFFF;"></i>
                 </div>
                 <div id="myDropdown" class="dropdown-content">
-                    <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Staff/profile.aspx">
+                    <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Staff/StaffProfile.aspx">
                     Profile
                     </asp:HyperLink>
                     <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Customer/Home.aspx" OnClick="Logout_Click">

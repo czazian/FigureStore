@@ -75,7 +75,7 @@
                     <div class="edit-btn">
                         <asp:Button PostBackUrl="~/Customer/EditProfile.aspx" CssClass="border btn btn-edit" runat="server" Text="Go Edit Profile" />
                     </div>
-                </fieldset>
+ </fieldset>
             </div>
         </div>
 

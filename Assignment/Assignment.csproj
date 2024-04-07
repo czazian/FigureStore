@@ -187,7 +187,9 @@
     <Content Include="Staff\Dashboard.aspx" />
     <Content Include="Staff\DashboardChartA.js" />
     <Content Include="Staff\DashboardChartB.js" />
+    <Content Include="Staff\Product.aspx" />
     <Content Include="Staff\StaffPage.css" />
+    <Content Include="Staff\StaffProfile.aspx" />
     <Content Include="Style\reset.css" />
     <Content Include="Style\style.css" />
     <Content Include="Web.config" />
@@ -340,6 +342,20 @@
     </Compile>
     <Compile Include="Staff\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\StaffProfile.aspx.cs">
+      <DependentUpon>StaffProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\StaffProfile.aspx.designer.cs">
+      <DependentUpon>StaffProfile.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
