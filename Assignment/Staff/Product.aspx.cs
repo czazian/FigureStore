@@ -78,5 +78,10 @@ namespace Assignment.Staff
                 Repeater7.DataSourceID = SqlDataSource1.ID;
             }
         }
+
+        protected void createProductBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Staff/AddProduct.aspx");
+        }
     }
 }
