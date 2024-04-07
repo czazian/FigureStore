@@ -184,6 +184,8 @@
     <Content Include="Login\StaffLogin.aspx" />
     <Content Include="Login\StaffLogin.css" />
     <Content Include="Login\StaffLogin.js" />
+    <Content Include="Staff\AccessDenied.aspx" />
+    <Content Include="Staff\AddProduct.aspx" />
     <Content Include="Staff\Dashboard.aspx" />
     <Content Include="Staff\DashboardChartA.js" />
     <Content Include="Staff\DashboardChartB.js" />
@@ -335,6 +337,20 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

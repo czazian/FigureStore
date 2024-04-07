@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="StaffLogin.css" />
     <style>
         body {
-            background-color: #e8e8e8;
+            background-color: #f7f7f7;
         }
 
         .form-container {

@@ -16,7 +16,7 @@ namespace Assignment.Staff
             //if no permission
             if (Session["prod_permit"] == null || Session["prod_permit"].ToString() != "1")
             {
-                //Response.Redirect("/Staff/Error/invalid_access_permission.aspx");
+                Response.Redirect("/Staff/AccessDenied.aspx");
             }
         }
 
