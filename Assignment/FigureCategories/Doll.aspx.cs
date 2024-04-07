@@ -46,10 +46,10 @@ namespace Assignment.FigureCategories
 
             if (dolls.HasRows)
             {
-                dollRepater.DataSource = dolls;
-                dollRepater.DataBind();
+                dollRepeater.DataSource = dolls;
+                dollRepeater.DataBind();
 
-                resultno.Text = dollRepater.Controls.Count + " Results";
+                resultno.Text = dollRepeater.Controls.Count + " Results";
             }
             else
             {
@@ -149,8 +149,8 @@ namespace Assignment.FigureCategories
             ddlSort.SelectedIndex = -1;
 
             //Main Operation
-            dollRepater.DataSource = null;
-            dollRepater.DataBind();
+            dollRepeater.DataSource = null;
+            dollRepeater.DataBind();
             SqlConnection conn2;
             string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
             conn2 = new SqlConnection(str);
@@ -178,10 +178,10 @@ namespace Assignment.FigureCategories
 
             if (result.HasRows)
             {
-                dollRepater.DataSource = result;
-                dollRepater.DataBind();
+                dollRepeater.DataSource = result;
+                dollRepeater.DataBind();
 
-                resultno.Text = dollRepater.Controls.Count.ToString() + " Results";
+                resultno.Text = dollRepeater.Controls.Count.ToString() + " Results";
             }
             else
             {
@@ -209,7 +209,7 @@ namespace Assignment.FigureCategories
             if (cbxManufacturer.SelectedIndex == -1 && RadioButtonList.SelectedIndex == -1 && cbxSeries.SelectedIndex == -1)
             {
                 RadioButtonList.SelectedIndex = 0;
-                resultno.Text = dollRepater.Controls.Count.ToString() + " Results";
+                resultno.Text = dollRepeater.Controls.Count.ToString() + " Results";
             }
 
             //Main Operation
@@ -249,10 +249,10 @@ namespace Assignment.FigureCategories
                 {
                     System.Diagnostics.Debug.Write("\n1 Round : " + commandManufacturer);
 
-                    dollRepater.DataSource = mresult;
-                    dollRepater.DataBind();
+                    dollRepeater.DataSource = mresult;
+                    dollRepeater.DataBind();
 
-                    resultno.Text = dollRepater.Controls.Count.ToString() + " Results";
+                    resultno.Text = dollRepeater.Controls.Count.ToString() + " Results";
                 }
                 else
                 {
@@ -283,7 +283,7 @@ namespace Assignment.FigureCategories
             if (cbxManufacturer.SelectedIndex == -1 && RadioButtonList.SelectedIndex == -1 && cbxSeries.SelectedIndex == -1)
             {
                 RadioButtonList.SelectedIndex = 0;
-                resultno.Text = dollRepater.Controls.Count.ToString() + " Results";
+                resultno.Text = dollRepeater.Controls.Count.ToString() + " Results";
             }
 
             //Main Operation
@@ -322,10 +322,10 @@ namespace Assignment.FigureCategories
                 {
                     System.Diagnostics.Debug.Write("\n1 Round : " + commandSeries);
 
-                    dollRepater.DataSource = sresult;
-                    dollRepater.DataBind();
+                    dollRepeater.DataSource = sresult;
+                    dollRepeater.DataBind();
 
-                    resultno.Text = dollRepater.Controls.Count.ToString() + " Results";
+                    resultno.Text = dollRepeater.Controls.Count.ToString() + " Results";
                 }
                 else
                 {
@@ -346,7 +346,7 @@ namespace Assignment.FigureCategories
 
             //To Default
             RadioButtonList.SelectedIndex = 0;
-            resultno.Text = dollRepater.Controls.Count.ToString() + " Results";
+            resultno.Text = dollRepeater.Controls.Count.ToString() + " Results";
         }
 
         protected void Apply_Click(object sender, EventArgs e)
@@ -373,7 +373,7 @@ namespace Assignment.FigureCategories
             if (minPrice.Text == "" || maxPrice.Text == "")
             {
                 errorPrice.Visible = true;
-                resultno.Text = dollRepater.Controls.Count.ToString() + " Results";
+                resultno.Text = dollRepeater.Controls.Count.ToString() + " Results";
             }
             else
             {
@@ -384,7 +384,7 @@ namespace Assignment.FigureCategories
                 if (min >= max)
                 {
                     errorPrice.Visible = true;
-                    resultno.Text = dollRepater.Controls.Count.ToString() + " Results";
+                    resultno.Text = dollRepeater.Controls.Count.ToString() + " Results";
                 }
                 else
                 {
@@ -403,14 +403,14 @@ namespace Assignment.FigureCategories
 
                     if (reader.HasRows)
                     {
-                        dollRepater.DataSource = reader;
-                        dollRepater.DataBind();
-                        resultno.Text = dollRepater.Controls.Count.ToString() + " Results";
+                        dollRepeater.DataSource = reader;
+                        dollRepeater.DataBind();
+                        resultno.Text = dollRepeater.Controls.Count.ToString() + " Results";
                     }
                     else
                     {
-                        dollRepater.DataSource = "";
-                        dollRepater.DataBind();
+                        dollRepeater.DataSource = "";
+                        dollRepeater.DataBind();
                         resultno.Text = "0" + " Results";
                     }
                 }
@@ -426,7 +426,7 @@ namespace Assignment.FigureCategories
             maxPrice.Text = "";
             errorPrice.Visible = false;
             RadioButtonList.SelectedIndex = 0;
-            resultno.Text = dollRepater.Controls.Count.ToString() + " Results";
+            resultno.Text = dollRepeater.Controls.Count.ToString() + " Results";
 
             //Main Operation
             SqlConnection conn7;
@@ -459,8 +459,8 @@ namespace Assignment.FigureCategories
 
             if (r.HasRows)
             {
-                dollRepater.DataSource = r;
-                dollRepater.DataBind();
+                dollRepeater.DataSource = r;
+                dollRepeater.DataBind();
             }
         }
 

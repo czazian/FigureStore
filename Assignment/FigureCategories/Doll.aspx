@@ -110,7 +110,7 @@
                     </div>
                     <div class="item-container">
 
-                        <asp:Repeater runat="server" ID="dollRepater">
+                        <asp:Repeater runat="server" ID="dollRepeater">
                             <ItemTemplate>
                                 <!--An Item-->
                                 <div class="item">

@@ -51,10 +51,10 @@ namespace Assignment.FigureCategories
 
             if (gundam.HasRows)
             {
-                gundamRepater.DataSource = gundam;
-                gundamRepater.DataBind();
+                gundamRepeater.DataSource = gundam;
+                gundamRepeater.DataBind();
 
-                resultno.Text = gundamRepater.Controls.Count + " Results";
+                resultno.Text = gundamRepeater.Controls.Count + " Results";
             }
             else
             {
@@ -162,8 +162,8 @@ namespace Assignment.FigureCategories
             ddlSort.SelectedIndex = -1;
 
             //Main Operation
-            gundamRepater.DataSource = null;
-            gundamRepater.DataBind();
+            gundamRepeater.DataSource = null;
+            gundamRepeater.DataBind();
             SqlConnection conn2;
             string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
             conn2 = new SqlConnection(str);
@@ -192,10 +192,10 @@ namespace Assignment.FigureCategories
 
             if (result.HasRows)
             {
-                gundamRepater.DataSource = result;
-                gundamRepater.DataBind();
+                gundamRepeater.DataSource = result;
+                gundamRepeater.DataBind();
 
-                resultno.Text = gundamRepater.Controls.Count.ToString() + " Results";
+                resultno.Text = gundamRepeater.Controls.Count.ToString() + " Results";
             }
             else
             {
@@ -223,7 +223,7 @@ namespace Assignment.FigureCategories
             if (cbxManufacturer.SelectedIndex == -1 && RadioButtonList.SelectedIndex == -1 && cbxSeries.SelectedIndex == -1)
             {
                 RadioButtonList.SelectedIndex = 0;
-                resultno.Text = gundamRepater.Controls.Count.ToString() + " Results";
+                resultno.Text = gundamRepeater.Controls.Count.ToString() + " Results";
             }
 
             //Main Operation
@@ -263,10 +263,10 @@ namespace Assignment.FigureCategories
                 {
                     System.Diagnostics.Debug.Write("\n1 Round : " + commandManufacturer);
 
-                    gundamRepater.DataSource = mresult;
-                    gundamRepater.DataBind();
+                    gundamRepeater.DataSource = mresult;
+                    gundamRepeater.DataBind();
 
-                    resultno.Text = gundamRepater.Controls.Count.ToString() + " Results";
+                    resultno.Text = gundamRepeater.Controls.Count.ToString() + " Results";
                 }
                 else
                 {
@@ -299,7 +299,7 @@ namespace Assignment.FigureCategories
             if (cbxManufacturer.SelectedIndex == -1 && RadioButtonList.SelectedIndex == -1 && cbxSeries.SelectedIndex == -1)
             {
                 RadioButtonList.SelectedIndex = 0;
-                resultno.Text = gundamRepater.Controls.Count.ToString() + " Results";
+                resultno.Text = gundamRepeater.Controls.Count.ToString() + " Results";
             }
 
             //Main Operation
@@ -338,10 +338,10 @@ namespace Assignment.FigureCategories
                 {
                     System.Diagnostics.Debug.Write("\n1 Round : " + commandSeries);
 
-                    gundamRepater.DataSource = sresult;
-                    gundamRepater.DataBind();
+                    gundamRepeater.DataSource = sresult;
+                    gundamRepeater.DataBind();
 
-                    resultno.Text = gundamRepater.Controls.Count.ToString() + " Results";
+                    resultno.Text = gundamRepeater.Controls.Count.ToString() + " Results";
                 }
                 else
                 {
@@ -362,7 +362,7 @@ namespace Assignment.FigureCategories
 
             //To Default
             RadioButtonList.SelectedIndex = 0;
-            resultno.Text = gundamRepater.Controls.Count.ToString() + " Results";
+            resultno.Text = gundamRepeater.Controls.Count.ToString() + " Results";
         }
 
         protected void Apply_Click(object sender, EventArgs e)
@@ -389,7 +389,7 @@ namespace Assignment.FigureCategories
             if (minPrice.Text == "" || maxPrice.Text == "")
             {
                 errorPrice.Visible = true;
-                resultno.Text = gundamRepater.Controls.Count.ToString() + " Results";
+                resultno.Text = gundamRepeater.Controls.Count.ToString() + " Results";
             }
             else
             {
@@ -400,7 +400,7 @@ namespace Assignment.FigureCategories
                 if (min >= max)
                 {
                     errorPrice.Visible = true;
-                    resultno.Text = gundamRepater.Controls.Count.ToString() + " Results";
+                    resultno.Text = gundamRepeater.Controls.Count.ToString() + " Results";
                 }
                 else
                 {
@@ -419,14 +419,14 @@ namespace Assignment.FigureCategories
 
                     if (reader.HasRows)
                     {
-                        gundamRepater.DataSource = reader;
-                        gundamRepater.DataBind();
-                        resultno.Text = gundamRepater.Controls.Count.ToString() + " Results";
+                        gundamRepeater.DataSource = reader;
+                        gundamRepeater.DataBind();
+                        resultno.Text = gundamRepeater.Controls.Count.ToString() + " Results";
                     }
                     else
                     {
-                        gundamRepater.DataSource = "";
-                        gundamRepater.DataBind();
+                        gundamRepeater.DataSource = "";
+                        gundamRepeater.DataBind();
                         resultno.Text = "0" + " Results";
                     }
                 }
@@ -442,7 +442,7 @@ namespace Assignment.FigureCategories
             maxPrice.Text = "";
             errorPrice.Visible = false;
             RadioButtonList.SelectedIndex = 0;
-            resultno.Text = gundamRepater.Controls.Count.ToString() + " Results";
+            resultno.Text = gundamRepeater.Controls.Count.ToString() + " Results";
 
             //Main Operation
             SqlConnection conn7;
@@ -472,8 +472,8 @@ namespace Assignment.FigureCategories
 
             if(r.HasRows)
             {
-                gundamRepater.DataSource = r;
-                gundamRepater.DataBind();
+                gundamRepeater.DataSource = r;
+                gundamRepeater.DataBind();
             } 
         }
     }

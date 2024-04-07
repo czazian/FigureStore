@@ -1,105 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\figurecategories\\gundam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\figurecategories\\gundam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\figurecategories\\doll.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\figurecategories\\doll.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\figurecategories\\gundam.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\figurecategories\\gundam.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLlocalDB/C__USERS_JUNKE_ONEDRIVE_DOCUMENTS_GITHUB_WEBAPPLICATIONDEVELOPMENT_ASSIGNMENT_APP_DATA_APEXONLINESHOPDB.MDF/True/SqlTable/dbo.Figure.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\figurecategories\\doll.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\figurecategories\\doll.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 259,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "dbo.Figure [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLlocalDB/C__USERS_JUNKE_ONEDRIVE_DOCUMENTS_GITHUB_WEBAPPLICATIONDEVELOPMENT_ASSIGNMENT_APP_DATA_APEXONLINESHOPDB.MDF/True/SqlTable/dbo.Figure.sql",
-              "ToolTip": "dbo.Figure [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-04-05T05:52:27.604Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Doll.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\FigureCategories\\Doll.aspx.cs",
-              "RelativeDocumentMoniker": "Assignment\\FigureCategories\\Doll.aspx.cs",
-              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\FigureCategories\\Doll.aspx.cs",
-              "RelativeToolTip": "Assignment\\FigureCategories\\Doll.aspx.cs",
-              "ViewState": "AQIAACsBAAAAAAAAAAAmwD4BAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T05:36:30.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Doll.aspx",
-              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\FigureCategories\\Doll.aspx",
-              "RelativeDocumentMoniker": "Assignment\\FigureCategories\\Doll.aspx",
-              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\FigureCategories\\Doll.aspx",
-              "RelativeToolTip": "Assignment\\FigureCategories\\Doll.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-04-05T05:35:16.285Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
           "DockedHeight": 182,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Gundam.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\FigureCategories\\Gundam.aspx.cs",
-              "RelativeDocumentMoniker": "Assignment\\FigureCategories\\Gundam.aspx.cs",
-              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\FigureCategories\\Gundam.aspx.cs",
-              "RelativeToolTip": "Assignment\\FigureCategories\\Gundam.aspx.cs",
-              "ViewState": "AQIAAEQBAAAAAAAAAAAowN0BAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T05:36:15.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Gundam.aspx",
-              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\FigureCategories\\Gundam.aspx",
-              "RelativeDocumentMoniker": "Assignment\\FigureCategories\\Gundam.aspx",
-              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\FigureCategories\\Gundam.aspx",
-              "RelativeToolTip": "Assignment\\FigureCategories\\Gundam.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-04-05T05:35:09.266Z",
-              "EditorCaption": ""
-            }
-          ]
+          "SelectedChildIndex": -1,
+          "Children": []
         }
       ]
     }

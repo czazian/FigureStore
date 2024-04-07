@@ -114,12 +114,12 @@ namespace Assignment.FigureCategories
         protected global::System.Web.UI.WebControls.DropDownList ddlSort;
 
         /// <summary>
-        /// dollRepater control.
+        /// dollRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater dollRepater;
+        protected global::System.Web.UI.WebControls.Repeater dollRepeater;
     }
 }
