@@ -125,7 +125,7 @@
         </div>
     </div>
         <div class="right">
-                <h1 style="font-size:32px; padding-bottom:20px;">User Profile</h1>
+                <h1 style="font-size:32px; padding-bottom:25px;"><i class="bx bx-user"></i>&nbsp;User Profile</h1>
                 <div class="profile-info">
                     <label class="label-field">Username: </label>
                     </br>

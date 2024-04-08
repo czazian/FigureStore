@@ -186,7 +186,7 @@ a {
     <div class="home-content">
         <div class="sales-boxes">
             <div class="recent-sales box">
-                <div class="title" style="padding-bottom:10px; font-size:30px;">Product List</div>
+                <div class="title" style="padding-bottom:10px; font-size:30px; font-weight:600; color: #ff7e29"><i class="bx bx-purchase-tag"></i>&nbsp;Product List</div>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
 
                     <div class="search-box">
@@ -291,9 +291,8 @@ a {
                         <itemtemplate>
                             <li class="txt-center">
                                 <%--still trying make it query string send and retrieve work--%>
-                                <a href="product_view.aspx?figureID=<%# Eval("FigureID") %>"><i class='bx bx-show'></i></a>
-                                <a href="product_edit.aspx?figureID=<%# Eval("FigureID") %>"><i class='bx bxs-edit'></i></a>
-                                <a href="product_addStock.aspx?figureID=<%# Eval("FigureID") %>"><i class='bx bxs-package'></i></a>
+                                <a href="ViewProduct.aspx?figureID=<%# Eval("FigureID") %>"><i class='bx bx-show'></i></a>&nbsp;
+                                <a href="EditProduct.aspx?figureID=<%# Eval("FigureID") %>"><i class='bx bxs-edit' style="background-color:dodgerblue;"></i></a>&nbsp;
                                 <asp:LinkButton runat="server" ID="Hyperlink1" OnClientClick='<%# CreateConfirmation(Eval("FigureName")) %>' OnCommand="delete_click" CommandName="deleteClick" CommandArgument='<%# Eval("FigureID")%>'><i class='bx bxs-trash'></i></asp:LinkButton>
                             </li>
                             <hr />

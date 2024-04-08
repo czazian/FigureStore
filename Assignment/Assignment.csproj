@@ -192,6 +192,7 @@
     <Content Include="Staff\Product.aspx" />
     <Content Include="Staff\StaffPage.css" />
     <Content Include="Staff\StaffProfile.aspx" />
+    <Content Include="Staff\ViewProduct.aspx" />
     <Content Include="Style\reset.css" />
     <Content Include="Style\style.css" />
     <Content Include="Web.config" />
@@ -372,6 +373,13 @@
     </Compile>
     <Compile Include="Staff\StaffProfile.aspx.designer.cs">
       <DependentUpon>StaffProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\ViewProduct.aspx.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\ViewProduct.aspx.designer.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
