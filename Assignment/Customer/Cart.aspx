@@ -7,6 +7,60 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!--Remove the Query String after it is obtained, to avoid keep adding item-->
+    <script>
+        $(document).ready(function () {
+            history.pushState(null, "", location.href.split("?")[0]);
+
+            //Disabled the checkout and total amount if the cart is empty
+            var qty = document.getElementById('<%= lblTotal.ClientID %>').innerHTML;
+            var checkout = document.getElementById('checkout');
+            var amount = document.getElementById('total-payment');
+
+            if (qty > 0) {
+                checkout.style.display = "flex";
+                amount.style.display = "flex";
+            } else if (qty == 0) {
+                checkout.style.display = "none";
+                amount.style.display = "none";
+            }
+        })
+
+        $('<%= lblTotal.ClientID %>').on('labelchanged', function () {
+            //Disabled the checkout and total amount if the cart is empty
+            var qty = document.getElementById('<%= lblTotal.ClientID %>').innerHTML;
+            var checkout = document.getElementById('checkout');
+            var amount = document.getElementById('total-payment');
+
+            if (qty > 0) {
+                checkout.style.display = "flex";
+                amount.style.display = "flex";
+            } else if (qty == 0) {
+                checkout.style.display = "none";
+                amount.style.display = "none";
+            }
+        })
+    </script>
+
+    <% 
+        //Obtain shopping cart
+        Assignment.Objects.ShoppingCart shoppingCart = (Assignment.Objects.ShoppingCart)Session["shoppingCart"];
+
+        if (shoppingCart == null)
+        {
+            shoppingCart = new Assignment.Objects.ShoppingCart();
+            Session["shoppingCart"] = shoppingCart;
+        }
+
+        List<Assignment.Objects.Cart> figures = shoppingCart.getCartItems();
+
+        if (figures.Count == 0)
+        {
+            lblEmptyCart.Text = "Cart is empty. Kindly add an item and come back again!";
+        }
+    %>
+
+    <!--Start shopping cart -->
     <div class="product-container">
         <div class="left-box" id="left">
             <div class="top-container">
@@ -15,8 +69,9 @@
                 </div>
 
                 <div class="middle">
-
+                    <!--Start of cart content-->
                     <table class="oneProductContainer" style="width: 100%;">
+                        <!--HEADER-->
                         <tr style="text-align: center; font-size: 18px; border-bottom: 1px solid lightgrey;">
                             <th></th>
                             <th></th>
@@ -24,111 +79,59 @@
                             <th>Item Price</th>
                             <th>SubTotal</th>
                         </tr>
+                        <asp:Repeater runat="server" ID="FigureRepeater" OnItemDataBound="FigureRepeater_ItemDataBound">
 
-                        <!--One product-->
-                        <tr class="item">
-                            <td class="start1">
-                                <asp:ImageButton CssClass="inner-img" runat="server" ID="ProductImage" ImageUrl="~/Image/Product/f1.jpg" PostBackUrl="~/Customer/IndividualFigure.aspx" />
-                            </td>
-                            <td class="start2">
-                                <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
-                                    <asp:Label ID="productname" runat="server" Text="Nendoroid Frieren" />
-                                </div>
-                                <div class="product-series">
-                                    <span style="color: #ff7e29;">Series : </span>
-                                    <asp:Label ID="lblSeries" runat="server" Text="Frieren: Beyond Journey's End" />
-                                </div>
-                                <div class="remove-btn">
-                                    <asp:Button OnClientClick="return confirm('Are you sure to delete this item ?')" ID="removeitem" CssClass="removebtn" runat="server" Text="Remove" />
-                                </div>
-                            </td>
+                            <ItemTemplate>
+                                <asp:HiddenField runat="server" ID="hdnID" Value='<%# Eval("figureID") %>' />
+                                <tr class="item">
 
+                                    <!-- Figure Image -->
+                                    <td class="start1">
+                                        <asp:ImageButton CssClass="inner-img" runat="server" ID="ProductImage" ImageUrl='<%# Eval("image") %>' OnCommand="imgBook_Command" CommandArgument='<%# Eval("figureID") %>' />
+                                    </td>
 
-                            <td class="mid">
-                                <asp:TextBox Text="2" Style="width: 70px; text-align: center;" TextMode="Number" runat="server" ID="txtQty" Min="1" />
-                            </td>
+                                    <!-- Figure Name, Series and remove button -->
+                                    <td class="start2">
+                                        <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
+                                            <asp:Label ID="productname" runat="server" Text='<%# Eval("name") %>' />
+                                        </div>
+                                        <div class="product-series">
+                                            <span style="color: #ff7e29;">Series : </span>
+                                            <asp:Label ID="lblSeries" runat="server" Text='<%# Eval("series") %>' />
+                                        </div>
+                                        <div class="remove-btn">
+                                            <asp:LinkButton CommandArgument='<%# Eval("bookID") %>' OnClick="btnDelete_Click" CssClass="removebtn" runat="server" Text="Remove" ID="removeitem" OnClientClick="return confirm('Are you sure you want to delete this item ?')">
+                                            </asp:LinkButton>
+                                        </div>
+                                    </td>
 
-                            <td class="end">
-                                <asp:Label runat="server" ID="itemprice" Text="RM 100.00" />
-                            </td>
+                                    <!-- Quantity -->
+                                    <td class="mid">
+                                        <asp:TextBox runat="server" Style="width: 70px; text-align: center;" TextMode="Number" ID="txtQty" Text='<%# Eval("selectedQuantity") %>' Min="1" />
+                                    </td>
 
-                            <td class="total-price">
-                                <asp:Label runat="server" ID="itemSubtotal" Text="RM 200.00" />
-                            </td>
-                        </tr>
-                        <!--End of one product-->
+                                    <!-- Figure price -->
+                                    <td class="end">
+                                        <asp:Label runat="server" ID="itemprice" Text='<%# "RM " + Eval("price") %>' />
+                                    </td>
 
+                                    <!-- total price -->
+                                    <td class="total-price">
+                                        <asp:Label runat="server" ID="itemSubtotal" Text="" />
+                                    </td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:Repeater>
 
-                        <!--One product-->
-                        <tr class="item">
-                            <td class="start1">
-                                <asp:ImageButton CssClass="inner-img" runat="server" ID="ImageButton1" ImageUrl="~/Image/Product/f2.jpg" PostBackUrl="~/Customer/IndividualFigure.aspx" />
-                            </td>
-                            <td class="start2">
-                                <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
-                                    <asp:Label ID="Label1" runat="server" Text="TENITOL Jess" />
-                                </div>
-                                <div class="product-series">
-                                    <span style="color: #ff7e29;">Series : </span>
-                                    <asp:Label ID="Label2" runat="server" Text="Butareba: The Story of a Man Turned into a Pig" />
-                                </div>
-                                <div class="remove-btn">
-                                    <asp:Button OnClientClick="return confirm('Are you sure to delete this item ?')" ID="Button2" CssClass="removebtn" runat="server" Text="Remove" />
-                                </div>
-                            </td>
-
-
-                            <td class="mid">
-                                <asp:TextBox Text="2" Style="width: 70px; text-align: center;" TextMode="Number" runat="server" ID="TextBox1" Min="1" />
-                            </td>
-
-                            <td class="end">
-                                <asp:Label runat="server" ID="Label3" Text="RM 100.00" />
-                            </td>
-
-                            <td class="total-price">
-                                <asp:Label runat="server" ID="Label4" Text="RM 200.00" />
-                            </td>
-                        </tr>
-                        <!--End of one product-->
-
-
-                        <!--One product-->
-                        <tr class="item">
-                            <td class="start1">
-                                <asp:ImageButton CssClass="inner-img" runat="server" ID="ImageButton2" ImageUrl="~/Image/Product/f4.jpg" PostBackUrl="~/Customer/IndividualFigure.aspx" />
-                            </td>
-                            <td class="start2">
-                                <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
-                                    <asp:Label ID="Label5" runat="server" Text="Chen Hai" />
-                                </div>
-                                <div class="product-series">
-                                    <span style="color: #ff7e29;">Series : </span>
-                                    <asp:Label ID="Label6" runat="server" Text="Azur Lane" />
-                                </div>
-                                <div class="remove-btn">
-                                    <asp:Button OnClientClick="return confirm('Are you sure to delete this item ?')" ID="Button3" CssClass="removebtn" runat="server" Text="Remove" />
-                                </div>
-                            </td>
-
-
-                            <td class="mid">
-                                <asp:TextBox Text="2" Style="width: 70px; text-align: center;" TextMode="Number" runat="server" ID="TextBox2" Min="1" />
-                            </td>
-
-                            <td class="end">
-                                <asp:Label runat="server" ID="Label7" Text="RM 100.00" />
-                            </td>
-
-                            <td class="total-price">
-                                <asp:Label runat="server" ID="Label8" Text="RM 200.00" />
-                            </td>
-                        </tr>
-                        <!--End of one product-->
-
+                        <!--End of Cart Content-->
 
                     </table>
 
+
+                    <!--If cart is empty-->
+                    <div style="text-align: center; width: 100%; padding: 10px; margin-top: 15px;">
+                        <asp:Label ID="lblEmptyCart" runat="server" Style="color: crimson; font-size: 1.2rem; font-weight: bold; text-align: center;"></asp:Label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -136,18 +139,18 @@
 
         <div class="right-box" id="right-box">
             <!--Information-->
-            <div class="info">
-                <p>Total : </p>
+            <div class="info" id="total-payment">
+                <p>Total : RM</p>
                 &nbsp;
                 <div class="total">
-                    <asp:Label ID="lblTotal" runat="server" Text="RM 200.00" />
+                    <asp:Label ID="lblTotal" runat="server" />
                 </div>
             </div>
 
             <!--Checkout Button-->
-            <div class="row details-row" style="width: 100%; display:flex; gap: 10px;">
-                <div style="display: flex; justify-content: center">
-                    <asp:LinkButton PostBackUrl="~/Customer/Checkout.aspx" runat="server" ID="btnCheckoutt" CssClass="btn-checkout" Style="background-color: #ff7e29; color: white; font-weight: bold; text-decoration: none; text-align: center;">
+            <div class="row details-row" style="width: 100%; display: flex; gap: 10px;">
+                <div class="checkout" id="checkout" style="display: flex; justify-content: center">
+                    <asp:LinkButton PostBackUrl="~/Customer/Checkout.aspx" runat="server" ID="btnCheckout" CssClass="btn-checkout" Style="background-color: #ff7e29; color: white; font-weight: bold; text-decoration: none; text-align: center;">
                         <i class="fa-solid fa-cart-shopping"></i>&nbsp;Checkout
                     </asp:LinkButton>
                 </div>

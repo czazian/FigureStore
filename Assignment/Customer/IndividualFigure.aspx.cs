@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment.Objects;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -16,7 +17,7 @@ namespace Assignment.Customer
         protected void Page_Load(object sender, EventArgs e)
         {
             //Query String
-            string id = Request.QueryString["id"];
+            string figureID = Request.QueryString["id"];
             if (!IsPostBack)
             {
                 //Connection Establish
@@ -29,7 +30,7 @@ namespace Assignment.Customer
                 //Command & Execution 
                 string retrieve = "SELECT * FROM FIGURE WHERE FigureID = @id";
                 SqlCommand cmd = new SqlCommand(retrieve, conn);
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@id", figureID);
 
                 SqlDataReader figure = cmd.ExecuteReader(); //More than 1 value
 
@@ -54,8 +55,34 @@ namespace Assignment.Customer
                 }
                 conn.Close();
             }
+            //Check if cart already has it, then get it quantity in the cart, and compare with the quantity available in DB
+            //to know how many quantity can be selected
+            
+            ShoppingCart shoppingCart = (ShoppingCart)Session["shoppingCart"];
+            if (shoppingCart == null)
+            {
+                shoppingCart = new ShoppingCart();
+                Session["shoppingCart"] = shoppingCart;
+            }
+            List<Cart> cartItems = shoppingCart.getCartItems();
 
-            if(lblTopStatus.Text == "Pre-Order")
+            int currentQty = getCurrentQty(Convert.ToInt32(figureID), cartItems);
+            int availableQty = getAvailableQuantity(Convert.ToInt32(figureID));
+
+
+            int different = availableQty - currentQty;
+            if (different == 0)
+            {
+                rangevalidator.MaximumValue = different.ToString();
+                rangevalidator.MinimumValue = different.ToString();
+            }
+            else
+            {
+                rangevalidator.MaximumValue = different.ToString();
+                rangevalidator.MinimumValue = "1";
+            }
+
+            if (lblTopStatus.Text == "Pre-Order")
             {
                 lblTopStatus.BackColor = Color.DarkOrange;
             } else if (lblTopStatus.Text == "Available")
@@ -72,7 +99,7 @@ namespace Assignment.Customer
 
             string suggestion = "SELECT TOP 2 * FROM FIGURE WHERE NOT FigureID = @fid ORDER BY NEWID()";
             SqlCommand cmd2 = new SqlCommand(suggestion, conn2);
-            cmd2.Parameters.AddWithValue("@fid", id);
+            cmd2.Parameters.AddWithValue("@fid", figureID);
 
             SqlDataReader rdr = cmd2.ExecuteReader();
             if (rdr.HasRows)
@@ -82,6 +109,37 @@ namespace Assignment.Customer
             }
 
             conn2.Close();
+        }
+
+        public int getAvailableQuantity(int figureID)
+        {
+            //Connection Establish
+            SqlConnection conn;
+            string strConnection = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
+            conn = new SqlConnection(strConnection);
+
+            conn.Open();
+
+            //To Get the available quantity
+            string command2 = "SELECT FigureUnit FROM Figure WHERE FigureID = @figureID";
+            SqlCommand cmd2 = new SqlCommand(command2, conn);
+            cmd2.Parameters.AddWithValue("@figureID", figureID);
+
+            return (int)cmd2.ExecuteScalar();
+        }
+
+        public int getCurrentQty(int figureID, List<Cart> cartItems)
+        {
+            int currentQty = 0;
+            foreach (Cart cart in cartItems)
+            {
+                if (cart.figureID.Equals(figureID))
+                {
+                    currentQty = cart.selectedQuantity;
+                    break;
+                }
+            }
+            return currentQty;
         }
 
         protected void view_Command(object sender, CommandEventArgs e)

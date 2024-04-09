@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <div class="status-icon" id="status">
-                        <asp:Label runat="server" ID="lblTopStatus" CssClass="topStatus" Text="test"/>
+                        <asp:Label runat="server" ID="lblTopStatus" CssClass="topStatus" Text="test" />
                     </div>
                 </div>
                 <div class="middle">
@@ -94,7 +94,7 @@
                                         <!--Deduct 1-->
                                         <span class="input-group-btn">
                                             <asp:LinkButton ValidationGroup="grp" OnClientClick="return false" runat="server" ID="btnMinus" CssClass="quantity-left-minus btn btn-number" Style="background-color: #ff7e29; color: white;" data-type="minus" data-field="">
-                    <i class="fa-solid fa-minus"></i>
+                                                <i class="fa-solid fa-minus"></i>
                                             </asp:LinkButton>
                                         </span>
 
@@ -104,12 +104,14 @@
                                         <span class="input-group-btn">
                                             <span class="input-group-btn">
                                                 <asp:LinkButton ValidationGroup="grp" Style="background-color: #ff7e29; color: white" OnClientClick="return false;" runat="server" ID="btnAdd" CssClass="quantity-right-plus btn btn-number" data-type="plus" data-field="">
-                        <i class="fa-solid fa-plus"></i>
+                                                    <i class="fa-solid fa-plus"></i>
                                                 </asp:LinkButton>
                                             </span>
                                         </span>
                                     </div>
-
+                                    <div style="display: flex; align-items: center; flex-flow: row nowrap; margin-top: 5px;">
+                                        <asp:RangeValidator ID="rangevalidator" Type="Integer" SetFocusOnError="true" ForeColor="Red" ErrorMessage="Quantity must not be more than available unit." runat="server" ControlToValidate="txtQuantity" MinimumValue="1" />
+                                    </div>
                                 </div>
                             </div>
                         </td>
