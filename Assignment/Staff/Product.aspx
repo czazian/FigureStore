@@ -194,7 +194,7 @@ a {
                         <asp:LinkButton runat="server" ID="linkBtnSearch" OnClick="linkBtnSearch_Click"><i class='bx bx-search' style="background-color:#ff7e29;"></i></asp:LinkButton>
                     </div>
                     <div>
-                        <asp:Button runat="server" ID="createProductBtn" Text="Add New Product" CssClass="form-button" OnClick="createProductBtn_Click" />
+                        <asp:Button runat="server" ID="createProductBtn" Text="Add New Product" CssClass="form-button" OnClick="createProductBtn_Click" style="cursor: pointer;"/>
                     </div>
                 </div>
 

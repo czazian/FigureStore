@@ -579,7 +579,7 @@
                     ValidationExpression="\d+" ForeColor="Red" Display="Dynamic">
                 </asp:RegularExpressionValidator>
                 <asp:Button ID="btnCal" runat="server" Text="Calculate" CssClass="form-button2 width-100 mb-10"
-                    OnClick="btnCal_Click" />
+                    OnClick="btnCal_Click" style="cursor: pointer;"/>
                  <br />
                  <br />
                 <label class="label-field">Latest Quantity: </label>
@@ -587,9 +587,9 @@
                 <asp:TextBox runat="server" ID="txtLatestQuantity" CssClass="input-field" ReadOnly="True"></asp:TextBox>
                  <br /> <br />
                 <asp:Button runat="server" ID="Button1" Text="Confirm to Add" CssClass="form-button"
-                    OnClick="btnSubmit_Click" style="width:100%"/>
+                    OnClick="btnSubmit_Click" style="width:100%; cursor: pointer;"/>
                 <asp:Button runat="server" ID="Button2" Text="Back" CssClass="form-button"
-                    PostBackUrl="~/Staff/Product.aspx" CausesValidation="False"  style="width:100%"/>
+                    PostBackUrl="~/Staff/Product.aspx" CausesValidation="False"  style="width:100%; cursor: pointer;"/>
             </div>
            </div>
         </div>

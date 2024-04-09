@@ -285,8 +285,8 @@
             </asp:DropDownList>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="ddlfigurestatus" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
             </br>
-            <asp:Button runat="server" ID="btnBack" Text="Back" CssClass="form-button" PostBackUrl="~/Staff/Product.aspx" CausesValidation="False" />
-            <asp:Button runat="server" ID="btnSubmit" Text="Submit" CssClass="form-button" OnClick="btnSubmit_Click" />
+            <asp:Button runat="server" ID="btnBack" Text="Back" CssClass="form-button" PostBackUrl="~/Staff/Product.aspx" CausesValidation="False" style="cursor: pointer;" />
+            <asp:Button runat="server" ID="btnSubmit" Text="Submit" CssClass="form-button" OnClick="btnSubmit_Click" style="cursor: pointer;"/>
         </div>
 
     </div>
