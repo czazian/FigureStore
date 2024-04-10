@@ -187,7 +187,7 @@
     <div class="home-content">
     <div class="sales-boxes">
         <div class="recent-sales box">
-            <div class="title" style="padding-bottom: 10px; font-size: 30px; font-weight: 600; color: #ff7e29"><i class="bx bx-purchase-tag"></i>&nbsp;Member List</div>
+            <div class="title" style="padding-bottom: 10px; font-size: 30px; font-weight: 600; color: #ff7e29"><i class="bx bx-purchase-tag"></i>&nbsp;Staff List</div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                 <div class="search-box">
                     <asp:TextBox runat="server" ID="txtSearch" placeholder="Search..."></asp:TextBox>

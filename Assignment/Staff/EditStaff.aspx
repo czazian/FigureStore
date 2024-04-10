@@ -189,7 +189,7 @@
 
             <div class="recent-sales box">
 
-                <div class="title">Edit Staff</div>
+                <div class="title" style="padding-bottom: 20px; font-size: 30px; font-weight: 600; color: #ff7e29"><i class="bx bx-user-check"></i>&nbsp;Edit Staff</div>
                 <label class="label-field">Staff Name (Username) : </label>
                 </br>
            

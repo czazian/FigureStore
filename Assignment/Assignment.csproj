@@ -186,20 +186,24 @@
     <Content Include="Login\StaffLogin.js" />
     <Content Include="Staff\AccessDenied.aspx" />
     <Content Include="Staff\AddProduct.aspx" />
+    <Content Include="Staff\AddRole.aspx" />
     <Content Include="Staff\AddStaff.aspx" />
     <Content Include="Staff\Dashboard.aspx" />
     <Content Include="Staff\DashboardChartA.js" />
     <Content Include="Staff\DashboardChartB.js" />
     <Content Include="Staff\EditMember.aspx" />
     <Content Include="Staff\EditProduct.aspx" />
+    <Content Include="Staff\EditRole.aspx" />
     <Content Include="Staff\EditStaff.aspx" />
     <Content Include="Staff\Member.aspx" />
     <Content Include="Staff\Product.aspx" />
+    <Content Include="Staff\Role.aspx" />
     <Content Include="Staff\Staff.aspx" />
     <Content Include="Staff\StaffPage.css" />
     <Content Include="Staff\StaffProfile.aspx" />
     <Content Include="Staff\ViewMember.aspx" />
     <Content Include="Staff\ViewProduct.aspx" />
+    <Content Include="Staff\ViewRole.aspx" />
     <Content Include="Staff\ViewStaff.aspx" />
     <Content Include="Style\reset.css" />
     <Content Include="Style\style.css" />
@@ -363,6 +367,13 @@
     <Compile Include="Staff\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Staff\AddRole.aspx.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\AddRole.aspx.designer.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Staff\AddStaff.aspx.cs">
       <DependentUpon>AddStaff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -391,6 +402,13 @@
     <Compile Include="Staff\EditProduct.aspx.designer.cs">
       <DependentUpon>EditProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Staff\EditRole.aspx.cs">
+      <DependentUpon>EditRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\EditRole.aspx.designer.cs">
+      <DependentUpon>EditRole.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Staff\EditStaff.aspx.cs">
       <DependentUpon>EditStaff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -411,6 +429,13 @@
     </Compile>
     <Compile Include="Staff\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Role.aspx.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Role.aspx.designer.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\Staff.aspx.cs">
       <DependentUpon>Staff.aspx</DependentUpon>
@@ -439,6 +464,13 @@
     </Compile>
     <Compile Include="Staff\ViewProduct.aspx.designer.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\ViewRole.aspx.cs">
+      <DependentUpon>ViewRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\ViewRole.aspx.designer.cs">
+      <DependentUpon>ViewRole.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\ViewStaff.aspx.cs">
       <DependentUpon>ViewStaff.aspx</DependentUpon>

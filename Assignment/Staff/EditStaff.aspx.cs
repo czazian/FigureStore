@@ -15,7 +15,7 @@ namespace Assignment.Staff
         protected void Page_Load(object sender, EventArgs e)
         {
             //if no permission
-            if (Session["prod_permit"] == null || Session["prod_permit"].ToString() != "1")
+            if (Session["staff_permit"] == null || Session["staff_permit"].ToString() != "1")
             {
                 Response.Redirect("/Staff/AccessDenied.aspx");
             }
@@ -40,6 +40,7 @@ namespace Assignment.Staff
                 {
                     //work, can get query string
                     txtUsername.Text = staff.GetValue(1).ToString();
+                    txtNewPassw.Text = staff.GetValue(2).ToString();
                     ddlRole.SelectedValue = staff.GetValue(3).ToString();
 
                 }
