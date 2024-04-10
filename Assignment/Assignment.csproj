@@ -189,10 +189,13 @@
     <Content Include="Staff\Dashboard.aspx" />
     <Content Include="Staff\DashboardChartA.js" />
     <Content Include="Staff\DashboardChartB.js" />
+    <Content Include="Staff\EditMember.aspx" />
     <Content Include="Staff\EditProduct.aspx" />
+    <Content Include="Staff\Member.aspx" />
     <Content Include="Staff\Product.aspx" />
     <Content Include="Staff\StaffPage.css" />
     <Content Include="Staff\StaffProfile.aspx" />
+    <Content Include="Staff\ViewMember.aspx" />
     <Content Include="Staff\ViewProduct.aspx" />
     <Content Include="Style\reset.css" />
     <Content Include="Style\style.css" />
@@ -363,12 +366,26 @@
     <Compile Include="Staff\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Staff\EditMember.aspx.cs">
+      <DependentUpon>EditMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\EditMember.aspx.designer.cs">
+      <DependentUpon>EditMember.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Staff\EditProduct.aspx.cs">
       <DependentUpon>EditProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Staff\EditProduct.aspx.designer.cs">
       <DependentUpon>EditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Member.aspx.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Member.aspx.designer.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
@@ -383,6 +400,13 @@
     </Compile>
     <Compile Include="Staff\StaffProfile.aspx.designer.cs">
       <DependentUpon>StaffProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\ViewMember.aspx.cs">
+      <DependentUpon>ViewMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\ViewMember.aspx.designer.cs">
+      <DependentUpon>ViewMember.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>

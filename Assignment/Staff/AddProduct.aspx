@@ -184,61 +184,62 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="home-content">
-    <div class="sales-boxes">
+        <div class="sales-boxes">
 
-        <div class="recent-sales box">
+            <div class="recent-sales box">
 
-            <div class="title" style="padding-bottom:25px; font-size:30px; font-weight:600; color: #ff7e29;"><i class="bx bx-list-plus"></i>&nbsp;Add New Product</div>
-            <label class="label-field">Figure Name: </label>
-            </br>
+                <div class="title" style="padding-bottom: 25px; font-size: 30px; font-weight: 600; color: #ff7e29;"><i class="bx bx-list-plus"></i>&nbsp;Add New Product</div>
+                <label class="label-field">Figure Name: </label>
+                </br>
             </br>
              <asp:TextBox runat="server" ID="txtFigureName" CssClass="input-field"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFigureName" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-            <br><br />
-                <label class="label-field">Figure Series: </label>
-            </br>
-            </br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFigureName" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <br>
+                    <br />
+                    <label class="label-field">Figure Series: </label>
+                </br>
+                </br>
             <asp:TextBox runat="server" ID="txtFigureSeries" CssClass="input-field"></asp:TextBox><br />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtFigureSeries" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-            <br></br>
-            <label class="label-field">Figure Manufacturer: </label>
-            </br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtFigureSeries" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <br></br>
+                <label class="label-field">Figure Manufacturer: </label>
+                </br>
             </br>
            
         <asp:TextBox runat="server" ID="txtFigureManufacturer" CssClass="input-field"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFigureManufacturer" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-        <br></br>
-        <label class="label-field">Figure Specification: </label>
-        </br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFigureManufacturer" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <br></br>
+                <label class="label-field">Figure Specification: </label>
+                </br>
 </br>
         <asp:TextBox runat="server" ID="txtFigureSpecification" CssClass="input-field"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtFigureSpecification" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-        <br></br>
-        <label class="label-field">Figure Release Date (DD-MM-YY): </label>
-        </br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtFigureSpecification" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <br></br>
+                <label class="label-field">Figure Release Date (DD-MM-YY): </label>
+                </br>
 </br>
         <asp:TextBox runat="server" ID="txtFigureReleaseDate" CssClass="input-field"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtFigureReleaseDate" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-        <br></br>
-        <label class="label-field">Price (RM 0.00): </label>
-            </br></br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtFigureReleaseDate" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <br></br>
+                <label class="label-field">Price (RM 0.00): </label>
+                </br></br>
         <asp:TextBox runat="server" ID="txtFigurePrice" CssClass="input-field"></asp:TextBox><br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
-            ControlToValidate="txtFigurePrice"
-            ErrorMessage="This field is required"
-            ForeColor="Red"
-            Display="Dynamic">
-            </asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
-                ControlToValidate="txtFigurePrice"
-                ErrorMessage="Please enter a valid numeric format (e.g., 00.00)"
-                ValidationExpression="\d+(\.\d{1,2})?"
-                ForeColor="Red"
-                Display="Dynamic">
-            </asp:RegularExpressionValidator>
-            <br></br>
-            <label class="label-field">Category: </label>
-            </br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
+                    ControlToValidate="txtFigurePrice"
+                    ErrorMessage="This field is required"
+                    ForeColor="Red"
+                    Display="Dynamic">
+                </asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                    ControlToValidate="txtFigurePrice"
+                    ErrorMessage="Please enter a valid numeric format (e.g., 00.00)"
+                    ValidationExpression="\d+(\.\d{1,2})?"
+                    ForeColor="Red"
+                    Display="Dynamic">
+                </asp:RegularExpressionValidator>
+                <br></br>
+                <label class="label-field">Category: </label>
+                </br>
             </br>
             <asp:DropDownList runat="server" ID="ddlProductCategory" CssClass="input-field">
                 <asp:ListItem Text="Scale Figures" Value="Scale Figures"></asp:ListItem>
@@ -247,47 +248,48 @@
                 <asp:ListItem Text="Dolls" Value="Dolls"></asp:ListItem>
                 <asp:ListItem Text="Goods" Value="Goods"></asp:ListItem>
             </asp:DropDownList>
-            </br>
+                </br>
            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="ddlProductCategory" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-            </br>
+                </br>
             </br>
             <label class="label-field">Quantity/Unit(s): </label>
-            </br>
+                </br>
             </br>
             <asp:TextBox runat="server" ID="txtUnit" CssClass="input-field"></asp:TextBox></br>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtUnit" ErrorMessage="This field is required" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
-                ControlToValidate="txtUnit"
-                ErrorMessage="Please enter a valid numeric format"
-                ValidationExpression="\d+"
-                ForeColor="Red"
-                Display="Dynamic">
-            </asp:RegularExpressionValidator>
-            </br>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                    ControlToValidate="txtUnit"
+                    ErrorMessage="Please enter a valid numeric format"
+                    ValidationExpression="\d+"
+                    ForeColor="Red"
+                    Display="Dynamic">
+                </asp:RegularExpressionValidator>
+                </br>
             </br>
                 
         <label class="label-field">Figure Image 1:</label></br></br>
            
-        <asp:FileUpload runat="server" ID="newImgProd1" CssClass="input-field" style="align-content:center;" /></br>
+        <asp:FileUpload runat="server" ID="newImgProd1" CssClass="input-field" Style="align-content: center;" /></br>
            
         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="newImgProd1" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-        <br></br>
-        <label class="label-field">Figure Image 2:</label></br></br>
-        <asp:FileUpload runat="server" ID="newImgProd2" CssClass="input-field" style="align-content:center;"  /></br>
+                <br></br>
+                <label class="label-field">Figure Image 2:</label></br></br>
+        <asp:FileUpload runat="server" ID="newImgProd2" CssClass="input-field" Style="align-content: center;" /></br>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="newImgProd2" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-        <br></br>
-        <label class="label-field">Figure Status: </label>
-        <br />
-            <br />
-            <asp:DropDownList runat="server" ID="ddlfigurestatus" CssClass="input-field">
-                <asp:ListItem>Available</asp:ListItem>
-                <asp:ListItem>Pre-Order</asp:ListItem>
-            </asp:DropDownList>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="ddlfigurestatus" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-            </br>
-            <asp:Button runat="server" ID="btnBack" Text="Back" CssClass="form-button" PostBackUrl="~/Staff/Product.aspx" CausesValidation="False" style="cursor: pointer;" />
-            <asp:Button runat="server" ID="btnSubmit" Text="Submit" CssClass="form-button" OnClick="btnSubmit_Click" style="cursor: pointer;"/>
-        </div>
+                <br></br>
+                <label class="label-field">Figure Status: </label>
+                <br />
+                <br />
+                <asp:DropDownList runat="server" ID="ddlfigurestatus" CssClass="input-field">
+                    <asp:ListItem>Available</asp:ListItem>
+                    <asp:ListItem>Pre-Order</asp:ListItem>
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="ddlfigurestatus" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                </br>
+            <asp:Button runat="server" ID="btnBack" Text="Back" CssClass="form-button" PostBackUrl="~/Staff/Product.aspx" CausesValidation="False" Style="cursor: pointer;" />
+                <asp:Button runat="server" ID="btnSubmit" Text="Submit" CssClass="form-button" OnClick="btnSubmit_Click" Style="cursor: pointer;" />
+            </div>
 
+        </div>
     </div>
 </asp:Content>

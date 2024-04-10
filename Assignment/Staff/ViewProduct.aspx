@@ -461,7 +461,7 @@
                     </div>
                     <div class="middle">
                         <div class="main-img">
-                            <asp:Image runat="server" ID="mainimg" Style="width: 60%; padding: 20px;" />
+                            <asp:Image runat="server" ID="mainimg" Style="width: 80%; padding: 20px;" />
                         </div>
                         <div class="select-img">
                             <div class="img1" id="img1" style="border: 3px solid #ff7e29">
@@ -533,7 +533,7 @@
                             </td>
                             <td class="p-specification">
                                 <asp:TextBox runat="server" ID="txtFigureSpecification" CssClass="input-field2"
-                                    ReadOnly="True">
+                                    ReadOnly="True" TextMode="MultiLine" style="height:auto !important;">
                                 </asp:TextBox>
                             </td>
                         </tr>

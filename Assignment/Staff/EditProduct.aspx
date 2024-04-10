@@ -482,7 +482,7 @@
                         </div>
                         <div style="padding-top:10px;">
                             <span class="title2">Specification :</span>
-                            <asp:TextBox runat="server" ID="txtFigureSpecification" CssClass="input-field">
+                            <asp:TextBox runat="server" ID="txtFigureSpecification" CssClass="input-field" TextMode="MultiLine" style="height:auto !important;">
                             </asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtFigureSpecification" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
