@@ -273,8 +273,8 @@
                         <ItemTemplate>
                             <li class="txt-center">
                                 <%--still trying make it query string send and retrieve work--%>
-                                <a href="ViewMember.aspx?userID=<%# Eval("CustomerID") %>"><i class='bx bx-show'></i></a>
-                                <a href="EditMember.aspx?userID=<%# Eval("CustomerID") %>"><i class='bx bxs-edit'></i></a>
+                                <a href="ViewMember.aspx?userID=<%# Eval("CustomerID") %>"><i class='bx bx-show'></i></a>&nbsp;
+                                <a href="EditMember.aspx?userID=<%# Eval("CustomerID") %>"><i class='bx bxs-edit' style="background-color:dodgerblue;"></i></a>&nbsp;
                                 <asp:LinkButton runat="server" ID="Hyperlink1" OnClientClick='<%# CreateConfirmation(Eval("Name")) %>' OnCommand="delete_click" CommandName="deleteClick" CommandArgument='<%# Eval("CustomerID")%>'><i class='bx bxs-trash'></i></asp:LinkButton>
                             </li>
                             <hr />

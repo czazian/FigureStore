@@ -9,6 +9,10 @@
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        #memberLi {
+            background: #545454;
+        }
+
         .edit {
             display: flex;
             flex-flow: row nowrap;
@@ -209,6 +213,10 @@
 
         .lblMsg {
             color: #ff7e29;
+        }
+
+        .nav-links {
+            padding-left: 0;
         }
     </style>
 </asp:Content>

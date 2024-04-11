@@ -14,7 +14,7 @@ namespace Assignment.Staff
         protected void Page_Load(object sender, EventArgs e)
         {
             //if no permission
-            if (Session["prod_permit"] == null || Session["prod_permit"].ToString() != "1")
+            if (Session["member_permit"] == null || Session["member_permit"].ToString() != "1")
             {
                 Response.Redirect("/Staff/AccessDenied.aspx");
             }

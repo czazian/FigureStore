@@ -147,7 +147,7 @@
                 </asp:HyperLink>
             </li>
             <li id="orderLi" runat="server">
-                <asp:HyperLink runat="server" ID="orderLink" NavigateUrl="~/Staff/Order.aspx">
+                <asp:HyperLink runat="server" ID="orderLink" NavigateUrl="~/Staff/OrderList.aspx">
                     <i class='bx bx-list-ul' style="color:#fc893d;"></i>
                     <span class="links_name">Order List</span>
                 </asp:HyperLink>
