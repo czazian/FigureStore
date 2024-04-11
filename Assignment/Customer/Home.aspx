@@ -90,7 +90,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=2" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=2&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -116,7 +116,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=3" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=3&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -142,7 +142,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=4" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=4&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -168,7 +168,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=5" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=5&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -194,7 +194,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=6" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=6&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -227,7 +227,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=7" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=7&qty=1" runat="server">
                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -253,7 +253,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=8" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=8&qty=1" runat="server">
                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -279,7 +279,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=9" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=9&qty=1" runat="server">
                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -305,7 +305,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=10" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=10&qty=1" runat="server">
                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -331,7 +331,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=11" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=11&qty=1" runat="server">
                     <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -389,7 +389,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=1" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=1&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -415,7 +415,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=12" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=12&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -441,7 +441,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=13" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=13&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -467,7 +467,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=14" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=14&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -493,7 +493,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=15" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=15&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -526,7 +526,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=16" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=16&qty=1" runat="server">
                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -552,7 +552,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=17" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=17&qty=1" runat="server">
                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -578,7 +578,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=18" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=18&qty=1" runat="server">
                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -604,7 +604,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=41" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=41&qty=1" runat="server">
 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -630,7 +630,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=42" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=42&qty=1" runat="server">
 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -688,7 +688,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=19" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=19&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -714,7 +714,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=20" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=20&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -740,7 +740,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=21" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=21&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -766,7 +766,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=22" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=22&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -792,7 +792,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=23" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=23&qty=1" runat="server">
                                                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -825,7 +825,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=24" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=24&qty=1" runat="server">
                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -851,7 +851,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=25" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=25&qty=1" runat="server">
                 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -877,7 +877,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=38" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=38&qty=1" runat="server">
 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -903,7 +903,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=39" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=39&qty=1" runat="server">
 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>
@@ -929,7 +929,7 @@
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
-                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=40" runat="server">
+                                            <asp:LinkButton PostBackUrl="~/Customer/Cart.aspx?id=40&qty=1" runat="server">
 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                             </asp:LinkButton>
                                         </div>

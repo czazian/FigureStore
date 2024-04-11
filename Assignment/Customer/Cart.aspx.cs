@@ -79,15 +79,6 @@ namespace Assignment.Customer
 
         }
 
-        //protected void imgBook_Output(object sender, CommandEventArgs e)
-        //{
-        //    string destination = "~/Customer/IndividualFigure.aspx?id=" + e.CommandArgument;
-        //    Response.Redirect(destination, false);
-        //    Context.ApplicationInstance.CompleteRequest();
-        //}
-
-
-
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             //Obtian the bookid of the clicked item in the cart 

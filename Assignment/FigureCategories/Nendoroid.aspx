@@ -127,7 +127,7 @@
                                         </div>
                                         <div class="item-details">
                                             <div class="item-buy">
-                                                <asp:LinkButton runat="server">
+                                                <asp:LinkButton runat="server" PostBackUrl='<%# "~/Customer/Cart.aspx?id=" + Eval("FigureID") + "&qty=1" %>'>
 <i class="fa-solid fa-cart-shopping"></i>&nbsp;Buy
                                                 </asp:LinkButton>
                                             </div>

@@ -117,7 +117,7 @@
                                 Cart
                                 <div style="position: relative; margin-top: -5px; border-radius: 100px; background-color: #ff2b2b; padding: 5px; float: right; height: 16px; width: 16px;">
                                     <asp:Label Style="position: absolute; top: 0; left: 4.5px; color: white; height: 16px; font-size: 12px;"
-                                        ID="cartcount" runat="server" Text="2" />
+                                        ID="cartcount" runat="server" />
                                 </div>
                             </asp:LinkButton>
                         </div>

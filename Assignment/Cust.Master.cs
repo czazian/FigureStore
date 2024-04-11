@@ -12,6 +12,7 @@ using System.Net.Mail;
 using System.Net.Http;
 using System.Threading;
 using MailChimp.Net.Models;
+using Assignment.Objects;
 
 namespace Assignment
 {
@@ -33,6 +34,27 @@ namespace Assignment
                 string img = command.ExecuteScalar().ToString();
 
                 topImage.ImageUrl = img;
+
+                //Obtain shopping cart
+                Assignment.Objects.ShoppingCart shoppingCart = (Assignment.Objects.ShoppingCart)Session["shoppingCart"];
+
+                if (shoppingCart == null)
+                {
+                    shoppingCart = new Assignment.Objects.ShoppingCart();
+                    Session["shoppingCart"] = shoppingCart;
+                }
+
+                List<Assignment.Objects.OrderCart> figures = shoppingCart.getCartItems();
+
+                if(figures.Count == 0)
+                {
+                    cartcount.Text =  0.ToString();
+                }
+                else
+                {
+                    cartcount.Text = figures.Count.ToString();
+                }
+                
             }
         }
 
