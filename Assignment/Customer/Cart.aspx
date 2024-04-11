@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeBehind="cart.aspx.cs" Inherits="Assignment.Customer.cart" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="Cart.css" />
 </asp:Content>
@@ -12,13 +13,20 @@
             var qty = document.getElementById('<%= lblTotal.ClientID %>').innerHTML;
             var checkout = document.getElementById('checkout');
             var amount = document.getElementById('total-payment');
+            var middle = document.getElementById('middle');
+            var emptyCart = document.getElementById('emptyCart');
 
             if (qty > 0) {
                 checkout.style.display = "flex";
                 amount.style.display = "flex";
+                middle.style.display = "flex";
+                emptyCart.style.display = "none";
             } else if (qty == 0) {
                 checkout.style.display = "none";
                 amount.style.display = "none";
+                middle.style.display = "none";
+                emptyCart.style.marginTop = "100px";
+                emptyCart.style.marginBottom = "100px";
             }
         })
 
@@ -27,13 +35,21 @@
             var qty = document.getElementById('<%= lblTotal.ClientID %>').innerHTML;
             var checkout = document.getElementById('checkout');
             var amount = document.getElementById('total-payment');
+            var middle = document.getElementById('middle');
+            var emptyCart = document.getElementById('emptyCart');
 
             if (qty > 0) {
                 checkout.style.display = "flex";
+                middle.style.display = "flex";
                 amount.style.display = "flex";
+                emptyCart.style.display = "none";
+
             } else if (qty == 0) {
                 checkout.style.display = "none";
                 amount.style.display = "none";
+                middle.style.display = "none";
+                emptyCart.style.marginTop = "100px";
+                emptyCart.style.marginBottom = "100px";
             }
         })
     </script>
@@ -59,21 +75,21 @@
     <!--Start shopping cart -->
     <div class="product-container">
         <div class="left-box" id="left">
-            <div class="top-container">
+            <div class="top-container" style="height:auto">
                 <div class="header-title">
                     <asp:Label Style="font-weight: bold; font-size: 25px; color: #ff7e29; margin-right: 10px;" ID="pname" runat="server" Text="My Cart" />
                 </div>
 
-                <div class="middle">
+                <div class="middle" id="middle">
                     <!--Start of cart content-->
-                    <table class="oneProductContainer" style="width: 100%;">
+                    <table class="oneProductContainer" id="oneProductContainer" style="width: 100%;">
                         <!--HEADER-->
                         <tr style="text-align: center; font-size: 18px; border-bottom: 1px solid lightgrey;">
-                            <th></th>
-                            <th></th>
-                            <th>Quantity</th>
-                            <th>Item Price</th>
-                            <th>SubTotal</th>
+                            <th style="width:20%;"></th>
+                            <th style="width:40%;"></th>
+                            <th style="width:10%;">Quantity</th>
+                            <th style="width:10%;">Item Price</th>
+                            <th style="width:10%;">SubTotal</th>
                         </tr>
                         <asp:Repeater runat="server" ID="FigureRepeater" OnItemDataBound="FigureRepeater_ItemDataBound">
 
@@ -103,7 +119,7 @@
 
                                     <!-- Quantity -->
                                     <td class="mid">
-                                        <asp:TextBox runat="server" Style="width: 70px; text-align: center;" TextMode="Number" ID="txtQty" Text='<%# Eval("selectedQuantity") %>' Min="1" />
+                                        <asp:TextBox runat="server" Style="width: 70px; text-align: center;" TextMode="Number" ID="txtQty" Text='<%# Eval("selectedQuantity") %>' Min="1" Enabled="false"/>
                                     </td>
 
                                     <!-- Figure price -->
@@ -124,10 +140,11 @@
                     </table>
 
 
-                    <!--If cart is empty-->
-                    <div style="text-align: center; width: 100%; padding: 10px; margin-top: 15px;">
-                        <asp:Label ID="lblEmptyCart" runat="server" Style="color: crimson; font-size: 1.2rem; font-weight: bold; text-align: center;"></asp:Label>
-                    </div>
+
+                </div>
+                <!--If cart is empty-->
+                <div id="emptyCart" style="text-align: center; width: 100%; padding: 10px; margin-top: 15px;"  >
+                    <asp:Label ID="lblEmptyCart" runat="server" Style="color: crimson; font-size: 1.2rem; font-weight: bold; text-align: center;"></asp:Label>
                 </div>
             </div>
         </div>

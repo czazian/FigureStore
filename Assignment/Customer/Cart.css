@@ -59,6 +59,7 @@
 .top-container {
     display: flex;
     flex-flow: column nowrap;
+    height: fit-content !important;
 }
 
 .middle {
@@ -67,11 +68,19 @@
     margin: 0px;
     padding: 0px;
     width: 100%;
+    height: fit-content !important;
 }
+
+
 
 .title {
     width: 150px;
     color: #ff7e29;
+}
+
+tbody,table { 
+    width:100%;
+    height: fit-content;
 }
 
 .btn-checkout {
@@ -122,12 +131,14 @@
     padding: 15px;
 }
 
+
 th {
     padding-bottom: 18px;
 }
 
 tr {
     border-bottom: 1px solid lightgrey;
+    min-width: 100%;
 }
 
     tr:last-child {

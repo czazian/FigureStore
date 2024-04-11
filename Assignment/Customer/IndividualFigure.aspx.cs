@@ -1,4 +1,5 @@
 ﻿using Assignment.Objects;
+using Assignment;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -144,10 +145,11 @@ namespace Assignment.Customer
         }
         protected void btnCart_Click(object sender, EventArgs e)
         {
-            string postback = "~/Customer/Cart.aspx?bookID=" + Request.QueryString["figureID"] + "&qty=" + txtQuantity.Text;
+            string postback = "~/Customer/Cart.aspx?id=" + Request.QueryString["id"] + "&qty=" + txtQuantity.Text;
             Response.Redirect(postback, false);
             Context.ApplicationInstance.CompleteRequest();
         }
+
         protected void view_Command(object sender, CommandEventArgs e)
         {
             string url = "~/Customer/IndividualFigure.aspx?id=" + e.CommandArgument.ToString();

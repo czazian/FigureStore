@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeFile="IndividualFigure.aspx.cs" Inherits="Assignment.Customer.IndividualFigure" EnableEventValidation="false" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeBehind="IndividualFigure.aspx.cs" Inherits="Assignment.Customer.IndividualFigure" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="InidividualFigure.css" />
 </asp:Content>
@@ -197,7 +196,7 @@
 
 </asp:Content>
 
-<asp:Content ID="Content3" ContentPlaceHolderID="JS" runat="server">
+<asp:Content ID="Content4" ContentPlaceHolderID="JS" runat="server">
 
     <script type="text/javascript">
 
@@ -254,4 +253,6 @@
 
         });
     </script>
+
 </asp:Content>
+
