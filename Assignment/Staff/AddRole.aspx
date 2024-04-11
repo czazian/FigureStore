@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeFile="AddRole.aspx.cs" Inherits="Assignment.Staff.AddRole" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         #roleLi {
@@ -184,12 +183,12 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="home-content">
+     <div class="home-content">
         <div class="sales-boxes">
 
             <div class="recent-sales box">
 
-                <div class="title" style="padding-bottom: 10px; font-size: 30px; font-weight: 600; color: #ff7e29"><i class="bx bx-street-view"></i>&nbsp;Create Role</div>
+                <div class="title" style="padding-bottom: 10px; font-size: 30px; font-weight: 600; color: #ff7e29"><i class="bx bx-street-view"></i>&nbsp;Add New Role</div>
                 <label class="label-field">Name: </label>
                 </br>
            
