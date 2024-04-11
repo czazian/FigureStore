@@ -197,6 +197,7 @@
     <Content Include="Staff\EditRole.aspx" />
     <Content Include="Staff\EditStaff.aspx" />
     <Content Include="Staff\Member.aspx" />
+    <Content Include="Staff\OrderList.aspx" />
     <Content Include="Staff\Product.aspx" />
     <Content Include="Staff\Role.aspx" />
     <Content Include="Staff\Staff.aspx" />
@@ -423,6 +424,13 @@
     </Compile>
     <Compile Include="Staff\Member.aspx.designer.cs">
       <DependentUpon>Member.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
