@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeBehind="IndividualFigure.aspx.cs" Inherits="Assignment.Customer.IndividualFigure" EnableEventValidation="false" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeFile="IndividualFigure.aspx.cs" Inherits="Assignment.Customer.IndividualFigure" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="InidividualFigure.css" />
@@ -122,7 +122,7 @@
             <!--Add to card button-->
             <div class="row details-row addtocart" style="width: 100%;">
                 <div style="display: flex; justify-content: center;">
-                    <asp:Button PostBackUrl="~/Customer/Cart.aspx" runat="server" ID="btnCart" CssClass="btn" Style="background-color: #ff7e29; width: 83%; margin-top: 5px; color: white; font-weight: bold;" Text="Add to cart" />
+                    <asp:Button OnClick="btnCart_Click" runat="server" ID="btnCart" CssClass="btn" Style="background-color: #ff7e29; width: 83%; margin-top: 5px; color: white; font-weight: bold;" Text="Add to cart" />
                 </div>
             </div>
 

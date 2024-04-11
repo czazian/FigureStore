@@ -11,7 +11,7 @@ namespace Assignment.Customer
 {
 
 
-    public partial class Cart
+    public partial class cart
     {
 
         /// <summary>

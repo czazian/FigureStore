@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace Assignment.Customer
 {
-    public partial class Cart : System.Web.UI.Page
+    public partial class cart : System.Web.UI.Page
     {
         decimal overallPrice = 0;
         protected void Page_Load(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace Assignment.Customer
 
 
                     //Obtain values
-                    int figureID = Convert.ToInt32(Request.QueryString["figureID"]);
+                    int figureID = Convert.ToInt32(Request.QueryString["id"]);
                     int selectedQuantity = Convert.ToInt32(Request.QueryString["qty"]);
 
                     SqlConnection conn;
@@ -45,7 +45,7 @@ namespace Assignment.Customer
 
                     conn.Open();
 
-                    string command = "SELECT * FROM Figure WHERE figureID = @figureID";
+                    string command = "SELECT * FROM Figure WHERE FigureID = @figureID";
                     SqlCommand cmd = new SqlCommand(command, conn);
                     cmd.Parameters.AddWithValue("@figureID", figureID);
 
@@ -63,7 +63,7 @@ namespace Assignment.Customer
 
                         //Object creation
                         decimal p = Convert.ToDecimal(data[1]);
-                        Assignment.Objects.Cart figure = new Assignment.Objects.Cart(figureID, data[0], Decimal.Round(p, 2), data[2], data[3], selectedQuantity);
+                        Assignment.Objects.OrderCart figure = new Assignment.Objects.OrderCart(figureID, data[0], Decimal.Round(p, 2), data[2], data[3], selectedQuantity);
 
                         shoppingCart.addItem(figure);
                     }
@@ -79,12 +79,12 @@ namespace Assignment.Customer
 
         }
 
-        protected void imgBook_Command(object sender, CommandEventArgs e)
-        {
-            string destination = "~/Customer/IndividualFigure.aspx?bookID=" + e.CommandArgument;
-            Response.Redirect(destination, false);
-            Context.ApplicationInstance.CompleteRequest();
-        }
+        //protected void imgBook_Output(object sender, CommandEventArgs e)
+        //{
+        //    string destination = "~/Customer/IndividualFigure.aspx?id=" + e.CommandArgument;
+        //    Response.Redirect(destination, false);
+        //    Context.ApplicationInstance.CompleteRequest();
+        //}
 
 
 
@@ -123,7 +123,7 @@ namespace Assignment.Customer
                     TextBox qty = e.Item.FindControl("txtQty") as TextBox;
                     HiddenField figureID = e.Item.FindControl("hdnID") as HiddenField;
                     decimal subtotalPrice = shoppingCart.calculate(Convert.ToInt32(figureID.Value), Convert.ToInt32(qty.Text));
-                    
+
 
                     //Subtotal Price for individual product
                     ((Label)e.Item.FindControl("itemSubtotal")).Text = "RM " + (subtotalPrice).ToString();
@@ -139,5 +139,13 @@ namespace Assignment.Customer
 
             }
         }
+
+        protected void ProductImage_Command(object sender, CommandEventArgs e)
+        {
+            string destination = "~/Customer/IndividualFigure.aspx?id=" + e.CommandArgument;
+            Response.Redirect(destination, false);
+            Context.ApplicationInstance.CompleteRequest();
+        }
+
     }
 }

@@ -143,7 +143,7 @@
     <Content Include="App_Data\ApexOnlineShopDb_log.ldf">
       <DependentUpon>ApexOnlineShopDb.mdf</DependentUpon>
     </Content>
-    <Content Include="Customer\Cart.aspx" />
+    <Content Include="Customer\cart.aspx" />
     <Content Include="Customer\Cart.css" />
     <Content Include="Customer\Checkout.aspx" />
     <Content Include="Customer\Checkout.css" />
@@ -209,12 +209,12 @@
     <Compile Include="Cust.Master.designer.cs">
       <DependentUpon>Cust.Master</DependentUpon>
     </Compile>
-    <Compile Include="Customer\Cart.aspx.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
+    <Compile Include="Customer\cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer\Cart.aspx.designer.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
+    <Compile Include="Customer\cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
@@ -335,7 +335,7 @@
     <Compile Include="Login\StaffLogin.aspx.designer.cs">
       <DependentUpon>StaffLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Objects\Cart.cs" />
+    <Compile Include="Objects\OrderCart.cs" />
     <Compile Include="Objects\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Admin.Master.cs">

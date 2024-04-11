@@ -1,11 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="Assignment.Customer.Cart" %>
-
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeBehind="cart.aspx.cs" Inherits="Assignment.Customer.cart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="Cart.css" />
 </asp:Content>
-
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--Remove the Query String after it is obtained, to avoid keep adding item-->
     <script>
@@ -52,7 +48,7 @@
             Session["shoppingCart"] = shoppingCart;
         }
 
-        List<Assignment.Objects.Cart> figures = shoppingCart.getCartItems();
+        List<Assignment.Objects.OrderCart> figures = shoppingCart.getCartItems();
 
         if (figures.Count == 0)
         {
@@ -82,25 +78,25 @@
                         <asp:Repeater runat="server" ID="FigureRepeater" OnItemDataBound="FigureRepeater_ItemDataBound">
 
                             <ItemTemplate>
-                                <asp:HiddenField runat="server" ID="hdnID" Value='<%# Eval("figureID") %>' />
+                                <asp:HiddenField runat="server" ID="hdnID" Value='<%# Eval("FigureID") %>' />
                                 <tr class="item">
 
                                     <!-- Figure Image -->
                                     <td class="start1">
-                                        <asp:ImageButton CssClass="inner-img" runat="server" ID="ProductImage" ImageUrl='<%# Eval("image") %>' OnCommand="imgBook_Command" CommandArgument='<%# Eval("figureID") %>' />
+                                        <asp:ImageButton CssClass="inner-img" runat="server" ID="ProductImage" ImageUrl='<%# Eval("FigureImage1") %>' OnCommand="ProductImage_Command" CommandArgument='<%# Eval("FigureID") %>' />
                                     </td>
 
                                     <!-- Figure Name, Series and remove button -->
                                     <td class="start2">
                                         <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
-                                            <asp:Label ID="productname" runat="server" Text='<%# Eval("name") %>' />
+                                            <asp:Label ID="productname" runat="server" Text='<%# Eval("FigureName") %>' />
                                         </div>
                                         <div class="product-series">
                                             <span style="color: #ff7e29;">Series : </span>
-                                            <asp:Label ID="lblSeries" runat="server" Text='<%# Eval("series") %>' />
+                                            <asp:Label ID="lblSeries" runat="server" Text='<%# Eval("FigureSeries") %>' />
                                         </div>
                                         <div class="remove-btn">
-                                            <asp:LinkButton CommandArgument='<%# Eval("bookID") %>' OnClick="btnDelete_Click" CssClass="removebtn" runat="server" Text="Remove" ID="removeitem" OnClientClick="return confirm('Are you sure you want to delete this item ?')">
+                                            <asp:LinkButton CommandArgument='<%# Eval("FigureID") %>' OnClick="btnDelete_Click" CssClass="removebtn" runat="server" Text="Remove" ID="removeitem" OnClientClick="return confirm('Are you sure you want to delete this item ?')">
                                             </asp:LinkButton>
                                         </div>
                                     </td>
@@ -112,7 +108,7 @@
 
                                     <!-- Figure price -->
                                     <td class="end">
-                                        <asp:Label runat="server" ID="itemprice" Text='<%# "RM " + Eval("price") %>' />
+                                        <asp:Label runat="server" ID="itemprice" Text='<%# "RM " + Eval("FigurePrice") %>' />
                                     </td>
 
                                     <!-- total price -->
@@ -197,4 +193,6 @@
         });
     </script>
 
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="JS" runat="server">
 </asp:Content>

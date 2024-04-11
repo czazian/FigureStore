@@ -57,14 +57,14 @@ namespace Assignment.Customer
             }
             //Check if cart already has it, then get it quantity in the cart, and compare with the quantity available in DB
             //to know how many quantity can be selected
-            
+
             ShoppingCart shoppingCart = (ShoppingCart)Session["shoppingCart"];
             if (shoppingCart == null)
             {
                 shoppingCart = new ShoppingCart();
                 Session["shoppingCart"] = shoppingCart;
             }
-            List<Cart> cartItems = shoppingCart.getCartItems();
+            List<OrderCart> cartItems = shoppingCart.getCartItems();
 
             int currentQty = getCurrentQty(Convert.ToInt32(figureID), cartItems);
             int availableQty = getAvailableQuantity(Convert.ToInt32(figureID));
@@ -85,7 +85,8 @@ namespace Assignment.Customer
             if (lblTopStatus.Text == "Pre-Order")
             {
                 lblTopStatus.BackColor = Color.DarkOrange;
-            } else if (lblTopStatus.Text == "Available")
+            }
+            else if (lblTopStatus.Text == "Available")
             {
                 lblTopStatus.BackColor = Color.LimeGreen;
             }
@@ -128,10 +129,10 @@ namespace Assignment.Customer
             return (int)cmd2.ExecuteScalar();
         }
 
-        public int getCurrentQty(int figureID, List<Cart> cartItems)
+        public int getCurrentQty(int figureID, List<OrderCart> cartItems)
         {
             int currentQty = 0;
-            foreach (Cart cart in cartItems)
+            foreach (OrderCart cart in cartItems)
             {
                 if (cart.figureID.Equals(figureID))
                 {
@@ -141,7 +142,12 @@ namespace Assignment.Customer
             }
             return currentQty;
         }
-
+        protected void btnCart_Click(object sender, EventArgs e)
+        {
+            string postback = "~/Customer/Cart.aspx?bookID=" + Request.QueryString["figureID"] + "&qty=" + txtQuantity.Text;
+            Response.Redirect(postback, false);
+            Context.ApplicationInstance.CompleteRequest();
+        }
         protected void view_Command(object sender, CommandEventArgs e)
         {
             string url = "~/Customer/IndividualFigure.aspx?id=" + e.CommandArgument.ToString();

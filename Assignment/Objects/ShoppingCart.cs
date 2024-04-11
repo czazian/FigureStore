@@ -7,25 +7,25 @@ namespace Assignment.Objects
 {
     public class ShoppingCart
     {
-        protected List<Cart> figure;
+        protected List<OrderCart> figure;
         public int numberOfItems = 0;
 
         public ShoppingCart()
         {
-            figure = new List<Cart>();
+            figure = new List<OrderCart>();
         }
 
-        public List<Cart> getCartItems()
+        public List<OrderCart> getCartItems()
         {
             return figure;
         }
 
 
-        public void addItem(Cart newItem)
+        public void addItem(OrderCart newItem)
         {
 
             //Loop through a list, until the last item, or until a match item found
-            foreach (Cart currentItem in figure)
+            foreach (OrderCart currentItem in figure)
             {
                 //If there is any match elements, the quantity of the book will increase based on the customer new entered quantity
                 if (currentItem.figureID.Equals(newItem.figureID))
@@ -62,7 +62,7 @@ namespace Assignment.Objects
         public decimal calculate(int figureID, int qty)
         {
             decimal total = 0;
-            foreach (Cart currentItem in figure)
+            foreach (OrderCart currentItem in figure)
             {
                 if (currentItem.figureID.Equals(figureID))
                 {
