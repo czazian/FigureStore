@@ -600,7 +600,7 @@
                                         <asp:Label ID="Label49" CssClass="sentence" runat="server" Text="Nendoroid Saitama"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label50" runat="server" Text="RM 135.00"></asp:Label>
+                                        <asp:Label ID="Label50" runat="server" Text="RM 75.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -626,7 +626,7 @@
                                         <asp:Label ID="Label51" CssClass="sentence" runat="server" Text="Nendoroid of Bond"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label52" runat="server" Text="RM 208.00"></asp:Label>
+                                        <asp:Label ID="Label52" runat="server" Text="RM 128.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -899,7 +899,7 @@
                                         <asp:Label ID="Label55" CssClass="sentence" runat="server" Text="BLUELOCK Plushie Isagi Yoichi"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label56" runat="server" Text="RM 138.00"></asp:Label>
+                                        <asp:Label ID="Label56" runat="server" Text="RM 125.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">
@@ -925,7 +925,7 @@
                                         <asp:Label ID="Label57" CssClass="sentence" runat="server" Text="Hatsune Miku NT Big Plushie"></asp:Label>
                                     </div>
                                     <div class="item-price">
-                                        <asp:Label ID="Label58" runat="server" Text="RM 598.90"></asp:Label>
+                                        <asp:Label ID="Label58" runat="server" Text="RM 230.00"></asp:Label>
                                     </div>
                                     <div class="item-details">
                                         <div class="item-buy">

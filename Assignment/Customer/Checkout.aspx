@@ -38,13 +38,13 @@
                 <!-- Payment method -->
                 <div class="supported-methods" >
                     <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Cash On Delivery" class="cash">
-                        <asp:ImageButton ID="cash" OnClientClick="cash(); return false;" runat="server" CssClass="method selected" ImageUrl="~/Image/Element/cash.png" OnClick="method_Click" Value="1" />
+                        <asp:ImageButton ID="cash" runat="server" CssClass="method selected" ImageUrl="~/Image/Element/cash.png" OnClick="method_Click" Value="1" />
                     </div>
                     <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Visa Card" class="visa">
-                        <asp:ImageButton ID="visa" OnClientClick="visa(); return false;" runat="server" CssClass="method" ImageUrl="~/Image/Element/visa.png" OnClick="method_Click" Value="2" />
+                        <asp:ImageButton ID="visa" runat="server" CssClass="method" ImageUrl="~/Image/Element/visa.png" OnClick="method_Click" Value="2" />
                     </div>
                     <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Master Card" class="master">
-                        <asp:ImageButton ID="master" OnClientClick="master(); return false;" runat="server" CssClass="method" ImageUrl="~/Image/Element/master.png" OnClick="method_Click" Value="3" />
+                        <asp:ImageButton ID="master" runat="server" CssClass="method" ImageUrl="~/Image/Element/master.png" OnClick="method_Click" Value="3" />
                     </div>
                 </div>
                 <!-- End select payment method -->

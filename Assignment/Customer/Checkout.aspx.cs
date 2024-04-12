@@ -16,12 +16,11 @@ namespace Assignment.Customer
     {
         decimal overallPrice = 0;
         decimal shippingFee = 25;
-        string paymentMethod = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             //In case the shopping cart is not empty, load the session into shoppingCart.
             ShoppingCart shoppingCart = (ShoppingCart)Session["shoppingCart"];
-
+            
             //In case the shopping cart is null, create a shopping cart, and add to the session.
             if (shoppingCart == null)
             {
@@ -32,6 +31,12 @@ namespace Assignment.Customer
             List<OrderCart> cartItems = shoppingCart.getCartItems();
             FigureRepeater.DataSource = cartItems;
             FigureRepeater.DataBind();
+
+            if (Session["paymentMethod"] == null)
+            {
+                //Set default to cash
+                Session["paymentMethod"] = "Cash On Delivery";
+            }
         }
 
         protected void FigureRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -106,7 +111,7 @@ namespace Assignment.Customer
             dateTime.ToString("dd/MM/yyyy");
             string command1 = "INSERT INTO [Order] VALUES (@PaymentMethod, @PaymentAmount, @OrderDate, @HomeAddress, @HomeNo, @State, @PostCode, @City, @PurchaseFirstName, @PurchaseLastName, @PurchaseEmail, @PhoneNo, @CustomerID)" + "SELECT SCOPE_IDENTITY()";
             SqlCommand cmd1 = new SqlCommand(command1, conn);
-            cmd1.Parameters.AddWithValue("@PaymentMethod", paymentMethod);
+            cmd1.Parameters.AddWithValue("@PaymentMethod", Session["paymentMethod"].ToString());
             cmd1.Parameters.AddWithValue("@PaymentAmount", getOverAllTotal());
             cmd1.Parameters.AddWithValue("@OrderDate", dateTime);
             cmd1.Parameters.AddWithValue("@HomeAddress", txtAddress.Text);
@@ -176,19 +181,23 @@ namespace Assignment.Customer
 
         protected void method_Click(object sender, ImageClickEventArgs e)
         {
+
             ImageButton clickedButton = (ImageButton)sender;
             
 
             switch (clickedButton.ID)
             {
                 case "cash":
-                    paymentMethod = "Cash On Delivery";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "cash()", true);
+                    Session["paymentMethod"] = "Cash On Delivery";
                     break;
                 case "visa":
-                    paymentMethod = "Visa Card";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "visa()", true);
+                    Session["paymentMethod"] = "Visa Card";
                     break;
                 case "master":
-                    paymentMethod = "Master Card";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "master()", true);
+                    Session["paymentMethod"] = "Master Card";
                     break;
                 default:
                     throw new InvalidOperationException("Unknown payment method selected.");
