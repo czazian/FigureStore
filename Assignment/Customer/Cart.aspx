@@ -178,7 +178,7 @@
                     Notice : 
                 </div>
                 <div style="color: red;">
-                    Please ensure that your quantity selected for each item is not exceeding maximum available unit for each product. 
+                    Please ensure that your quantity selected for each item is not exceeding maximum available unit for each product. <br /><br /> We will charge a shipping fee of RM25.00 and 6% SST for each order.
                 </div>
             </div>
         </div>

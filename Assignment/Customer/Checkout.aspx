@@ -26,6 +26,7 @@
 </head>
 <body>
     <form id="form1" runat="server" class="all-container">
+        <!-- Payment side -->
         <div class="left-box">
             <div class="logo">
                 <asp:Image Style="border-radius: 5px;" Width="180px" runat="server" ID="imgLogo" ImageUrl="~/Image/Element/Logo.png" />
@@ -34,18 +35,19 @@
 
                 <span class="small-title">Payment Methods
                 </span>
-
-                <div class="supported-methods">
+                <!-- Payment method -->
+                <div class="supported-methods" >
                     <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Cash On Delivery" class="cash">
-                        <asp:ImageButton ID="cash" OnClientClick="cash(); return false;" runat="server" CssClass="method selected" ImageUrl="~/Image/Element/cash.png" />
+                        <asp:ImageButton ID="cash" OnClientClick="cash(); return false;" runat="server" CssClass="method selected" ImageUrl="~/Image/Element/cash.png" OnClick="method_Click" Value="1" />
                     </div>
                     <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Visa Card" class="visa">
-                        <asp:ImageButton ID="visa" OnClientClick="visa(); return false;" runat="server" CssClass="method" ImageUrl="~/Image/Element/visa.png" />
+                        <asp:ImageButton ID="visa" OnClientClick="visa(); return false;" runat="server" CssClass="method" ImageUrl="~/Image/Element/visa.png" OnClick="method_Click" Value="2" />
                     </div>
                     <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Master Card" class="master">
-                        <asp:ImageButton ID="master" OnClientClick="master(); return false;" runat="server" CssClass="method" ImageUrl="~/Image/Element/master.png" />
+                        <asp:ImageButton ID="master" OnClientClick="master(); return false;" runat="server" CssClass="method" ImageUrl="~/Image/Element/master.png" OnClick="method_Click" Value="3" />
                     </div>
                 </div>
+                <!-- End select payment method -->
             </div>
             <div class="payment-container" id="payment-container">
                 <div class="title">
@@ -92,7 +94,7 @@
                         <label for="txtAddress">Address</label>
                     </div>
                     <div class="form-floating houseno">
-                        <asp:TextBox runat="server" ID="TextBox1" class="form-control" placeholder="House no. or Unit no." />
+                        <asp:TextBox runat="server" ID="txtHouse" class="form-control" placeholder="House no. or Unit no." />
                         <label for="txtHouse">House no. / Unit no.</label>
                     </div>
                     <div class="state">
@@ -131,71 +133,48 @@
                 </div>
                 <div class="checkout">
                     <asp:Button Style="background-color: #212121; color: white; padding: 5px; border-radius: 5px;" runat="server" ID="btnBack" Text="Back to Cart" PostBackUrl="~/Customer/Cart.aspx" />
-                    <asp:LinkButton PostBackUrl="~/Customer/OrderConfirmation.aspx" Style="background-color: #ff7e29; color: white; padding: 8.5px; text-decoration: none; border-radius: 5px;" runat="server" ID="lkbCheckout">
+                    <asp:LinkButton OnClick="btnSubmitOdr_Click" Style="background-color: #ff7e29; color: white; padding: 8.5px; text-decoration: none; border-radius: 5px;" runat="server" ID="btnSubmitOdr">
                         <i class="fa-solid fa-cart-shopping"></i>&nbsp;Checkout
                     </asp:LinkButton>
                 </div>
             </div>
         </div>
 
+        <!-- Info Side -->
         <div class="right-box">
-
-            <!--An Item-->
-            <div class="products">
-                <div class="left">
-                    <div class="img">
-                        <asp:Image Style="width: 100%;" runat="server" ID="pImage" ImageUrl="~/Image/Product/f1.jpg" />
-                    </div>
-                    <div class="text">
-                        <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
-                            <asp:Label ID="Label1" runat="server" Text="Nendoroids Frieren" />
+            <asp:Repeater runat="server" ID="FigureRepeater" OnItemDataBound="FigureRepeater_ItemDataBound">
+                <ItemTemplate>
+                    <asp:HiddenField runat="server" ID="hdnID" Value='<%# Eval("FigureID") %>' />
+                    <!--An Item-->
+                    <div class="products">
+                        <div class="left">
+                            <div class="img">
+                                <asp:ImageButton OnClientClick="return false" Style="width: 100%;" runat="server" ID="ProductImage" ImageUrl='<%# Eval("FigureImage1") %>' />
+                            </div>
+                            <div class="text">
+                                <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
+                                    <asp:Label ID="productname" runat="server" Text='<%# Eval("FigureName") %>' />
+                                </div>
+                                <div class="qty">
+                                    <span>Quantity :&nbsp;</span><asp:Label ID="txtQty" runat="server" Text='<%# Eval("selectedQuantity") %>' />
+                                </div>
+                            </div>
                         </div>
-                        <div class="qty">
-                            <span>Quantity :&nbsp;</span><asp:Label ID="qty" runat="server" Text="2" />
-                        </div>
-                    </div>
-                </div>
-                <div class="right">
-                    <asp:Label runat="server" ID="itemtotal" Text="RM 200.00" />
-                </div>
-            </div>
-            <!--End of An Item-->
-
-            <!--An Item-->
-            <div class="products">
-                <div class="left">
-                    <div class="img">
-                        <asp:Image Style="width: 100%;" runat="server" ID="Image1" ImageUrl="~/Image/Product/f1.jpg" />
-                    </div>
-                    <div class="text">
-                        <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
-                            <asp:Label ID="Label2" runat="server" Text="Nendoroids Frieren" />
-                        </div>
-                        <div class="qty">
-                            <span>Quantity :&nbsp;</span><asp:Label ID="Label3" runat="server" Text="2" />
+                        <div class="right">
+                            <asp:Label runat="server" ID="itemSubtotal" Text="" />
                         </div>
                     </div>
-                </div>
-                <div class="right">
-                    <asp:Label runat="server" ID="Label4" Text="RM 200.00" />
-                </div>
-            </div>
-            <!--End of An Item-->
-
+                    <!--End of An Item-->
+                </ItemTemplate>
+            </asp:Repeater>        
             <hr />
+            <!-- Final payment info -->
             <table class="payment">
                 <tr class="subtotal">
                     <td class="tt t2">Total :
                     </td>
                     <td style="text-align: left">
-                        <asp:Label runat="server" ID="total" Text="RM 400.00"></asp:Label>
-                    </td>
-                </tr>
-                <tr class="discount">
-                    <td class="tt t2">Discount :
-                    </td>
-                    <td style="text-align: left">
-                        <asp:Label runat="server" ID="discount" Text="RM 60.00"></asp:Label>
+                        <asp:Label runat="server" ID="lblTotal" Text=""></asp:Label>
                     </td>
                 </tr>
                 <tr class="shipping-fee">
@@ -206,10 +185,10 @@
                     </td>
                 </tr>
                 <tr class="tax">
-                    <td class="tt t2">Tax (6%) :
+                    <td class="tt t2">SST Tax (6%) :
                     </td>
                     <td style="text-align: left">
-                        <asp:Label runat="server" ID="tax" Text="RM 24.00"></asp:Label>
+                        <asp:Label runat="server" ID="tax" Text=""></asp:Label>
                     </td>
                 </tr>
             </table>
@@ -219,7 +198,7 @@
             <div class="all-total">
                 <div class="tt">Overall Total :</div>
                 <div>
-                    <asp:Label runat="server" ID="alltotal" Text="RM 389.00" />
+                    <asp:Label runat="server" ID="alltotal" Text="" />
                 </div>
             </div>
         </div>
@@ -266,8 +245,9 @@
                 let box = document.getElementById("payment-container");
                 box.classList.add("payment-container-show");
             }
-        </script>
 
+        </script>
+        <script src="Checkout.js" type="text/javascript"></script>
     </form>
 </body>
 </html>

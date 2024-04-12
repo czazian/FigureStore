@@ -148,6 +148,7 @@
     <Content Include="Customer\Cart.css" />
     <Content Include="Customer\Checkout.aspx" />
     <Content Include="Customer\Checkout.css" />
+    <Content Include="Customer\Checkout.js" />
     <Content Include="Customer\EditProfile.aspx" />
     <Content Include="Customer\EditProfile.css" />
     <Content Include="Customer\Home.aspx" />
