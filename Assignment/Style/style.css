@@ -236,7 +236,7 @@ nav .profile-details i {
 .overview-boxes .box {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: calc(100% / 4 - 15px);
     background: #fff;
     padding: 15px 14px;
