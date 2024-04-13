@@ -193,6 +193,7 @@
     <Content Include="Staff\DashboardChartA.js" />
     <Content Include="Staff\DashboardChartB.js" />
     <Content Include="Staff\EditMember.aspx" />
+    <Content Include="Staff\EditOrder.aspx" />
     <Content Include="Staff\EditProduct.aspx" />
     <Content Include="Staff\EditRole.aspx" />
     <Content Include="Staff\EditStaff.aspx" />
@@ -397,6 +398,13 @@
     </Compile>
     <Compile Include="Staff\EditMember.aspx.designer.cs">
       <DependentUpon>EditMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\EditOrder.aspx.cs">
+      <DependentUpon>EditOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\EditOrder.aspx.designer.cs">
+      <DependentUpon>EditOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\EditProduct.aspx.cs">
       <DependentUpon>EditProduct.aspx</DependentUpon>

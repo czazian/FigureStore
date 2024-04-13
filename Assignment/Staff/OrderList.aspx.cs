@@ -36,14 +36,14 @@ namespace Assignment.Staff
                 {
                     connection.Open();
 
-                    string query = "SELECT * " +
-                                   "FROM [OrderFigure] OF " +
-                                   "JOIN [Order] O ON OF.OrderID = O.OrderID " +
-                                   "JOIN [Customer] C ON O.CustomerID = C.CustomerID; ";
-                    
+                    string query = "SELECT F.[OrderID], F.[OrderStatus], O.[PaymentAmount], O.[OrderID], O.[OrderDate], C.[CustomerID], C.[Name], C.[PhoneNo]" +
+                                   "FROM [OrderFigure] F " +
+                                   "JOIN [Order] O ON F.OrderID = O.OrderID " +
+                                   "JOIN [Customer] C ON O.CustomerID = C.CustomerID ";
+
                     if (!string.IsNullOrEmpty(searchTerm))
                     {
-                        query += "WHERE C.Name LIKE '%' + @SearchTerm + '%' OR OF.OrderStatus LIKE '%' + @SearchTerm + '%' " +
+                        query += "WHERE C.Name LIKE '%' + @SearchTerm + '%' OR F.OrderStatus LIKE '%' + @SearchTerm + '%' " +
                             "OR CAST(O.OrderID AS NVARCHAR(50)) LIKE '%' + @SearchTerm + '%' OR C.PhoneNo LIKE '%' + @SearchTerm + '%' " +
                             "OR CAST(O.OrderDate AS NVARCHAR(50)) LIKE '%' + @SearchTerm + '%' " +
                             "OR CAST(O.PaymentAmount AS NVARCHAR(50)) LIKE '%' + @SearchTerm + '%' ";
@@ -95,7 +95,7 @@ namespace Assignment.Staff
             catch (Exception ex)
             {
                 lblNoRecordsFound.Visible = true;
-                lblNoRecordsFound.Text = "xxxx";
+                lblNoRecordsFound.Text = "No matching records found.";
             }
         }
 
@@ -107,7 +107,7 @@ namespace Assignment.Staff
 
                 if (statusLabel != null)
                 {
-                    string status = (string)DataBinder.Eval(e.Item.DataItem, "Status");
+                    string status = (string)DataBinder.Eval(e.Item.DataItem, "OrderStatus");
 
                     // Set color based on status
                     switch (status)

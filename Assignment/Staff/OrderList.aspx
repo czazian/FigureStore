@@ -204,7 +204,7 @@
                                 <hr />
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <li><%# Eval("OrderID") %>.</li>
+                            <li>XYZ00<%# Eval("OrderID") %>A</li>
                             <hr />
                         </ItemTemplate>
                         <FooterTemplate>
@@ -334,5 +334,5 @@
             }
             return true;
         }
-</script>
+    </script>
 </asp:Content>
