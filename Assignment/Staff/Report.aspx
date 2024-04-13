@@ -196,6 +196,20 @@
             box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         }
 
+        .lbltxt {
+            font-size: 36px !important;
+            font-weight: 500 !important;
+            color: #ff7e29;
+        }
+
+        .box-topic {
+            font-weight: 750 !important;
+        }
+
+        .number {
+            font-size: 12px;
+            font-weight: 400 !important;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -206,7 +220,8 @@
                     <div class="right-side">
                         <div class="box-topic">Total Order</div>
                         <div class="number">
-                            <asp:Label ID="lblTotalOrder" runat="server">0</asp:Label>
+                            <asp:Label ID="lblTotalOrder" CssClass="lbltxt" runat="server">0</asp:Label>
+                             sales
                         </div>
                     </div>
                     <i class='bx bx-cart-alt cart' style="vertical-align:middle;"></i>
@@ -215,7 +230,8 @@
                     <div class="right-side">
                         <div class="box-topic">Quantity Sold</div>
                         <div class="number">
-                            <asp:Label ID="lblQuanSales" runat="server">0</asp:Label>
+                            <asp:Label ID="lblQuanSales" CssClass="lbltxt" runat="server">0</asp:Label>
+                             units
                         </div>
                     </div>
                     <i class='bx bxs-cart-add cart two'></i>
@@ -225,7 +241,7 @@
                         <div class="box-topic">Sales Profit</div>
                         <div class="number">
                             RM 
-                <asp:Label ID="lblSalesProfit" runat="server">0</asp:Label>
+                <asp:Label ID="lblSalesProfit" CssClass="lbltxt" runat="server">0</asp:Label>
                         </div>
                     </div>
                     <i class='bx bxs-cart-add cart three'></i>
@@ -235,7 +251,7 @@
                         <div class="box-topic">Total Profit</div>
                         <div class="number">
                             RM
-                <asp:Label ID="lblTotalProfit" runat="server">0</asp:Label>
+                <asp:Label ID="lblTotalProfit" CssClass="lbltxt" runat="server">0</asp:Label>
                         </div>
                     </div>
                     <i class='bx bx-cart cart three'></i>
@@ -246,7 +262,7 @@
 
         <div class="sales-boxes">
             <div class="recent-sales box">
-                <div class="title">Sales Report</div>
+                <div class="title" style="padding-bottom: 10px; font-size: 30px; font-weight: 600; color: #ff7e29"><i class="bx bxs-report"></i>&nbsp;Sales Report</div>
 
                 <asp:DropDownList runat="server" ID="timeFilter" OnSelectedIndexChanged="timeFilter_SelectedIndexChanged" AutoPostBack="True">
                     <asp:ListItem Text="All Time" Value="all" Selected="True"></asp:ListItem>
@@ -294,7 +310,7 @@
                         <HeaderTemplate>
                             <ul class="details">
                                 <hr />
-                                <li class="topic">Pirce</li>
+                                <li class="topic">Price</li>
                                 <hr />
                         </HeaderTemplate>
                         <ItemTemplate>
@@ -350,7 +366,7 @@
 
                     <asp:Repeater ID="Repeater6" runat="server" DataSourceID="SqlDataSource2">
                         <HeaderTemplate>
-                            <div class="title">Top 10 Product</div>
+                            <div class="title" style="color:#ff7e29">Top 10 Product</div>
                             <hr />
                             <div style="display: flex; justify-content: space-between; height: 25px;">
                                 <div>Rank</div>
@@ -384,7 +400,7 @@
 
                     <asp:Repeater ID="Repeater7" runat="server" DataSourceID="SqlDataSource3">
                         <HeaderTemplate>
-                            <div class="title">Least 10 Product</div>
+                            <div class="title" style="color:#ff7e29">Least 10 Product</div>
                             <hr />
                             <div style="display: flex; justify-content: space-between; height: 25px;">
                                 <div>Rank</div>

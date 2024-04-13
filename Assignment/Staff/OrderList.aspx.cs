@@ -36,11 +36,11 @@ namespace Assignment.Staff
                 {
                     connection.Open();
 
-                    string query = "SELECT  C.Name AS CustomerName, C.PhoneNo AS CustomerPhoneNo, O.OrderDate, O.PaymentAmount, OF.OrderStatus, O.OrderID " +
-               "FROM [Order] O " +
-               "JOIN Customer C ON O.CustomerID = C.CustomerID " +
-               "JOIN OrderFigure OF ON O.OrderID = OF.OrderID ";
-
+                    string query = "SELECT * " +
+                                   "FROM [OrderFigure] OF " +
+                                   "JOIN [Order] O ON OF.OrderID = O.OrderID " +
+                                   "JOIN [Customer] C ON O.CustomerID = C.CustomerID; ";
+                    
                     if (!string.IsNullOrEmpty(searchTerm))
                     {
                         query += "WHERE C.Name LIKE '%' + @SearchTerm + '%' OR OF.OrderStatus LIKE '%' + @SearchTerm + '%' " +
@@ -95,7 +95,7 @@ namespace Assignment.Staff
             catch (Exception ex)
             {
                 lblNoRecordsFound.Visible = true;
-                lblNoRecordsFound.Text = "No matching records found.";
+                lblNoRecordsFound.Text = "xxxx";
             }
         }
 
