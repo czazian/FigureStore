@@ -206,6 +206,7 @@
     <Content Include="Staff\StaffPage.css" />
     <Content Include="Staff\StaffProfile.aspx" />
     <Content Include="Staff\ViewMember.aspx" />
+    <Content Include="Staff\ViewOrder.aspx" />
     <Content Include="Staff\ViewProduct.aspx" />
     <Content Include="Staff\ViewRole.aspx" />
     <Content Include="Staff\ViewStaff.aspx" />
@@ -482,6 +483,13 @@
     </Compile>
     <Compile Include="Staff\ViewMember.aspx.designer.cs">
       <DependentUpon>ViewMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\ViewOrder.aspx.cs">
+      <DependentUpon>ViewOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\ViewOrder.aspx.designer.cs">
+      <DependentUpon>ViewOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>

@@ -203,11 +203,11 @@
         }
 
         .box-topic {
-            font-weight: 750 !important;
+            font-weight: 550 !important;
         }
 
         .number {
-            font-size: 12px;
+            font-size: 25px !important;
             font-weight: 400 !important;
         }
     </style>
