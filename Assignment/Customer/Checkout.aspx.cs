@@ -172,7 +172,7 @@ namespace Assignment.Customer
             //Make the cart empty
             clearCart();
             //Redirect to the complete order page
-            Response.Redirect("~/Customer/OrderConfirmation.aspx?orderID=" + insertedOrderID + "&reachDate=" + dateTime.AddDays(5).ToString("dd/MM/yyyy"));
+            Response.Redirect("~/Customer/OrderConfirmation.aspx?orderID=" + insertedOrderID + "&orderDate=" + dateTime.ToString("yyyyMMdd"));
         }
         public void clearCart()
         {

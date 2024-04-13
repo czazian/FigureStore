@@ -249,13 +249,13 @@
                 </div>
                 <div class="submessage">
                     Your order number is
-                    <asp:Label Style="color: #ff7e29;" runat="server" ID="orderID" Text="#20233101" />.
+                    <asp:Label Style="color: #ff7e29;" runat="server" ID="lblOrderID" Text="#20233101" />.
                     <br />
                     Your order will be shipped out as soon as possible.
                 </div>
                 <div class="btn-container">
                     <div class="view-order">
-                        <asp:Button PostBackUrl="~/Customer/OrderTrack.aspx" CssClass="btn border btn-view" runat="server" Text="VIEW ORDER" />
+                        <asp:Button ID="btnCheckOrderStatus" CssClass="btn border btn-view" runat="server" Text="VIEW ORDER" OnClick="btnCheckOrderStatus_Click" />
                     </div>
                     <div class="continue">
                         <asp:Button PostBackUrl="~/Customer/Home.aspx" CssClass="btn continue-btn" runat="server" Text="CONTINUE SHOPPING" />
