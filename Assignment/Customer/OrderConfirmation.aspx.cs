@@ -10,18 +10,18 @@ namespace Assignment.Customer
     public partial class OrderDone : System.Web.UI.Page
     {
         string orderID = "";
-        string reachDate = "";
+        string orderDate = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             orderID = "-" + Request.QueryString["orderID"];
-            reachDate = Request.QueryString["orderDate"];
+            orderDate = Request.QueryString["orderDate"];
 
-            lblOrderID.Text = "#" + string.Concat(reachDate, orderID);
+            lblOrderID.Text = "#" + string.Concat(orderDate, orderID);
         }
 
         protected void btnCheckOrderStatus_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Customer/OrderTrack.aspx?orderID=" + orderID);
+            Response.Redirect("~/Customer/OrderTrack.aspx?orderID=" + orderID +"&orderDate=" + orderDate);
         }
     }
 }

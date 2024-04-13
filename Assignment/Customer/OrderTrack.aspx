@@ -38,26 +38,33 @@
             <div class="topSelection">
                 <div class="all selection select" id="all">
                     <asp:LinkButton ID="btn1" OnClientClick="allOrder(); return false;" runat="server" CssClass="btn sButton">
-                        All Order&nbsp;<asp:Label CssClass="lbl" runat="server" ID="orderCount" Text="(3)" />
+                        All Order&nbsp;<asp:Label CssClass="lbl" runat="server" ID="orderCount" Text="" />
                     </asp:LinkButton>
                 </div>
                 <div class="received selection" id="received">
                     <asp:LinkButton ID="btn2" OnClientClick="received(); return false;" runat="server" CssClass="btn sButton">
-                        Order Received&nbsp;<asp:Label CssClass="lbl" runat="server" ID="receivedCount" Text="(1)" />
+                        Order Received&nbsp;<asp:Label CssClass="lbl" runat="server" ID="receivedCount" Text="" />
                     </asp:LinkButton>
                 </div>
                 <div class="shipping selection" id="shipping">
                     <asp:LinkButton ID="btn3" OnClientClick="shipping(); return false;" runat="server" CssClass="btn sButton">
-                        Shipping&nbsp;<asp:Label CssClass="lbl" runat="server" ID="shippingCount" Text="(1)" />
+                        Shipping&nbsp;<asp:Label CssClass="lbl" runat="server" ID="shippingCount" Text="" />
                     </asp:LinkButton>
                 </div>
                 <div class="delivered selection" id="delivered">
                     <asp:LinkButton ID="btn4" OnClientClick="delivered(); return false;" runat="server" CssClass="btn sButton">
-                        Delivered&nbsp;<asp:Label CssClass="lbl" runat="server" ID="deliveredCount" Text="(1)" />
+                        Delivered&nbsp;<asp:Label CssClass="lbl" runat="server" ID="deliveredCount" Text="" />
                     </asp:LinkButton>
                 </div>
             </div>
             <div class="order-container">
+                <asp:Label ID="lblFail" runat="server" Text="" Style="font-weight:bold; color:red; font-size:20px; margin-top:100px; margin-bottom:100px;"></asp:Label>
+
+                <asp:SqlDataSource ID="TrackingSource" runat="server" ConnectionString="<%$ ConnectionStrings:ApexOnlineShopDb %>" SelectCommand="SELECT DISTINCT ";>
+                    <SelectParameters>
+                        <asp:Parameter Name="custID" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
                 <!--An Order-->
                 <div class="anOrder">
                     <div class="top-item">
