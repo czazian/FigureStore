@@ -71,34 +71,34 @@ namespace Assignment.Staff
                     {
                         if (reader.Read())
                         {
-                            // Populate customer info
-                            txtFullName.Text = reader["Name"].ToString();
-                            txtEmail.Text = reader["Email"].ToString();
-                            txtPhoneNo.Text = reader["PhoneNo"].ToString();
-                            txtImg.ImageUrl = reader["Image"].ToString();
+                            //// Populate customer info
+                            //txtFullName.Text = reader["Name"].ToString();
+                            //txtEmail.Text = reader["Email"].ToString();
+                            //txtPhoneNo.Text = reader["PhoneNo"].ToString();
+                            //txtImg.ImageUrl = reader["Image"].ToString();
 
-                            // Populate order info
-                            txtPayMethod.Text = reader["PaymentMethod"].ToString();
-                            txtShippingAdd.Text = reader["HomeAddress"].ToString();
-                            txtTotalAmount.Text = reader["PaymentAmount"].ToString();
-                            txtOrderDate.Text = Convert.ToDateTime(reader["OrderDate"]).ToString("dd/MM/yyyy");
-                            ddlStatus.SelectedValue = reader["OrderStatus"].ToString();
+                            //// Populate order info
+                            //txtPayMethod.Text = reader["PaymentMethod"].ToString();
+                            //txtShippingAdd.Text = reader["HomeAddress"].ToString();
+                            //txtTotalAmount.Text = reader["PaymentAmount"].ToString();
+                            //txtOrderDate.Text = Convert.ToDateTime(reader["OrderDate"]).ToString("dd/MM/yyyy");
+                            //ddlStatus.SelectedValue = reader["OrderStatus"].ToString();
 
-                            // Order Detail
-                            RepeaterNo.DataSource = SqlDataSource1;
-                            RepeaterNo.DataBind();
+                            //// Order Detail
+                            //RepeaterNo.DataSource = SqlDataSource1;
+                            //RepeaterNo.DataBind();
 
-                            RepeaterImage.DataSource = SqlDataSource1;
-                            RepeaterImage.DataBind();
+                            //RepeaterImage.DataSource = SqlDataSource1;
+                            //RepeaterImage.DataBind();
 
-                            RepeaterProduct.DataSource = SqlDataSource1;
-                            RepeaterProduct.DataBind();
+                            //RepeaterProduct.DataSource = SqlDataSource1;
+                            //RepeaterProduct.DataBind();
 
-                            RepeaterPrice.DataSource = SqlDataSource1;
-                            RepeaterPrice.DataBind();
+                            //RepeaterPrice.DataSource = SqlDataSource1;
+                            //RepeaterPrice.DataBind();
 
-                            RepeaterQuantity.DataSource = SqlDataSource1;
-                            RepeaterQuantity.DataBind();
+                            //RepeaterQuantity.DataSource = SqlDataSource1;
+                            //RepeaterQuantity.DataBind();
 
                         }
                         else

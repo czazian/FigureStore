@@ -82,7 +82,7 @@ namespace Assignment.Staff
                             txtFullName.Text = reader["Name"].ToString();
                             txtEmail.Text = reader["Email"].ToString();
                             txtPhoneNo.Text = reader["PhoneNo"].ToString();
-                            txtImg.ImageUrl = reader["Image"].ToString();
+                            //txtImg.ImageUrl = reader["Image"].ToString();
 
                             // Populate order info
                             txtPayMethod.Text = reader["PaymentMethod"].ToString();

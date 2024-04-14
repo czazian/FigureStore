@@ -35,31 +35,29 @@
         </div>
 
         <div class="main-content">
-            <div class="topSelection">
+            <%--<div class="topSelection">
                 <div class="all selection select" id="all">
-                    <asp:LinkButton ID="btn1" OnClientClick="allOrder(); return false;" runat="server" CssClass="btn sButton">
+                    <asp:LinkButton ID="btn1" OnClientClick="allOrder(); return false;" runat="server" CssClass="btn sButton" OnClick="orderStatus_Click">
                         All Order&nbsp;<asp:Label CssClass="lbl" runat="server" ID="orderCount" Text="" />
                     </asp:LinkButton>
                 </div>
-                <div class="received selection" id="received">
-                    <asp:LinkButton ID="btn2" OnClientClick="received(); return false;" runat="server" CssClass="btn sButton">
+                <div class="received selection" id="pending">
+                    <asp:LinkButton ID="btn2" OnClientClick="received(); return false;" runat="server" CssClass="btn sButton" OnClick="orderStatus_Click">
                         Order Received&nbsp;<asp:Label CssClass="lbl" runat="server" ID="receivedCount" Text="" />
                     </asp:LinkButton>
                 </div>
                 <div class="shipping selection" id="shipping">
-                    <asp:LinkButton ID="btn3" OnClientClick="shipping(); return false;" runat="server" CssClass="btn sButton">
+                    <asp:LinkButton ID="btn3" OnClientClick="shipping(); return false;" runat="server" CssClass="btn sButton" OnClick="orderStatus_Click">
                         Shipping&nbsp;<asp:Label CssClass="lbl" runat="server" ID="shippingCount" Text="" />
                     </asp:LinkButton>
                 </div>
                 <div class="delivered selection" id="delivered">
-                    <asp:LinkButton ID="btn4" OnClientClick="delivered(); return false;" runat="server" CssClass="btn sButton">
+                    <asp:LinkButton ID="btn4" OnClientClick="delivered(); return false;" runat="server" CssClass="btn sButton" OnClick="orderStatus_Click">
                         Delivered&nbsp;<asp:Label CssClass="lbl" runat="server" ID="deliveredCount" Text="" />
                     </asp:LinkButton>
                 </div>
-            </div>
+            </div>--%>
             <div class="order-container">
-                <asp:Label ID="lblFail" runat="server" Text="" Style="font-weight: bold; color: red; font-size: 20px; margin-top: 100px; margin-bottom: 100px;"></asp:Label>
-
                 <asp:SqlDataSource ID="TrackingSource" runat="server" ConnectionString="<%$ ConnectionStrings:ApexOnlineShopDb %>" SelectCommand="SELECT DISTINCT O.OrderID AS OrderID, O.PaymentAmount AS PaymentAmount, O.OrderDate AS OrderDate, R.OrderQuantity AS OrderQuantity, R.OrderStatus AS OrderStatus, F.FigureID AS FigureID, F.FigureName AS FigureName, F.FigurePrice AS FigurePrice, F.FigureImage1 AS FigureImage1 FROM [Order] O JOIN [Customer] C ON O.CustomerID = C.CustomerID JOIN [OrderFigure] R ON R.OrderID = O.OrderID JOIN [Figure] F ON R.FigureID = F.FigureID WHERE O.CustomerID = @custID ORDER BY OrderDate DESC;">
                     <SelectParameters>
                         <asp:Parameter Name="custID" />
@@ -69,11 +67,12 @@
                 <asp:Repeater ID="OrderRepeater" runat="server" OnItemDataBound="OrderRepeater_ItemDataBound">
                     <ItemTemplate>
                         <asp:HiddenField runat="server" ID="hdnDate" Value='<%# Bind("OrderDate", "{0:dd-MM-yyyy}") %>' />
+                        <asp:HiddenField runat="server" ID="hdnID" Value='<%# Eval("FigureID") %>' />
                         <!--An Order-->
                         <div class="anOrder">
                             <div class="top-item">
                                 <div class="orderID">
-                                    <i class='fas fa-tag'></i>&nbsp;Order ID :&nbsp;#<asp:Label runat="server" ID="orderID" Text='<%# "#"+Eval("OrderDate", "{0:yyyyMMdd}")+Eval("OrderID") %>' />
+                                    <i class='fas fa-tag'></i>&nbsp;Order ID :&nbsp;#<asp:Label runat="server" ID="orderID" Text='<%# Eval("OrderDate", "{0:yyyyMMdd}")+"-"+Eval("OrderID") %>' />
                                 </div>
                                 <div class="status">
                                     <i class="fa-solid fa-truck"></i>&nbsp;<asp:Label runat="server" ID="lblStatus" Text='<%# Eval("OrderStatus") %>' />
@@ -92,12 +91,12 @@
                                     </div>
                                 </div>
                                 <div class="subtotal">
-                                    <asp:Label runat="server" ID="lblSubtotal" Text="RM 200.00" />
+                                    <asp:Label runat="server" ID="lblSubTotal" Text=""/>
                                 </div>
                             </div>
                             <div class="middle2">
                                 <div class="noOfItems">
-                                    <asp:Label Style="color: grey" runat="server" ID="noOfItems" Text="3 Items" />
+                                    <asp:Label Style="color: grey" runat="server" ID="lblOrderDate" Text='<%# Bind("OrderDate", "{0:dd-MM-yyyy}") %>' />
                                 </div>
                                 <div class="totalForAll" style="font-size: 18px;">
                                     <span style="color: grey">Order Total :</span>&nbsp;<asp:Label Style="font-weight: bold; color: #ff7e29" runat="server" ID="lblTotal" Text='<%# "RM "+Eval("PaymentAmount") %>' />
@@ -105,7 +104,7 @@
                             </div>
                             <div class="bottom">
                                 <div class="estimate">
-                                    Products will be shipped out by&nbsp;<asp:Label Style="text-decoration: underline" runat="server" ID="estimate" Text="" />
+                                    Products will be shipped out by&nbsp;<asp:Label Style="text-decoration: underline" runat="server" ID="lblEstimateDate" Text="" />
                                 </div>
                                 <div class="view-order-btn">
                                     <asp:LinkButton PostBackUrl="~/Customer/OrderDetail.aspx" CssClass="viewOrder btn border" runat="server">
@@ -117,6 +116,7 @@
                         <!--End Of An Order-->
                     </ItemTemplate>
                 </asp:Repeater>
+                <asp:Label ID="lblFail" runat="server" Text="" Style="font-weight: bold; color: red; font-size: 20px; margin-top: 100px; margin-bottom: 100px;"></asp:Label>
             </div>
         </div>
     </div>
@@ -203,13 +203,13 @@
 
         function allOrder() {
             document.getElementById("all").classList.add("select");
-            document.getElementById("received").classList.remove("select");
+            document.getElementById("pending").classList.remove("select");
             document.getElementById("shipping").classList.remove("select");
             document.getElementById("delivered").classList.remove("select");
         }
 
-        function received() {
-            document.getElementById("received").classList.add("select");
+        function pending() {
+            document.getElementById("pending").classList.add("select");
             document.getElementById("all").classList.remove("select");
             document.getElementById("shipping").classList.remove("select");
             document.getElementById("delivered").classList.remove("select");
@@ -217,14 +217,14 @@
 
         function shipping() {
             document.getElementById("shipping").classList.add("select");
-            document.getElementById("received").classList.remove("select");
+            document.getElementById("pending").classList.remove("select");
             document.getElementById("all").classList.remove("select");
             document.getElementById("delivered").classList.remove("select");
         }
 
         function delivered() {
             document.getElementById("delivered").classList.add("select");
-            document.getElementById("received").classList.remove("select");
+            document.getElementById("pending").classList.remove("select");
             document.getElementById("shipping").classList.remove("select");
             document.getElementById("all").classList.remove("select");
         }

@@ -1,7 +1,10 @@
-﻿using MailChimp.Net.Models;
+﻿using MailChimp.Net.Core;
+using MailChimp.Net.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
 using System.Web;
@@ -49,7 +52,7 @@ namespace Assignment.Customer
         {
             TrackingSource.SelectParameters["custID"].DefaultValue = custID;
             DataView dv = (DataView)TrackingSource.Select(DataSourceSelectArguments.Empty);
-            DataTable distinctDataTable = dv.ToTable(true, "OrderID", "OrderDate", "PaymentAmount", "OrderStatus");
+            DataTable distinctDataTable = dv.ToTable(true, "OrderID", "OrderDate", "PaymentAmount", "OrderStatus", "FigureID", "FigureName", "FigureImage1", "OrderQuantity");
             return distinctDataTable;
         }
 
@@ -84,10 +87,10 @@ namespace Assignment.Customer
         private void CalculateEstimatedShippingDate(RepeaterItem item)
         {
             // Find the controls within the item
-            HiddenField hdnDate = (HiddenField)item.FindControl("hdnDate");
-            Label estimate = (Label)item.FindControl("estimate");
+            Label lblOrderDate = (Label)item.FindControl("lblOrderDate");
+            Label lblEstimateDate = (Label)item.FindControl("lblEstimateDate");
 
-            if (hdnDate != null && estimate != null)
+            if (lblOrderDate != null && lblEstimateDate != null)
             {
                 // Assuming lblOrderDate.Text contains the payment date
                 DateTime orderDate;
@@ -96,21 +99,20 @@ namespace Assignment.Customer
                 string[] dateFormats = { "dd-MM-yyyy" }; // Adjust according to your actual date format
 
                 // Use DateTime.TryParseExact to handle specific date formats
-                if (DateTime.TryParseExact(hdnDate.ToString(), dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out orderDate))
+                if (DateTime.TryParseExact(lblOrderDate.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out orderDate))
                 {
                     // Calculate estimated arrival date
                     DateTime estimatedArrivalDate = orderDate.AddDays(5);
 
                     // Set the values for lblArrivalDate
-                    estimate.Text = estimatedArrivalDate.ToString("dd-MM-yyyy");
+                    lblEstimateDate.Text = estimatedArrivalDate.ToString("dd-MM-yyyy");
                 }
                 else
                 {
                     // Handle parsing failure
-                    estimate.Text = "Invalid Date Format";
+                    lblEstimateDate.Text = "Invalid Date Format";
                 }
             }
         }
-
     }
 }
