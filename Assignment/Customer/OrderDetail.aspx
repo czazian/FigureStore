@@ -44,19 +44,19 @@
                 <div class="order-title">
                     <div class="top-title">
                         <div class="title">
-                            Order details&nbsp;#<asp:Label runat="server" ID="orderID" Text="20233101" />
+                            Order details&nbsp;#<asp:Label runat="server" ID="orderID" Text='<%# Eval("OrderDate", "{0:yyyyMMdd}")+"-"+Eval("OrderID") %>' />
                         </div>
                         <div class="current-status">
-                            <asp:Label runat="server" Text="SHIPPING" />
+                            <asp:Label runat="server" ID="lblStatus" Text='<%# Eval("OrderStatus") %>' />
                         </div>
                     </div>
                     <div class="date-title">
                         <div class="date">
-                            Order Date:&nbsp;<asp:Label runat="server" ID="orderDate" Text="10 March 2024" />
+                            Order Date:&nbsp;<asp:Label runat="server" ID="lblOrderDate" Text='<%# Bind("OrderDate", "{0:dd-MM-yyyy}") %>' />
                         </div>
                         |
                         <div class="estimate">
-                            Estimate Arrival Date:&nbsp;<asp:Label runat="server" ID="orderEstimate" Text="16 March 2024" />
+                            Estimate Arrival Date:&nbsp;<asp:Label runat="server" ID="lblEstimateDate" Text="" />
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                                 </span>
                                 <h5>Order Received</h5>
                                 <div class="done-date">
-                                    <asp:Label runat="server" ID="Label3" Text="8:23 PM 10/3/2024" />
+                                    <asp:Label runat="server" ID="lblOrderDate2" Text='<%# Bind("OrderDate", "{0:dd-MM-yyyy}") %>' />
                                 </div>
                             </div>
                             <div class="seperator"></div>
@@ -79,9 +79,9 @@
                                 <span class="check-container">
                                     <span class="check"><i class="fa-solid fa-truck"></i></span>
                                 </span>
-                                <h5>Shipping</h5>
+                                <h5>Pending</h5>
                                 <div class="done-date">
-                                    <asp:Label runat="server" ID="Label2" Text="8:23 PM 12/3/2024" />
+                                    <asp:Label runat="server" ID="lblPendingDate" Text='<%# Bind("OrderDate", "{0:dd-MM-yyyy}") %>' />
                                 </div>
                             </div>
                             <div class="seperator"></div>
@@ -89,9 +89,9 @@
                                 <span class="check-container">
                                     <span class="check"><i class="fa-solid fa-truck-fast"></i></span>
                                 </span>
-                                <h5>Out for delivery</h5>
+                                <h5>Shipping</h5>
                                 <div class="done-date">
-                                    <asp:Label runat="server" ID="Label1" Text="" />
+                                    <asp:Label runat="server" ID="lblShippingDate" Text="" />
                                 </div>
                             </div>
                             <div class="seperator"></div>
@@ -101,7 +101,7 @@
                                 </span>
                                 <h5>Delivered</h5>
                                 <div class="done-date">
-                                    <asp:Label runat="server" ID="donedate" Text="" />
+                                    <asp:Label runat="server" ID="lblDeliveredDate" Text="" />
                                 </div>
                             </div>
                         </div>
@@ -111,69 +111,38 @@
                         <div class="item-ordered-title">
                             Item Ordered
                         </div>
+                        
                         <div class="items-cont">
-                            <!--An Item-->
-                            <div class="products">
-                                <div class="left">
-                                    <div class="img">
-                                        <asp:Image Style="width: 100%;" runat="server" ID="pImage" ImageUrl="~/Image/Product/f1.jpg" />
-                                    </div>
-                                    <div class="text">
-                                        <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
-                                            <asp:Label ID="Label4" runat="server" Text="Nendoroids Frieren" />
+                            <asp:SqlDataSource ID="TrackingSource" runat="server" ConnectionString="<%$ ConnectionStrings:ApexOnlineShopDb %>" SelectCommand="SELECT DISTINCT O.OrderID AS OrderID, O.PaymentAmount AS PaymentAmount, O.OrderDate AS OrderDate, R.OrderQuantity AS OrderQuantity, R.OrderStatus AS OrderStatus, F.FigureID AS FigureID, F.FigureName AS FigureName, F.FigurePrice AS FigurePrice, F.FigureImage1 AS FigureImage1 FROM [Order] O JOIN [Customer] C ON O.CustomerID = C.CustomerID JOIN [OrderFigure] R ON R.OrderID = O.OrderID JOIN [Figure] F ON R.FigureID = F.FigureID WHERE O.CustomerID = @custID ORDER BY OrderDate DESC;">
+                                <SelectParameters>
+                                    <asp:Parameter Name="custID" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                            <asp:Repeater ID="ItemRepeater" runat="server" OnItemDataBound="ItemRepeater_ItemDataBound">
+                                <ItemTemplate>
+                                    <!--An Item-->
+                                    <div class="products">
+                                        <div class="left">
+                                            <div class="img">
+                                                <asp:Image Style="width: 100%;" runat="server" ID="orderimg" ImageUrl='<%# Eval("FigureImage1") %>'" />
+                                            </div>
+                                            <div class="text">
+                                                <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
+                                                    <asp:Label ID="lblName" runat="server" Text='<%# Eval("FigureName") %>' />
+                                                </div>
+                                                <div class="qty">
+                                                    <span>Quantity :&nbsp;</span><asp:Label ID="lblQty" runat="server" Text='<%# Eval("OrderQuantity") %>' />
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="qty">
-                                            <span>Quantity :&nbsp;</span><asp:Label ID="qty" runat="server" Text="2" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <asp:Label runat="server" ID="itemtotal" Text="RM 200.00" />
-                                </div>
-                            </div>
-                            <!--End of An Item-->
-
-                            <!--An Item-->
-                            <div class="products">
-                                <div class="left">
-                                    <div class="img">
-                                        <asp:Image Style="width: 100%;" runat="server" ID="Image2" ImageUrl="~/Image/Product/f1.jpg" />
-                                    </div>
-                                    <div class="text">
-                                        <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
-                                            <asp:Label ID="Label8" runat="server" Text="Nendoroids Frieren" />
-                                        </div>
-                                        <div class="qty">
-                                            <span>Quantity :&nbsp;</span><asp:Label ID="Label9" runat="server" Text="2" />
+                                        <div class="right">
+                                            <asp:Label runat="server" ID="itemtotal" Text="RM 200.00" />
                                         </div>
                                     </div>
-                                </div>
-                                <div class="right">
-                                    <asp:Label runat="server" ID="Label10" Text="RM 200.00" />
-                                </div>
-                            </div>
-                            <!--End of An Item-->
-
-                            <!--An Item-->
-                            <div class="products">
-                                <div class="left">
-                                    <div class="img">
-                                        <asp:Image Style="width: 100%;" runat="server" ID="Image1" ImageUrl="~/Image/Product/f1.jpg" />
-                                    </div>
-                                    <div class="text">
-                                        <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
-                                            <asp:Label ID="Label5" runat="server" Text="Nendoroids Frieren" />
-                                        </div>
-                                        <div class="qty">
-                                            <span>Quantity :&nbsp;</span><asp:Label ID="Label6" runat="server" Text="2" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <asp:Label runat="server" ID="Label7" Text="RM 200.00" />
-                                </div>
-                            </div>
-                            <!--End of An Item-->
+                                    <!--End of An Item-->
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            
 
                             <!--Bottom Information-->
                             <div class="bottom-info">
@@ -184,14 +153,14 @@
                                             <th>Name</th>
                                             <td>:</td>
                                             <td>
-                                                <asp:Label runat="server" ID="name" Text="Lala Yang" />
+                                                <asp:Label runat="server" ID="purchaseName" Text='<%# Eval("PurchaseFirstName")+ " " + Eval("PurchaseLastName") %>' />
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Phone No.</th>
                                             <td>:</td>
                                             <td>
-                                                <asp:Label runat="server" ID="Label11" Text="012-34567890" />
+                                                <asp:Label runat="server" ID="phoneNo" Text=<%# Eval("PhoneNo") %> />
                                             </td>
                                         </tr>
                                         <tr>
@@ -199,7 +168,7 @@
                                             </th>
                                             <td>:</td>
                                             <td>
-                                                <asp:Label runat="server" ID="homeaddress" Text="TARUMT, Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur, Federal Territory of Kuala Lumpur." />
+                                                <asp:Label runat="server" ID="homeAddress" Text='<%# Eval("HomeAddress") + " ," + Eval("PosCode") + " " + Eval("City") + " ," + Eval("State") + "." %>' />
                                             </td>
                                         </tr>
                                         <tr>
@@ -207,7 +176,7 @@
                                             </th>
                                             <td>:</td>
                                             <td>
-                                                <asp:Label runat="server" ID="paymentmethod" Text="Cash On Delivery" />
+                                                <asp:Label runat="server" ID="paymentMethod" Text='<%# Eval("PaymentMethod") %>' />
                                             </td>
                                         </tr>
                                     </table>
@@ -220,15 +189,7 @@
                                             </th>
                                             <td>:</td>
                                             <td class="tRight">
-                                                <asp:Label runat="server" ID="lblSubtotal" Text="RM 600.00" />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Discount
-                                            </th>
-                                            <td>:</td>
-                                            <td class="tRight">
-                                                <asp:Label runat="server" ID="lblDiscount" Text="RM 60.00" />
+                                                <asp:Label runat="server" ID="lblSubtotal" Text="" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -244,7 +205,7 @@
                                             </th>
                                             <td style="padding-bottom: 20px;">:</td>
                                             <td class="tRight" style="padding-bottom: 20px;">
-                                                <asp:Label runat="server" ID="lblTax" Text="RM 36.00" />
+                                                <asp:Label runat="server" ID="lblTax" Text="" />
                                             </td>
                                         </tr>
                                         <tr class="last-column">
@@ -252,7 +213,7 @@
                                             </th>
                                             <td style="font-weight: 100; padding-top: 20px;">:</td>
                                             <td style="padding-top: 20px;" class="tRight">
-                                                <asp:Label runat="server" ID="lblTotal" Text="RM 601.00" />
+                                                <asp:Label runat="server" ID="lblTotal" Text="" />
                                             </td>
                                         </tr>
                                     </table>

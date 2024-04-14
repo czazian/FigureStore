@@ -52,7 +52,7 @@ namespace Assignment.Customer
         {
             TrackingSource.SelectParameters["custID"].DefaultValue = custID;
             DataView dv = (DataView)TrackingSource.Select(DataSourceSelectArguments.Empty);
-            DataTable distinctDataTable = dv.ToTable(true, "OrderID", "OrderDate", "PaymentAmount", "OrderStatus", "FigureID", "FigureName", "FigureImage1", "OrderQuantity");
+            DataTable distinctDataTable = dv.ToTable(true, "OrderID", "FigureID", "OrderDate", "PaymentAmount", "OrderStatus", "FigureName", "FigureImage1", "OrderQuantity");
             return distinctDataTable;
         }
 
