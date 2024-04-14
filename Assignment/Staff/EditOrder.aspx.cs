@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -173,6 +174,7 @@ namespace Assignment.Staff
             }
             catch (Exception ex)
             {
+                Debug.Write(ex.Message);
                 // Log the exception or handle it as needed
                 return false;
             }

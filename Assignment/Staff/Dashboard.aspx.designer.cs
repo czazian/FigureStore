@@ -14,6 +14,11 @@ namespace Assignment.Staff
     public partial class Dashboard
     {
 
+        protected global::System.Web.UI.WebControls.Label txtUsername;
+
+        protected global::System.Web.UI.WebControls.Panel pnlNoLowStock;
+
+
         /// <summary>
         /// lblTotalOrder control.
         /// </summary>
@@ -49,5 +54,40 @@ namespace Assignment.Staff
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTotalProfit;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalJanOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalFebOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalMacOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalAprOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalMayOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalJuneOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalJulyOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalOgosOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalSepOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalOctOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalNovOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lblTotalDecOrder;
+
+        protected global::System.Web.UI.WebControls.HiddenField lbltotalScaleFiguresSold;
+
+        protected global::System.Web.UI.WebControls.HiddenField lbltotalNendoroidsSold;
+
+        protected global::System.Web.UI.WebControls.HiddenField lbltotalDollsSold;
+
+        protected global::System.Web.UI.WebControls.HiddenField lbltotalGundamSold;
+
+        protected global::System.Web.UI.WebControls.HiddenField lbltotalGoodsSold;
+
     }
 }

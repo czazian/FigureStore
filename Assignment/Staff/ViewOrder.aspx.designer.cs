@@ -13,5 +13,34 @@ namespace Assignment.Staff
 
     public partial class ViewOrder
     {
+        protected global::System.Web.UI.WebControls.TextBox txtFullName;
+
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+
+        protected global::System.Web.UI.WebControls.TextBox txtPhoneNo;
+
+        protected global::System.Web.UI.WebControls.Image txtImg;
+
+        protected global::System.Web.UI.WebControls.TextBox txtPayMethod;
+
+        protected global::System.Web.UI.WebControls.TextBox txtShippingAdd;
+
+        protected global::System.Web.UI.WebControls.TextBox txtTotalAmount;
+
+        protected global::System.Web.UI.WebControls.TextBox txtOrderDate;
+
+        protected global::System.Web.UI.WebControls.DropDownList ddlStatus;
+
+        protected global::System.Web.UI.WebControls.Repeater RepeaterNo;
+
+        protected global::System.Web.UI.WebControls.Repeater RepeaterImage;
+
+        protected global::System.Web.UI.WebControls.Repeater RepeaterProduct;
+
+        protected global::System.Web.UI.WebControls.Repeater RepeaterPrice;
+
+        protected global::System.Web.UI.WebControls.Repeater RepeaterQuantity;
+
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

@@ -95,7 +95,7 @@ namespace Assignment.Staff
             catch (Exception ex)
             {
                 lblNoRecordsFound.Visible = true;
-                lblNoRecordsFound.Text = "No matching records found.";
+                lblNoRecordsFound.Text = "No matching records found." + ex.Message;
             }
         }
 

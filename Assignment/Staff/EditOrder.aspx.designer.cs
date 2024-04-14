@@ -41,6 +41,8 @@ namespace Assignment.Staff
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhoneNo;
 
+        protected global::System.Web.UI.WebControls.Image txtImg;
+
         /// <summary>
         /// txtPayMethod control.
         /// </summary>

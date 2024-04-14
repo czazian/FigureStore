@@ -190,8 +190,6 @@
     <Content Include="Staff\AddRole.aspx" />
     <Content Include="Staff\AddStaff.aspx" />
     <Content Include="Staff\Dashboard.aspx" />
-    <Content Include="Staff\DashboardChartA.js" />
-    <Content Include="Staff\DashboardChartB.js" />
     <Content Include="Staff\EditMember.aspx" />
     <Content Include="Staff\EditOrder.aspx" />
     <Content Include="Staff\EditProduct.aspx" />
