@@ -58,154 +58,69 @@
                 </div>
             </div>
             <div class="order-container">
-                <asp:Label ID="lblFail" runat="server" Text="" Style="font-weight:bold; color:red; font-size:20px; margin-top:100px; margin-bottom:100px;"></asp:Label>
+                <asp:Label ID="lblFail" runat="server" Text="" Style="font-weight: bold; color: red; font-size: 20px; margin-top: 100px; margin-bottom: 100px;"></asp:Label>
 
-                <asp:SqlDataSource ID="TrackingSource" runat="server" ConnectionString="<%$ ConnectionStrings:ApexOnlineShopDb %>" SelectCommand="SELECT DISTINCT ";>
+                <asp:SqlDataSource ID="TrackingSource" runat="server" ConnectionString="<%$ ConnectionStrings:ApexOnlineShopDb %>" SelectCommand="SELECT DISTINCT O.OrderID AS OrderID, O.PaymentAmount AS PaymentAmount, O.OrderDate AS OrderDate, R.OrderQuantity AS OrderQuantity, R.OrderStatus AS OrderStatus, F.FigureID AS FigureID, F.FigureName AS FigureName, F.FigurePrice AS FigurePrice, F.FigureImage1 AS FigureImage1 FROM [Order] O JOIN [Customer] C ON O.CustomerID = C.CustomerID JOIN [OrderFigure] R ON R.OrderID = O.OrderID JOIN [Figure] F ON R.FigureID = F.FigureID WHERE O.CustomerID = @custID ORDER BY OrderDate DESC;">
                     <SelectParameters>
                         <asp:Parameter Name="custID" />
                     </SelectParameters>
                 </asp:SqlDataSource>
-                <!--An Order-->
-                <div class="anOrder">
-                    <div class="top-item">
-                        <div class="orderID">
-                            <i class='fas fa-tag'></i>&nbsp;Order ID :&nbsp;#<asp:Label runat="server" ID="orderID" Text="20233101" />
-                        </div>
-                        <div class="status">
-                            <i class="fa-solid fa-truck"></i>&nbsp;<asp:Label runat="server" ID="lblStatus" Text="Order Received" />
-                        </div>
-                    </div>
-                    <div class="middle1">
-                        <div class="img" style="width: 200px; height: contain;">
-                            <asp:ImageButton CssClass="imga" PostBackUrl="~/Customer/IndividualFigure.aspx" Style="width: 100%;" runat="server" ID="orderimg" ImageUrl="~/Image/Product/f1.jpg" />
-                        </div>
-                        <div class="product">
-                            <div class="name">
-                                <asp:Label runat="server" ID="lblName" Text="Nendoroid Frieren" />
+
+                <asp:Repeater ID="OrderRepeater" runat="server" OnItemDataBound="OrderRepeater_ItemDataBound">
+                    <ItemTemplate>
+                        <asp:HiddenField runat="server" ID="hdnDate" Value='<%# Bind("OrderDate", "{0:dd-MM-yyyy}") %>' />
+                        <!--An Order-->
+                        <div class="anOrder">
+                            <div class="top-item">
+                                <div class="orderID">
+                                    <i class='fas fa-tag'></i>&nbsp;Order ID :&nbsp;#<asp:Label runat="server" ID="orderID" Text='<%# "#"+Eval("OrderDate", "{0:yyyyMMdd}")+Eval("OrderID") %>' />
+                                </div>
+                                <div class="status">
+                                    <i class="fa-solid fa-truck"></i>&nbsp;<asp:Label runat="server" ID="lblStatus" Text='<%# Eval("OrderStatus") %>' />
+                                </div>
                             </div>
-                            <div class="quantity">
-                                ×<asp:Label runat="server" ID="lblQty" Text="2" />
+                            <div class="middle1">
+                                <div class="img" style="width: 200px; height: contain;">
+                                    <asp:ImageButton CssClass="imga" PostBackUrl='<%# "~/Customer/IndividualFigure.aspx?id=" + Eval("FigureID") %>' Style="width: 100%;" runat="server" ID="orderimg" ImageUrl='<%# Eval("FigureImage1") %>' />
+                                </div>
+                                <div class="product">
+                                    <div class="name">
+                                        <asp:Label runat="server" ID="lblName" Text='<%# Eval("FigureName") %>' />
+                                    </div>
+                                    <div class="quantity">
+                                        ×<asp:Label runat="server" ID="lblQty" Text='<%# Eval("OrderQuantity") %>' />
+                                    </div>
+                                </div>
+                                <div class="subtotal">
+                                    <asp:Label runat="server" ID="lblSubtotal" Text="RM 200.00" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="subtotal">
-                            <asp:Label runat="server" ID="lblSubtotal" Text="RM 200.00" />
-                        </div>
-                    </div>
-                    <div class="middle2">
-                        <div class="noOfItems">
-                            <asp:Label Style="color: grey" runat="server" ID="noOfItems" Text="3 Items" />
-                        </div>
-                        <div class="totalForAll" style="font-size: 18px;">
-                            <span style="color: grey">Order Total :</span>&nbsp;<asp:Label Style="font-weight: bold; color: #ff7e29" runat="server" ID="lblTotal" Text="RM 200.00" />
-                        </div>
-                    </div>
-                    <div class="bottom">
-                        <div class="estimate">
-                            Products will be shipped out by&nbsp;<asp:Label Style="text-decoration: underline" runat="server" ID="estimate" Text="8 March 2024" />
-                        </div>
-                        <div class="view-order-btn">
-                            <asp:LinkButton PostBackUrl="~/Customer/OrderDetail.aspx" CssClass="viewOrder btn border" runat="server">
-                                <i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;VIEW ORDER
-                            </asp:LinkButton>
-                        </div>
-                    </div>
-                </div>
-                <!--End Of An Order-->
-                <!--An Order-->
-                <div class="anOrder">
-                    <div class="top-item">
-                        <div class="orderID">
-                            <i class='fas fa-tag'></i>&nbsp;Order ID :&nbsp;#<asp:Label runat="server" ID="Label1" Text="20233102" />
-                        </div>
-                        <div class="status">
-                            <i class="fa-solid fa-truck"></i>&nbsp;<asp:Label runat="server" ID="Label2" Text="Order Received" />
-                        </div>
-                    </div>
-                    <div class="middle1">
-                        <div class="img" style="width: 200px; height: contain;">
-                            <asp:ImageButton PostBackUrl="~/Customer/IndividualFigure.aspx" Style="width: 100%;" runat="server" ID="ImageButton1" ImageUrl="~/Image/Product/f2.jpg" />
-                        </div>
-                        <div class="product">
-                            <div class="name">
-                                <asp:Label runat="server" ID="Label3" Text="TENITOL Jess" />
+                            <div class="middle2">
+                                <div class="noOfItems">
+                                    <asp:Label Style="color: grey" runat="server" ID="noOfItems" Text="3 Items" />
+                                </div>
+                                <div class="totalForAll" style="font-size: 18px;">
+                                    <span style="color: grey">Order Total :</span>&nbsp;<asp:Label Style="font-weight: bold; color: #ff7e29" runat="server" ID="lblTotal" Text='<%# "RM "+Eval("PaymentAmount") %>' />
+                                </div>
                             </div>
-                            <div class="quantity">
-                                ×<asp:Label runat="server" ID="Label4" Text="2" />
+                            <div class="bottom">
+                                <div class="estimate">
+                                    Products will be shipped out by&nbsp;<asp:Label Style="text-decoration: underline" runat="server" ID="estimate" Text="" />
+                                </div>
+                                <div class="view-order-btn">
+                                    <asp:LinkButton PostBackUrl="~/Customer/OrderDetail.aspx" CssClass="viewOrder btn border" runat="server">
+                                        <i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;VIEW ORDER
+                                    </asp:LinkButton>
+                                </div>
                             </div>
                         </div>
-                        <div class="subtotal">
-                            <asp:Label runat="server" ID="Label5" Text="RM 200.00" />
-                        </div>
-                    </div>
-                    <div class="middle2">
-                        <div class="noOfItems">
-                            <asp:Label Style="color: grey" runat="server" ID="Label6" Text="1 Item" />
-                        </div>
-                        <div class="totalForAll" style="font-size: 18px;">
-                            <span style="color: grey">Order Total :</span>&nbsp;<asp:Label Style="font-weight: bold; color: #ff7e29" runat="server" ID="Label7" Text="RM 200.00" />
-                        </div>
-                    </div>
-                    <div class="bottom">
-                        <div class="estimate">
-                            Products will be shipped out by&nbsp;<asp:Label Style="text-decoration: underline" runat="server" ID="Label8" Text="8 March 2024" />
-                        </div>
-                        <div class="view-order-btn">
-                            <asp:LinkButton PostBackUrl="~/Customer/OrderDetail.aspx" CssClass="viewOrder btn border" runat="server">
-                                <i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;VIEW ORDER
-                            </asp:LinkButton>
-                        </div>
-                    </div>
-                </div>
-                <!--End Of An Order-->
-                <!--An Order-->
-                <div class="anOrder">
-                    <div class="top-item">
-                        <div class="orderID">
-                            <i class='fas fa-tag'></i>&nbsp;Order ID :&nbsp;#<asp:Label runat="server" ID="Label9" Text="20233103" />
-                        </div>
-                        <div class="status">
-                            <i class="fa-solid fa-truck"></i>&nbsp;<asp:Label runat="server" ID="Label10" Text="Order Received" />
-                        </div>
-                    </div>
-                    <div class="middle1">
-                        <div class="img" style="width: 200px; height: contain;">
-                            <asp:ImageButton PostBackUrl="~/Customer/IndividualFigure.aspx" Style="width: 100%;" runat="server" ID="ImageButton2" ImageUrl="~/Image/Product/f4.jpg" />
-                        </div>
-                        <div class="product">
-                            <div class="name">
-                                <asp:Label runat="server" ID="Label11" Text="Chen Hai" />
-                            </div>
-                            <div class="quantity">
-                                ×<asp:Label runat="server" ID="Label12" Text="2" />
-                            </div>
-                        </div>
-                        <div class="subtotal">
-                            <asp:Label runat="server" ID="Label13" Text="RM 200.00" />
-                        </div>
-                    </div>
-                    <div class="middle2">
-                        <div class="noOfItems">
-                            <asp:Label Style="color: grey" runat="server" ID="Label14" Text="1 Item" />
-                        </div>
-                        <div class="totalForAll" style="font-size: 18px;">
-                            <span style="color: grey">Order Total :</span>&nbsp;<asp:Label Style="font-weight: bold; color: #ff7e29" runat="server" ID="Label15" Text="RM 200.00" />
-                        </div>
-                    </div>
-                    <div class="bottom">
-                        <div class="estimate">
-                            Products will be shipped out by&nbsp;<asp:Label Style="text-decoration: underline" runat="server" ID="Label16" Text="8 March 2024" />
-                        </div>
-                        <div class="view-order-btn">
-                            <asp:LinkButton PostBackUrl="~/Customer/OrderDetail.aspx" CssClass="viewOrder btn border" runat="server">
-                                <i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;VIEW ORDER
-                            </asp:LinkButton>
-                        </div>
-                    </div>
-                </div>
-                <!--End Of An Order-->
+                        <!--End Of An Order-->
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
         </div>
     </div>
+
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="JS" runat="server">

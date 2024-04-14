@@ -3,15 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLlocalDB/C__USERS_JUNKE_ONEDRIVE_DOCUMENTS_GITHUB_WEBAPPLICATIONDEVELOPMENT_ASSIGNMENT_APP_DATA_APEXONLINESHOPDB.MDF/True/SqlTable/dbo.Order.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\customer\\ordertrack.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\ordertrack.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\assignment\\customer\\ordertrack.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\ordertrack.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\assignment\\customer\\ordertrack.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\ordertrack.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\assignment\\customer\\orderconfirmation.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,34 +26,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 182,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dbo.Order [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLlocalDB/C__USERS_JUNKE_ONEDRIVE_DOCUMENTS_GITHUB_WEBAPPLICATIONDEVELOPMENT_ASSIGNMENT_APP_DATA_APEXONLINESHOPDB.MDF/True/SqlTable/dbo.Order.sql",
-              "ToolTip": "dbo.Order [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-04-13T07:04:34.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Checkout.aspx.cs",
               "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\Checkout.aspx.cs",
               "RelativeDocumentMoniker": "Assignment\\Customer\\Checkout.aspx.cs",
               "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\Checkout.aspx.cs",
               "RelativeToolTip": "Assignment\\Customer\\Checkout.aspx.cs",
-              "ViewState": "AQIAAJ0AAAAAAAAAAAAowK4AAABmAAAA",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAmwK4AAABmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-13T05:39:05.778Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "OrderConfirmation.aspx.cs",
               "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\OrderConfirmation.aspx.cs",
               "RelativeDocumentMoniker": "Assignment\\Customer\\OrderConfirmation.aspx.cs",
@@ -64,18 +51,17 @@
               "RelativeToolTip": "Assignment\\Customer\\OrderConfirmation.aspx.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T05:38:58.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T05:38:58.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "OrderTrack.aspx.cs",
               "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\OrderTrack.aspx.cs",
               "RelativeDocumentMoniker": "Assignment\\Customer\\OrderTrack.aspx.cs",
               "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\OrderTrack.aspx.cs",
               "RelativeToolTip": "Assignment\\Customer\\OrderTrack.aspx.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAD4vy4AAAAaAAAA",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAAAA4AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-13T05:30:59.86Z",
               "EditorCaption": ""
