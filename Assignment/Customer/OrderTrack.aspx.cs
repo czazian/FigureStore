@@ -15,6 +15,8 @@ namespace Assignment.Customer
 {
     public partial class OrderTrack : System.Web.UI.Page
     {
+        string orderID = "";
+        string orderDate = "";
         Label status;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -113,6 +115,12 @@ namespace Assignment.Customer
                     lblEstimateDate.Text = "Invalid Date Format";
                 }
             }
+        }
+
+        protected void viewOrder_Command(object sender, CommandEventArgs e)
+        {
+            string url = "~/Customer/OrderDetail.aspx?orderID=" + e.CommandArgument.ToString();
+            Response.Redirect(url);
         }
     }
 }

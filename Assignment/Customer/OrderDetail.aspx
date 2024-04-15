@@ -113,18 +113,13 @@
                         </div>
                         
                         <div class="items-cont">
-                            <asp:SqlDataSource ID="TrackingSource" runat="server" ConnectionString="<%$ ConnectionStrings:ApexOnlineShopDb %>" SelectCommand="SELECT DISTINCT O.OrderID AS OrderID, O.PaymentMethod AS PaymentMethod,O.PaymentAmount AS PaymentAmount, O.OrderDate AS OrderDate, O.HomeAddress AS HomeAdress, O.State As State, O.Poscode AS Poscode, O.City AS City, O.PurchaseFirstName AS PurchaseFirstName, O.PurchaseLastName AS PurchaseLastName, O.PhoneNo AS PhoneNo,R.OrderQuantity AS OrderQuantity, R.OrderStatus AS OrderStatus, F.FigureID AS FigureID, F.FigureName AS FigureName, F.FigurePrice AS FigurePrice, F.FigureImage1 AS FigureImage1 FROM [Order] O JOIN [Customer] C ON O.CustomerID = C.CustomerID JOIN [OrderFigure] R ON R.OrderID = O.OrderID JOIN [Figure] F ON R.FigureID = F.FigureID WHERE O.CustomerID = @custID ORDER BY OrderDate DESC;">
-                                <SelectParameters>
-                                    <asp:Parameter Name="custID" />
-                                </SelectParameters>
-                            </asp:SqlDataSource>
-                            <asp:Repeater ID="ItemRepeater" runat="server" OnItemDataBound="ItemRepeater_ItemDataBound">
+                            <asp:Repeater ID="ItemRepeater" runat="server">
                                 <ItemTemplate>
                                     <!--An Item-->
                                     <div class="products">
                                         <div class="left">
                                             <div class="img">
-                                                <asp:Image Style="width: 100%;" runat="server" ID="orderimg" ImageUrl='<%# Eval("FigureImage1") %>' />
+                                                <asp:Image Style="width: 100%;" runat="server" ID="orderImg" ImageUrl='<%# Eval("FigureImage1") %>'/>
                                             </div>
                                             <div class="text">
                                                 <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
@@ -136,7 +131,7 @@
                                             </div>
                                         </div>
                                         <div class="right">
-                                            <asp:Label runat="server" ID="itemtotal" Text="RM 200.00" />
+                                            <asp:Label runat="server" ID="itemtotal" Text="" />
                                         </div>
                                     </div>
                                     <!--End of An Item-->
@@ -205,7 +200,7 @@
                                             </th>
                                             <td style="padding-bottom: 20px;">:</td>
                                             <td class="tRight" style="padding-bottom: 20px;">
-                                                <asp:Label runat="server" ID="lblTax" Text="" />
+                                                <asp:Label runat="server" ID="lblTax" Type="" Text="" />
                                             </td>
                                         </tr>
                                         <tr class="last-column">
@@ -213,7 +208,7 @@
                                             </th>
                                             <td style="font-weight: 100; padding-top: 20px;">:</td>
                                             <td style="padding-top: 20px;" class="tRight">
-                                                <asp:Label runat="server" ID="lblTotal" Text="" />
+                                                <asp:Label runat="server" ID="lblTotal" Text='<%# Eval("PaymentAmount") %>' />
                                             </td>
                                         </tr>
                                     </table>

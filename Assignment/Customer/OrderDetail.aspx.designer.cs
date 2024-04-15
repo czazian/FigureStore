@@ -123,15 +123,6 @@ namespace Assignment.Customer
         protected global::System.Web.UI.WebControls.Label lblDeliveredDate;
 
         /// <summary>
-        /// TrackingSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource TrackingSource;
-
-        /// <summary>
         /// ItemRepeater control.
         /// </summary>
         /// <remarks>

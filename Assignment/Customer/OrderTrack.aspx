@@ -107,7 +107,7 @@
                                     Products will be shipped out by&nbsp;<asp:Label Style="text-decoration: underline" runat="server" ID="lblEstimateDate" Text="" />
                                 </div>
                                 <div class="view-order-btn">
-                                    <asp:LinkButton PostBackUrl="~/Customer/OrderDetail.aspx" CssClass="viewOrder btn border" runat="server">
+                                    <asp:LinkButton CommandArgument='<%# Eval("OrderID") %>' CssClass="viewOrder btn border" runat="server" ID="viewOrder" OnCommand="viewOrder_Command">
                                         <i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;VIEW ORDER
                                     </asp:LinkButton>
                                 </div>
