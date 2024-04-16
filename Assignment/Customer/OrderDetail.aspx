@@ -148,14 +148,14 @@
                                             <th>Name</th>
                                             <td>:</td>
                                             <td>
-                                                <asp:Label runat="server" ID="purchaseName" Text='<%# Eval("PurchaseFirstName")+ " " + Eval("PurchaseLastName") %>' />
+                                                <asp:Label runat="server" ID="purchaseName" Text="" />
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Phone No.</th>
                                             <td>:</td>
                                             <td>
-                                                <asp:Label runat="server" ID="phoneNo" Text=<%# Eval("PhoneNo") %> />
+                                                <asp:Label runat="server" ID="phoneNo" Text="" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -163,7 +163,7 @@
                                             </th>
                                             <td>:</td>
                                             <td>
-                                                <asp:Label runat="server" ID="homeAddress" Text='<%# Eval("HomeAddress") + " ," + Eval("PosCode") + " " + Eval("City") + " ," + Eval("State") + "." %>' />
+                                                <asp:Label runat="server" ID="homeAddress" Text="" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -171,7 +171,7 @@
                                             </th>
                                             <td>:</td>
                                             <td>
-                                                <asp:Label runat="server" ID="paymentMethod" Text='<%# Eval("PaymentMethod") %>' />
+                                                <asp:Label runat="server" ID="paymentMethod" Text="" />
                                             </td>
                                         </tr>
                                     </table>
@@ -208,7 +208,7 @@
                                             </th>
                                             <td style="font-weight: 100; padding-top: 20px;">:</td>
                                             <td style="padding-top: 20px;" class="tRight">
-                                                <asp:Label runat="server" ID="lblTotal" Text='<%# Eval("PaymentAmount") %>' />
+                                                <asp:Label runat="server" ID="lblTotal" Text="" />
                                             </td>
                                         </tr>
                                     </table>
