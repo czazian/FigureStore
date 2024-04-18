@@ -44,7 +44,7 @@
                 <div class="order-title">
                     <div class="top-title">
                         <div class="title">
-                            Order details&nbsp;#<asp:Label runat="server" ID="orderID" Text='<%# Eval("OrderDate", "{0:yyyyMMdd}")+"-"+Eval("OrderID") %>' />
+                            Order details&nbsp;#<asp:Label runat="server" ID="lblOrderID" Text='<%# Eval("OrderDate", "{0:yyyyMMdd}")+"-"+Eval("OrderID") %>' />
                         </div>
                         <div class="current-status">
                             <asp:Label runat="server" ID="lblStatus" Text='<%# Eval("OrderStatus") %>' />
