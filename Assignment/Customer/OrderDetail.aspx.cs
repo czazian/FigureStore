@@ -113,9 +113,11 @@ namespace Assignment.Customer
                     lblStatus.Text = orderHeader["OrderStatus"].ToString();
                     lblOrderID.Text = formatedDate + "-" + id;
                     lblOrderDate.Text = formatedDate2;
-
+                    Session["orderStatus"] = orderHeader["OrderStatus"].ToString();
+                    System.Diagnostics.Debug.WriteLine("Order session: " + Session["orderStatus"]);
                     DateTime estimateDate = date.AddDays(5);
                     lblEstimateDate.Text = estimateDate.ToString("dd-MM-yyyy");
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "orderStatus();", true);
                 }
 
                 conn.Close();
@@ -131,40 +133,40 @@ namespace Assignment.Customer
             Response.Redirect("~/Customer/Home.aspx");
         }
 
-        protected void CalculateEstimatedAllDate(Repeater item)
-        {
-            Label lblOrderDate = (Label)item.FindControl("lblOrderDate");
-            Label lblEstimateDate = (Label)item.FindControl("lblEstimateDate");
-            Label lblPendingDate = (Label)item.FindControl("lblPendingDate");
-            Label lblShippingDate = (Label)item.FindControl("lblShippingDate");
-            Label lblDeliveredDate = (Label)item.FindControl("lblDeliveredDate");
+        //protected void CalculateEstimatedAllDate(Repeater item)
+        //{
+        //    Label lblOrderDate = (Label)item.FindControl("lblOrderDate");
+        //    Label lblEstimateDate = (Label)item.FindControl("lblEstimateDate");
+        //    Label lblPendingDate = (Label)item.FindControl("lblPendingDate");
+        //    Label lblShippingDate = (Label)item.FindControl("lblShippingDate");
+        //    Label lblDeliveredDate = (Label)item.FindControl("lblDeliveredDate");
 
-            if(lblOrderDate != null && lblEstimateDate != null && lblPendingDate != null && lblShippingDate != null && lblDeliveredDate !=null) 
-            {
-                DateTime paymentDate;
+        //    if(lblOrderDate != null && lblEstimateDate != null && lblPendingDate != null && lblShippingDate != null && lblDeliveredDate !=null) 
+        //    {
+        //        DateTime paymentDate;
 
-                string[] dateFormats = { "dd-MM-yyyy" };
+        //        string[] dateFormats = { "dd-MM-yyyy" };
 
-                if(DateTime.TryParseExact(lblOrderDate.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out paymentDate))
-                {
-                    DateTime estimatedPendingDate = paymentDate.AddDays(1);
-                    DateTime estimatedShippingDate = paymentDate.AddDays(2);
-                    DateTime estimatedEstimateDate = paymentDate.AddDays(5);
-                    DateTime estimatedArrivalDate = paymentDate.AddDays(5);
+        //        if(DateTime.TryParseExact(lblOrderDate.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out paymentDate))
+        //        {
+        //            DateTime estimatedPendingDate = paymentDate.AddDays(1);
+        //            DateTime estimatedShippingDate = paymentDate.AddDays(2);
+        //            DateTime estimatedEstimateDate = paymentDate.AddDays(5);
+        //            DateTime estimatedArrivalDate = paymentDate.AddDays(5);
 
-                    lblPendingDate.Text = estimatedPendingDate.ToString();
-                    lblShippingDate.Text = estimatedShippingDate.ToString();
-                    lblEstimateDate.Text = estimatedEstimateDate.ToString();
-                    lblDeliveredDate.Text = estimatedArrivalDate.ToString();
-                }
-                else
-                {
-                    lblPendingDate.Text = "Invalid Date Format";
-                    lblShippingDate.Text = "Invalid Date Format";
-                    lblEstimateDate.Text = "Invalid Date Format";
-                    lblDeliveredDate.Text = "Invalid Date Format";
-                }
-            }
-        }
+        //            lblPendingDate.Text = estimatedPendingDate.ToString();
+        //            lblShippingDate.Text = estimatedShippingDate.ToString();
+        //            lblEstimateDate.Text = estimatedEstimateDate.ToString();
+        //            lblDeliveredDate.Text = estimatedArrivalDate.ToString();
+        //        }
+        //        else
+        //        {
+        //            lblPendingDate.Text = "Invalid Date Format";
+        //            lblShippingDate.Text = "Invalid Date Format";
+        //            lblEstimateDate.Text = "Invalid Date Format";
+        //            lblDeliveredDate.Text = "Invalid Date Format";
+        //        }
+        //    }
+        //}
     }
 }

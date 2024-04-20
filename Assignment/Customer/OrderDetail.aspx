@@ -64,45 +64,44 @@
                     <div class="status-line">
                         <div id="bar-progress" class="mt-5 mt-lg-0">
                             <!--Add step-active class for current phase-->
-                            <!--Please change the done-date when a phase is done-->
-                            <div class="step step-active">
+                            <div class="step">
                                 <span class="check-container">
                                     <span class="check"><i class="fa-regular fa-clipboard"></i></span>
                                 </span>
-                                <h5>Order Received</h5>
-                                <div class="done-date">
-                                    <asp:Label runat="server" ID="lblOrderDate2" Text='<%# Bind("OrderDate", "{0:dd-MM-yyyy}") %>' />
-                                </div>
+                                <h5>ORDER RECEIVED</h5>
+                                <%--<div class="done-date">
+                                    <asp:Label runat="server" ID="lblOrderDate2" Text="" />
+                                </div>--%>
                             </div>
                             <div class="seperator"></div>
-                            <div class="step step-active">
+                            <div class="step">
                                 <span class="check-container">
                                     <span class="check"><i class="fa-solid fa-truck"></i></span>
                                 </span>
-                                <h5>Pending</h5>
-                                <div class="done-date">
-                                    <asp:Label runat="server" ID="lblPendingDate" Text='<%# Bind("OrderDate", "{0:dd-MM-yyyy}") %>' />
-                                </div>
+                                <h5>PENDING</h5>
+                                <%--<div class="done-date">
+                                    <asp:Label runat="server" ID="lblPendingDate" Text="" />
+                                </div>--%>
                             </div>
                             <div class="seperator"></div>
                             <div class="step">
                                 <span class="check-container">
                                     <span class="check"><i class="fa-solid fa-truck-fast"></i></span>
                                 </span>
-                                <h5>Shipping</h5>
-                                <div class="done-date">
+                                <h5>SHIPPING</h5>
+                                <%--<div class="done-date">
                                     <asp:Label runat="server" ID="lblShippingDate" Text="" />
-                                </div>
+                                </div>--%>
                             </div>
                             <div class="seperator"></div>
                             <div class="step">
                                 <span class="check-container">
                                     <span class="check"><i class="fa-solid fa-check"></i></span>
                                 </span>
-                                <h5>Delivered</h5>
-                                <div class="done-date">
+                                <h5>DELIVERED</h5>
+                                <%--<div class="done-date">
                                     <asp:Label runat="server" ID="lblDeliveredDate" Text="" />
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
                     </div>
@@ -111,7 +110,7 @@
                         <div class="item-ordered-title">
                             Item Ordered
                         </div>
-                        
+
                         <div class="items-cont">
                             <asp:Repeater ID="ItemRepeater" runat="server">
                                 <ItemTemplate>
@@ -119,7 +118,7 @@
                                     <div class="products">
                                         <div class="left">
                                             <div class="img">
-                                                <asp:Image Style="width: 100%;" runat="server" ID="orderImg" ImageUrl='<%# Eval("FigureImage1") %>'/>
+                                                <asp:Image Style="width: 100%;" runat="server" ID="orderImg" ImageUrl='<%# Eval("FigureImage1") %>' />
                                             </div>
                                             <div class="text">
                                                 <div class="product-name" style="color: #ff7e29; font-weight: bold; font-size: 18px;">
@@ -137,7 +136,7 @@
                                     <!--End of An Item-->
                                 </ItemTemplate>
                             </asp:Repeater>
-                            
+
 
                             <!--Bottom Information-->
                             <div class="bottom-info">
@@ -293,6 +292,35 @@
                 });
             }
 
+        }
+
+    </script>
+
+
+    <script type="text/javascript">
+        function orderStatus() {
+            var orderStatus = '<%= Session["orderStatus"]%>';
+
+            var statusDivs = document.querySelectorAll('.status-line .step');
+
+            statusDivs.forEach(function (div) {
+                var title = div.querySelector('h5').innerText.trim().toUpperCase();
+
+                if (orderStatus === "SHIPPING" || orderStatus === "DELIVERED") {
+                    if (title === "SHIPPING" || title === "DELIVERED") {
+                        div.classList.add('step-active');
+                    } else {
+                        div.classList.remove('step-active');
+                    }
+                    div.previousElementSibling.classList.add('step-active');
+                } else {
+                    if (title === "ORDER RECEIVED" || title === "PENDING") {
+                        div.classList.add('step-active');
+                    } else {
+                        div.classList.remove('step-active');
+                    }
+                }
+            });
         }
     </script>
 

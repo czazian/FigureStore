@@ -122,5 +122,18 @@ namespace Assignment.Customer
             string url = "~/Customer/OrderDetail.aspx?orderID=" + e.CommandArgument.ToString();
             Response.Redirect(url);
         }
+
+        protected void btnToOpenFeedback_Command(object sender, CommandEventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "openModal()",true);
+
+            System.Diagnostics.Debug.WriteLine("ID : " + e.CommandArgument.ToString());
+            Session["rateFID"] = e.CommandArgument.ToString();
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
