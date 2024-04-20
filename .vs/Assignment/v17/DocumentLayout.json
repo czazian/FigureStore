@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\customer\\orderdetail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\orderdetail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\assignment\\customer\\ordertrack.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\ordertrack.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
@@ -22,24 +18,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 190,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderDetail.aspx",
-              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\OrderDetail.aspx",
-              "RelativeDocumentMoniker": "Assignment\\Customer\\OrderDetail.aspx",
-              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\OrderDetail.aspx",
-              "RelativeToolTip": "Assignment\\Customer\\OrderDetail.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-04-20T03:12:34.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "OrderTrack.aspx.cs",
               "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\OrderTrack.aspx.cs",
               "RelativeDocumentMoniker": "Assignment\\Customer\\OrderTrack.aspx.cs",
@@ -52,7 +35,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "OrderTrack.aspx",
               "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\OrderTrack.aspx",
               "RelativeDocumentMoniker": "Assignment\\Customer\\OrderTrack.aspx",
@@ -60,8 +43,7 @@
               "RelativeToolTip": "Assignment\\Customer\\OrderTrack.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-04-13T05:26:00.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T05:26:00.959Z"
             }
           ]
         }

@@ -69,9 +69,9 @@
                                     <span class="check"><i class="fa-regular fa-clipboard"></i></span>
                                 </span>
                                 <h5>ORDER RECEIVED</h5>
-                                <%--<div class="done-date">
+                                <div class="done-date">
                                     <asp:Label runat="server" ID="lblOrderDate2" Text="" />
-                                </div>--%>
+                                </div>
                             </div>
                             <div class="seperator"></div>
                             <div class="step">
@@ -79,9 +79,9 @@
                                     <span class="check"><i class="fa-solid fa-truck"></i></span>
                                 </span>
                                 <h5>PENDING</h5>
-                                <%--<div class="done-date">
+                                <div class="done-date">
                                     <asp:Label runat="server" ID="lblPendingDate" Text="" />
-                                </div>--%>
+                                </div>
                             </div>
                             <div class="seperator"></div>
                             <div class="step">
@@ -89,9 +89,9 @@
                                     <span class="check"><i class="fa-solid fa-truck-fast"></i></span>
                                 </span>
                                 <h5>SHIPPING</h5>
-                                <%--<div class="done-date">
+                                <div class="done-date">
                                     <asp:Label runat="server" ID="lblShippingDate" Text="" />
-                                </div>--%>
+                                </div>
                             </div>
                             <div class="seperator"></div>
                             <div class="step">
@@ -99,9 +99,9 @@
                                     <span class="check"><i class="fa-solid fa-check"></i></span>
                                 </span>
                                 <h5>DELIVERED</h5>
-                                <%--<div class="done-date">
+                                <div class="done-date">
                                     <asp:Label runat="server" ID="lblDeliveredDate" Text="" />
-                                </div>--%>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -298,29 +298,27 @@
 
 
     <script type="text/javascript">
+
         function orderStatus() {
-            var orderStatus = '<%= Session["orderStatus"]%>';
+            var orderStatus = '<%= Session["orderStatus"] %>';
 
             var statusDivs = document.querySelectorAll('.status-line .step');
 
             statusDivs.forEach(function (div) {
-                var title = div.querySelector('h5').innerText.trim().toUpperCase();
-
-                if (orderStatus === "SHIPPING" || orderStatus === "DELIVERED") {
-                    if (title === "SHIPPING" || title === "DELIVERED") {
-                        div.classList.add('step-active');
-                    } else {
-                        div.classList.remove('step-active');
-                    }
-                    div.previousElementSibling.classList.add('step-active');
+                var title = div.querySelector('h5').innerText;
+                if (orderStatus === "Delivered") {
+                    div.classList.add('step-active');
                 } else {
-                    if (title === "ORDER RECEIVED" || title === "PENDING") {
-                        div.classList.add('step-active');
-                    } else {
-                        div.classList.remove('step-active');
-                    }
+                    div.classList.remove('step-active');
                 }
             });
+
+            if (orderStatus === "Pending" || orderStatus === "Shipping") {
+                var stepActiveCount = orderStatus === "Pending" ? 2 : 3;
+                for (var i = 0; i < stepActiveCount; i++) {
+                    statusDivs[i].classList.add('step-active');
+                }
+            }
         }
     </script>
 

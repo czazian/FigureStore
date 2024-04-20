@@ -103,21 +103,53 @@ namespace Assignment.Customer
                 cmd4.Parameters.AddWithValue("@orderID", orderID);
 
                 SqlDataReader orderHeader = cmd4.ExecuteReader();
-                if(orderHeader.HasRows && orderHeader.Read())
+                if (orderHeader.HasRows && orderHeader.Read())
                 {
                     string date1 = orderHeader["OrderDate"].ToString();
                     var date = DateTime.Parse(date1);
                     string formatedDate = date.ToString("yyyyMMdd");
                     string formatedDate2 = date.ToString("dd-MM-yyyy");
                     string id = orderHeader["OrderID"].ToString();
+
+                    //set label text
                     lblStatus.Text = orderHeader["OrderStatus"].ToString();
                     lblOrderID.Text = formatedDate + "-" + id;
                     lblOrderDate.Text = formatedDate2;
-                    Session["orderStatus"] = orderHeader["OrderStatus"].ToString();
-                    System.Diagnostics.Debug.WriteLine("Order session: " + Session["orderStatus"]);
                     DateTime estimateDate = date.AddDays(5);
                     lblEstimateDate.Text = estimateDate.ToString("dd-MM-yyyy");
+
+                    //create session
+                    Session["orderStatus"] = orderHeader["OrderStatus"].ToString();
+                    Session["orderDate"] = formatedDate2;
+
+
+
+                    //start up order status script
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "orderStatus();", true);
+
+                    //calculate date at the order status section
+                    if (Session["orderDate"] != null)
+                    {
+                        string orderDate = Session["orderDate"].ToString();
+                        DateTime parsedOrderDate;
+                        if (DateTime.TryParseExact(orderDate, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedOrderDate))
+                        {
+                            // 设置lblOrderDate2
+                            lblOrderDate2.Text = parsedOrderDate.ToString("dd-MM-yyyy");
+
+                            // 设置lblPendingDate
+                            DateTime pendingDate = parsedOrderDate.AddDays(1);
+                            lblPendingDate.Text = pendingDate.ToString("dd-MM-yyyy");
+
+                            // 设置lblShippingDate
+                            DateTime shippingDate = parsedOrderDate.AddDays(2);
+                            lblShippingDate.Text = shippingDate.ToString("dd-MM-yyyy");
+
+                            // 设置lblDeliveredDate
+                            DateTime deliveredDate = parsedOrderDate.AddDays(5);
+                            lblDeliveredDate.Text = deliveredDate.ToString("dd-MM-yyyy");
+                        }
+                    }
                 }
 
                 conn.Close();
@@ -133,40 +165,5 @@ namespace Assignment.Customer
             Response.Redirect("~/Customer/Home.aspx");
         }
 
-        //protected void CalculateEstimatedAllDate(Repeater item)
-        //{
-        //    Label lblOrderDate = (Label)item.FindControl("lblOrderDate");
-        //    Label lblEstimateDate = (Label)item.FindControl("lblEstimateDate");
-        //    Label lblPendingDate = (Label)item.FindControl("lblPendingDate");
-        //    Label lblShippingDate = (Label)item.FindControl("lblShippingDate");
-        //    Label lblDeliveredDate = (Label)item.FindControl("lblDeliveredDate");
-
-        //    if(lblOrderDate != null && lblEstimateDate != null && lblPendingDate != null && lblShippingDate != null && lblDeliveredDate !=null) 
-        //    {
-        //        DateTime paymentDate;
-
-        //        string[] dateFormats = { "dd-MM-yyyy" };
-
-        //        if(DateTime.TryParseExact(lblOrderDate.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out paymentDate))
-        //        {
-        //            DateTime estimatedPendingDate = paymentDate.AddDays(1);
-        //            DateTime estimatedShippingDate = paymentDate.AddDays(2);
-        //            DateTime estimatedEstimateDate = paymentDate.AddDays(5);
-        //            DateTime estimatedArrivalDate = paymentDate.AddDays(5);
-
-        //            lblPendingDate.Text = estimatedPendingDate.ToString();
-        //            lblShippingDate.Text = estimatedShippingDate.ToString();
-        //            lblEstimateDate.Text = estimatedEstimateDate.ToString();
-        //            lblDeliveredDate.Text = estimatedArrivalDate.ToString();
-        //        }
-        //        else
-        //        {
-        //            lblPendingDate.Text = "Invalid Date Format";
-        //            lblShippingDate.Text = "Invalid Date Format";
-        //            lblEstimateDate.Text = "Invalid Date Format";
-        //            lblDeliveredDate.Text = "Invalid Date Format";
-        //        }
-        //    }
-        //}
     }
 }

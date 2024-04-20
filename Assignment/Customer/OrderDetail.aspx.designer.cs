@@ -87,6 +87,42 @@ namespace Assignment.Customer
         protected global::System.Web.UI.WebControls.Label lblEstimateDate;
 
         /// <summary>
+        /// lblOrderDate2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOrderDate2;
+
+        /// <summary>
+        /// lblPendingDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPendingDate;
+
+        /// <summary>
+        /// lblShippingDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblShippingDate;
+
+        /// <summary>
+        /// lblDeliveredDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDeliveredDate;
+
+        /// <summary>
         /// ItemRepeater control.
         /// </summary>
         /// <remarks>
