@@ -2,71 +2,68 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="OrderTrack.css" />
-
-    <script defer>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get the modal element
-            var exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-
-            // Add event listener when the modal is about to be shown
-            exampleModal.addEventListener('show.bs.modal', function (event) {
-                // Button that triggered the modal
-                var button = event.relatedTarget;
-
-                // Extract info from data-bs-* attributes
-                var recipient = button.getAttribute('data-bs-whatever');
-
-                // Update the modal's content
-                var modalTitle = exampleModal._element.querySelector('.modal-title');
-                var modalBodyInput = exampleModal._element.querySelector('.modal-body input');
-
-                modalTitle.textContent = 'New message to ' + recipient;
-                modalBodyInput.value = recipient;
-            });
-        });
-
-        function openModal() {
-            var exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-
-            // Update the modal's content (optional)
-            var modalTitle = exampleModal._element.querySelector('.modal-title');
-            var modalBodyInput = exampleModal._element.querySelector('.modal-body input');
-
-            //modalTitle.textContent = 'New message to @getbootstrap';
-            //modalBodyInput.value = '@getbootstrap';
-
-            // Show the modal
-            exampleModal.show();
+    <style>
+        /* Modal container */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         }
 
+        /* Modal content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 25%; /* Could be more or less, depending on screen size */
+            border-radius: 10px;
+            text-align: center;
+        }
 
-        $(function () {
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-            $(document).on({
-                mouseover: function (event) {
-                    $(this).find('.far').addClass('star-over');
-                    $(this).prevAll().find('.far').addClass('star-over');
-                },
-                mouseleave: function (event) {
-                    $(this).find('.far').removeClass('star-over');
-                    $(this).prevAll().find('.far').removeClass('star-over');
-                }
-            }, '.rate');
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        /* Rating stars */
+        .rating {
+            margin-bottom: 20px;
+        }
+
+            .rating input[type="radio"] {
+                display: none;
+            }
+
+            .rating label {
+                font-size: 20px;
+                color: #aaa;
+                cursor: pointer;
+            }
+
+            .rating input[type="radio"]:checked ~ label {
+                color: orange;
+            }
 
 
-            $(document).on('click', '.rate', function () {
-                if (!$(this).find('.star').hasClass('rate-active')) {
-                    $(this).siblings().find('.star').addClass('far').removeClass('fas rate-active');
-                    $(this).find('.star').addClass('rate-active fas').removeClass('far star-over');
-                    $(this).prevAll().find('.star').addClass('fas').removeClass('far star-over');
-                } else {
-                    console.log('has');
-                }
-            });
-
-        });
-    </script>
-
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -134,7 +131,7 @@
                                     </div>
                                 </div>
                                 <div class="subtotal">
-                                    <asp:Button ID="btnToOpenFeedback" runat="server" Text="Rate" CommandArgument='<%# Eval("FigureID") %>' OnCommand="btnToOpenFeedback_Command" />
+                                    <asp:Button ID="btnToRate" runat="server" Text="Rate" CommandArgument='<%# Eval("FigureID") %>' OnCommand="btnToRate_Command" />
                                 </div>
                             </div>
                             <div class="middle2">
@@ -162,44 +159,24 @@
 
                 <asp:Label ID="lblFail" runat="server" Text="" Style="font-weight: bold; color: red; font-size: 20px; margin-top: 100px; margin-bottom: 100px;"></asp:Label>
 
-                <!--Rating Model-->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel" style="font-size: 25px;"><b>Product Feedback</b></h5>
-                                <asp:Button ID="btnClose" runat="server" class="btn-close" data-bs-dismiss="modal" aria-label="Close" />
-                            </div>
-                            <div class="modal-body">
-                                <div class="mb-3">
-
-                                    <asp:Label ID="lblRate" runat="server" CssClass="col-form-label" Text="Product Rating: " Style="margin-top: 100px;"></asp:Label>
-
-
-                                    <div class="wrap" style="margin-bottom: 20px;">
-
-                                        <asp:RadioButtonList RepeatDirection="Horizontal" ID="r" runat="server">
-                                            <asp:ListItem Value="1" Style="margin-right: 10px; display: flex; flex-flow: column nowrap; color: crimson">&#9733;1</asp:ListItem>
-                                            <asp:ListItem Value="2" Style="margin-right: 10px; display: flex; flex-flow: column nowrap; color: crimson">&#9733;2</asp:ListItem>
-                                            <asp:ListItem Value="3" Style="margin-right: 10px; display: flex; flex-flow: column nowrap; color: crimson">&#9733;3</asp:ListItem>
-                                            <asp:ListItem Value="4" Style="margin-right: 10px; display: flex; flex-flow: column nowrap; color: crimson">&#9733;4</asp:ListItem>
-                                            <asp:ListItem Value="5" Style="margin-right: 10px; display: flex; flex-flow: column nowrap; color: crimson">&#9733;5</asp:ListItem>
-                                        </asp:RadioButtonList>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <br />
-                                    <asp:Label ID="lblFeedback" runat="server" Text="Feedback: " CssClass="col-form-label"></asp:Label>
-                                    <asp:TextBox ID="txtFeedback" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-danger" Text="Submit" OnClick="btnSubmit_Click" />
-                            </div>
+                <!-- Rating modal -->
+                <div id="ratingModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Rate the Product</h2>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars">5 stars</label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars">4 stars</label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars">3 stars</label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars">2 stars</label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star">1 star</label>
                         </div>
+                        <asp:TextBox ID="txtFeedback" runat="server" placeholder="Enter your feedback" Style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"/>
+                        <asp:Label ID="lblErrorMsg" runat="server" Text="" Style="color: red; font-weight: bold; margin-bottom: 20px;" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" Style="background-color: orange; color: white; margin:10px 50px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;"/>
                     </div>
                 </div>
-                <!-- End of rating modal -->
+                <!-- End rating modal -->
             </div>
         </div>
     </div>
@@ -279,37 +256,21 @@
         }
     </script>
 
-
-
     <script>
-        //May need to change. When the user click on a button, the system should trigger the click button whether is "Order Received", "Shipping", "All Order" or something else. Apply the "select" class according to the value. 
-
-        function allOrder() {
-            document.getElementById("all").classList.add("select");
-            document.getElementById("pending").classList.remove("select");
-            document.getElementById("shipping").classList.remove("select");
-            document.getElementById("delivered").classList.remove("select");
+        function openModal() {
+            document.getElementById("ratingModal").style.display = "block";
         }
 
-        function pending() {
-            document.getElementById("pending").classList.add("select");
-            document.getElementById("all").classList.remove("select");
-            document.getElementById("shipping").classList.remove("select");
-            document.getElementById("delivered").classList.remove("select");
-        }
+        var closeBtn = document.querySelector(".close");
 
-        function shipping() {
-            document.getElementById("shipping").classList.add("select");
-            document.getElementById("pending").classList.remove("select");
-            document.getElementById("all").classList.remove("select");
-            document.getElementById("delivered").classList.remove("select");
+        if (closeBtn) {
+            closeBtn.addEventListener("click", function () {
+                closeModal();
+            });
         }
-
-        function delivered() {
-            document.getElementById("delivered").classList.add("select");
-            document.getElementById("pending").classList.remove("select");
-            document.getElementById("shipping").classList.remove("select");
-            document.getElementById("all").classList.remove("select");
+        function closeModal() {
+            document.getElementById("ratingModal").style.display = "none";
         }
     </script>
+
 </asp:Content>

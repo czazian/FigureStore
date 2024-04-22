@@ -69,6 +69,7 @@ namespace Assignment.Customer
                 // Get the current order's data
                 DataRowView orderData = (DataRowView)e.Item.DataItem;
                 int orderID = orderData.Row.Field<int>("OrderID");
+                string orderStat = orderData["OrderStatus"].ToString();
 
                 // Filter the DataTable to get items for the current order
                 DataTable itemsForOrder = ((DataView)TrackingSource.Select(DataSourceSelectArguments.Empty))
@@ -79,6 +80,13 @@ namespace Assignment.Customer
                 itemsForOrder.DefaultView.Sort = "OrderDate DESC";
 
                 CalculateEstimatedShippingDate(e.Item);
+
+                //Check if the order status is Delivered, hide the Rate button otherwise
+                Button btnToRate = (Button)e.Item.FindControl("btnToRate");
+                if(orderStat != "Delivered")
+                {
+                    btnToRate.Visible = false;
+                }
             }
             else
             {
@@ -123,17 +131,78 @@ namespace Assignment.Customer
             Response.Redirect(url);
         }
 
-        protected void btnToOpenFeedback_Command(object sender, CommandEventArgs e)
-        {
-            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "openModal()",true);
-
-            System.Diagnostics.Debug.WriteLine("ID : " + e.CommandArgument.ToString());
-            Session["rateFID"] = e.CommandArgument.ToString();
-        }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            // Get the FigureID from session
+            string figureID = Session["rateFID"].ToString();
+            int rating = Convert.ToInt32(Request.Form["rating"]); // Assuming the name of the radio button group is "rating"
+            string comment = txtFeedback.Text;
+            System.Diagnostics.Debug.WriteLine("rating start is: " + rating);
+            System.Diagnostics.Debug.WriteLine("feedback is : " + comment);
 
+            if (string.IsNullOrWhiteSpace(comment))
+            {
+                lblErrorMsg.Text = "Please enter a feedback";
+                return;
+            }
+
+            // Insert the rating data into the database
+            InsertRatingIntoDatabase(figureID, rating, comment);
+
+            // Disable the Rate button
+            foreach (RepeaterItem item in OrderRepeater.Items)
+            {
+                Button btnToRate = (Button)item.FindControl("btnToRate");
+                if (btnToRate.CommandArgument == figureID)
+                {
+                    btnToRate.Enabled = false;
+                    break;
+                }
+            }
+
+            //// Get the FigureID from session
+            //string figureID = Session["rateFID"].ToString();
+            //int rating = Convert.ToInt32(r.SelectedValue); // Assuming r is the RadioButtonList ID
+
+            //// Get the Comment from the TextBox
+            //string comment = txtFeedback.Text;
+
+            //// Insert the rating data into the database
+            //InsertRatingIntoDatabase(figureID, rating, comment);
+        }
+
+        protected void btnToRate_Command(object sender, CommandEventArgs e)
+        {
+            //Testing
+            System.Diagnostics.Debug.WriteLine("Button clicked!");
+
+            // Store the FigureID in session for further processing
+            Session["rateFID"] = e.CommandArgument.ToString();
+
+            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "openModal", "openModal();", true);
+        }
+
+        private void InsertRatingIntoDatabase(string figureID, int rating, string comment)
+        {
+            DateTime date = DateTime.UtcNow.Date;
+
+            SqlConnection conn;
+            string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
+            conn = new SqlConnection(str);
+
+            conn.Open();
+
+            string query = "INSERT INTO [Rating] (RateStar, Comment, CommentDate, FigureID, OrderID) VALUES (@RateStar, @Comment, @CommentDate, @FigureID, @CustomerID)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@RateStar", rating);
+            cmd.Parameters.AddWithValue("@Feedback", comment);
+            cmd.Parameters.AddWithValue("@CommentDate", date);
+            cmd.Parameters.AddWithValue("@FigureID", figureID);
+            cmd.Parameters.AddWithValue("@CustomerID", Session["CustomerID"]);
+
+            cmd.ExecuteNonQuery();
+            
         }
     }
 }
