@@ -193,10 +193,10 @@ namespace Assignment.Customer
 
             conn.Open();
 
-            string query = "INSERT INTO [Rating] (RateStar, Comment, CommentDate, FigureID, OrderID) VALUES (@RateStar, @Comment, @CommentDate, @FigureID, @CustomerID)";
+            string query = "INSERT INTO [Rating] (RateStar, Comment, CommentDate, FigureID, CustomerID) VALUES (@RateStar, @Comment, @CommentDate, @FigureID, @CustomerID)";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@RateStar", rating);
-            cmd.Parameters.AddWithValue("@Feedback", comment);
+            cmd.Parameters.AddWithValue("@Comment", comment);
             cmd.Parameters.AddWithValue("@CommentDate", date);
             cmd.Parameters.AddWithValue("@FigureID", figureID);
             cmd.Parameters.AddWithValue("@CustomerID", Session["CustomerID"]);
