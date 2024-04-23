@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="OrderTrack.css" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
     <style>
         /* Modal container */
         .modal {
@@ -165,11 +167,11 @@
                         <span class="close">&times;</span>
                         <h2>Rate the Product</h2>
                         <div class="rating">
-                            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars">5 stars</label>
-                            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars">4 stars</label>
-                            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars">3 stars</label>
-                            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars">2 stars</label>
-                            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star">1 star</label>
+                            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars"><i class="bx bxs-star"></i></label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars"><i class="bx bxs-star"></i></label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"><i class="bx bxs-star"></i></label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"><i class="bx bxs-star"></i></label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"><i class="bx bxs-star"></i></label>
                         </div>
                         <asp:TextBox ID="txtFeedback" runat="server" placeholder="Enter your feedback" Style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"/>
                         <asp:Label ID="lblErrorMsg" runat="server" Text="" Style="color: red; font-weight: bold; margin-bottom: 20px;" />
