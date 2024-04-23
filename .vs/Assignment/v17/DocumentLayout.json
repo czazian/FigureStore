@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\assignment\\customer\\individualfigure.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\individualfigure.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\customer\\individualfigure.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\individualfigure.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\customer\\individualfigure.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\individualfigure.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\customer\\inidividualfigure.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\inidividualfigure.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +22,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 190,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IndividualFigure.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\IndividualFigure.aspx.cs",
-              "RelativeDocumentMoniker": "Assignment\\Customer\\IndividualFigure.aspx.cs",
-              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\IndividualFigure.aspx.cs",
-              "RelativeToolTip": "Assignment\\Customer\\IndividualFigure.aspx.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAIwIMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T05:36:13.637Z",
+              "DocumentIndex": 2,
+              "Title": "InidividualFigure.css",
+              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\InidividualFigure.css",
+              "RelativeDocumentMoniker": "Assignment\\Customer\\InidividualFigure.css",
+              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\InidividualFigure.css",
+              "RelativeToolTip": "Assignment\\Customer\\InidividualFigure.css",
+              "ViewState": "AQIAAPMAAAAAAAAAAAAAAKgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-23T18:49:53.146Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "IndividualFigure.aspx",
               "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\IndividualFigure.aspx",
               "RelativeDocumentMoniker": "Assignment\\Customer\\IndividualFigure.aspx",
@@ -43,7 +47,20 @@
               "RelativeToolTip": "Assignment\\Customer\\IndividualFigure.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-04-23T05:23:42.903Z",
+              "WhenOpened": "2024-04-23T16:52:00.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IndividualFigure.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\IndividualFigure.aspx.cs",
+              "RelativeDocumentMoniker": "Assignment\\Customer\\IndividualFigure.aspx.cs",
+              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\IndividualFigure.aspx.cs",
+              "RelativeToolTip": "Assignment\\Customer\\IndividualFigure.aspx.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAswDAAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T05:36:13.637Z",
               "EditorCaption": ""
             }
           ]

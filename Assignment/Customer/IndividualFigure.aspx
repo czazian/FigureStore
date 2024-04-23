@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cust.Master" AutoEventWireup="true" CodeBehind="IndividualFigure.aspx.cs" Inherits="Assignment.Customer.IndividualFigure" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="InidividualFigure.css" />
 </asp:Content>
@@ -164,14 +165,165 @@
                 </asp:Repeater>
                 <hr />
             </div>
-
-
-
-        </div>
-        <div class="bottom-box">
-
         </div>
     </div>
+
+    <div class="product-container">
+        <!-- Rating show at here -->
+        <div class="bottom-box">
+            <div class="rating-container" style="width: 100%;">
+                <h1 style="font-size: 25px; color: crimson; margin: 28px; font-weight: bold;">Customer Reviews</h1>
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-flow: row wrap; padding: 40px;">
+                    <div style="display: flex; margin-left: 20px; margin-right: 20px;">
+                        <div style="border: 1px solid white; padding: 30px 20px; border-radius: 100px; background-color: orangered; color: white;">
+                            <asp:Label runat="server" ID="lblRate" Text="" Style="font-size: 50px; margin-top: 3px;" />
+                        </div>
+                        <div style="margin-left: 30px; display: flex; flex-flow: column nowrap; justify-content: center;">
+                            <div class="stars" style="margin-bottom: 13px; font-size: 20px; text-shadow: 1px 1px grey">
+                                <asp:Label runat="server" ID="ranking" />
+                            </div>
+                            <div class="noOfPeople">
+                                <asp:Label runat="server" ID="people" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rating" style="flex: 0 1 500px;">
+                        <div class="row">
+                            <div class="side">
+                                <div>5 <i class="fa-solid fa-star" style="color: lightcoral"></i></div>
+                            </div>
+                            <div class="middle">
+                                <div class="bar-container">
+                                    <div class="bar-5" id="bar5"></div>
+                                </div>
+                            </div>
+                            <div class="side right">
+                                <div>
+                                    <asp:Label runat="server" ID="lblFiveStar" />
+                                </div>
+                            </div>
+                            <div class="side">
+                                <div>4 <i class="fa-solid fa-star" style="color: lightcoral"></i></div>
+                            </div>
+                            <div class="middle">
+                                <div class="bar-container">
+                                    <div class="bar-4" id="bar4"></div>
+                                </div>
+                            </div>
+                            <div class="side right">
+                                <div>
+                                    <asp:Label runat="server" ID="lblFourStar" />
+                                </div>
+                            </div>
+                            <div class="side">
+                                <div>3 <i class="fa-solid fa-star" style="color: lightcoral"></i></div>
+                            </div>
+                            <div class="middle">
+                                <div class="bar-container">
+                                    <div class="bar-3" id="bar3"></div>
+                                </div>
+                            </div>
+                            <div class="side right">
+                                <div>
+                                    <asp:Label runat="server" ID="lblThreeStar" />
+                                </div>
+                            </div>
+                            <div class="side">
+                                <div>2 <i class="fa-solid fa-star" style="color: lightcoral"></i></div>
+                            </div>
+                            <div class="middle">
+                                <div class="bar-container">
+                                    <div class="bar-2" id="bar2"></div>
+                                </div>
+                            </div>
+                            <div class="side right">
+                                <div>
+                                    <asp:Label runat="server" ID="lblTwoStar" />
+                                </div>
+                            </div>
+                            <div class="side">
+                                <div>1 &nbsp;<i class="fa-solid fa-star" style="color: lightcoral"></i></div>
+                            </div>
+                            <div class="middle">
+                                <div class="bar-container">
+                                    <div class="bar-1" id="bar1"></div>
+                                </div>
+                            </div>
+                            <div class="side right">
+                                <div>
+                                    <asp:Label runat="server" ID="lblOneStar" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%
+                    if (CommentRepeater.Controls.Count == 0)
+                    {
+                        emptyComment.Visible = true;
+                        emptyComment.Text = "No comment yet.";
+                    }
+                    else
+                    {
+                        emptyComment.Visible = false;
+                        emptyComment.Text = "";
+                    }
+                %>
+
+                <div class="comment-container" style="width: 100%;">
+                    <div style="display: flex; flex-flow: row nowrap; justify-content: space-between; margin-bottom: 10px;">
+                        <h1 style="font-size: 22px; margin: 28px; color: dimgray; font-weight: bold;">Comments</h1>
+                        <asp:DropDownList Style="font-size: 15px; height: 30px; margin-top: 5px; margin-right:28px" runat="server" ID="ddlFilter" OnSelectedIndexChanged="ddlFilter_SelectedIndexChanged" AutoPostBack="true">
+                            <asp:ListItem Selected="True" Value="0">Sort by Star (1-5)</asp:ListItem>
+                            <asp:ListItem Value="1">Sort by Star (5 - 1)</asp:ListItem>
+                            <asp:ListItem Value="2">Sort by Latest</asp:ListItem>
+                            <asp:ListItem Value="3">Sort by Oldest</asp:ListItem>
+                            <asp:ListItem Value="4">Show only 1 Star</asp:ListItem>
+                            <asp:ListItem Value="5">Show only 2 Stars</asp:ListItem>
+                            <asp:ListItem Value="6">Show only 3 Stars</asp:ListItem>
+                            <asp:ListItem Value="7">Show only 4 Stars</asp:ListItem>
+                            <asp:ListItem Value="8">Show only 5 Stars</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <asp:Label Style="padding-top: 20px; padding-bottom: 20px; border: 1.5px solid grey; color: dimgray; font-size: 1.2rem; text-align: center; width: 95%; display: flex; flex-flow: row nowrap; justify-content: center; margin: 10px 0px 10px 30px;" runat="server" ID="emptyComment" />
+
+                    <!-- Comment Repeater -->
+                    <asp:Repeater runat="server" ID="CommentRepeater">
+                        <ItemTemplate>
+                            <div class="one-comment" style="padding: 10px; margin-bottom: 20px;">
+                                <div style="display: flex;">
+                                    <div class="photo">
+                                        <asp:Image runat="server" ID="profileImg" Width="80" Height="80" Style="border-radius: 10px; border: 3px outset crimson;" ImageUrl='<%# Eval("Image") %>' />
+                                    </div>
+                                    <div class="info" style="display: flex; justify-content: space-between; width: 100%;">
+                                        <div class="personal-info" style="margin-left: 10px; display: flex; flex-flow: column nowrap; justify-content: center; gap: 15px;">
+                                            <div class="name">
+                                                <asp:Label Style="font-size: 19px; color: dodgerblue; font-weight: bold;" runat="server" ID="lblName" Text='<%# Eval("Name") %>' />
+                                            </div>
+
+                                            <div class="star star-box" id="starID">
+                                                <input type="hidden" value='<%# Eval("RateStar") %>' class="starHidden" />
+                                            </div>
+                                        </div>
+                                        <div class="date" style="margin-right: 10px;">
+                                            <asp:Label Style="font-size: 15px;" runat="server" ID="lblDate" Text='<%# DateTime.Parse(Eval("CommentDate").ToString()).ToString("dd MMM yyyy") %>' />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="long-comment" style="width: 100%; line-height: 18px; margin-top: 6px;">
+                                    <asp:Label runat="server" ID="lblComment" Text='<%# Eval("COmment") %>' />
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+            </div>
+        </div>
+        <!-- Rating end -->
+    </div>
+
 
     <!--Click this button back to top of the page-->
     <div class="toTop" id="toTop">
@@ -256,6 +408,51 @@
 
         });
     </script>
+    <!--Rating Star-->
+    <script>
+        $(document).ready(function () {
+            //Each Comment will be Loop
+            $(".starBox").each(function () {
+                let starBox = $(this);
+                let numberOfStar = parseInt($(this).find('.starHidden').val()); //Able to get no of star for each comment
 
+                //Know the number of star of each comment
+                for (let i = 0; i < numberOfStar; i++) {
+                    var element = document.createElement("i");
+                    element.classList.add("fa-solid", "fa-star");
+                    element.style.color = "crimson";
+                    starBox.append(element.cloneNode());
+                }
+            })
+
+            //set the progress bar length of each rate star 
+            var one = <%= this.percentageOfOne %>;
+         var two = <%= this.percentageOfTwo %>;
+         var three = <%= this.percentageOfThree %>;
+         var four = <%= this.percentageOfFour %>;
+         var five = <%= this.percentageOfFive %>;
+
+         document.getElementById('bar1').style.width = one + "%";
+         document.getElementById('bar2').style.width = two + "%";
+         document.getElementById('bar3').style.width = three + "%";
+         document.getElementById('bar4').style.width = four + "%";
+         document.getElementById('bar5').style.width = five + "%";
+
+
+         //Set the color of the ranking
+         var rank = document.getElementById('<%=ranking.ClientID%>').innerHTML;
+         var rankItem = document.getElementById('<%=ranking.ClientID%>');
+         console.log(rank);
+         if (rank == "Excellent") {
+             rankItem.style.color = "lawngreen";
+         } else if (rank == "Good") {
+             rankItem.style.color = "#ffc654";
+         } else if (rank == "Unsatisfied") {
+             rankItem.style.color = "#f53d3d";
+         } else {
+             rankItem.style.color = "#bdbdbd";
+         }
+     })
+    </script>
 </asp:Content>
 
