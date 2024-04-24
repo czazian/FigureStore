@@ -69,7 +69,7 @@ namespace Assignment.Login
             string hashedPassword = HashPassword(password2);
 
             //Store into DB
-            if (password1 == password2 && password1 != "" && password2 != "" && Page.IsValid && valid == true)
+            if (password1 == password2 && password1 != "" && password2 != "" && password1.Length > 8 && password2.Length > 8 && Page.IsValid && valid == true)
             {
                 SqlConnection conn;
                 string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
@@ -126,11 +126,11 @@ namespace Assignment.Login
 
         protected void CustomValidator2_ServerValidate(object source, ServerValidateEventArgs args)
         {
-
             System.Diagnostics.Debug.WriteLine("Custom Validator is fired.");
 
             string password1 = pass1.Text;
             string password2 = pass2.Text;
+
             if (password1 == "" || password2 == "")
             {
                 CustomValidator2.IsValid = false;
@@ -140,6 +140,12 @@ namespace Assignment.Login
             {
                 CustomValidator2.IsValid = false;
                 error2.Text = "*Please ensure your password 1 and password 2 is matched.";
+            }
+            else if (password1.Length < 8 || password2.Length < 8)
+            {
+                CustomValidator2.IsValid = false;
+                error2.Text = "*Password length must be at least 8 characters.";
+                System.Diagnostics.Debug.WriteLine("Password Length true? : " + CustomValidator2);
             }
             else
             {

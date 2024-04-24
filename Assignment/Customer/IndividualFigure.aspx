@@ -173,7 +173,7 @@
         <div class="bottom-box">
             <div class="rating-container" style="width: 100%;">
                 <h1 style="font-size: 25px; color: crimson; margin: 28px; font-weight: bold;">Customer Reviews</h1>
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-flow: row wrap; padding: 40px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-flow: row wrap; padding:40px 20px;">
                     <div style="display: flex; margin-left: 20px; margin-right: 20px;">
                         <div style="border: 1px solid white; padding: 30px 20px; border-radius: 100px; background-color: orangered; color: white;">
                             <asp:Label runat="server" ID="lblRate" Text="" Style="font-size: 50px; margin-top: 3px;" />
@@ -193,7 +193,7 @@
                             <div class="side">
                                 <div>5 <i class="fa-solid fa-star" style="color: lightcoral"></i></div>
                             </div>
-                            <div class="middle">
+                            <div class="ratingMiddle">
                                 <div class="bar-container">
                                     <div class="bar-5" id="bar5"></div>
                                 </div>
@@ -206,7 +206,7 @@
                             <div class="side">
                                 <div>4 <i class="fa-solid fa-star" style="color: lightcoral"></i></div>
                             </div>
-                            <div class="middle">
+                            <div class="ratingMiddle">
                                 <div class="bar-container">
                                     <div class="bar-4" id="bar4"></div>
                                 </div>
@@ -219,7 +219,7 @@
                             <div class="side">
                                 <div>3 <i class="fa-solid fa-star" style="color: lightcoral"></i></div>
                             </div>
-                            <div class="middle">
+                            <div class="ratingMiddle">
                                 <div class="bar-container">
                                     <div class="bar-3" id="bar3"></div>
                                 </div>
@@ -232,7 +232,7 @@
                             <div class="side">
                                 <div>2 <i class="fa-solid fa-star" style="color: lightcoral"></i></div>
                             </div>
-                            <div class="middle">
+                            <div class="ratingMiddle">
                                 <div class="bar-container">
                                     <div class="bar-2" id="bar2"></div>
                                 </div>
@@ -245,7 +245,7 @@
                             <div class="side">
                                 <div>1 &nbsp;<i class="fa-solid fa-star" style="color: lightcoral"></i></div>
                             </div>
-                            <div class="middle">
+                            <div class="ratingMiddle">
                                 <div class="bar-container">
                                     <div class="bar-1" id="bar1"></div>
                                 </div>

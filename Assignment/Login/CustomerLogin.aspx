@@ -237,6 +237,7 @@
     <script> 
         function registered() {
             alert("Your account has been successfully registered!");
+            window.location.href = "CustomerLogin.aspx";
         }
 
         function error() {
