@@ -242,11 +242,11 @@
                             MAIN CATEGORIES
                         </div>
                         <div style="margin-top: 15px; display: flex; flex-flow: column nowrap;" class="items">
-                            <a href='<%= ResolveUrl("~/FigureCategories/ScaleFigure.aspx") %>' class="space">Scale Figures</a>
-                            <a href='<%= ResolveUrl("~/FigureCategories/Nendoroid.aspx") %>' class="space">Nendoroids</a>
-                            <a href='<%= ResolveUrl("~/FigureCategories/Gundam.aspx") %>' class="space">Gundam</a>
-                            <a href='<%= ResolveUrl("~/FigureCategories/Doll.aspx") %>' class="space">Dolls</a>
-                            <a href='<%= ResolveUrl("~/FigureCategories/Good.aspx") %>' class="space">Goods</a>
+                            <a href='<%= ResolveUrl("~/FigureCategories/ScaleFigure.aspx?status=all") %>' class="space">Scale Figures</a>
+                            <a href='<%= ResolveUrl("~/FigureCategories/Nendoroid.aspx?status=all") %>' class="space">Nendoroids</a>
+                            <a href='<%= ResolveUrl("~/FigureCategories/Gundam.aspx?status=all") %>' class="space">Gundam</a>
+                            <a href='<%= ResolveUrl("~/FigureCategories/Doll.aspx?status=all") %>' class="space">Dolls</a>
+                            <a href='<%= ResolveUrl("~/FigureCategories/Good.aspx?status=all") %>' class="space">Goods</a>
                         </div>
                     </div>
 

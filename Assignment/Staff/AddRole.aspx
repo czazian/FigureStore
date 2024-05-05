@@ -189,11 +189,11 @@
             <div class="recent-sales box">
 
                 <div class="title" style="padding-bottom: 10px; font-size: 30px; font-weight: 600; color: #ff7e29"><i class="bx bx-street-view"></i>&nbsp;Add New Role</div>
-                <label class="label-field">Name: </label>
+                <label class="label-field">Role Name: </label>
                 </br>
            
                 <asp:TextBox runat="server" ID="txtUserName" CssClass="input-field"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtUserName" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtUserName" ErrorMessage="*Role Name cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br>
                 <br>
                     <label class="label-field">Module Permission:</label></br>

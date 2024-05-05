@@ -193,40 +193,40 @@
                 </br>
             </br>
              <asp:TextBox runat="server" ID="txtFigureName" CssClass="input-field"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFigureName" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFigureName" ErrorMessage="*Figure Name cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br>
                     <br />
                     <label class="label-field">Figure Series: </label>
                 </br>
                 </br>
             <asp:TextBox runat="server" ID="txtFigureSeries" CssClass="input-field"></asp:TextBox><br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtFigureSeries" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtFigureSeries" ErrorMessage="*Figure Series cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br></br>
                 <label class="label-field">Figure Manufacturer: </label>
                 </br>
             </br>
            
         <asp:TextBox runat="server" ID="txtFigureManufacturer" CssClass="input-field"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFigureManufacturer" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFigureManufacturer" ErrorMessage="*Figure Manufacturer cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br></br>
                 <label class="label-field">Figure Specification: </label>
                 </br>
 </br>
         <asp:TextBox runat="server" ID="txtFigureSpecification" CssClass="input-field"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtFigureSpecification" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtFigureSpecification" ErrorMessage="*Figure Specification cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br></br>
                 <label class="label-field">Figure Release Date (DD-MM-YY): </label>
                 </br>
 </br>
         <asp:TextBox runat="server" ID="txtFigureReleaseDate" CssClass="input-field"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtFigureReleaseDate" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtFigureReleaseDate" ErrorMessage="*Release Date cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br></br>
                 <label class="label-field">Price (RM 0.00): </label>
                 </br></br>
         <asp:TextBox runat="server" ID="txtFigurePrice" CssClass="input-field"></asp:TextBox><br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
                     ControlToValidate="txtFigurePrice"
-                    ErrorMessage="This field is required"
+                    ErrorMessage="*Figure Price cannot be empty"
                     ForeColor="Red"
                     Display="Dynamic">
                 </asp:RequiredFieldValidator>
@@ -256,7 +256,7 @@
                 </br>
             </br>
             <asp:TextBox runat="server" ID="txtUnit" CssClass="input-field"></asp:TextBox></br>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtUnit" ErrorMessage="This field is required" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtUnit" ErrorMessage="*Quantity/Unit cannot be empty" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
                     ControlToValidate="txtUnit"
                     ErrorMessage="Please enter a valid numeric format"
@@ -271,11 +271,11 @@
            
         <asp:FileUpload runat="server" ID="newImgProd1" CssClass="input-field" Style="align-content: center;" /></br>
            
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="newImgProd1" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="newImgProd1" ErrorMessage="*Figure Image1 cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br></br>
                 <label class="label-field">Figure Image 2:</label></br></br>
         <asp:FileUpload runat="server" ID="newImgProd2" CssClass="input-field" Style="align-content: center;" /></br>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="newImgProd2" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="newImgProd2" ErrorMessage="*Figure Image2 cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br></br>
                 <label class="label-field">Figure Status: </label>
                 <br />

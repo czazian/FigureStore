@@ -7,7 +7,7 @@
         }
 
         body {
-            min-width:1700px;
+            min-width:1500px;
         }
 
         .home-content .sales-boxes {

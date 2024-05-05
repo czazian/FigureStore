@@ -193,14 +193,14 @@
            </br>
                 <asp:TextBox runat="server" ID="txtUsername" CssClass="input-field"></asp:TextBox>
                 <br>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorUsername" runat="server" ControlToValidate="txtUsername" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorUsername" runat="server" ControlToValidate="txtUsername" ErrorMessage="*Staff Name cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
                     <br />
                 </br>
                 <label class="label-field">Password :</label></br>
            </br>
                 <asp:TextBox runat="server" ID="txtPass" CssClass="input-field"></asp:TextBox>
                 <br>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" runat="server" ControlToValidate="txtPass" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" runat="server" ControlToValidate="txtPass" ErrorMessage="*Password cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
                     <br />
                 </br>
                 <label class="label-field">Role/Position : </label>

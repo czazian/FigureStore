@@ -49,11 +49,11 @@
             </div>
 
             <div class="toper1">
-                <asp:ImageButton CssClass="toper" ImageUrl="~/Image/Element/toper1.png" runat="server" PostBackUrl="~/FigureCategories/Nendoroid.aspx" />
+                <asp:ImageButton CssClass="toper" ImageUrl="~/Image/Element/toper1.png" runat="server" PostBackUrl="~/FigureCategories/Nendoroid.aspx?status=all" />
             </div>
 
             <div class="toper2">
-                <asp:ImageButton CssClass="toper" ImageUrl="~/Image/Element/toper2.png" runat="server" PostBackUrl="~/FigureCategories/ScaleFigure.aspx" />
+                <asp:ImageButton CssClass="toper" ImageUrl="~/Image/Element/toper2.png" runat="server" PostBackUrl="~/FigureCategories/ScaleFigure.aspx?status=all" />
             </div>
         </div>
 
