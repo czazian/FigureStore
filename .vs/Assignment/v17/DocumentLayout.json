@@ -1,12 +1,122 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\customer\\editprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\editprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\login\\customerlogin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\login\\customerlogin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\customer\\editprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\customer\\editprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\login\\customerlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\login\\customerlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\login\\changepassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\login\\changepassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|c:\\users\\junke\\onedrive\\documents\\github\\webapplicationdevelopment\\assignment\\login\\customerlogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19219B72-250D-4FB7-B812-C25CE8557EB6}|Assignment\\Assignment.csproj|solutionrelative:assignment\\login\\customerlogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EditProfile.css",
+              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\EditProfile.css",
+              "RelativeDocumentMoniker": "Assignment\\Customer\\EditProfile.css",
+              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\EditProfile.css",
+              "RelativeToolTip": "Assignment\\Customer\\EditProfile.css",
+              "ViewState": "AQIAALsAAAAAAAAAAAAwwOYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-06T04:00:43.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerLogin.css",
+              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.css",
+              "RelativeDocumentMoniker": "Assignment\\Login\\CustomerLogin.css",
+              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.css",
+              "RelativeToolTip": "Assignment\\Login\\CustomerLogin.css",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAAAL8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-06T03:59:53.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomerLogin.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.aspx.cs",
+              "RelativeDocumentMoniker": "Assignment\\Login\\CustomerLogin.aspx.cs",
+              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.aspx.cs",
+              "RelativeToolTip": "Assignment\\Login\\CustomerLogin.aspx.cs",
+              "ViewState": "AQIAADgBAAAAAAAAAAAUwEUBAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T03:45:59.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerLogin.aspx",
+              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.aspx",
+              "RelativeDocumentMoniker": "Assignment\\Login\\CustomerLogin.aspx",
+              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\CustomerLogin.aspx",
+              "RelativeToolTip": "Assignment\\Login\\CustomerLogin.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-06T03:41:24.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChangePassword.aspx",
+              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\ChangePassword.aspx",
+              "RelativeDocumentMoniker": "Assignment\\Login\\ChangePassword.aspx",
+              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Login\\ChangePassword.aspx",
+              "RelativeToolTip": "Assignment\\Login\\ChangePassword.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-06T03:41:00.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditProfile.aspx",
+              "DocumentMoniker": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\EditProfile.aspx",
+              "RelativeDocumentMoniker": "Assignment\\Customer\\EditProfile.aspx",
+              "ToolTip": "C:\\Users\\junke\\OneDrive\\Documents\\GitHub\\WebApplicationDevelopment\\Assignment\\Customer\\EditProfile.aspx",
+              "RelativeToolTip": "Assignment\\Customer\\EditProfile.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-06T03:37:13.14Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

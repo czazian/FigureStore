@@ -129,9 +129,69 @@
                         </div>
                     </div>
                     <div class="edit-btn">
+                        <asp:Button ID="change_Pass" CssClass="border btn btn-edit" OnClientClick="return false;" runat="server" CausesValidation="false" data-bs-toggle="modal" data-bs-target="#staticBackdrop" Text="Edit Password" />
                         <asp:Button OnClick="edit_Click" Enabled="false" ID="edit" PostBackUrl="~/Customer/EditProfile.aspx" CssClass="border btn btn-edit" runat="server" Text="Edit Profile" />
                     </div>
 
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style="font-weight: bold;">Password Recovery</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+
+
+                                <asp:UpdatePanel runat="server" ID="upEmail" UpdateMode="Conditional">
+                                    <Triggers>
+                                        <asp:AsyncPostBackTrigger ControlID="btnSendEmail" />
+                                    </Triggers>
+                                    <ContentTemplate>
+                                        <table class="modal-body">
+                                            <tr class="emailRecover">
+                                                <td class="tt" style="font-weight: bold; margin:0px 0px 0px 0px; font-size:15px;">Email:&nbsp;</td>
+                                                <td class="ti">
+                                                    <asp:TextBox CausesValidation="false" ID="txtRecoverEmail" TextMode="Email" runat="server" />
+                                                    <asp:Button CausesValidation="false" runat="server" Text="Send" ID="btnSendEmail" CssClass="border btn" Style="background-color: #ff7e29; height: inherit; color: white; font-size: 13px;" OnClick="btnSendEmail_Click" />
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tt"></td>
+                                                <td class="ti" style="padding: 5px 15px 5px 15px;">
+                                                    <asp:Label ID="message1" runat="server" />
+                                                </td>
+                                            </tr>
+
+                                            <tr class="verification">
+                                                <td class="tt" style="margin:0px 0px 0px 0px; font-size:15px;">
+                                                    <div style="font-weight: bold; font-size:15px;">Verification Code:&nbsp;</div>
+                                                </td>
+                                                <td class="ti">
+                                                    <asp:TextBox CausesValidation="false" runat="server" ID="verificationCode" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tt"></td>
+                                                <td class="ti" style="padding: 5px 15px 5px 15px;">
+                                                    <asp:Label ID="message2" runat="server" />
+                                                </td>
+                                            </tr>
+
+                                        </table>
+
+
+
+                                        <div class="modal-footer">
+                                            <asp:Button Enabled="false" runat="server" CausesValidation="false" Text="Resend" CssClass="btn btn-secondary" OnClick="resendbtn_Click" ID="resendbtn" />
+                                            <asp:Button ID="recBtn" Enabled="false" OnClientClick="return true;" runat="server" CausesValidation="false" OnClick="Unnamed_Click" Style="background-color: #ff7e29; height: inherit; color: white;" CssClass="btn" Text="Recover" />
+                                        </div>
+
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </div>
+                        </div>
+                    </div>
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>

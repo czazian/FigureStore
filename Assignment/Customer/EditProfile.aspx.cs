@@ -3,9 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Net.NetworkInformation;
 using System.Text;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -230,6 +233,141 @@ namespace Assignment.Customer
                         "alert('Something wrong when trying to update!');",
                         true);
             }
+        }
+
+        private int getCount()
+        {
+            //Getting user id with email 
+            SqlConnection conn;
+            string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
+            conn = new SqlConnection(str);
+
+            conn.Open();
+
+            string query = "SELECT COUNT(*) FROM Customer WHERE Email = @email";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@email", txtRecoverEmail.Text);
+
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+            conn.Close();
+
+            return count;
+        }
+
+        protected void btnSendEmail_Click(object sender, EventArgs e)
+        {
+            //Operation
+            if (txtRecoverEmail.Text == "")
+            {
+                message1.Text = "Please do not leave email empty and enter your email with correct format.";
+                message1.ForeColor = Color.Red;
+            }
+            else if (getCount() == 0)
+            {
+                message1.Text = "Email does not exist, please try another one.";
+                message1.ForeColor = Color.Red;
+            }
+            else if (txtRecoverEmail.Text != "")
+            {
+                //Avoid user click again while email is sending
+                btnSendEmail.Enabled = false;
+                recBtn.Enabled = true;
+                resendbtn.Enabled = true;
+                //Correct operation
+                message1.ForeColor = Color.ForestGreen;
+                string recipient = txtRecoverEmail.Text;
+                string code = sendEmail(recipient);
+                Session["code"] = code.ToString();
+
+            }
+        }
+
+        private string sendEmail(string recipient)
+        {
+            //Generate 6 digits random numbers 
+            Random generator = new Random();
+            string code = generator.Next(0, 1000000).ToString("D6");
+
+            //Mail Object
+            MailMessage mailMessage = new MailMessage();
+            string fromMail = "apexonlineshop.noreply@gmail.com";
+            string fromPassword = "mlgrtqinkgbiutmn";
+
+            //Sender and Recipient
+            mailMessage.From = new MailAddress(fromMail); //The sender
+            mailMessage.To.Add(recipient); //The recipient
+            mailMessage.Subject = "Verification Code"; //Email Subject
+
+            //Mail Message
+            mailMessage.Body = "Your Verification Code : " + code;
+            mailMessage.IsBodyHtml = true;
+
+            SmtpClient client = new SmtpClient("smtp.gmail.com");
+            client.Port = 587;
+            client.Timeout = 20000;
+            client.Credentials = new System.Net.NetworkCredential(fromMail, fromPassword);
+            client.EnableSsl = true;
+
+            //Send the email asynchronously - means send in background 
+            ThreadPool.QueueUserWorkItem(delegate
+            {
+                client.Send(mailMessage);
+            });
+
+            message1.Text = "Verification code has been sent to your mainbox.";
+
+            return code;
+        }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            string codeToCompare = "";
+            string enteredCode = verificationCode.Text;
+            if (Session["code"].ToString() != "")
+            {
+                codeToCompare = Session["code"].ToString();
+                recBtn.Enabled = true;
+            }
+
+            if (enteredCode == codeToCompare.ToString())
+            {
+                //Obtain user id 
+                SqlConnection conn;
+                string str = ConfigurationManager.ConnectionStrings["ApexOnlineShopDb"].ConnectionString;
+                conn = new SqlConnection(str);
+
+                conn.Open();
+
+                string query = "SELECT CustomerID FROM CUSTOMER WHERE Email = @email";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@email", txtRecoverEmail.Text);
+
+                string id = cmd.ExecuteScalar().ToString();
+
+                if (id != "")
+                {
+                    Response.Redirect("~/Login/ChangePassword.aspx?id=" + id);
+                }
+
+            }
+            else
+            {
+                message2.ForeColor = Color.Red;
+                message2.Text = "Incorrect verification code, please enter again.";
+            }
+        }
+
+        protected void resendbtn_Click(object sender, EventArgs e)
+        {
+            txtRecoverEmail.Text = "";
+            verificationCode.Text = "";
+            message1.Text = "";
+            message2.Text = "";
+            resendbtn.Enabled = false;
+            btnSendEmail.Enabled = true;
+            recBtn.Enabled = false;
+            txtRecoverEmail.Focus();
         }
     }
 }
