@@ -137,6 +137,11 @@ namespace Assignment.Staff
             {
                 Response.Write("Invalid Records");
             }
+
+            cnn1.Close();
+            cnn2.Close();
+            cnn3.Close();
+            cnn4.Close();
         }
 
         protected void timeFilter_SelectedIndexChanged(object sender, EventArgs e)

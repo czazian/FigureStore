@@ -189,6 +189,27 @@ namespace Assignment.Staff
                 Response.Write("Invalid Records");
             }
 
+            cnn1.Close();
+            cnn2.Close();
+            cnn3.Close();
+            cnn4.Close();
+            cnn5.Close();
+            cnn6.Close();
+            cnn7.Close();
+            cnn8.Close();
+            cnn9.Close();
+            cnn10.Close();
+            cnn11.Close();
+            cnn12.Close();
+            cnn13.Close();
+            cnn14.Close();
+            cnn15.Close();
+            cnn16.Close();
+            cnn17.Close();
+            cnn18.Close();
+            cnn19.Close();
+            cnn20.Close();
+            cnn21.Close();
         }
 
         private void showstaffDetails(int staffID)
