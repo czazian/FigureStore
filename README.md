@@ -1,4 +1,4 @@
-# Apex Online Store 🛒
+# Apex Online Shop 🛒
 
 **Apex Online Store** is an online platform to showcase and sell various kinds of collectible figures. Built using **ASP.NET**, this project focuses on providing an intuitive user interface and a seamless shopping experience for customers while offering powerful management tools for administrators.
 
